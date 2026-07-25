@@ -5,14 +5,18 @@
         private readonly LobbyDomain _lobbyDomain;
 
         private readonly ShopPresenter _shopPresenter;
+        private readonly SynergyPresenter _synergyPresenter;
         
         private readonly LobbyShopAction _lobbyShopAction;
 
         public LobbyCompositor(LobbyDomain lobbyDomain,
-                               ShopPresenter shopPresenter)
+                               ShopPresenter shopPresenter,
+                               SynergyPresenter synergyPresenter)
         {
             _lobbyDomain = lobbyDomain;
+            
             _shopPresenter = shopPresenter;
+            _synergyPresenter = synergyPresenter;
             
             _lobbyShopAction = new LobbyShopAction(_lobbyDomain);
         }
@@ -61,17 +65,25 @@
         {
             _lobbyShopAction.TryLevelUp();
         }
+
+        private void HandleOnSynergyUpdated(SynergyContext synergyContext)
+        {
+            _synergyPresenter.UpdateSynergySlots(synergyContext, _lobbyDomain.SynergySystem.SynergyDataTableRows);
+            // TODO: 슬롯 시너지 갱신
+        }
 #endregion
 
 #region Event Bindings
         public void BindEvents()
         {
             BindLobbyShopEvents();
+            BindLobbySynergyEvents();
         }
 
         public void ReleaseEvents()
         {
             ReleaseLobbyShopEvents();
+            ReleaseLobbySynergyEvents();
         }
 
         private void BindLobbyShopEvents()
@@ -102,6 +114,16 @@
             _shopPresenter.OnClickedReroll -= HandleOnClickedShopReroll;
             _shopPresenter.OnChangedLock -= _lobbyDomain.ShopSystem.UpdateLock;
             _shopPresenter.OnRequestLevelUp -= HandleOnRequestShopLevelUp;
+        }
+
+        private void BindLobbySynergyEvents()
+        {
+            _lobbyDomain.SynergySystem.OnSynergyUpdated += HandleOnSynergyUpdated;
+        }
+
+        private void ReleaseLobbySynergyEvents()
+        {
+            _lobbyDomain.SynergySystem.OnSynergyUpdated -= HandleOnSynergyUpdated;
         }
 #endregion
     }

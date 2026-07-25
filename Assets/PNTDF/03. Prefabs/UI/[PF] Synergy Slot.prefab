@@ -696,7 +696,7 @@ MonoBehaviour:
   - {fileID: 8859207120167265800}
   - {fileID: 3089906325074072508}
   - {fileID: 975706349673804510}
-  highlightStepEffect: {fileID: 6394283388390823062}
+  synergySlotEffect: {fileID: 6394283388390823062}
 --- !u!114 &6394283388390823062
 MonoBehaviour:
   m_ObjectHideFlags: 0
