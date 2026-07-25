@@ -647,6 +647,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2407269737194702794}
+  - component: {fileID: 514207429527896899}
+  - component: {fileID: 6394283388390823062}
   m_Layer: 5
   m_Name: '[PF] Synergy Slot'
   m_TagString: Untagged
@@ -674,6 +676,42 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &514207429527896899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999799888326386041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161b6117fa7244ae915af59d316967e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergySlotView
+  synergyImage: {fileID: 5163697294902575513}
+  stepImages:
+  - {fileID: 1562704139621558615}
+  - {fileID: 2845104320388049030}
+  - {fileID: 7592643502358217385}
+  - {fileID: 8859207120167265800}
+  - {fileID: 3089906325074072508}
+  - {fileID: 975706349673804510}
+  highlightStepEffect: {fileID: 6394283388390823062}
+--- !u!114 &6394283388390823062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999799888326386041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7404de067d4659863fa37f66f69acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HighlightStepEffect
+  maxAlpha: 1
+  minAlpha: 0.25
+  alphaDuration: 0.35
 --- !u!1 &8732344806491037811
 GameObject:
   m_ObjectHideFlags: 0
