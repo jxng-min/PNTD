@@ -1,0 +1,37 @@
+﻿using System.Collections.Generic;
+
+namespace PNTD
+{
+    public class LobbyPartyAction
+    {
+        private readonly LobbyDomain _lobbyDomain;
+
+        public LobbyPartyAction(LobbyDomain lobbyDomain)
+        {
+            _lobbyDomain = lobbyDomain;
+        }
+
+        public void GetPartyCount(out int currentCount, out int maxCount)
+        {
+            currentCount = _lobbyDomain.PartySystem.HeroContexts.Count;
+            // TODO: 스테이터스 추가 시, 최대 개수 연결
+            maxCount = currentCount;
+        }
+
+        public void ReorderParty(List<HeroContext> heroContexts)
+        {
+            _lobbyDomain.PartySystem.TryReorderParty(heroContexts);
+        }
+
+        public void SellHero(HeroContext heroContext, int price)
+        {
+            if (heroContext == null)
+            {
+                return;
+            }
+            
+            // TODO: 스테이터스 추가 시, 판매 가격만큼 추가
+            _lobbyDomain.PartySystem.RemoveHeroContext(heroContext);
+        }
+    }
+}

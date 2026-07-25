@@ -22,7 +22,11 @@ namespace PNTD
             
             // TODO: 골드 확인
             
-            // TODO: 히어로 추가
+            var heroContext = new HeroContext(heroDataTableRow);
+            if (!_lobbyDomain.PartySystem.TryAddHeroContext(heroContext))
+            {
+                return false;
+            }
             
             // TODO: 골드 차감
 
@@ -81,9 +85,8 @@ namespace PNTD
                 }
                 
                 var synergies = _lobbyDomain.ShuffleSystem.GetSynergyDataTableRows(hero.synergy);
-                
-                // TODO: 이미 파티에 히어로를 가지고 있는지 확인
-                var canIncreaseSynergy = synergies?.Count > 0;
+                var alreadyOwned = _lobbyDomain.PartySystem.GetHeroContexts(hero.rowID)?.Count > 0;
+                var canIncreaseSynergy = !alreadyOwned && synergies.Count > 0;
 
                 contexts.Add(new ShopSlotContext(hero, synergies, canIncreaseSynergy));
             }

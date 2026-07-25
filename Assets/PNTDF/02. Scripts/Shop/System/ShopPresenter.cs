@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using JxModule;
 using TMPro;
 using UnityEngine;
@@ -59,6 +60,39 @@ namespace PNTD
             
             _soldOutSlots[slotIndex] = true;
             shopSlotViews[slotIndex].CanvasGroup.Hide();
+        }
+
+        public void RefreshSlotsSynergies(SynergyContext synergyContext, IReadOnlyList<HeroContext> heroContexts)
+        {
+            var currentSynergyContext = synergyContext ?? SynergyContext.Empty;
+            var count = Mathf.Min(_slotData.Count, shopSlotViews.Length);
+            
+            for (var index = 0; index < shopSlotViews.Length; index++)
+            {
+                var shopSlotView = shopSlotViews[index];
+                if (shopSlotView == null)
+                {
+                    continue;
+                }
+                
+                var isActive = index < count && !IsSoldOut(index);
+                shopSlotView.CanvasGroup.gameObject.SetActive(isActive);
+
+                if (!isActive)
+                {
+                    continue;
+                }
+                
+                var shopSlotContext = _slotData[index];
+                var alreadyOwned = HasOwnedSameHero(heroContexts, shopSlotContext.HeroDataTableRow);
+                var canIncreaseSynergy = !alreadyOwned && shopSlotContext.SynergyDataTableRows is { Count: > 0 };
+                
+                shopSlotView.Initialize(new ShopSlotContext(shopSlotContext.HeroDataTableRow,
+                                                            shopSlotContext.SynergyDataTableRows, 
+                                                            canIncreaseSynergy),
+                                        currentSynergyContext,
+                                        index);
+            }
         }
 
         public void HandleOnUpdateGold(int gold)
@@ -141,6 +175,18 @@ namespace PNTD
 
                 shopSlotView.CanvasGroup.Hide();
             }
+        }
+
+        private static bool HasOwnedSameHero(IReadOnlyList<HeroContext> heroContexts, HeroDataTableRow heroDataTableRow)
+        {
+            if (heroContexts == null || heroDataTableRow == null)
+            {
+                return false;
+            }
+
+            return heroContexts
+                .Where(heroContext => heroContext != null && heroContext.HeroDataTableRow != null)
+                .Any(heroContext => heroContext.HeroDataTableRow.rowID == heroDataTableRow.rowID);
         }
 
         private void OnDestroy()

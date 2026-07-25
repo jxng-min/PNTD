@@ -1,4 +1,6 @@
-﻿namespace PNTD
+﻿using System.Collections.Generic;
+
+namespace PNTD
 {
     public class LobbyCompositor
     {
@@ -6,19 +8,24 @@
 
         private readonly ShopPresenter _shopPresenter;
         private readonly SynergyPresenter _synergyPresenter;
+        private readonly PartyPresenter _partyPresenter;
         
         private readonly LobbyShopAction _lobbyShopAction;
+        private readonly LobbyPartyAction _lobbyPartyAction;
 
         public LobbyCompositor(LobbyDomain lobbyDomain,
                                ShopPresenter shopPresenter,
-                               SynergyPresenter synergyPresenter)
+                               SynergyPresenter synergyPresenter,
+                               PartyPresenter partyPresenter)
         {
             _lobbyDomain = lobbyDomain;
             
             _shopPresenter = shopPresenter;
             _synergyPresenter = synergyPresenter;
+            _partyPresenter = partyPresenter;
             
             _lobbyShopAction = new LobbyShopAction(_lobbyDomain);
+            _lobbyPartyAction = new LobbyPartyAction(_lobbyDomain);
         }
 
         public void Initialize()
@@ -36,7 +43,8 @@
 
             var contexts = _lobbyShopAction.CreateShopSlotContexts();
             _shopPresenter.HandleOnRerollShop(contexts);
-            // TODO: 슬롯 시너지 갱신
+            _shopPresenter.RefreshSlotsSynergies(_lobbyDomain.SynergySystem.CurrentContext,
+                                                 _lobbyDomain.PartySystem.HeroContexts);
         }
 
         private void HandleOnClickedShopSlot(HeroDataTableRow heroDataTableRow, int slotIndex)
@@ -47,7 +55,8 @@
             }
 
             _shopPresenter.SetSoldOut(slotIndex);
-            // TODO: 슬롯 시너지 갱신
+            _shopPresenter.RefreshSlotsSynergies(_lobbyDomain.SynergySystem.CurrentContext,
+                                                 _lobbyDomain.PartySystem.HeroContexts);
         }
 
         private void HandleOnClickedShopReroll()
@@ -58,7 +67,8 @@
             }
             
             _shopPresenter.HandleOnRerollShop(contexts);
-            // TODO: 슬롯 시너지 갱신
+            _shopPresenter.RefreshSlotsSynergies(_lobbyDomain.SynergySystem.CurrentContext,
+                                                 _lobbyDomain.PartySystem.HeroContexts);
         }
 
         private void HandleOnRequestShopLevelUp()
@@ -69,7 +79,29 @@
         private void HandleOnSynergyUpdated(SynergyContext synergyContext)
         {
             _synergyPresenter.UpdateSynergySlots(synergyContext, _lobbyDomain.SynergySystem.SynergyDataTableRows);
-            // TODO: 슬롯 시너지 갱신
+            _shopPresenter.RefreshSlotsSynergies(_lobbyDomain.SynergySystem.CurrentContext,
+                                                 _lobbyDomain.PartySystem.HeroContexts);
+        }
+
+        private void HandleUpdateSynergies()
+        {
+            _lobbyDomain.SynergySystem.RefreshSynergies(_lobbyDomain.PartySystem.HeroContexts);
+        }
+
+        private void HandleOnUpdateCountRequested()
+        {
+            _lobbyPartyAction.GetPartyCount(out var currentCount, out var maxCount);
+            _partyPresenter.UpdateCountLabel(currentCount, maxCount);
+        }
+
+        private void HandleOnClickedPartySlot(HeroContext heroContext, int price)
+        {
+            _lobbyPartyAction.SellHero(heroContext, price);
+        }
+
+        private void HandleOnReorderPartyRequested(List<HeroContext> heroContexts)
+        {
+            _lobbyPartyAction.ReorderParty(heroContexts);
         }
 #endregion
 
@@ -77,12 +109,14 @@
         public void BindEvents()
         {
             BindLobbyShopEvents();
+            BindLobbyPartyEvents();
             BindLobbySynergyEvents();
         }
 
         public void ReleaseEvents()
         {
             ReleaseLobbyShopEvents();
+            ReleaseLobbyPartyEvents();
             ReleaseLobbySynergyEvents();
         }
 
@@ -124,6 +158,36 @@
         private void ReleaseLobbySynergyEvents()
         {
             _lobbyDomain.SynergySystem.OnSynergyUpdated -= HandleOnSynergyUpdated;
+        }
+
+        private void BindLobbyPartyEvents()
+        {
+            _lobbyDomain.PartySystem.OnHeroAdded += _partyPresenter.HandleHeroAdded;
+            _lobbyDomain.PartySystem.OnHeroRemoved += _partyPresenter.HandlePartyChanged;
+            _lobbyDomain.PartySystem.OnPartyChanged += _partyPresenter.HandlePartyChanged;
+            _lobbyDomain.PartySystem.OnPartyChanged += HandleUpdateSynergies;
+            _lobbyDomain.PartySystem.OnHeroLevelUpdated += _partyPresenter.HandlePartyChanged;
+            
+            // TODO: 스테이터스 추가 시, 최대 파티 수 업데이트 연결
+
+            _partyPresenter.OnUpdateCountRequested += HandleOnUpdateCountRequested;
+            _partyPresenter.OnClickedPartySlot += HandleOnClickedPartySlot;
+            _partyPresenter.OnReorderPartyRequested += HandleOnReorderPartyRequested;
+        }
+
+        private void ReleaseLobbyPartyEvents()
+        {
+            _lobbyDomain.PartySystem.OnHeroAdded -= _partyPresenter.HandleHeroAdded;
+            _lobbyDomain.PartySystem.OnHeroRemoved -= _partyPresenter.HandlePartyChanged;
+            _lobbyDomain.PartySystem.OnPartyChanged -= _partyPresenter.HandlePartyChanged;
+            _lobbyDomain.PartySystem.OnPartyChanged -= HandleUpdateSynergies;
+            _lobbyDomain.PartySystem.OnHeroLevelUpdated -= _partyPresenter.HandlePartyChanged;
+            
+            // TODO: 스테이터스 추가 시, 최대 파티 수 업데이트 해제
+
+            _partyPresenter.OnUpdateCountRequested -= HandleOnUpdateCountRequested;
+            _partyPresenter.OnClickedPartySlot -= HandleOnClickedPartySlot;
+            _partyPresenter.OnReorderPartyRequested -= HandleOnReorderPartyRequested;
         }
 #endregion
     }

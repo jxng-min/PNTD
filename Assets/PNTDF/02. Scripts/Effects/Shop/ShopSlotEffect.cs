@@ -33,14 +33,14 @@ namespace PNTD
         public Tween PlayPointerDownEffect(RectTransform rectTransform, 
                                            Vector2 originAnchoredPosition)
         {
-            return rectTransform.DOAnchorPosY(originAnchoredPosition.y - anchoredYOffset, fadeDuration)
+            return rectTransform.DOAnchorPosY(originAnchoredPosition.y - anchoredYOffset, translateDuration)
                                 .SetEase(downEase);
         }
 
         public Tween PlayPointerUpEffect(RectTransform rectTransform,
                                          Vector2 originAnchoredPosition)
         {
-            return rectTransform.DOAnchorPosY(originAnchoredPosition.y, fadeDuration)
+            return rectTransform.DOAnchorPosY(originAnchoredPosition.y, translateDuration)
                                 .SetEase(upEase);
         }
     }

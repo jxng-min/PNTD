@@ -26,6 +26,10 @@ namespace PNTD
 
     public enum ESynergyEffect
     {
-        
+        AttackCooldownMultiplier = 0,
+        EnemySlowOnHit = 1,
+        EnemyGoldDropOnKill = 2,
+        OraRangeMultiplier = 3,
+        OraEffectMultiplier = 4,
     }
 }
