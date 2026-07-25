@@ -70,7 +70,23 @@ namespace PNTD
                 return contexts;
             }
 
-            // TODO: 시너지 컨텍스트 구성
+            for (var i = 0; i < 3; i++)
+            {
+                var tier = _lobbyDomain.ShuffleSystem.GetTier(_lobbyDomain.ShopSystem.Level);
+                var hero = _lobbyDomain.ShuffleSystem.GetHeroDataTableRow(tier);
+
+                if (hero == null)
+                {
+                    continue;
+                }
+                
+                var synergies = _lobbyDomain.ShuffleSystem.GetSynergyDataTableRows(hero.synergy);
+                
+                // TODO: 이미 파티에 히어로를 가지고 있는지 확인
+                var canIncreaseSynergy = synergies?.Count > 0;
+
+                contexts.Add(new ShopSlotContext(hero, synergies, canIncreaseSynergy));
+            }
 
             return contexts;
         }
