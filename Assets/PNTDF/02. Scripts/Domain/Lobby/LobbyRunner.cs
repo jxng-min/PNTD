@@ -10,6 +10,7 @@ namespace PNTD
         [SerializeField] private ShopPresenter shopPresenter;
         [SerializeField] private SynergyPresenter synergyPresenter;
         [SerializeField] private PartyPresenter partyPresenter;
+        [SerializeField] private IndexerPresenter indexerPresenter;
 
         private LobbyModel _model;
 
@@ -32,7 +33,7 @@ namespace PNTD
             var partySystem = new PartySystem();
             
             var domain = new LobbyDomain(shopSystem, shuffleSystem, synergySystem, partySystem);
-            var compositor = new LobbyCompositor(domain, shopPresenter, synergyPresenter, partyPresenter);
+            var compositor = new LobbyCompositor(domain, shopPresenter, synergyPresenter, partyPresenter, indexerPresenter);
 
             _model = new LobbyModel(domain, compositor);
             _model.Initialize();

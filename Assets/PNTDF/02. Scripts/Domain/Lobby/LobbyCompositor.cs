@@ -9,6 +9,7 @@ namespace PNTD
         private readonly ShopPresenter _shopPresenter;
         private readonly SynergyPresenter _synergyPresenter;
         private readonly PartyPresenter _partyPresenter;
+        private readonly IndexerPresenter _indexerPresenter;
         
         private readonly LobbyShopAction _lobbyShopAction;
         private readonly LobbyPartyAction _lobbyPartyAction;
@@ -16,13 +17,15 @@ namespace PNTD
         public LobbyCompositor(LobbyDomain lobbyDomain,
                                ShopPresenter shopPresenter,
                                SynergyPresenter synergyPresenter,
-                               PartyPresenter partyPresenter)
+                               PartyPresenter partyPresenter,
+                               IndexerPresenter indexerPresenter)
         {
             _lobbyDomain = lobbyDomain;
             
             _shopPresenter = shopPresenter;
             _synergyPresenter = synergyPresenter;
             _partyPresenter = partyPresenter;
+            _indexerPresenter = indexerPresenter;
             
             _lobbyShopAction = new LobbyShopAction(_lobbyDomain);
             _lobbyPartyAction = new LobbyPartyAction(_lobbyDomain);
@@ -31,6 +34,7 @@ namespace PNTD
         public void Initialize()
         {
             _shopPresenter.Initialize(_lobbyDomain.ShopSystem);
+            _indexerPresenter.Initialize();
         }
 
 #region Event Handlings

@@ -166,6 +166,7 @@ MonoBehaviour:
   shopPresenter: {fileID: 540077116}
   synergyPresenter: {fileID: 6375087746946129831}
   partyPresenter: {fileID: 1485824875}
+  indexerPresenter: {fileID: 1677400127}
 --- !u!1 &429648005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,6 +2115,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1281391824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &684135332 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8277208602228078483, guid: 67ac0c4bac782a74f9afc8f60b3d00a4, type: 3}
+  m_PrefabInstance: {fileID: 540077114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1188951963 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 4473907724274237129, guid: 8cdc4a746c0b8bd40a8026d6590bfaf6, type: 3}
+  m_PrefabInstance: {fileID: 251072653875241774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1281391823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,6 +2158,11 @@ Transform:
   - {fileID: 1893677617}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &1374453495 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1647954168398842007, guid: 64be4ad306d3fd7478398b0fb22251a9, type: 3}
+  m_PrefabInstance: {fileID: 6375087746946129830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439860258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2319,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[PF] Lobby Canvas'
       objectReference: {fileID: 0}
+    - target: {fileID: 1067360156270929623, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}
+      propertyPath: lobbyCanvasGroups.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067360156270929623, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}
+      propertyPath: 'lobbyCanvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 684135332}
+    - target: {fileID: 1067360156270929623, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}
+      propertyPath: 'lobbyCanvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1374453495}
+    - target: {fileID: 1067360156270929623, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}
+      propertyPath: 'lobbyCanvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1188951963}
     - target: {fileID: 2750490606520196619, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2381,6 +2413,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 580937206892580122, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}
   m_PrefabInstance: {fileID: 1495977875}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1677400127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1067360156270929623, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}
+  m_PrefabInstance: {fileID: 1495977875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec725b047ee43d89d759fbd64f754b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.IndexerPresenter
 --- !u!224 &1687813538 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 118141560785703138, guid: 64be4ad306d3fd7478398b0fb22251a9, type: 3}
