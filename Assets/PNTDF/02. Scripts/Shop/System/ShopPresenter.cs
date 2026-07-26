@@ -76,7 +76,14 @@ namespace PNTD
                 }
                 
                 var isActive = index < count && !IsSoldOut(index);
-                shopSlotView.CanvasGroup.gameObject.SetActive(isActive);
+                if (isActive)
+                {
+                    shopSlotView.CanvasGroup.Show();
+                }
+                else
+                {
+                    shopSlotView.CanvasGroup.Hide();
+                }
 
                 if (!isActive)
                 {
