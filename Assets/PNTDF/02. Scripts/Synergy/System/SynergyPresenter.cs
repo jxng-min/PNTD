@@ -34,8 +34,7 @@ namespace PNTD
                 return;
             }
             
-            var loopCount = Mathf.Min(synergyDataTableRows.Count, _synergySlotViews.Length);
-            for (var index = 0; index < loopCount; index++)
+            for (var index = 0; index < _synergySlotViews.Length; index++)
             {
                 var synergySlotView = _synergySlotViews[index];
                 if (synergySlotView == null)
@@ -43,22 +42,29 @@ namespace PNTD
                     continue;
                 }
 
-                if (index >= loopCount)
+                if (index >= synergyDataTableRows.Count)
                 {
                     synergySlotView.gameObject.SetActive(false);
                     continue;
                 }
-                
+
                 var synergyDataTableRow = synergyDataTableRows[index];
+                if (synergyDataTableRow == null)
+                {
+                    synergySlotView.gameObject.SetActive(false);
+                    continue;
+                }
+
                 var synergyCount = _synergyContext.GetCount(synergyDataTableRow.synergy);
                 var isActive = synergyCount > 0;
-                
+
                 synergySlotView.gameObject.SetActive(isActive);
+
                 if (!isActive)
                 {
                     continue;
                 }
-                
+
                 synergySlotView.Initialize(synergyDataTableRow, synergyCount);
                 _synergySlotDict[synergyDataTableRow.synergy] = synergySlotView;
             }

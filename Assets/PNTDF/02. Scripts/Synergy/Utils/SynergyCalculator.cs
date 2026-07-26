@@ -5,7 +5,7 @@ using JxModule;
 
 namespace PNTD
 {
-    public class SynergyCalculator
+    public static class SynergyCalculator
     {
         public static Dictionary<ESynergy, int> Calculate(IEnumerable<HeroContext> heroContexts)
         {

@@ -63,7 +63,7 @@ namespace PNTD
 
             ClearHighlight();
             
-            CurrentStep = Mathf.Clamp(CurrentStep, 0, _maxStep);
+            CurrentStep = Mathf.Clamp(currentStep, 0, _maxStep);
             RefreshStepColors();
         }
         

@@ -30,7 +30,7 @@ namespace PNTD
             }
             
             var synergyCounts = SynergyCalculator.Calculate(heroContexts);
-            // TODO: 시너지 적용 후 현재 컨텍스트 갱신
+            CurrentContext = new SynergyContext(heroContexts, synergyCounts);
             OnSynergyUpdated?.Invoke(CurrentContext);
         }
     }
