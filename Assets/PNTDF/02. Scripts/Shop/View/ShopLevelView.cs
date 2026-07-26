@@ -40,7 +40,7 @@ namespace PNTD
         {
             for (var i = 0; i < expImages.Length; i++)
             {
-                expImages[i].color = i < exp ? disabledColor : enabledColor;
+                expImages[i].color = i < exp ? enabledColor : disabledColor;
             }
         }
 

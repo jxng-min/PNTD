@@ -5,7 +5,7 @@ namespace PNTD
     public class ShopSystem
     {
         private const int MaxLevel = 5;
-        private const int MaxExp = 6;
+        private const int MaxExp = 7;
 
         public event Action<int, int> OnUpdateLevel;
         public event Action OnRequestShopRoll;
