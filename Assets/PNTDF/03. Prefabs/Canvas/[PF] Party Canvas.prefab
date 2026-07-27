@@ -119,7 +119,9 @@ MonoBehaviour:
   partyCountLabel: {fileID: 1633257008887191575}
   partySlotHolder: {fileID: 4514857591444040492}
   layoutWidth: 1200
-  horizontalPadding: 100
+  minimumHorizontalPadding: 100
+  maximumHorizontalPadding: 800
+  paddingDecay: 0.5
   layoutY: 0
 --- !u!1 &1076419371152482891
 GameObject:

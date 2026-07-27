@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace PNTD
 {
@@ -16,6 +17,18 @@ namespace PNTD
             currentCount = _lobbyDomain.PartySystem.HeroContexts.Count;
             // TODO: 스테이터스 추가 시, 최대 개수 연결
             maxCount = currentCount;
+        }
+
+        public void GetPartySlotContext(out IReadOnlyList<HeroContext> heroContexts,
+                                        out int heroCount,
+                                        out int visibleCount)
+        {
+            heroContexts = _lobbyDomain.PartySystem.HeroContexts;
+            heroCount = heroContexts.Count;
+            
+            // TODO: 스테이터스 추가 시, 최대 개수 연결
+            var maxHeroCount = heroContexts.Count;
+            visibleCount = Mathf.Min(heroCount, maxHeroCount);
         }
 
         public void ReorderParty(List<HeroContext> heroContexts)

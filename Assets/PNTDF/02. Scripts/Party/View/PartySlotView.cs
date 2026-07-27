@@ -53,6 +53,21 @@ namespace PNTD
                 ClearPartySlot();
                 return;
             }
+
+            var heroDataTableRow = HeroContext.HeroDataTableRow;
+            gameObject.SetActive(true);
+
+            if (heroImage != null)
+            {
+                heroImage.color = heroDataTableRow.color;
+            }
+
+            if (levelLabel != null)
+            {
+                levelLabel.text = $"{HeroContext.Level}";
+            }
+            
+            UpdateExp(HeroContext.Exp, heroDataTableRow.color);
         }
 
         public void RefreshPartySlot()
@@ -100,7 +115,7 @@ namespace PNTD
 
         private void UpdateExp(int exp, Color color)
         {
-            var clampedExp = Mathf.Clamp(exp + 1, 0, stepImages.Length);
+            var clampedExp = Mathf.Clamp(exp, 0, stepImages.Length);
 
             for (var index = 0; index < stepImages.Length; index++)
             {
@@ -109,12 +124,10 @@ namespace PNTD
                 {
                     continue;
                 }
-                
+
                 stepImage.gameObject.SetActive(true);
 
-                var activeStartIndex = stepImages.Length - clampedExp;
-                var isActive = index >= activeStartIndex;
-                
+                var isActive = index < clampedExp;
                 stepImage.color = isActive ? color : InactiveColor;
             }
         }

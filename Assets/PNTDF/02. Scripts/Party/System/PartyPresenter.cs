@@ -18,7 +18,9 @@ namespace PNTD
         [Space(30f)]
         [BigHeader("Layout")]
         [SerializeField, Min(0f)] private float layoutWidth = 1200f;
-        [SerializeField, Min(0f)] private float horizontalPadding = 100f;
+        [SerializeField, Min(0f)] private float minimumHorizontalPadding = 100f;
+        [SerializeField, Min(0f)] float maximumHorizontalPadding = 300f;
+        [SerializeField, Min(0.01f)] private float paddingDecay = 0.5f;
         [SerializeField] private float layoutY;
 
         private IReadOnlyList<HeroContext> _heroContexts;
@@ -39,7 +41,7 @@ namespace PNTD
 
         private void Awake()
         {
-            _partySlotViews = partySlotHolder.GetComponentsInChildren<PartySlotView>().ToList();
+            _partySlotViews = partySlotHolder.GetComponentsInChildren<PartySlotView>(true).ToList();
             _displayOrders = new List<PartySlotView>(_partySlotViews);
 
             foreach (var partySlotView in _partySlotViews)
@@ -223,7 +225,7 @@ namespace PNTD
             _forceImmediateLayout = true;
 
             var orderedParty = _displayOrders
-                .Where(view => view != null || view.HeroContext != null)
+                .Where(view => view != null && view.HeroContext != null)
                 .Select(view => view.HeroContext)
                 .ToList();
             
@@ -267,19 +269,33 @@ namespace PNTD
             }
 
             index = Mathf.Clamp(index, 0, _visibleCount - 1);
-            
-            var usableWidth = Mathf.Max(0f, layoutWidth - horizontalPadding * 2f);
-            
+
             if (_visibleCount == 1)
             {
                 return new Vector2(0f, layoutY);
             }
+
+            var horizontalPadding = GetHorizontalPadding(_visibleCount);
+            var usableWidth = Mathf.Max(0f, layoutWidth - horizontalPadding * 2f);
 
             var left = -usableWidth * 0.5f;
             var spacing = usableWidth / (_visibleCount - 1);
             var x = left + spacing * index;
 
             return new Vector2(x, layoutY);
+        }
+        
+        private float GetHorizontalPadding(int visibleCount)
+        {
+            if (visibleCount <= 1)
+            {
+                return maximumHorizontalPadding;
+            }
+
+            var paddingRange = maximumHorizontalPadding - minimumHorizontalPadding;
+            var padding = minimumHorizontalPadding + paddingRange * Mathf.Exp(-paddingDecay * (visibleCount - 1));
+
+            return Mathf.Max(minimumHorizontalPadding, padding);
         }
 
         private int GetTargetIndex(float xPosition, int visibleCount)

@@ -103,6 +103,15 @@ namespace PNTD
             _lobbyPartyAction.SellHero(heroContext, price);
         }
 
+        private void HandleOnRefreshPartySlotsRequested()
+        {
+            _lobbyPartyAction.GetPartySlotContext(out var heroContexts, 
+                                                  out var heroCount, 
+                                                  out var visibleCount);
+            
+            _partyPresenter.UpdatePartySlots(heroContexts, heroCount, visibleCount);
+        }
+
         private void HandleOnReorderPartyRequested(List<HeroContext> heroContexts)
         {
             _lobbyPartyAction.ReorderParty(heroContexts);
@@ -176,6 +185,7 @@ namespace PNTD
 
             _partyPresenter.OnUpdateCountRequested += HandleOnUpdateCountRequested;
             _partyPresenter.OnClickedPartySlot += HandleOnClickedPartySlot;
+            _partyPresenter.OnRefreshSlotsRequested += HandleOnRefreshPartySlotsRequested;
             _partyPresenter.OnReorderPartyRequested += HandleOnReorderPartyRequested;
         }
 
@@ -191,6 +201,7 @@ namespace PNTD
 
             _partyPresenter.OnUpdateCountRequested -= HandleOnUpdateCountRequested;
             _partyPresenter.OnClickedPartySlot -= HandleOnClickedPartySlot;
+            _partyPresenter.OnRefreshSlotsRequested -= HandleOnRefreshPartySlotsRequested;
             _partyPresenter.OnReorderPartyRequested -= HandleOnReorderPartyRequested;
         }
 #endregion
