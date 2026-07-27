@@ -32,4 +32,13 @@ namespace PNTD
         OraRangeMultiplier = 3,
         OraEffectMultiplier = 4,
     }
+
+    public enum ETooltipLayout
+    {
+        None            = 0,
+        ShopSlot        = 1,
+        SynergySlot     = 2,
+        PartySlot       = 3,
+        PaletteSlot     = 4,
+    }
 }
