@@ -1,4 +1,9 @@
 ﻿rowID,layout,headerText,tagText,bodyText,additionalHeaderText,additionalTagText,additionalBodyText,isEnable
+Synergy_Ranger,SynergySlot,"{synergyName} - owned: {synergyCount}",,{thresholdText} - Reduces Rangers' attack cooldown by {valueText}.,,,,TRUE
+Synergy_Mage,SynergySlot,"{synergyName} - owned: {synergyCount}",,{thresholdText} - Mages slow enemies by {valueText}.,,,,TRUE
+Synergy_Plunder,SynergySlot,"{synergyName} - owned: {synergyCount}",,{thresholdText} - Defeated enemies have a {valueText} chance to drop gold.,,,,TRUE
+Synergy_Cleric,SynergySlot,"{synergyName} - owned: {synergyCount}",,{synergyDescription}{synergyTierText},,,,TRUE
+
 ShopSlot_Archer,ShopSlot,"{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for <color=#FFCE1B>{deployCost}</color>","Classes : {heroSynergies}","Fires <color=red>1</color> bullet at the nearest enemy.",Lv.3,,Reduces attack cooldown by 30%.,TRUE
 ShopSlot_Handgunner,ShopSlot,"{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for <color=#FFCE1B>{deployCost}</color>","Classes : {heroSynergies}","Fires <color=red>3</color> bullets at the nearest enemy.",Lv.3,,Increases the bullet count to 8.,TRUE
 ShopSlot_Shotgunner,ShopSlot,"{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for <color=#FFCE1B>{deployCost}</color>","Classes : {heroSynergies}","Fires <color=red>3</color> bullets across a 45-degree arc.",Lv.3,,Turns the arc into a full circle and increases the bullet count.,TRUE

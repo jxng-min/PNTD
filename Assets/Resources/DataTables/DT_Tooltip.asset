@@ -113,6 +113,27 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: 
   additionalBodyText: Bullets pierce enemies.
+--- !u!114 &-5274029515253788217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Ranger
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Ranger
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Reduces Rangers'' attack cooldown by {valueText}.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &-4683078545624456898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +156,27 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: 
   additionalBodyText: "Nearby heroes\u2019 DEF Ignore increases to 40%."
+--- !u!114 &-3718996050707910871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Mage
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Mage
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Mages slow enemies by {valueText}.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &-3659907403344229783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +224,27 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: 
   additionalBodyText: Halves the DoT interval.
+--- !u!114 &-2365779413551853955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Cleric
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Cleric
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{synergyDescription}{synergyTierText}'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +261,10 @@ MonoBehaviour:
   dataTableRowName: PNTD.TooltipDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataTableRows:
+  - {fileID: -5274029515253788217}
+  - {fileID: -3718996050707910871}
+  - {fileID: 480641124572162229}
+  - {fileID: -2365779413551853955}
   - {fileID: 7217976862326607653}
   - {fileID: 7667974950013000256}
   - {fileID: 8523920146065610724}
@@ -238,6 +305,28 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: 
   additionalBodyText: Deals double damage to enemies.
+--- !u!114 &480641124572162229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Plunder
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Plunder
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Defeated enemies have a {valueText} chance to drop
+    gold.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &1099249959214426722
 MonoBehaviour:
   m_ObjectHideFlags: 0

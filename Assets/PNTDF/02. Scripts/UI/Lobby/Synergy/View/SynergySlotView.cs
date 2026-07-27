@@ -1,11 +1,12 @@
-﻿using DG.Tweening;
+﻿using System.Collections.Generic;
+using DG.Tweening;
 using JxModule;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace PNTD
 {
-    public class SynergySlotView : MonoBehaviour
+    public class SynergySlotView : MonoBehaviour, ITooltipProvider
     {
         [BigHeader("UI")]
         [SerializeField] private Image synergyImage;
@@ -23,6 +24,7 @@ namespace PNTD
 
         public ESynergy Synergy => _synergyDataTableRow != null ? _synergyDataTableRow.synergy : ESynergy.None;
         public int CurrentStep { get; private set; }
+        public bool CanShowTooltip => _synergyDataTableRow != null;
 
         public void Initialize(SynergyDataTableRow synergyDataTableRow, int currentStep = 0)
         {
@@ -162,6 +164,31 @@ namespace PNTD
         private void OnDestroy()
         {
             ClearHighlight();
+        }
+
+        public TooltipContent GetTooltipContent()
+        {
+            if (_synergyDataTableRow == null)
+            {
+                return null;
+            }
+
+            var tooltipID = _synergyDataTableRow.rowID;
+            var thresholdText = SynergyDataTableUtility.BuildThresholdText(_synergyDataTableRow, CurrentStep);
+            var valueText = SynergyDataTableUtility.BuildValueText(_synergyDataTableRow, CurrentStep);
+            var synergyColor = ColorUtility.ToHtmlStringRGB(_synergyDataTableRow.color);
+
+            return new TooltipContent(
+                tooltipID,
+                new Dictionary<string, object>
+                {
+                    { "synergyName", $"<color=#{synergyColor}>{_synergyDataTableRow.displayName}</color>" },
+                    { "synergyDescription", _synergyDataTableRow.description },
+                    { "synergyCount", $"<color=#FFCE1B>{CurrentStep}</color>" },
+                    { "thresholdText", thresholdText },
+                    { "valueText", valueText },
+                    { "synergyTierText", SynergyDataTableUtility.BuildTierText(_synergyDataTableRow, CurrentStep) },
+                });
         }
     }
 }

@@ -4425,7 +4425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipEffect
   enableAlpha: 1
   disableAlpha: 0
-  fadeDuration: 0.3
+  fadeDuration: 0.2
 --- !u!114 &1177087292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4456,8 +4456,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1177087284}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!225 &1188951963 stripped
 CanvasGroup:
@@ -4793,6 +4793,7 @@ MonoBehaviour:
   tooltipCanvas: {fileID: 1448094269}
   tooltipViews:
   - {fileID: 1177087292}
+  - {fileID: 1550715642}
 --- !u!224 &1485824871 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8122099294386419309, guid: 8cdc4a746c0b8bd40a8026d6590bfaf6, type: 3}
@@ -5090,6 +5091,9 @@ GameObject:
   - component: {fileID: 1550715638}
   - component: {fileID: 1550715637}
   - component: {fileID: 1550715636}
+  - component: {fileID: 1550715643}
+  - component: {fileID: 1550715642}
+  - component: {fileID: 1550715641}
   m_Layer: 0
   m_Name: Synergy Tooltip View
   m_TagString: Untagged
@@ -5116,9 +5120,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 64.0625}
   m_SizeDelta: {x: 137.5, y: 128.125}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1550715636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5212,6 +5216,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550715634}
   m_CullTransparentMesh: 1
+--- !u!114 &1550715641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550715634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f59625e7c364539b50cbd9444baaf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipEffect
+  enableAlpha: 1
+  disableAlpha: 0
+  fadeDuration: 0.2
+--- !u!114 &1550715642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550715634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88de1960254d469b8a9b525045290bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyTooltipView
+  layout: 2
+  tooltipEffect: {fileID: 1550715641}
+  headerLabel: {fileID: 58767637}
+  bodyLabel: {fileID: 34831157}
+--- !u!225 &1550715643
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550715634}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!114 &1677400127 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1067360156270929623, guid: 17a014bb533af8044a3c68a2a5358b71, type: 3}

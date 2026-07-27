@@ -91,6 +91,7 @@ namespace PNTD
             }
             
             _currentTooltipView = tooltipView;
+            _currentTooltipView.RectTransform.SetAsLastSibling();
             _currentTooltipView.Show(tooltipDataTableRow, tooltipContent);
             
             Canvas.ForceUpdateCanvases();

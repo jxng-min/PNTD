@@ -647,8 +647,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2407269737194702794}
+  - component: {fileID: 637926206298709123}
+  - component: {fileID: 703783311456539164}
   - component: {fileID: 514207429527896899}
   - component: {fileID: 6394283388390823062}
+  - component: {fileID: 5404090766207519178}
   m_Layer: 5
   m_Name: '[PF] Synergy Slot'
   m_TagString: Untagged
@@ -676,6 +679,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &637926206298709123
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999799888326386041}
+  m_CullTransparentMesh: 1
+--- !u!114 &703783311456539164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999799888326386041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbe992515c44ccf809860f94011986a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxEmptyGraphic
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &514207429527896899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +739,19 @@ MonoBehaviour:
   maxAlpha: 1
   minAlpha: 0.25
   alphaDuration: 0.35
+--- !u!114 &5404090766207519178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999799888326386041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab44119f558417683ada35280093675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipUI
+  tooltipOffset: {x: 0, y: -50}
 --- !u!1 &8732344806491037811
 GameObject:
   m_ObjectHideFlags: 0

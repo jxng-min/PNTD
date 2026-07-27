@@ -6,7 +6,7 @@ namespace PNTD
     public class StatusSystem
     {
         private int _currentStage = 1;
-        private int _currentGold = 3;
+        private int _currentGold = 999;
         private int _heroCountLimit = 7;
 
         public event Action<int> OnUpdateGold;
