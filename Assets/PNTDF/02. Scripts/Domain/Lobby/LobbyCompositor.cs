@@ -80,6 +80,11 @@ namespace PNTD
             _lobbyShopAction.TryLevelUp();
         }
 
+        private void HandleOnUpdateShopSynergies(SynergyContext synergyContext)
+        {
+            _shopPresenter.RefreshSlotsSynergies(synergyContext, _lobbyDomain.PartySystem.HeroContexts);
+        }
+
         private void HandleOnSynergyUpdated(SynergyContext synergyContext)
         {
             _synergyPresenter.UpdateSynergySlots(synergyContext, _lobbyDomain.SynergySystem.SynergyDataTableRows);
@@ -135,12 +140,12 @@ namespace PNTD
 
         private void BindLobbyShopEvents()
         {
-            // TODO: 스테이터스 추가 시, 골드 업데이트 연결
+            _lobbyDomain.StatusSystem.OnUpdateGold += _shopPresenter.HandleOnUpdateGold;
             
             _lobbyDomain.ShopSystem.OnRequestShopRoll += HandleOnRequestShopRoll;
             _lobbyDomain.ShopSystem.OnUpdateLevel += _shopPresenter.HandleOnUpdateLevel;
             
-            // TODO: 스테이터스 추가 시, 시너지 변경 연결
+            _lobbyDomain.SynergySystem.OnSynergyUpdated += HandleOnUpdateShopSynergies;
 
             _shopPresenter.OnClickedSlot += HandleOnClickedShopSlot;
             _shopPresenter.OnClickedReroll += HandleOnClickedShopReroll;
@@ -150,12 +155,12 @@ namespace PNTD
         
         private void ReleaseLobbyShopEvents()
         {
-            // TODO: 스테이터스 추가 시, 골드 업데이트 해제
+            _lobbyDomain.StatusSystem.OnUpdateGold -= _shopPresenter.HandleOnUpdateGold;
             
             _lobbyDomain.ShopSystem.OnRequestShopRoll -= HandleOnRequestShopRoll;
             _lobbyDomain.ShopSystem.OnUpdateLevel -= _shopPresenter.HandleOnUpdateLevel;
             
-            // TODO: 스테이터스 추가 시, 시너지 변경 해제
+            _lobbyDomain.SynergySystem.OnSynergyUpdated -= HandleOnUpdateShopSynergies;
 
             _shopPresenter.OnClickedSlot -= HandleOnClickedShopSlot;
             _shopPresenter.OnClickedReroll -= HandleOnClickedShopReroll;
@@ -181,7 +186,7 @@ namespace PNTD
             _lobbyDomain.PartySystem.OnPartyChanged += HandleUpdateSynergies;
             _lobbyDomain.PartySystem.OnHeroLevelUpdated += _partyPresenter.HandlePartyChanged;
             
-            // TODO: 스테이터스 추가 시, 최대 파티 수 업데이트 연결
+            _lobbyDomain.StatusSystem.OnUpdateHeroCountLimit += _partyPresenter.HandleHeroCountLimitChanged;
 
             _partyPresenter.OnUpdateCountRequested += HandleOnUpdateCountRequested;
             _partyPresenter.OnClickedPartySlot += HandleOnClickedPartySlot;
@@ -197,7 +202,7 @@ namespace PNTD
             _lobbyDomain.PartySystem.OnPartyChanged -= HandleUpdateSynergies;
             _lobbyDomain.PartySystem.OnHeroLevelUpdated -= _partyPresenter.HandlePartyChanged;
             
-            // TODO: 스테이터스 추가 시, 최대 파티 수 업데이트 해제
+            _lobbyDomain.StatusSystem.OnUpdateHeroCountLimit -= _partyPresenter.HandleHeroCountLimitChanged;
 
             _partyPresenter.OnUpdateCountRequested -= HandleOnUpdateCountRequested;
             _partyPresenter.OnClickedPartySlot -= HandleOnClickedPartySlot;

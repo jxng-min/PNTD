@@ -31,8 +31,9 @@ namespace PNTD
             var shuffleSystem = new ShuffleSystem(_heroDataTable, _synergyDataTable, _shopRateDataTable);
             var synergySystem = new SynergySystem(_synergyDataTable.FindAll<SynergyDataTableRow>().ToArray());
             var partySystem = new PartySystem();
+            var statusSystem = new StatusSystem();
             
-            var domain = new LobbyDomain(shopSystem, shuffleSystem, synergySystem, partySystem);
+            var domain = new LobbyDomain(shopSystem, shuffleSystem, synergySystem, partySystem, statusSystem);
             var compositor = new LobbyCompositor(domain, shopPresenter, synergyPresenter, partyPresenter, indexerPresenter);
 
             _model = new LobbyModel(domain, compositor);

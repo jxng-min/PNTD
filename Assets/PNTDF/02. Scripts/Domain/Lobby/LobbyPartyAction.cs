@@ -15,8 +15,7 @@ namespace PNTD
         public void GetPartyCount(out int currentCount, out int maxCount)
         {
             currentCount = _lobbyDomain.PartySystem.HeroContexts.Count;
-            // TODO: 스테이터스 추가 시, 최대 개수 연결
-            maxCount = currentCount;
+            maxCount = _lobbyDomain.StatusSystem.HeroCountLimit;
         }
 
         public void GetPartySlotContext(out IReadOnlyList<HeroContext> heroContexts,
@@ -26,8 +25,7 @@ namespace PNTD
             heroContexts = _lobbyDomain.PartySystem.HeroContexts;
             heroCount = heroContexts.Count;
             
-            // TODO: 스테이터스 추가 시, 최대 개수 연결
-            var maxHeroCount = heroContexts.Count;
+            var maxHeroCount = _lobbyDomain.StatusSystem.HeroCountLimit;
             visibleCount = Mathf.Min(heroCount, maxHeroCount);
         }
 

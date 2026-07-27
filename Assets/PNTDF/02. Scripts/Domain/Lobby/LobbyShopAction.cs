@@ -18,9 +18,17 @@ namespace PNTD
                 return false;
             }
             
-            // TODO: 현재 파티 목록 확인
-            
-            // TODO: 골드 확인
+            var currentHeroCount = _lobbyDomain.PartySystem.HeroContexts.Count;
+            var maxHeroCount = _lobbyDomain.StatusSystem.HeroCountLimit;
+            if (currentHeroCount >= maxHeroCount)
+            {
+                return false;
+            }
+
+            if (_lobbyDomain.StatusSystem.Gold < heroDataTableRow.cost)
+            {
+                return false;
+            }
             
             var heroContext = new HeroContext(heroDataTableRow);
             if (!_lobbyDomain.PartySystem.TryAddHeroContext(heroContext))
@@ -28,7 +36,7 @@ namespace PNTD
                 return false;
             }
             
-            // TODO: 골드 차감
+            _lobbyDomain.StatusSystem.UpdateGold(-heroDataTableRow.cost);
 
             return true;
         }
@@ -42,9 +50,12 @@ namespace PNTD
                 return false;
             }
             
-            // TODO: 골드 확인
+            if (_lobbyDomain.StatusSystem.Gold < _lobbyDomain.ShopSystem.RerollCost)
+            {
+                return false;
+            }
             
-            // TODO; 골드 차감
+            _lobbyDomain.StatusSystem.UpdateGold(-_lobbyDomain.ShopSystem.RerollCost);
 
             contexts = CreateShopSlotContexts();
             return true;
@@ -56,10 +67,13 @@ namespace PNTD
             {
                 return false;
             }
-
-            // TODO: 골드 확인
             
-            // TODO: 골드 차감
+            if (_lobbyDomain.StatusSystem.Gold < _lobbyDomain.ShopSystem.LevelCost)
+            {
+                return false;
+            }
+            
+            _lobbyDomain.StatusSystem.UpdateGold(-_lobbyDomain.ShopSystem.LevelCost);
             
             _lobbyDomain.ShopSystem.UpdateLevel();
             return true;
