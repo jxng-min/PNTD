@@ -71,6 +71,8 @@ namespace PNTD
             {
                 return;
             }
+            
+            Debug.Log("여기1");
 
             var tooltipDataTableRow = GetTooltipDataTableRow(tooltipContent.TooltipId);
             if (tooltipDataTableRow == null)
@@ -78,6 +80,8 @@ namespace PNTD
                 Hide();
                 return;
             }
+            
+            Debug.Log("여기2");
 
             if (!TryGetTooltipView(tooltipDataTableRow.layout, out var tooltipView))
             {
@@ -85,10 +89,14 @@ namespace PNTD
                 return;
             }
             
+            Debug.Log("여기3");
+            
             if (_currentTooltipView != null && _currentTooltipView != tooltipView)
             {
                 _currentTooltipView.HideImmediate();
             }
+            
+            Debug.Log("여기4");
             
             _currentTooltipView = tooltipView;
             _currentTooltipView.RectTransform.SetAsLastSibling();

@@ -26,7 +26,7 @@ namespace PNTD
 
             var heroColor = ColorUtility.ToHtmlStringRGB(heroDataTableRow.color);
             return new TooltipContent(
-                $"HeroContext_{heroDataTableRow.displayName}",
+                $"PartySlot_{heroDataTableRow.displayName}",
                 new Dictionary<string, object>
                 {
                     { "heroName", $"<color=#{heroColor}>{heroDataTableRow.displayName}</color>" },

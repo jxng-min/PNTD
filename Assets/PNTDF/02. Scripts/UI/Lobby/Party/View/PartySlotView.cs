@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace PNTD
 {
-    public class PartySlotView : ViewBase, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class PartySlotView : ViewBase, IBeginDragHandler, IDragHandler, IEndDragHandler, ITooltipProvider
     {
         private static readonly Color32 InactiveColor = new(80, 80, 80, 255);
         
@@ -37,12 +37,20 @@ namespace PNTD
         public event Action<PartySlotView, PointerEventData> OnSlotEndDrag;
         
         public HeroContext HeroContext { get; private set; }
+        public bool CanShowTooltip => HeroContext != null && !_isDragging;
 
         private void Awake()
         {
             _hoverImageRect = hoverImage.GetComponent<RectTransform>();
             _originAnchoredPosition = _hoverImageRect.anchoredPosition;
             _originScale = _hoverImageRect.localScale;
+        }
+
+        private void OnEnable()
+        {
+            var color = hoverImage.color;
+            color.a = 0f;
+            hoverImage.color = color;
         }
 
         public void Initialize(HeroContext heroContext)
@@ -216,6 +224,11 @@ namespace PNTD
             
             _isDragging = false;
             OnSlotEndDrag?.Invoke(this, eventData);
+        }
+
+        public TooltipContent GetTooltipContent()
+        {
+            return HeroContextTooltipUtility.Create(HeroContext, "Sells");
         }
     }
 }

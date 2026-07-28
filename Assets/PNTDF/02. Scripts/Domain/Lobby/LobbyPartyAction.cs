@@ -41,7 +41,7 @@ namespace PNTD
                 return;
             }
             
-            // TODO: 스테이터스 추가 시, 판매 가격만큼 추가
+            _lobbyDomain.StatusSystem.UpdateGold(price);
             _lobbyDomain.PartySystem.RemoveHeroContext(heroContext);
         }
     }
