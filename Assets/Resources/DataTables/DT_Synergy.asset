@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3588271410307564690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
+  m_Name: Synergy_Warrior
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyDataTableRow
+  rowID: Synergy_Warrior
+  isEnable: 1
+  synergy: 1
+  displayName: Warrior
+  description: 
+  maxStep: 6
+  icon: {fileID: 464222450, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
+  color: {r: 1, g: 0.80784315, b: 0.105882354, a: 1}
+  thresholds: 
+  synergyEffects: 
+  primaryValues: []
+  secondaryValues: []
+--- !u!114 &-2933341009449715878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
+  m_Name: Synergy_Ranger
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyDataTableRow
+  rowID: Synergy_Ranger
+  isEnable: 1
+  synergy: 2
+  displayName: Ranger
+  description: 
+  maxStep: 6
+  icon: {fileID: 608826643, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
+  color: {r: 0.53333336, g: 0.90588236, b: 0.53333336, a: 1}
+  thresholds: 0300000006000000
+  synergyEffects: 0000000000000000
+  primaryValues:
+  - 0.7
+  - 0.4
+  secondaryValues:
+  - 0
+  - 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_Synergy
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: c7d1592d7e9eb3e49b825bba50dcf6d6, type: 3}
+  dataTableRowName: PNTD.SynergyDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataTableRows:
+  - {fileID: -3588271410307564690}
+  - {fileID: 1783906979332910602}
+  - {fileID: -2933341009449715878}
+  - {fileID: 9219606528569619503}
+  - {fileID: 4441783916989561215}
+  dataTableRowScript: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
+--- !u!114 &1783906979332910602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
+  m_Name: Synergy_Mage
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyDataTableRow
+  rowID: Synergy_Mage
+  isEnable: 1
+  synergy: 4
+  displayName: Mage
+  description: 
+  maxStep: 6
+  icon: {fileID: -2118054926, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
+  color: {r: 0.60784316, g: 0.77254903, b: 0.85490197, a: 1}
+  thresholds: 0300000006000000
+  synergyEffects: 0100000001000000
+  primaryValues:
+  - 0.75
+  - 0.5
+  secondaryValues:
+  - 2
+  - 2
+--- !u!114 &4441783916989561215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
+  m_Name: Synergy_Cleric
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyDataTableRow
+  rowID: Synergy_Cleric
+  isEnable: 1
+  synergy: 16
+  displayName: Cleric
+  description: 
+  maxStep: 4
+  icon: {fileID: -1107177425, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
+  color: {r: 0.7764706, g: 0.65882355, b: 1, a: 1}
+  thresholds: 0200000004000000
+  synergyEffects: 0300000004000000
+  primaryValues:
+  - 1.5
+  - 2
+  secondaryValues:
+  - 0
+  - 0
+--- !u!114 &9219606528569619503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
+  m_Name: Synergy_Plunder
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyDataTableRow
+  rowID: Synergy_Plunder
+  isEnable: 1
+  synergy: 8
+  displayName: Plunder
+  description: 
+  maxStep: 4
+  icon: {fileID: -673363206, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
+  color: {r: 0.9490196, g: 0.69411767, b: 0.20392157, a: 1}
+  thresholds: 0200000004000000
+  synergyEffects: 0200000002000000
+  primaryValues:
+  - 0.2
+  - 0.4
+  secondaryValues:
+  - 0
+  - 0

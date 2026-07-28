@@ -1,0 +1,6 @@
+﻿rowID,level,tier1,tier2,tier3,isEnable
+1,1,70,25,5,TRUE
+2,2,55,35,10,TRUE
+3,3,35,45,20,TRUE
+4,4,20,50,30,TRUE
+5,5,10,45,45,TRUE

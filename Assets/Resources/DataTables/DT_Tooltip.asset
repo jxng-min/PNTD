@@ -1,0 +1,908 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8034736271627824222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Artificer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Artificer
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Deploys a hextech robot to an adjacent tile.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: The hextech robot has a 30% chance to slow enemies.
+--- !u!114 &-7676478887893891429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Miner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Miner
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Drops <color=red>1</color> gold every 5/4/3 attacks.
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-7659092550491601260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Saint
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Saint
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Nearby heroes gain <color=red>20</color>% ATK.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Nearby heroes\u2019 ATK increases to 40%."
+--- !u!114 &-7029546099745367705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Saint
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Saint
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Nearby heroes gain <color=red>20</color>% ATK.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Nearby heroes\u2019 ATK increases to 40%."
+--- !u!114 &-6914647886798294392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Magician
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Magician
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Fires a magic orb at the nearest enemy,
+
+    dealing immediate damage
+    and <color=red>DoT</color> damage.'
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: DoT damage is doubled.
+--- !u!114 &-5386201712456967790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Trickshooter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Trickshooter
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires rapid machine-gun shots at the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Bullets pierce enemies.
+--- !u!114 &-5274029515253788217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Ranger
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Ranger
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Reduces Rangers'' attack cooldown by {valueText}.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-4683078545624456898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Alchemist
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Alchemist
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Nearby heroes gain <color=red>20</color>% DEF Ignore.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Nearby heroes\u2019 DEF Ignore increases to 40%."
+--- !u!114 &-4561189870947132965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Explomancer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Explomancer
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Creates a magic circle at the nearest enemy,
+
+    dealing immediate
+    damage and <color=red>DoT</color> to enemies within it.'
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Halves the DoT interval.
+--- !u!114 &-3718996050707910871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Mage
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Mage
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Mages slow enemies by {valueText}.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-3659907403344229783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Artillery
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Artillery
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Launches a massive <color=red>1</color> cannonball that pierces enemies.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Doubles the cannonball\u2019s movement speed."
+--- !u!114 &-3605471055292185483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Explomancer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Explomancer
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Creates a magic circle at the nearest enemy,
+
+    dealing immediate
+    damage and <color=red>DoT</color> damage to enemies within it.'
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Halves the DoT interval.
+--- !u!114 &-3119987286545460644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Wizard
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Wizard
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Creates <color=red>3</color> magic circles on the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Increases the magic circles count to 8.
+--- !u!114 &-3075295032975140461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Artificer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Artificer
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Deploys a hextech robot to an adjacent tile.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: The hextech robot has a 30% chance to slow enemies.
+--- !u!114 &-2365779413551853955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Cleric
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Cleric
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{synergyDescription}{synergyTierText}'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-2324030331795341082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Magician
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Magician
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Fires a magic orb at the nearest enemy,
+
+    dealing immediate damage
+    and <color=red>DoT</color> damage.'
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: DoT damage is doubled.
+--- !u!114 &-862781137380603543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Transmuter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Transmuter
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Fires a magic orb at the nearest enemy,
+
+    disabling its abilities.'
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Roots enemies hit by the magic orb.
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_Tooltip
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: b0c152caabdc43e41a20599c57901cea, type: 3}
+  dataTableRowName: PNTD.TooltipDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataTableRows:
+  - {fileID: -5274029515253788217}
+  - {fileID: -3718996050707910871}
+  - {fileID: 480641124572162229}
+  - {fileID: -2365779413551853955}
+  - {fileID: 7217976862326607653}
+  - {fileID: 7667974950013000256}
+  - {fileID: 8523920146065610724}
+  - {fileID: -3659907403344229783}
+  - {fileID: 5919453794394578136}
+  - {fileID: -5386201712456967790}
+  - {fileID: 5755365923033762741}
+  - {fileID: -6914647886798294392}
+  - {fileID: -3605471055292185483}
+  - {fileID: 1099249959214426722}
+  - {fileID: 8395420507715911809}
+  - {fileID: -8034736271627824222}
+  - {fileID: -7676478887893891429}
+  - {fileID: -4683078545624456898}
+  - {fileID: -7659092550491601260}
+  - {fileID: 1448341485660470076}
+  - {fileID: 45658707242189685}
+  - {fileID: 1705227897017767903}
+  - {fileID: 3635322571531102011}
+  - {fileID: 5436509952966250281}
+  - {fileID: 5227268507470465885}
+  - {fileID: 5996170345341466288}
+  - {fileID: 495760439282386521}
+  - {fileID: -3119987286545460644}
+  - {fileID: -2324030331795341082}
+  - {fileID: -4561189870947132965}
+  - {fileID: 8969021392599596881}
+  - {fileID: -862781137380603543}
+  - {fileID: -3075295032975140461}
+  - {fileID: 7680217399478585820}
+  - {fileID: 6749567048279184742}
+  - {fileID: -7029546099745367705}
+  - {fileID: 5362546307921466219}
+  - {fileID: 8552425043911848873}
+  dataTableRowScript: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+--- !u!114 &45658707242189685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Crusader
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Crusader
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Periodically deals damage to enemies within range.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Deals double damage to enemies.
+--- !u!114 &480641124572162229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Plunder
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Plunder
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Defeated enemies have a {valueText} chance to drop
+    gold.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &495760439282386521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Trickshooter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Trickshooter
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires rapid machine-gun shots at the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Bullets pierce enemies.
+--- !u!114 &1099249959214426722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Telekinetic
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Telekinetic
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: "Creates a gravity field at the nearest enemy\u2019s location,\npulling
+    enemies inward."
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Doubles the gravity field\u2019s duration."
+--- !u!114 &1448341485660470076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Sancitifier
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Sancitifier
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Nearby heroes decrease cooldown by <color=red>20</color>%.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Nearby heroes\u2019 cooldown decreases by 40%."
+--- !u!114 &1705227897017767903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Archer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Archer
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires <color=red>1</color> bullet at the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Reduces attack cooldown by 30%.
+--- !u!114 &3635322571531102011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Handgunner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Handgunner
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires <color=red>3</color> bullets at the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Increases the bullet count to 8.
+--- !u!114 &5227268507470465885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Artillery
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Artillery
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Launches a massive <color=red>1</color> cannonball that pierces enemies.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Doubles the cannonball\u2019s movement speed."
+--- !u!114 &5362546307921466219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Sancitifier
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Sancitifier
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Nearby heroes decrease <color=red>20</color>% Cooldown.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Nearby heroes\u2019 cooldown decreases to 40%."
+--- !u!114 &5436509952966250281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Shotgunner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Shotgunner
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires <color=red>3</color> bullets across a 45-degree arc.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Turns the arc into a full circle and increases the bullet count.
+--- !u!114 &5755365923033762741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Wizard
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Wizard
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Creates <color=red>3</color> magic circles on the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Increases the magic circle count to 8.
+--- !u!114 &5919453794394578136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Sniper
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Sniper
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires <color=red>1</color> high-speed bullet that pierces enemies.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Reduces attack cooldown by 50%.
+--- !u!114 &5996170345341466288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Sniper
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Sniper
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires high-speed <color=red>1</color> bullet that pierces enemies.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Reduces attack cooldown by 50%.
+--- !u!114 &6749567048279184742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Alchemist
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Alchemist
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Nearby heroes gain <color=red>20</color>% DEF Ignore.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Nearby heroes\u2019 DEF Ignore increases to 40%."
+--- !u!114 &7217976862326607653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Archer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Archer
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires <color=red>1</color> bullet at the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Reduces attack cooldown by 30%.
+--- !u!114 &7667974950013000256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Handgunner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Handgunner
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires <color=red>3</color> bullets at the nearest enemy.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Increases the bullet count to 8.
+--- !u!114 &7680217399478585820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Miner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Miner
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Drops <color=red>1</color> gold every 5/4/3 attacks.
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &8395420507715911809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Transmuter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Transmuter
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Fires a magic orb at the nearest enemy,
+
+    disabling its abilities.'
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Roots enemies hit by the magic orb.
+--- !u!114 &8523920146065610724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Shotgunner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Shotgunner
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires <color=red>3</color> bullets across a 45-degree arc.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Turns the arc into a full circle and increases the bullet count.
+--- !u!114 &8552425043911848873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Crusader
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Crusader
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Periodically deals damage to enemies within range.
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: Deals double damage to enemies.
+--- !u!114 &8969021392599596881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Telekinetic
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Telekinetic
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: "Creates a gravity field at the nearest enemy\u2019s location,\npulling
+    enemies inward."
+  additionalHeaderText: Lv.3
+  additionalTagText: 
+  additionalBodyText: "Doubles the gravity field\u2019s duration."
