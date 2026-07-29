@@ -41,4 +41,18 @@ namespace PNTD
         PartySlot       = 3,
         PaletteSlot     = 4,
     }
+
+    public enum EAttack
+    {
+        Physical        = 0,
+        Magic           = 1,
+        True            = 2,
+    }
+
+    public enum EEnemyType
+    {
+        Normal          = 0,
+        Mini            = 1,
+        Elite           = 2,
+    }
 }
