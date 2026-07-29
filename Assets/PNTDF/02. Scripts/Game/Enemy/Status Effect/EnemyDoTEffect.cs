@@ -7,6 +7,8 @@ namespace PNTD
         private readonly float _damagePerTick;
         private readonly float _tickInterval;
         private readonly EAttack _attackType;
+        private readonly float _flatPenetration;
+        private readonly float _percentPenetration;
         
         private float _tickElapsedTime;
         
@@ -20,6 +22,8 @@ namespace PNTD
                               float damagePerTick, 
                               float tickInterval, 
                               float duration,
+                              float flatPenetration,
+                              float percentPenetration,
                               EAttack attackType, 
                               Color? overrideColor = null)
             : base(duration, overrideColor)
@@ -28,6 +32,8 @@ namespace PNTD
             _damagePerTick = damagePerTick;
             _tickInterval = tickInterval;
             _attackType = attackType;
+            _flatPenetration = flatPenetration;
+            _percentPenetration = percentPenetration;
         }
 
         protected override void Tick(float deltaTime)
@@ -49,7 +55,8 @@ namespace PNTD
             }
             
             // TODO: EnemyHealth를 구현한 후 붙여야 함.
-            // Owner.TakeDamage(_damagePerTick, _attackType);
+            var context = new DamageContext(_damagePerTick, _attackType, _flatPenetration, _percentPenetration);
+            Owner.Health.TakeDamage(context);
         }
     }
 }

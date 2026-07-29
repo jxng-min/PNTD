@@ -191,9 +191,9 @@ namespace PNTD
             return AddEffect(new EnemyDisableEffect(effectId, duration, overrideColor));
         }
 
-        public bool AddDoTEffect(string effectId, float damagePerTick, float tickInterval, float duration, EAttack attackType, Color? overrideColor = null)
+        public bool AddDoTEffect(string effectId, float damagePerTick, float tickInterval, float duration, float flatPenetration, float percentPenetration, EAttack attackType, Color? overrideColor = null)
         {
-            return AddEffect(new EnemyDoTEffect(effectId, damagePerTick, tickInterval, duration, attackType, overrideColor));
+            return AddEffect(new EnemyDoTEffect(effectId, damagePerTick, tickInterval, duration, flatPenetration, percentPenetration, attackType, overrideColor));
         }
 
         public bool AddInvincibleEffect(float duration, Color? overrideColor = null)
