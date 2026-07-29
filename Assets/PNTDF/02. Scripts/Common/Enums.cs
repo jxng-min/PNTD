@@ -55,4 +55,20 @@ namespace PNTD
         Mini            = 1,
         Elite           = 2,
     }
+
+    public enum EStackPolicy
+    {
+        Stack               = 0,    // 중첩
+        RefreshDuration     = 1,    // 기존 효과의 지속 시간 갱신
+        ExtendDuration      = 2,    // 기존 효과의 지속 시간 중첩
+        Replace             = 3,    // 대체
+        KeepStrongest       = 4,    // 더 강한 효과만 유지
+    }
+
+    public enum EEffectCategory
+    {
+        Buff                = 0,
+        Debuff              = 1,
+        Control             = 2,
+    }
 }
