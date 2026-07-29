@@ -1,0 +1,4 @@
+﻿rowID,stageID,endDelay,order,isEnable
+Stage_01_Prepare,Stage_01,10,0,TRUE
+Stage_01_01,Stage_01,5,1,TRUE
+Stage_01_02,Stage_01,0,2,TRUE

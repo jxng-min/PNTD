@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7881994872016999981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_01_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_01_Prepare
+  isEnable: 1
+  stageID: Stage_01
+  endDelay: 10
+  order: 0
+--- !u!114 &-5486152258763654478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_01_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_01_01
+  isEnable: 1
+  stageID: Stage_01
+  endDelay: 5
+  order: 1
+--- !u!114 &-2316529408657546491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_01_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_01_02
+  isEnable: 1
+  stageID: Stage_01
+  endDelay: 0
+  order: 2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_Wave
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: 50deeeebd8b6444469da33099ca6bcd0, type: 3}
+  dataTableRowName: PNTD.WaveDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  dataTableRows:
+  - {fileID: -7881994872016999981}
+  - {fileID: -5486152258763654478}
+  - {fileID: -2316529408657546491}
+  dataTableRowScript: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}

@@ -1,0 +1,4 @@
+﻿rowID,waveID,enemyID,spawnCount,startTime,spawnInterval,order,isEnable
+Stage_01_01_01,Stage_01_01,Enemy_Normal,5,0,0.5,0,TRUE
+Stage_01_02_01,Stage_01_02,Enemy_Enrager,1,0,0.5,0,TRUE
+Stage_01_02_02,Stage_01_02,Enemy_Normal,4,0.5,0.5,1,TRUE
