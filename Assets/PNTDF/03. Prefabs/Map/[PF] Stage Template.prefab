@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 1058240575893322966}
   - component: {fileID: 4265646744353434885}
   m_Layer: 0
-  m_Name: PF_Stage_Template
+  m_Name: '[PF] Stage Template'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

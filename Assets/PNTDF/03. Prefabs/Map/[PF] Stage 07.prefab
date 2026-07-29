@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 6750095003254326997}
   - component: {fileID: 4405562157136086146}
   m_Layer: 0
-  m_Name: PF_Stage_07
+  m_Name: '[PF] Stage 07'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

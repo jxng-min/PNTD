@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 8809693395139843252}
   - component: {fileID: 9047539359353999118}
   m_Layer: 0
-  m_Name: PF_Stage_09
+  m_Name: '[PF] Stage 09'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
