@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e71dfb5c1745d7b6e258aec063928d, type: 3}
   m_Name: PrefabManager
   m_EditorClassIdentifier: Assembly-CSharp::JxModule.PrefabManager
-  prefabs: []
+  prefabs:
+  - {fileID: 69457163131605798, guid: 0b9a9b61faeef0c45949e049b43881e8, type: 3}

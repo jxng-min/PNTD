@@ -28,12 +28,84 @@ namespace PNTD
         public EnemyHealth Health => health;
         public EnemyModel Model => model;
         
-        public Hero HitHero { get; private set; }
+        //public Hero LastHitHero { get; private set; }
         public Collider2D Collider => collider2d;
 
         public void Initialize(EnemyContext enemyContext, StagePath stagePath, IEnemyProvider enemyProvider)
         {
+            Context = enemyContext;
+            IsResolved = false;
+            // LastHitHero = null;
             
+            status.Initialize(
+                this, 
+                enemyContext.MoveSpeed, 
+                enemyContext.PhysicalDefense, 
+                enemyContext.MagicResistance, 
+                enemyContext.SlowResistance
+            );
+            
+            health.Initialize(
+                status,
+                enemyContext.MaxHp
+            );
+            
+            movement.Initialize(
+                status,
+                stagePath
+            );
+            
+            model.Initialize(
+                enemyContext.Color,
+                health,
+                status
+            );
+            
+            abiliter.Initialize(
+                this,
+                enemyContext.AbilityData,
+                enemyProvider
+            );
+            
+            health.OnEnemyDied += HandleOnEnemyDied;
+            movement.OnDestinationReached += HandleOnDestinationReached;
+        }
+        
+        // public void SetLastHitHero(Hero hero)
+        // {
+        //     LastHitHero = hero;
+        // }
+
+        private void HandleOnEnemyDied()
+        {
+            if (IsResolved)
+            {
+                return;
+            }
+            
+            IsResolved = true;
+            
+            OnEnemyDied?.Invoke(this);
+            ObjectPoolManager.Instance.Return(gameObject);
+        }
+
+        private void HandleOnDestinationReached()
+        {
+            if (IsResolved)
+            {
+                return;
+            }
+            
+            IsResolved = true;
+            
+            OnDestinationReached?.Invoke(this);
+            ObjectPoolManager.Instance.Return(gameObject);
+        }
+
+        private void OnDisable()
+        {
+            health.OnEnemyDied -= HandleOnEnemyDied;
+            movement.OnDestinationReached -= HandleOnDestinationReached;
         }
     }
 }
