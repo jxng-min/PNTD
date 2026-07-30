@@ -55,4 +55,44 @@ namespace PNTD
         Mini            = 1,
         Elite           = 2,
     }
+
+    public enum EStackPolicy
+    {
+        Stack               = 0,    // 중첩
+        RefreshDuration     = 1,    // 기존 효과의 지속 시간 갱신
+        ExtendDuration      = 2,    // 기존 효과의 지속 시간 중첩
+        Replace             = 3,    // 대체
+        KeepStrongest       = 4,    // 더 강한 효과만 유지
+    }
+
+    public enum EEffectCategory
+    {
+        Buff                = 0,
+        Debuff              = 1,
+        Control             = 2,
+    }
+
+    public enum EEnemyAbility
+    {
+        None                = 0,
+        Normal              = 1,
+        Enrager             = 2,
+        Tanker              = 3,
+        Blinker             = 4,
+        Hexer               = 5,
+        Summoner            = 6,
+        Swarmer             = 7,
+        Baby                = 8,
+    }
+
+    public enum EEnemyTriggerType
+    {
+        None                = 0,
+        OnSpawn             = 1,
+        OnDeath             = 2,
+        OnHit               = 3,
+        OnHpThreshold       = 4,
+        OnInterval          = 5,
+        OnPassive           = 6,
+    }
 }
