@@ -6,7 +6,8 @@
         {
             return abilityData switch
             {
-                _ => null
+                EnragerData enragerData         => new EnragerAbility(enragerData),
+                _                               => null
             };
         }
     }

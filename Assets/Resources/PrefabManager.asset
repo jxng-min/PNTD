@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: PrefabManager
   m_EditorClassIdentifier: Assembly-CSharp::JxModule.PrefabManager
   prefabs:
+  - {fileID: 2971872994421524407, guid: 869b72b020c82d14d8e862f877c9e6ab, type: 3}
   - {fileID: 69457163131605798, guid: 0b9a9b61faeef0c45949e049b43881e8, type: 3}

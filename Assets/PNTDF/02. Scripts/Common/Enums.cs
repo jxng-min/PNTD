@@ -71,4 +71,28 @@ namespace PNTD
         Debuff              = 1,
         Control             = 2,
     }
+
+    public enum EEnemyAbility
+    {
+        None                = 0,
+        Normal              = 1,
+        Enrager             = 2,
+        Tanker              = 3,
+        Blinker             = 4,
+        Hexer               = 5,
+        Summoner            = 6,
+        Swarmer             = 7,
+        Baby                = 8,
+    }
+
+    public enum EEnemyTriggerType
+    {
+        None                = 0,
+        OnSpawn             = 1,
+        OnDeath             = 2,
+        OnHit               = 3,
+        OnHpThreshold       = 4,
+        OnInterval          = 5,
+        OnPassive           = 6,
+    }
 }
