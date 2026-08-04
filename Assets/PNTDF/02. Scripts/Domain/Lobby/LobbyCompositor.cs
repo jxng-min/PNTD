@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+using System.Collections;
+
 namespace PNTD
 {
     public class LobbyCompositor
@@ -121,6 +123,22 @@ namespace PNTD
         {
             _lobbyPartyAction.ReorderParty(heroContexts);
         }
+
+        private void HandleOnClickedPlay()
+        {
+            LoadingManager.Instance.StartCoroutine(PlayRoutine());
+        }
+
+        private IEnumerator PlayRoutine()
+        {
+            yield return LoadingManager.Instance.VirtualLoadScene("<pop>loading...</pop>", HideLobbyRoutine);
+        }
+
+        private IEnumerator HideLobbyRoutine()
+        {
+            _lobbyDomain.VisibilitySystem.Hide();
+            yield break;
+        }
 #endregion
 
 #region Event Bindings
@@ -129,6 +147,7 @@ namespace PNTD
             BindLobbyShopEvents();
             BindLobbyPartyEvents();
             BindLobbySynergyEvents();
+            BindLobbyFlowEvents();
         }
 
         public void ReleaseEvents()
@@ -136,6 +155,7 @@ namespace PNTD
             ReleaseLobbyShopEvents();
             ReleaseLobbyPartyEvents();
             ReleaseLobbySynergyEvents();
+            ReleaseLobbyFlowEvents();
         }
 
         private void BindLobbyShopEvents()
@@ -208,6 +228,16 @@ namespace PNTD
             _partyPresenter.OnClickedPartySlot -= HandleOnClickedPartySlot;
             _partyPresenter.OnRefreshSlotsRequested -= HandleOnRefreshPartySlotsRequested;
             _partyPresenter.OnReorderPartyRequested -= HandleOnReorderPartyRequested;
+        }
+
+        private void BindLobbyFlowEvents()
+        {
+            _indexerPresenter.OnClickedPlay += HandleOnClickedPlay;
+        }
+
+        private void ReleaseLobbyFlowEvents()
+        {
+            _indexerPresenter.OnClickedPlay -= HandleOnClickedPlay;
         }
 #endregion
     }
