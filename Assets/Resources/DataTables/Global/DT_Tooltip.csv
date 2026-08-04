@@ -1,4 +1,5 @@
 ﻿rowID,layout,headerText,tagText,bodyText,additionalHeaderText,additionalTagText,additionalBodyText,isEnable
+ShopLevel,ShopLevel,"Shop - <color=#FFCE1B>Lv.{level}</color>",,"Tier 1 : <color=#FFCE1B>{tier1}%\n</color>Tier 2 : <color=#FFCE1B>{tier2}%</color>\nTier 3 : <color=#FFCE1B>{tier3}%</color>",,,,TRUE
 Synergy_Ranger,SynergySlot,"{synergyName} - owned: {synergyCount}",,{thresholdText} - Reduces Rangers' attack cooldown by {valueText}.,,,,TRUE
 Synergy_Mage,SynergySlot,"{synergyName} - owned: {synergyCount}",,{thresholdText} - Mages slow enemies by {valueText}.,,,,TRUE
 Synergy_Plunder,SynergySlot,"{synergyName} - owned: {synergyCount}",,{thresholdText} - Defeated enemies have a {valueText} chance to drop gold.,,,,TRUE

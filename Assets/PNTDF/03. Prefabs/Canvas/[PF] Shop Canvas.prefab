@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 4711614835768365250}
   - component: {fileID: 5049885198888584492}
   - component: {fileID: 2172838116997737238}
+  - component: {fileID: 236400100004200101}
   m_Layer: 5
   m_Name: Level View
   m_TagString: Untagged
@@ -251,6 +252,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxButton
   animator: {fileID: 0}
+--- !u!114 &236400100004200101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438041963557798905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab44119f558417683ada35280093675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipUI
+  tooltipOffset: {x: 0, y: -60}
 --- !u!1 &2732676042297955524
 GameObject:
   m_ObjectHideFlags: 0
