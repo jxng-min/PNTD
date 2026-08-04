@@ -3720,6 +3720,17 @@ Transform:
   - {fileID: 1100335381}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1983535589 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1652715100902926062, guid: 8e9c96543225bfa448ba03070fc50d32, type: 3}
+  m_PrefabInstance: {fileID: 76284950169472858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086988b36c4c4dc6bd0b60313342a7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.ShopLevelTooltipView
 --- !u!1001 &76284950169472858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3812,10 +3823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[PF] Tooltip Canvas'
       objectReference: {fileID: 0}
-    - target: {fileID: 4069782195506482324, guid: 8e9c96543225bfa448ba03070fc50d32, type: 3}
-      propertyPath: m_Camera
+    - target: {fileID: 3773576280913525074, guid: 8e9c96543225bfa448ba03070fc50d32, type: 3}
+      propertyPath: 'tooltipViews.Array.data[1]'
       value: 
-      objectReference: {fileID: 579142842}
+      objectReference: {fileID: 1983535589}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -32,6 +32,17 @@ namespace PNTD
             _fadeTween = tooltipEffect.PlayShowTooltipEffect(CanvasGroup);
         }
 
+        public void Refresh(TooltipDataTableRow tooltipDataTableRow,
+                            TooltipContent tooltipContent)
+        {
+            if (tooltipDataTableRow == null || tooltipContent == null)
+            {
+                return;
+            }
+
+            Bind(tooltipDataTableRow, tooltipContent);
+        }
+
         public void Hide()
         {
             if (!gameObject.activeSelf)

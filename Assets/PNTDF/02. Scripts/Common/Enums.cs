@@ -40,6 +40,7 @@ namespace PNTD
         SynergySlot     = 2,
         PartySlot       = 3,
         PaletteSlot     = 4,
+        ShopLevel       = 5,
     }
 
     public enum EAttack

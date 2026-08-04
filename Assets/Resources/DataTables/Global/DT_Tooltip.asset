@@ -401,6 +401,7 @@ MonoBehaviour:
   dataTableRowName: PNTD.TooltipDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   dataTableRows:
+  - {fileID: 236400100004200001}
   - {fileID: -5274029515253788217}
   - {fileID: -3718996050707910871}
   - {fileID: 480641124572162229}
@@ -462,6 +463,32 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: 
   additionalBodyText: Deals double damage to enemies.
+--- !u!114 &236400100004200001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopLevel
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopLevel
+  isEnable: 1
+  layout: 5
+  headerText: Shop - <color=#FFCE1B>Lv.{level}</color>
+  tagText: 
+  bodyText: 'Tier 1 : <color=#FFCE1B>{tier1}%
+
+    </color>Tier 2 : <color=#FFCE1B>{tier2}%</color>
+
+    Tier
+    3 : <color=#FFCE1B>{tier3}%</color>'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &480641124572162229
 MonoBehaviour:
   m_ObjectHideFlags: 0

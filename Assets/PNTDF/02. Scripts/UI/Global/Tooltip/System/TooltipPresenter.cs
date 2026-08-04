@@ -99,6 +99,35 @@ namespace PNTD
             Move(screenPosition, tooltipOffset);
         }
 
+        public void Refresh(TooltipContent tooltipContent)
+        {
+            if (_currentTooltipView == null)
+            {
+                return;
+            }
+
+            if (tooltipContent is not { IsValid: true })
+            {
+                Hide();
+                return;
+            }
+
+            var tooltipDataTableRow = GetTooltipDataTableRow(tooltipContent.TooltipId);
+            if (tooltipDataTableRow == null)
+            {
+                Hide();
+                return;
+            }
+
+            if (_currentTooltipView.Layout != tooltipDataTableRow.layout)
+            {
+                return;
+            }
+
+            _currentTooltipView.Refresh(tooltipDataTableRow, tooltipContent);
+            Canvas.ForceUpdateCanvases();
+        }
+
         public void Move(Vector2 screenPosition, Vector2 tooltipOffset)
         {
             if (_currentTooltipView == null || tooltipCanvas == null || _canvasRectTransform == null)

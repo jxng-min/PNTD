@@ -1,13 +1,17 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using JxModule;
+using JxModule.DataTable;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace PNTD
 {
-    public class ShopLevelView : ViewBase
+    public class ShopLevelView : ViewBase, ITooltipProvider
     {
+        private const string TooltipId = "ShopLevel";
+
         [BigHeader("UI")]
         [SerializeField] private JxButton levelUpButton;
         [SerializeField] private TMP_Text levelLabel;
@@ -19,9 +23,14 @@ namespace PNTD
         [SerializeField] private Color disabledColor;
 
         public event Action OnRequestLevelUp;
+        public bool CanShowTooltip => GetShopRateDataTableRow() != null;
+
+        private TooltipUI _tooltipUI;
+        private int _level;
 
         private void Awake()
         {
+            _tooltipUI = GetComponent<TooltipUI>();
             levelUpButton.AddListener(RequestLevelUp);   
         }
 
@@ -32,8 +41,29 @@ namespace PNTD
 
         public void UpdateLevel(int level, int exp)
         {
+            _level = level;
             levelLabel.text = level.ToString();
             UpdateExp(exp);
+            _tooltipUI?.Refresh();
+        }
+
+        public TooltipContent GetTooltipContent()
+        {
+            var shopRateDataTableRow = GetShopRateDataTableRow();
+            if (shopRateDataTableRow == null)
+            {
+                return null;
+            }
+
+            return new TooltipContent(
+                TooltipId,
+                new Dictionary<string, object>
+                {
+                    { "level", shopRateDataTableRow.level },
+                    { "tier1", shopRateDataTableRow.tier1 },
+                    { "tier2", shopRateDataTableRow.tier2 },
+                    { "tier3", shopRateDataTableRow.tier3 },
+                });
         }
 
         private void UpdateExp(int exp)
@@ -47,6 +77,11 @@ namespace PNTD
         private void RequestLevelUp()
         {
             OnRequestLevelUp?.Invoke();
+        }
+
+        private ShopRateDataTableRow GetShopRateDataTableRow()
+        {
+            return DataTableManager.FindRow<ShopRateDataTableRow>(row => row.level == _level);
         }
 
         private void OnDestroy()
