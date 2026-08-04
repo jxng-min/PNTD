@@ -30,6 +30,8 @@ namespace PNTD
             clearGroup.Hide();
             
             CreateDissolveParticle(clearParticleColor, clearParticleScale, clearLabel.transform as RectTransform);
+            
+            yield return new WaitForSeconds(delayTime);
         }
         
         private void CreateDissolveParticle(Color color, float scale, RectTransform rectTransform)

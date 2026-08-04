@@ -15,7 +15,7 @@ MonoBehaviour:
   rowID: Stage_01_Prepare
   isEnable: 1
   stageID: Stage_01
-  endDelay: 10
+  endDelay: 3
   order: 0
 --- !u!114 &-5486152258763654478
 MonoBehaviour:

@@ -14,6 +14,7 @@ namespace PNTD
         [SerializeField] private PartyPresenter partyPresenter;
         [SerializeField] private IndexerPresenter indexerPresenter;
         [SerializeField] private MapRunner mapRunner;
+        [SerializeField] private StageRunner stageRunner;
         [SerializeField] private CanvasGroup[] lobbyCanvasGroups;
 
         private LobbyModel _model;
@@ -45,7 +46,8 @@ namespace PNTD
             _model.Initialize();
             
             mapRunner ??= FindFirstObjectByType<MapRunner>();
-            GameFlow.Instance.Initialize(_model, mapRunner);
+            stageRunner ??= FindFirstObjectByType<StageRunner>();
+            GameFlow.Instance.Initialize(_model, mapRunner, stageRunner);
         }
 
         public void Roll()

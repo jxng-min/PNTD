@@ -8,12 +8,15 @@ namespace PNTD
     {
         private LobbyModel _lobbyModel;
         private MapRunner _mapRunner;
+        private StageRunner _stageRunner;
+        private MapContext _currentMapContext;
         private bool _isPlaying;
 
-        public void Initialize(LobbyModel lobbyModel, MapRunner mapRunner)
+        public void Initialize(LobbyModel lobbyModel, MapRunner mapRunner, StageRunner stageRunner)
         {
             _lobbyModel = lobbyModel;
             _mapRunner = mapRunner;
+            _stageRunner = stageRunner;
         }
 
         public void Play()
@@ -28,7 +31,7 @@ namespace PNTD
 
         private IEnumerator PlayRoutine()
         {
-            if (_lobbyModel == null || _mapRunner == null)
+            if (_lobbyModel == null || _mapRunner == null || _stageRunner == null)
             {
                 yield break;
             }
@@ -39,6 +42,7 @@ namespace PNTD
             var loadingText = $"<pop>Stage {stage}</pop>";
             
             yield return LoadingManager.Instance.VirtualLoadScene(loadingText, LoadStageRoutine);
+            yield return _stageRunner.PlayStageRoutine();
 
             _isPlaying = false;
         }
@@ -48,8 +52,13 @@ namespace PNTD
             var stage = _lobbyModel.Domain.StatusSystem.Stage;
             var stageId = $"Stage_{stage:00}";
             
-            _lobbyModel.Domain.VisibilitySystem.Hide();
-            _mapRunner.LoadMap(stageId);
+            _lobbyModel.Hide();
+            
+            _currentMapContext = _mapRunner.LoadMap(stageId);
+            if (_currentMapContext != null)
+            {
+                _stageRunner.Initialize(_currentMapContext, stage);
+            }
 
             yield break;
         }

@@ -101,7 +101,7 @@ namespace PNTD
 
             if (waveContext?.Turns == null || waveContext.Turns.Count == 0)
             {
-                _isWaveRunning = false;
+                _isWaveRunning = true;
                 TryCompleteWave();
                 return;
             }
