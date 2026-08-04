@@ -7,18 +7,21 @@
         public SynergySystem SynergySystem { get; }
         public PartySystem PartySystem { get; }
         public StatusSystem StatusSystem { get; }
+        public LobbyVisibilitySystem VisibilitySystem { get; }
 
         public LobbyDomain(ShopSystem shopSystem, 
                            ShuffleSystem shuffleSystem,
                            SynergySystem synergySystem,
                            PartySystem partySystem,
-                           StatusSystem statusSystem)
+                           StatusSystem statusSystem,
+                           LobbyVisibilitySystem visibilitySystem)
         {
             ShopSystem = shopSystem;
             ShuffleSystem = shuffleSystem;
             SynergySystem = synergySystem;
             PartySystem = partySystem;
             StatusSystem = statusSystem;
+            VisibilitySystem = visibilitySystem;
         }
 
         public void Initialize()

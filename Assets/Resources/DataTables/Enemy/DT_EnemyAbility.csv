@@ -1,0 +1,2 @@
+﻿rowID,ability,coolDown,trigger,isEnable
+Ability_Enrager,Enrager,,OnDeath,TRUE

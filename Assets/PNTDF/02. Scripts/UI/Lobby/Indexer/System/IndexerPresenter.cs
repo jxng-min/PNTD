@@ -1,4 +1,6 @@
 ﻿using DG.Tweening;
+using System;
+using System.Linq;
 using JxModule;
 using UnityEngine;
 
@@ -8,9 +10,12 @@ namespace PNTD
     {
         [BigHeader("UI")]
         [SerializeField] private Transform indexerHolder;
+        [SerializeField] private JxButton playButton;
         [SerializeField] private CanvasGroup[] lobbyCanvasGroups;
 
         private IndexerSlotView[] _indexerSlotViews;
+
+        public event Action OnClickedPlay;
 
         private void Awake()
         {
@@ -22,6 +27,10 @@ namespace PNTD
                 indexerSlotView.Initialize(index);
                 indexerSlotView.OnClickedIndexerSlot += HandleOnClickedIndexerSlot;
             }
+
+            playButton ??= GetComponentsInChildren<JxButton>(true)
+                .FirstOrDefault(button => button != null && button.name == "Play Button");
+            playButton?.AddListener(HandleOnClickedPlay);
         }
 
         public void Initialize()
@@ -77,8 +86,15 @@ namespace PNTD
             // TODO: 씬 재로드
         }
 
+        private void HandleOnClickedPlay()
+        {
+            OnClickedPlay?.Invoke();
+        }
+
         private void OnDestroy()
         {
+            playButton?.RemoveListener(HandleOnClickedPlay);
+
             if (_indexerSlotViews == null)
             {
                 return;

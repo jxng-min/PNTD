@@ -1,0 +1,150 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using JxModule;
+using JxModule.DataTable;
+using UnityEngine;
+
+namespace PNTD
+{
+    public class StageRunner : MonoBehaviour
+    {
+        [BigHeader("Presenter")]
+        [SerializeField] private FlowPresenter flowPresenter;
+        [SerializeField] private ProgressView progressView;
+        [SerializeField] private ResultPresenter resultPresenter;
+        [SerializeField] private CanvasGroup[] stageCanvasGroups;
+
+        private StageModel _model;
+
+        private DataTable _enemyDataTable;
+        private DataTable _enemyAbilityDataTable;
+        private DataTable _enragerDataTable;
+        private int _interest;
+
+        private void Awake()
+        {
+            _enemyDataTable = DataTableManager.FindTable<EnemyDataTableRow>("DT_Enemy");
+            _enemyAbilityDataTable = DataTableManager.FindTable<EnemyAbilityDataTableRow>("DT_EnemyAbility");
+            _enragerDataTable = DataTableManager.FindTable<EnragerDataTableRow>("DT_Enrager");
+        }
+
+        public void Initialize(MapContext mapContext, int stage, int interest)
+        {
+            DisposeModel();
+            
+            if (mapContext?.StageContext == null || mapContext.Map == null)
+            {
+                return;
+            }
+
+            _interest = interest;
+
+            var enemyBuilder = new EnemyBuilder(_enemyDataTable, _enemyAbilityDataTable, _enragerDataTable);
+            var enemyFactory = new EnemyFactory(enemyBuilder);
+            var stageSystem = new StageSystem();
+            var waveSystem = new WaveSystem();
+            var visibilitySystem = new StageVisibilitySystem(GetStageCanvasGroups());
+            
+            enemyFactory.Initialize(mapContext.Map.StagePath, waveSystem);
+            
+            var runtimeStageContext = new RStageContext();
+            var domain = new StageDomain(stageSystem, waveSystem, visibilitySystem);
+            var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter);
+
+            _model = new StageModel(domain, compositor, runtimeStageContext);
+            _model.Initialize(enemyFactory, mapContext.StageContext, stage);
+            _model.Show();
+        }
+
+        public IEnumerator PlayStageRoutine()
+        {
+            if (_model == null)
+            {
+                yield break;
+            }
+
+            _model.StartStage();
+            yield return _model.WaitUntilStageEnd();
+
+            if (_model.StageResult == StageModel.EStageResult.Clear && flowPresenter != null)
+            {
+                yield return flowPresenter.Clear();
+            }
+
+            if (resultPresenter == null)
+            {
+                yield break;
+            }
+
+            switch (_model.StageResult)
+            {
+                case StageModel.EStageResult.Clear:
+                    yield return resultPresenter.StageClear(_model.RewardGold, _model.BonusGold, _interest);
+                    break;
+                
+                case StageModel.EStageResult.Over:
+                    yield return resultPresenter.StageOver(_model.ReachedStage);
+                    break;
+            }
+        }
+
+        private void Update()
+        {
+            _model?.Tick(Time.deltaTime);
+        }
+
+        private void OnDestroy()
+        {
+            DisposeModel();
+        }
+
+        private void DisposeModel()
+        {
+            _model?.Dispose();
+            _model = null;
+        }
+
+        private CanvasGroup[] GetStageCanvasGroups()
+        {
+            if (stageCanvasGroups is { Length: > 0 })
+            {
+                return stageCanvasGroups;
+            }
+
+            var presenters = new MonoBehaviour[]
+            {
+                flowPresenter,
+                progressView,
+                resultPresenter
+            };
+
+            var canvasGroups = new List<CanvasGroup>();
+            foreach (var presenter in presenters)
+            {
+                if (presenter == null)
+                {
+                    continue;
+                }
+
+                var canvasGroup = presenter.GetComponent<CanvasGroup>();
+                if (canvasGroup != null)
+                {
+                    canvasGroups.Add(canvasGroup);
+                    continue;
+                }
+
+                canvasGroup = presenter
+                    .GetComponentsInParent<CanvasGroup>(true)
+                    .FirstOrDefault(group => group != null);
+
+                if (canvasGroup != null)
+                {
+                    canvasGroups.Add(canvasGroup);
+                }
+            }
+
+            return canvasGroups.Distinct().ToArray();
+        }
+    }
+}

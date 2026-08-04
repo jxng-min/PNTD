@@ -254,7 +254,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.IndexerPresenter
   indexerHolder: {fileID: 1397934782506863313}
-  lobbyCanvasGroups: []
+  playButton: {fileID: 2262239691892982806}
+  lobbyCanvasGroups:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1042924104701653041
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,8 +447,8 @@ CanvasGroup:
   m_GameObject: {fileID: 1189072194761021125}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1369470648043622919
 GameObject:
@@ -2291,6 +2296,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
   m_PrefabInstance: {fileID: 8080612450258665048}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2262239691892982806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 8080612450258665048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798852885780907986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
 --- !u!1 &2369433177790114425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -2342,7 +2358,7 @@ MonoBehaviour:
   targetImage: {fileID: 3718715657419581142}
   punchScaleAmount: 0.1
   punchDuration: 0.5
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.78239405, b: 0.3915094, a: 1}
   highlightDuration: 0.2
   yOffset: 10
   translationDuration: 0.1

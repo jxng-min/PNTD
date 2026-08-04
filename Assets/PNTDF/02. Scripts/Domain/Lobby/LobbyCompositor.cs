@@ -121,6 +121,11 @@ namespace PNTD
         {
             _lobbyPartyAction.ReorderParty(heroContexts);
         }
+
+        private void HandleOnClickedPlay()
+        {
+            GameFlow.Instance.Play();
+        }
 #endregion
 
 #region Event Bindings
@@ -129,6 +134,7 @@ namespace PNTD
             BindLobbyShopEvents();
             BindLobbyPartyEvents();
             BindLobbySynergyEvents();
+            BindLobbyFlowEvents();
         }
 
         public void ReleaseEvents()
@@ -136,6 +142,7 @@ namespace PNTD
             ReleaseLobbyShopEvents();
             ReleaseLobbyPartyEvents();
             ReleaseLobbySynergyEvents();
+            ReleaseLobbyFlowEvents();
         }
 
         private void BindLobbyShopEvents()
@@ -208,6 +215,16 @@ namespace PNTD
             _partyPresenter.OnClickedPartySlot -= HandleOnClickedPartySlot;
             _partyPresenter.OnRefreshSlotsRequested -= HandleOnRefreshPartySlotsRequested;
             _partyPresenter.OnReorderPartyRequested -= HandleOnReorderPartyRequested;
+        }
+
+        private void BindLobbyFlowEvents()
+        {
+            _indexerPresenter.OnClickedPlay += HandleOnClickedPlay;
+        }
+
+        private void ReleaseLobbyFlowEvents()
+        {
+            _indexerPresenter.OnClickedPlay -= HandleOnClickedPlay;
         }
 #endregion
     }

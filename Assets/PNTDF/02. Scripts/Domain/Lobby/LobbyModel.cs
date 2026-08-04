@@ -22,5 +22,15 @@
         {
             Compositor.ReleaseEvents();
         }
+
+        public void Show()
+        {
+            Domain.VisibilitySystem.Show();
+        }
+
+        public void Hide()
+        {
+            Domain.VisibilitySystem.Hide();
+        }
     }
 }
