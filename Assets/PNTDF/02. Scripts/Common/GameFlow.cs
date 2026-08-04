@@ -57,7 +57,8 @@ namespace PNTD
             _currentMapContext = _mapRunner.LoadMap(stageId);
             if (_currentMapContext != null)
             {
-                _stageRunner.Initialize(_currentMapContext, stage);
+                var interest = _lobbyModel.Domain.StatusSystem.Interest;
+                _stageRunner.Initialize(_currentMapContext, stage, interest);
             }
 
             yield break;

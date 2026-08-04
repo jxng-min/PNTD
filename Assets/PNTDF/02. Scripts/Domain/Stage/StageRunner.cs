@@ -12,6 +12,7 @@ namespace PNTD
         [BigHeader("Presenter")]
         [SerializeField] private FlowPresenter flowPresenter;
         [SerializeField] private ProgressView progressView;
+        [SerializeField] private ResultPresenter resultPresenter;
         [SerializeField] private CanvasGroup[] stageCanvasGroups;
 
         private StageModel _model;
@@ -19,6 +20,7 @@ namespace PNTD
         private DataTable _enemyDataTable;
         private DataTable _enemyAbilityDataTable;
         private DataTable _enragerDataTable;
+        private int _interest;
 
         private void Awake()
         {
@@ -27,7 +29,7 @@ namespace PNTD
             _enragerDataTable = DataTableManager.FindTable<EnragerDataTableRow>("DT_Enrager");
         }
 
-        public void Initialize(MapContext mapContext, int stage)
+        public void Initialize(MapContext mapContext, int stage, int interest)
         {
             DisposeModel();
             
@@ -35,6 +37,8 @@ namespace PNTD
             {
                 return;
             }
+
+            _interest = interest;
 
             var enemyBuilder = new EnemyBuilder(_enemyDataTable, _enemyAbilityDataTable, _enragerDataTable);
             var enemyFactory = new EnemyFactory(enemyBuilder);
@@ -44,10 +48,11 @@ namespace PNTD
             
             enemyFactory.Initialize(mapContext.Map.StagePath, waveSystem);
             
+            var runtimeStageContext = new RStageContext();
             var domain = new StageDomain(stageSystem, waveSystem, visibilitySystem);
-            var compositor = new StageCompositor(domain, new RStageContext(), progressView, flowPresenter);
+            var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter);
 
-            _model = new StageModel(domain, compositor);
+            _model = new StageModel(domain, compositor, runtimeStageContext);
             _model.Initialize(enemyFactory, mapContext.StageContext, stage);
             _model.Show();
         }
@@ -62,9 +67,25 @@ namespace PNTD
             _model.StartStage();
             yield return _model.WaitUntilStageEnd();
 
-            if (flowPresenter != null)
+            if (_model.StageResult == StageModel.EStageResult.Clear && flowPresenter != null)
             {
                 yield return flowPresenter.Clear();
+            }
+
+            if (resultPresenter == null)
+            {
+                yield break;
+            }
+
+            switch (_model.StageResult)
+            {
+                case StageModel.EStageResult.Clear:
+                    yield return resultPresenter.StageClear(_model.RewardGold, _model.BonusGold, _interest);
+                    break;
+                
+                case StageModel.EStageResult.Over:
+                    yield return resultPresenter.StageOver(_model.ReachedStage);
+                    break;
             }
         }
 
@@ -94,7 +115,8 @@ namespace PNTD
             var presenters = new MonoBehaviour[]
             {
                 flowPresenter,
-                progressView
+                progressView,
+                resultPresenter
             };
 
             var canvasGroups = new List<CanvasGroup>();
