@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JxModule;
+using UnityEngine;
 
 namespace PNTD
 {
@@ -68,7 +69,7 @@ namespace PNTD
 
         private void OnParticleSystemStopped()
         {
-            Destroy(gameObject);
+            ObjectPoolManager.Instance.Return(gameObject);
         }
     }
 }
