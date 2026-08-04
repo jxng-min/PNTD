@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_07
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 6657291481499247271, guid: 07afc179d4984ed478d11ddf2cf32b0c, type: 3}
 --- !u!114 &-6893777159304876872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_04
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 7853586469896403741, guid: 00fb46a9689af894698099142a979bba, type: 3}
 --- !u!114 &-6427367935606111284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_09
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 7518752606629031044, guid: 9cab4f61f9d5db943bb4e3f8277bcfaa, type: 3}
 --- !u!114 &-4755690019960222505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_03
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 1229056615604292111, guid: e656e7f34c9eb1849be221ac85a06dc0, type: 3}
 --- !u!114 &-4415125719638136623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_08
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 8440414862928509306, guid: d89a42a1e19944d4cb312de9cb388cf4, type: 3}
 --- !u!114 &-736592308198556936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_11
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 8001606115143265827, guid: 4b920daa27f10a34d94a2baa9eeb840a, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_05
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 6159383838247140159, guid: dc4267dcfc6a57047a30301fcd3c856b, type: 3}
 --- !u!114 &612535652178723964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_01
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 2651199852090616337, guid: 3607914226cc31749abe13661953338c, type: 3}
 --- !u!114 &613752134166863647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_06
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 6470967362881757287, guid: 1cce6e4d6995ee74080711bdf930f892, type: 3}
 --- !u!114 &4352210654497551208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_10
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 5221065898095798448, guid: fd1090703777ea84a9ada121f9f55af6, type: 3}
 --- !u!114 &7404228264883734239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_12
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 3421417580343482423, guid: b4cb5ed8dbf4fd44d911f025fec1ba10, type: 3}
 --- !u!114 &8648748235100670326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,4 +208,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.MapDataTableRow
   rowID: Map_02
   isEnable: 1
-  prefab: {fileID: 0}
+  prefab: {fileID: 583633969085416718, guid: 91eb74348f815d849871638d7b24ec56, type: 3}

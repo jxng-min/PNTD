@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 
-using System.Collections;
-
 namespace PNTD
 {
     public class LobbyCompositor
@@ -126,18 +124,7 @@ namespace PNTD
 
         private void HandleOnClickedPlay()
         {
-            LoadingManager.Instance.StartCoroutine(PlayRoutine());
-        }
-
-        private IEnumerator PlayRoutine()
-        {
-            yield return LoadingManager.Instance.VirtualLoadScene("<pop>loading...</pop>", HideLobbyRoutine);
-        }
-
-        private IEnumerator HideLobbyRoutine()
-        {
-            _lobbyDomain.VisibilitySystem.Hide();
-            yield break;
+            GameFlow.Instance.Play();
         }
 #endregion
 

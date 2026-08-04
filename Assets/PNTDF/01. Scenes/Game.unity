@@ -696,6 +696,7 @@ MonoBehaviour:
   synergyPresenter: {fileID: 6375087746946129831}
   partyPresenter: {fileID: 1485824875}
   indexerPresenter: {fileID: 1677400127}
+  mapRunner: {fileID: 216071611}
   lobbyCanvasGroups:
   - {fileID: 1495977877}
   - {fileID: 684135332}
@@ -3315,6 +3316,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586382932}
   m_CullTransparentMesh: 1
+--- !u!1 &599359648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599359649}
+  - component: {fileID: 599359650}
+  m_Layer: 0
+  m_Name: Game Flow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &599359649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599359648}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1439860259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599359650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599359648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8200fe059d3148b9a1ee965b7c8a3454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.GameFlow
 --- !u!225 &684135332 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8277208602228078483, guid: 67ac0c4bac782a74f9afc8f60b3d00a4, type: 3}
@@ -3626,7 +3671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1e83eec3ab4a338cc8a85abc898b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JxModule.CharFX.CharFxRunner
-  sourceText: <pop>loading...</pop>
+  sourceText: 
   cfxEnable: 1
   playMode: 1
   onceDuration: 1
@@ -4759,6 +4804,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 216071609}
+  - {fileID: 599359649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1448094266 stripped
@@ -5732,7 +5778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.LoadingActor
   loadingManager: {fileID: 1803535782}
   loadingImage: {fileID: 1942574533}
-  loadingLabel: {fileID: 0}
+  loadingLabel: {fileID: 787364124}
   beginRadius: 0
   endRadius: 1.5
   duration: 1
