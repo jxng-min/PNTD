@@ -18,7 +18,7 @@ MonoBehaviour:
   displayName: Plunder
   description: 
   maxStep: 4
-  icon: {fileID: 0}
+  icon: {fileID: -673363206, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
   color: {r: 0.9490196, g: 0.69411767, b: 0.20392157, a: 1}
   thresholds: 0200000004000000
   synergyEffects: 0200000002000000
@@ -46,7 +46,7 @@ MonoBehaviour:
   displayName: Mage
   description: 
   maxStep: 6
-  icon: {fileID: 0}
+  icon: {fileID: -2118054926, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
   color: {r: 0.60784316, g: 0.77254903, b: 0.85490197, a: 1}
   thresholds: 0300000006000000
   synergyEffects: 0100000001000000
@@ -74,7 +74,7 @@ MonoBehaviour:
   displayName: Warrior
   description: 
   maxStep: 6
-  icon: {fileID: 0}
+  icon: {fileID: 464222450, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
   color: {r: 1, g: 0.80784315, b: 0.105882354, a: 1}
   thresholds: 
   synergyEffects: 
@@ -121,7 +121,7 @@ MonoBehaviour:
   displayName: Ranger
   description: 
   maxStep: 6
-  icon: {fileID: 0}
+  icon: {fileID: 608826643, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
   color: {r: 0.53333336, g: 0.90588236, b: 0.53333336, a: 1}
   thresholds: 0300000006000000
   synergyEffects: 0000000000000000
@@ -149,7 +149,7 @@ MonoBehaviour:
   displayName: Cleric
   description: 
   maxStep: 4
-  icon: {fileID: 0}
+  icon: {fileID: -1107177425, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
   color: {r: 0.7764706, g: 0.65882355, b: 1, a: 1}
   thresholds: 0200000004000000
   synergyEffects: 0300000004000000
