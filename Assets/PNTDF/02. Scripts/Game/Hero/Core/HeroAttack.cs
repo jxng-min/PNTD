@@ -232,6 +232,11 @@ namespace PNTD
 
         private void OnDisable()
         {
+            if (!_isInitialized)
+            {
+                return;
+            }
+            
             Release();
         }
     }

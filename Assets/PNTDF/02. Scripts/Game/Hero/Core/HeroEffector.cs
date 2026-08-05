@@ -157,7 +157,7 @@ namespace PNTD
         {
             var isSkillSealed = CalculateSkillSealed();
 
-            if (!forceNotify && _isInitialized == IsSkillSealed)
+            if (!forceNotify && isSkillSealed == IsSkillSealed)
             {
                 return;
             }

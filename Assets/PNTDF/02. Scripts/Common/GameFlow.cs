@@ -58,7 +58,13 @@ namespace PNTD
             if (_currentMapContext != null)
             {
                 var interest = _lobbyModel.Domain.StatusSystem.Interest;
-                _stageRunner.Initialize(_currentMapContext, stage, interest);
+                var party = _lobbyModel.Domain.PartySystem.HeroContexts;
+                
+                _stageRunner.Initialize(_currentMapContext,
+                                        stage,
+                                        interest,
+                                        party,
+                                        () => _lobbyModel.Domain.SynergySystem.CurrentContext);
             }
 
             yield break;

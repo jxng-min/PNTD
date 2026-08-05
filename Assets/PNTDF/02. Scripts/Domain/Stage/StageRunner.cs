@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace PNTD
         [SerializeField] private FlowPresenter flowPresenter;
         [SerializeField] private ProgressView progressView;
         [SerializeField] private ResultPresenter resultPresenter;
+        [SerializeField] private PalettePresenter palettePresenter;
         [SerializeField] private CanvasGroup[] stageCanvasGroups;
 
         private StageModel _model;
@@ -29,7 +31,11 @@ namespace PNTD
             _enragerDataTable = DataTableManager.FindTable<EnragerDataTableRow>("DT_Enrager");
         }
 
-        public void Initialize(MapContext mapContext, int stage, int interest)
+        public void Initialize(MapContext mapContext,
+                               int stage,
+                               int interest,
+                               IReadOnlyList<HeroContext> party,
+                               Func<SynergyContext> synergyContextProvider)
         {
             DisposeModel();
             
@@ -45,6 +51,8 @@ namespace PNTD
             var stageSystem = new StageSystem();
             var waveSystem = new WaveSystem();
             var visibilitySystem = new StageVisibilitySystem(GetStageCanvasGroups());
+            var deploySystem = new DeploySystem();
+            var deployContextFactory = new DeployContextFactory();
             
             enemyFactory.Initialize(mapContext.Map.StagePath, waveSystem);
             
@@ -54,6 +62,7 @@ namespace PNTD
 
             _model = new StageModel(domain, compositor, runtimeStageContext);
             _model.Initialize(enemyFactory, mapContext.StageContext, stage);
+            palettePresenter?.Initialize(party, deploySystem, deployContextFactory, synergyContextProvider);
             _model.Show();
         }
 
@@ -101,6 +110,7 @@ namespace PNTD
 
         private void DisposeModel()
         {
+            palettePresenter?.Release();
             _model?.Dispose();
             _model = null;
         }
@@ -116,7 +126,8 @@ namespace PNTD
             {
                 flowPresenter,
                 progressView,
-                resultPresenter
+                resultPresenter,
+                palettePresenter
             };
 
             var canvasGroups = new List<CanvasGroup>();
