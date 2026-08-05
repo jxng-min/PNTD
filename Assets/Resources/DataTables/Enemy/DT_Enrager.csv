@@ -1,2 +1,2 @@
-﻿rowID,radius,moveSpeedMultiplier,boostedDuration,recoverDuration,overrideColor,isEnable
-Ability_Enrager,2.5,2.5,3,1,"#7CFC00",TRUE
+rowID,radius,moveSpeedMultiplier,boostedDuration,recoverDuration,overrideColor,isEnable
+Ability_Enrager,2.5,2.5,3,1,#7CFC00,TRUE

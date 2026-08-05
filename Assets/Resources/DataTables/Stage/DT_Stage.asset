@@ -15,6 +15,7 @@ MonoBehaviour:
   dataTableCsv: {fileID: 4900000, guid: d800cce5dbfcf8f4b9e7007bd154ec87, type: 3}
   dataTableRowName: PNTD.StageDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=1066033838
   dataTableRows:
   - {fileID: 532058714707385962}
   dataTableRowScript: {fileID: 11500000, guid: 52071d02f8bc41cdad5a691379fb04b5, type: 3}

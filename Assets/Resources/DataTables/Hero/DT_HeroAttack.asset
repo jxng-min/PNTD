@@ -15,5 +15,6 @@ MonoBehaviour:
   dataTableCsv: {fileID: 4900000, guid: 52e7badc301d5ec4ab3cb8c3301f59ee, type: 3}
   dataTableRowName: PNTD.HeroAttackDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=832457350
   dataTableRows: []
   dataTableRowScript: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}

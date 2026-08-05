@@ -35,6 +35,7 @@ MonoBehaviour:
   dataTableCsv: {fileID: 4900000, guid: 0db8e36a7120fdd4bbb13be747f2dba9, type: 3}
   dataTableRowName: PNTD.SynergyTierDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=1364560182
   dataTableRows:
   - {fileID: -8540261929321151387}
   - {fileID: 2976783520264928242}

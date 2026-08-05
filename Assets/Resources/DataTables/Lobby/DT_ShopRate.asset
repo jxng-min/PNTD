@@ -1,46 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4676936685239509088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbd483a85ae46979cc2d704b177b214, type: 3}
-  m_Name: 1
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.ShopRateDataTableRow
-  rowID: 1
-  isEnable: 1
-  level: 1
-  tier1: 70
-  tier2: 25
-  tier3: 5
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
-  m_Name: DT_ShopRate
-  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
-  dataTableCsv: {fileID: 4900000, guid: b034c35b41a1eb84a808c7d1bc872573, type: 3}
-  dataTableRowName: PNTD.ShopRateDataTableRow, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  dataTableRows:
-  - {fileID: -4676936685239509088}
-  - {fileID: 3699328348657740147}
-  - {fileID: 7133593400979999597}
-  - {fileID: 6918921249107130490}
-  - {fileID: 520761832700747488}
-  dataTableRowScript: {fileID: 11500000, guid: 1cbd483a85ae46979cc2d704b177b214, type: 3}
---- !u!114 &520761832700747488
+--- !u!114 &-6700724261738714378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,7 +18,7 @@ MonoBehaviour:
   tier1: 10
   tier2: 45
   tier3: 45
---- !u!114 &3699328348657740147
+--- !u!114 &-3961184975933638474
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,15 +28,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cbd483a85ae46979cc2d704b177b214, type: 3}
-  m_Name: 2
+  m_Name: 1
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.ShopRateDataTableRow
-  rowID: 2
+  rowID: 1
   isEnable: 1
-  level: 2
-  tier1: 55
-  tier2: 35
-  tier3: 10
---- !u!114 &6918921249107130490
+  level: 1
+  tier1: 70
+  tier2: 25
+  tier3: 5
+--- !u!114 &-1632023229606365094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +54,30 @@ MonoBehaviour:
   tier1: 20
   tier2: 50
   tier3: 30
---- !u!114 &7133593400979999597
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_ShopRate
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: b034c35b41a1eb84a808c7d1bc872573, type: 3}
+  dataTableRowName: PNTD.ShopRateDataTableRow, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=275677155
+  dataTableRows:
+  - {fileID: -3961184975933638474}
+  - {fileID: 6554998607453717928}
+  - {fileID: 138623376759399619}
+  - {fileID: -1632023229606365094}
+  - {fileID: -6700724261738714378}
+  dataTableRowScript: {fileID: 11500000, guid: 1cbd483a85ae46979cc2d704b177b214, type: 3}
+--- !u!114 &138623376759399619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,3 +95,21 @@ MonoBehaviour:
   tier1: 35
   tier2: 45
   tier3: 20
+--- !u!114 &6554998607453717928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbd483a85ae46979cc2d704b177b214, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.ShopRateDataTableRow
+  rowID: 2
+  isEnable: 1
+  level: 2
+  tier1: 55
+  tier2: 35
+  tier3: 10

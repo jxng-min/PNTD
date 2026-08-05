@@ -1,4 +1,4 @@
-﻿rowID,synergy,displayName,description,maxStep,icon,color,thresholds,synergyEffects,primaryValues,secondaryValues,isEnable
+rowID,synergy,displayName,description,maxStep,icon,color,thresholds,synergyEffects,primaryValues,secondaryValues,isEnable
 Synergy_Warrior,Warrior,Warrior,,6,Synergy[Warrior].png,#FFCE1B,,,,,TRUE
 Synergy_Mage,Mage,Mage,,6,Synergy[Mage].png,#9BC5DA,3|6,1|1,0.75|0.5,2|2,TRUE
 Synergy_Ranger,Ranger,Ranger,,6,Synergy[Ranger].png,#88E788,3|6,0|0,0.7|0.4,0|0,TRUE

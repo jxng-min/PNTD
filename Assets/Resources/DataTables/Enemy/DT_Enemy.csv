@@ -1,3 +1,3 @@
-﻿rowID,color,maxHp,moveSpeed,type,physicalDefense,magicResistance,slowResistance,abilityID,isEnable
-Enemy_Normal,"#FF3636",5,1,Normal,0.25,0.25,0,,TRUE
-Enemy_Enrager,"#7CFC00",5,1,Normal,0.25,0.25,0.25,Ability_Enrager,TRUE
+rowID,color,maxHp,moveSpeed,type,physicalDefense,magicResistance,slowResistance,abilityID,isEnable
+Enemy_Normal,#FF3636,5,1,Normal,0.25,0.25,0,,TRUE
+Enemy_Enrager,#7CFC00,5,1,Normal,0.25,0.25,0.25,Ability_Enrager,TRUE

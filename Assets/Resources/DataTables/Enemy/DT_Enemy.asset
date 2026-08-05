@@ -37,6 +37,7 @@ MonoBehaviour:
   dataTableCsv: {fileID: 4900000, guid: 2f26b882a0f743743ade331802d1f264, type: 3}
   dataTableRowName: PNTD.EnemyDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=728675544
   dataTableRows:
   - {fileID: -7902922335907351645}
   - {fileID: 8005275100149357009}

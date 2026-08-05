@@ -1,290 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8044126471107728080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Alchemist
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Alchemist
-  isEnable: 1
-  displayName: Alchemist
-  color: {r: 0.8509804, g: 0.54901963, b: 1, a: 1}
-  tier: 2
-  synergy: 24
-  cost: 2
---- !u!114 &-7833035937882042187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Telekinetic
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Telekinetic
-  isEnable: 1
-  displayName: Telekinetic
-  color: {r: 0.14901961, g: 0.7764706, b: 0.85490197, a: 1}
-  tier: 2
-  synergy: 4
-  cost: 2
---- !u!114 &-7266096739558840502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Explomancer
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Explomancer
-  isEnable: 1
-  displayName: Explomancer
-  color: {r: 0.3019608, g: 0.8156863, b: 0.88235295, a: 1}
-  tier: 2
-  synergy: 4
-  cost: 2
---- !u!114 &-7061135315050588452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_MageRobo
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_MageRobo
-  isEnable: 1
-  displayName: Hextech Robot
-  color: {r: 0, g: 0.6745098, b: 0.75686276, a: 1}
-  tier: 0
-  synergy: 0
-  cost: 0
---- !u!114 &-6913387025636306147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Saint
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Saint
-  isEnable: 1
-  displayName: Saint
-  color: {r: 0.5921569, g: 0.56078434, b: 0.9764706, a: 1}
-  tier: 2
-  synergy: 16
-  cost: 2
---- !u!114 &-6707845357828310837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Crusader
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Crusader
-  isEnable: 1
-  displayName: Crusader
-  color: {r: 0.4745098, g: 0.03529412, b: 0.3882353, a: 1}
-  tier: 3
-  synergy: 17
-  cost: 3
---- !u!114 &-6603223055726006805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Trickshooter
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Trickshooter
-  isEnable: 1
-  displayName: Trickshooter
-  color: {r: 0.18039216, g: 0.49019608, b: 0.19607843, a: 1}
-  tier: 3
-  synergy: 2
-  cost: 3
---- !u!114 &-4771643076308114193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Handgunner
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Handgunner
-  isEnable: 1
-  displayName: Handgunner
-  color: {r: 0.4, g: 0.73333335, b: 0.41568628, a: 1}
-  tier: 2
-  synergy: 10
-  cost: 2
---- !u!114 &-2779429694225133957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Artillery
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Artillery
-  isEnable: 1
-  displayName: Artillery
-  color: {r: 0.2627451, g: 0.627451, b: 0.2784314, a: 1}
-  tier: 2
-  synergy: 2
-  cost: 2
---- !u!114 &-1859824817773969065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Shotgunner
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Shotgunner
-  isEnable: 1
-  displayName: Shotgunner
-  color: {r: 0.29803923, g: 0.6862745, b: 0.3137255, a: 1}
-  tier: 2
-  synergy: 2
-  cost: 2
---- !u!114 &-792753243311502915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Swordman
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Swordman
-  isEnable: 1
-  displayName: Swordman
-  color: {r: 1, g: 0.972549, b: 0.20392157, a: 1}
-  tier: 1
-  synergy: 1
-  cost: 1
---- !u!114 &-662781493522574291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Miner
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Miner
-  isEnable: 1
-  displayName: Miner
-  color: {r: 1, g: 0.77254903, b: 0.30980393, a: 1}
-  tier: 1
-  synergy: 8
-  cost: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
-  m_Name: DT_Hero
-  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
-  dataTableCsv: {fileID: 4900000, guid: f6c2c7ce03e420d47b74a0ac9c54e652, type: 3}
-  dataTableRowName: PNTD.HeroDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  dataTableRows:
-  - {fileID: -792753243311502915}
-  - {fileID: 6063016972214359772}
-  - {fileID: -4771643076308114193}
-  - {fileID: -1859824817773969065}
-  - {fileID: -2779429694225133957}
-  - {fileID: 3099453314529607899}
-  - {fileID: -6603223055726006805}
-  - {fileID: 8017827969746050034}
-  - {fileID: 6013980681208504886}
-  - {fileID: -7266096739558840502}
-  - {fileID: -7833035937882042187}
-  - {fileID: 1401746276687276735}
-  - {fileID: 5487755157691696719}
-  - {fileID: -7061135315050588452}
-  - {fileID: -662781493522574291}
-  - {fileID: -8044126471107728080}
-  - {fileID: -6913387025636306147}
-  - {fileID: 2542622685013274132}
-  - {fileID: -6707845357828310837}
-  - {fileID: 3283417673196249087}
-  dataTableRowScript: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
---- !u!114 &1401746276687276735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Transmuter
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Transmuter
-  isEnable: 1
-  displayName: Transmuter
-  color: {r: 0, g: 0.7372549, b: 0.83137256, a: 1}
-  tier: 3
-  synergy: 4
-  cost: 3
---- !u!114 &2542622685013274132
+--- !u!114 &-8024836263520734836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -303,7 +19,7 @@ MonoBehaviour:
   tier: 2
   synergy: 20
   cost: 2
---- !u!114 &3099453314529607899
+--- !u!114 &-7482934987075978659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,16 +29,206 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Sniper
+  m_Name: Hero_Handgunner
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Sniper
+  rowID: Hero_Handgunner
   isEnable: 1
-  displayName: Sniper
-  color: {r: 0.21960784, g: 0.5568628, b: 0.23529412, a: 1}
-  tier: 3
+  displayName: Handgunner
+  color: {r: 0.4, g: 0.73333335, b: 0.41568628, a: 1}
+  tier: 2
+  synergy: 10
+  cost: 2
+--- !u!114 &-6166521136080056606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_MageRobo
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_MageRobo
+  isEnable: 1
+  displayName: Hextech Robot
+  color: {r: 0, g: 0.6745098, b: 0.75686276, a: 1}
+  tier: 0
+  synergy: 0
+  cost: 0
+--- !u!114 &-4981726269066216892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Shotgunner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Shotgunner
+  isEnable: 1
+  displayName: Shotgunner
+  color: {r: 0.29803923, g: 0.6862745, b: 0.3137255, a: 1}
+  tier: 2
   synergy: 2
+  cost: 2
+--- !u!114 &-3452042158845359732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Saint
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Saint
+  isEnable: 1
+  displayName: Saint
+  color: {r: 0.5921569, g: 0.56078434, b: 0.9764706, a: 1}
+  tier: 2
+  synergy: 16
+  cost: 2
+--- !u!114 &-3243047386131535863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Alchemist
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Alchemist
+  isEnable: 1
+  displayName: Alchemist
+  color: {r: 0.8509804, g: 0.54901963, b: 1, a: 1}
+  tier: 2
+  synergy: 24
+  cost: 2
+--- !u!114 &-2561357900620779495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Telekinetic
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Telekinetic
+  isEnable: 1
+  displayName: Telekinetic
+  color: {r: 0.14901961, g: 0.7764706, b: 0.85490197, a: 1}
+  tier: 2
+  synergy: 4
+  cost: 2
+--- !u!114 &-1072018602865270898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Transmuter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Transmuter
+  isEnable: 1
+  displayName: Transmuter
+  color: {r: 0, g: 0.7372549, b: 0.83137256, a: 1}
+  tier: 3
+  synergy: 4
   cost: 3
---- !u!114 &3283417673196249087
+--- !u!114 &-585649596675210853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Artillery
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Artillery
+  isEnable: 1
+  displayName: Artillery
+  color: {r: 0.2627451, g: 0.627451, b: 0.2784314, a: 1}
+  tier: 2
+  synergy: 2
+  cost: 2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_Hero
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: f6c2c7ce03e420d47b74a0ac9c54e652, type: 3}
+  dataTableRowName: PNTD.HeroDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=0
+  dataTableRows:
+  - {fileID: 717412596325567598}
+  - {fileID: 6201986173345399165}
+  - {fileID: -7482934987075978659}
+  - {fileID: -4981726269066216892}
+  - {fileID: -585649596675210853}
+  - {fileID: 4201738370495130994}
+  - {fileID: 7325909315835556372}
+  - {fileID: 3269799351450931619}
+  - {fileID: 6876907272863570738}
+  - {fileID: 8505830292631284896}
+  - {fileID: -2561357900620779495}
+  - {fileID: -1072018602865270898}
+  - {fileID: 9208774785752481754}
+  - {fileID: -6166521136080056606}
+  - {fileID: 4071502479712666693}
+  - {fileID: -3243047386131535863}
+  - {fileID: -3452042158845359732}
+  - {fileID: -8024836263520734836}
+  - {fileID: 3202663529469924615}
+  - {fileID: 2167515771189885436}
+  dataTableRowScript: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+--- !u!114 &717412596325567598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Swordman
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Swordman
+  isEnable: 1
+  displayName: Swordman
+  color: {r: 1, g: 0.972549, b: 0.20392157, a: 1}
+  tier: 1
+  synergy: 1
+  cost: 1
+--- !u!114 &2167515771189885436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -341,7 +247,7 @@ MonoBehaviour:
   tier: 3
   synergy: 40
   cost: 3
---- !u!114 &5487755157691696719
+--- !u!114 &3202663529469924615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,54 +257,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Artificer
+  m_Name: Hero_Crusader
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Artificer
+  rowID: Hero_Crusader
   isEnable: 1
-  displayName: Artificer
-  color: {r: 0, g: 0.6745098, b: 0.75686276, a: 1}
+  displayName: Crusader
+  color: {r: 0.4745098, g: 0.03529412, b: 0.3882353, a: 1}
   tier: 3
-  synergy: 4
+  synergy: 17
   cost: 3
---- !u!114 &6013980681208504886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Magician
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Magician
-  isEnable: 1
-  displayName: Magician
-  color: {r: 0.5019608, g: 0.87058824, b: 0.91764706, a: 1}
-  tier: 1
-  synergy: 4
-  cost: 1
---- !u!114 &6063016972214359772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
-  m_Name: Hero_Archer
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
-  rowID: Hero_Archer
-  isEnable: 1
-  displayName: Archer
-  color: {r: 0.5058824, g: 0.78039217, b: 0.5176471, a: 1}
-  tier: 1
-  synergy: 2
-  cost: 1
---- !u!114 &8017827969746050034
+--- !u!114 &3269799351450931619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,3 +285,136 @@ MonoBehaviour:
   tier: 1
   synergy: 4
   cost: 1
+--- !u!114 &4071502479712666693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Miner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Miner
+  isEnable: 1
+  displayName: Miner
+  color: {r: 1, g: 0.77254903, b: 0.30980393, a: 1}
+  tier: 1
+  synergy: 8
+  cost: 1
+--- !u!114 &4201738370495130994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Sniper
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Sniper
+  isEnable: 1
+  displayName: Sniper
+  color: {r: 0.21960784, g: 0.5568628, b: 0.23529412, a: 1}
+  tier: 3
+  synergy: 2
+  cost: 3
+--- !u!114 &6201986173345399165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Archer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Archer
+  isEnable: 1
+  displayName: Archer
+  color: {r: 0.5058824, g: 0.78039217, b: 0.5176471, a: 1}
+  tier: 1
+  synergy: 2
+  cost: 1
+--- !u!114 &6876907272863570738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Magician
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Magician
+  isEnable: 1
+  displayName: Magician
+  color: {r: 0.5019608, g: 0.87058824, b: 0.91764706, a: 1}
+  tier: 1
+  synergy: 4
+  cost: 1
+--- !u!114 &7325909315835556372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Trickshooter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Trickshooter
+  isEnable: 1
+  displayName: Trickshooter
+  color: {r: 0.18039216, g: 0.49019608, b: 0.19607843, a: 1}
+  tier: 3
+  synergy: 2
+  cost: 3
+--- !u!114 &8505830292631284896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Explomancer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Explomancer
+  isEnable: 1
+  displayName: Explomancer
+  color: {r: 0.3019608, g: 0.8156863, b: 0.88235295, a: 1}
+  tier: 2
+  synergy: 4
+  cost: 2
+--- !u!114 &9208774785752481754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Artificer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Artificer
+  isEnable: 1
+  displayName: Artificer
+  color: {r: 0, g: 0.6745098, b: 0.75686276, a: 1}
+  tier: 3
+  synergy: 4
+  cost: 3
