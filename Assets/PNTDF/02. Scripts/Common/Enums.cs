@@ -96,4 +96,23 @@ namespace PNTD
         OnInterval          = 5,
         OnPassive           = 6,
     }
+
+    public enum EHeroStat
+    {
+        PhysicalAttackPower             = 0,
+        MagicAttackPower                = 1,
+        AttackCooldown                  = 2,
+        AttackRange                     = 3,
+        PhysicalFlatPenetration         = 4,
+        PhysicalPercentPenetration      = 5,
+        MagicFlatPenetration            = 6,
+        MagicPercentPenetration         = 7,
+    }
+
+    public enum EHeroStatModifierOperation
+    {
+        Flat                = 0,
+        Additive            = 1,
+        Multiply            = 2,
+    }
 }

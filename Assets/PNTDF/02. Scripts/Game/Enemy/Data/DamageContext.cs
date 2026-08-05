@@ -1,6 +1,6 @@
 ﻿namespace PNTD
 {
-    public class DamageContext
+    public readonly struct DamageContext
     {
         public float Damage { get; }
         public EAttack AttackType { get; }
