@@ -27,6 +27,7 @@ namespace PNTD
         private DataTable _enemyDataTable;
         private DataTable _enemyAbilityDataTable;
         private DataTable _enragerDataTable;
+        private DataTable _heroDataTable;
         private DataTable _heroAttackDataTable;
         private int _interest;
 
@@ -35,6 +36,7 @@ namespace PNTD
             _enemyDataTable = DataTableManager.FindTable<EnemyDataTableRow>("DT_Enemy");
             _enemyAbilityDataTable = DataTableManager.FindTable<EnemyAbilityDataTableRow>("DT_EnemyAbility");
             _enragerDataTable = DataTableManager.FindTable<EnragerDataTableRow>("DT_Enrager");
+            _heroDataTable = DataTableManager.FindTable<HeroDataTableRow>("DT_Hero");
             _heroAttackDataTable = DataTableManager.FindTable<HeroAttackDataTableRow>("DT_HeroAttack");
         }
 
@@ -61,9 +63,10 @@ namespace PNTD
             var boardSystem = new BoardSystem();
             var deploySystem = new DeploySystem();
             var deployContextFactory = new DeployContextFactory();
-            var skillContext = new HeroSkillContext(mapContext.Map.BuildMap, heroRoot);
+            var skillContext = new HeroSkillContext(mapContext.Map.BuildMap, heroRoot, boardSystem);
             var heroPrefab = PrefabManager.CachePrefab<Hero>("[PF] Hero");
-            var heroFactory = new HeroFactory(heroPrefab, _heroAttackDataTable, skillContext, heroRoot);
+            var magitechRobotPrefab = PrefabManager.CachePrefab<Hero>("[PF] Magitech Robot");
+            var heroFactory = new HeroFactory(heroPrefab, magitechRobotPrefab, _heroDataTable, _heroAttackDataTable, skillContext, heroRoot);
             var deployAction = new StageDeployAction(boardSystem, deploySystem, heroFactory, mapContext.Map);
             var deployPreviewSystem = new DeployPreviewSystem(deploySystem,
                                                               deployAction,

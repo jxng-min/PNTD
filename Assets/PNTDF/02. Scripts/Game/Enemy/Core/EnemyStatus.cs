@@ -118,7 +118,7 @@ namespace PNTD
                     speed *= 1f - resistedSlowRate;
                 }
 
-                var minimumSpeed = _baseMoveSpeed * 0.1f;
+                var minimumSpeed = _baseMoveSpeed * 0.2f;
                 return Mathf.Max(speed, minimumSpeed);
             }
         }
@@ -161,9 +161,13 @@ namespace PNTD
             OnChanged?.Invoke();
         }
 
-        public bool AddMoveSpeedEffect(string effectId, float multiplier, float duration, Color? overrideColor = null)
+        public bool AddMoveSpeedEffect(string effectId, 
+                                       float multiplier, 
+                                       float duration, 
+                                       Color? overrideColor = null,
+                                       EStackPolicy stackPolicy = EStackPolicy.KeepStrongest)
         {
-            return AddEffect(new EnemyMoveSpeedEffect(effectId, multiplier, duration, overrideColor));
+            return AddEffect(new EnemyMoveSpeedEffect(effectId, multiplier, duration, stackPolicy, overrideColor));
         }
 
         public bool AddPhysicalDefenseEffect(string effectId, float modifier, float duration, Color? overrideColor = null)

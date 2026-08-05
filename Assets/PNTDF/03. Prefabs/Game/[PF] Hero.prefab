@@ -69,7 +69,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroModel
   bodyRenderer: {fileID: 7009040819281777339}
   rotationAxis: {fileID: 6793575251960841242}
+  facingAngleOffset: 90
   coolBarBackground: {fileID: 8184895565198222829}
   coolBarInner: {fileID: 3383620071118123849}
 --- !u!114 &3798309213596802799

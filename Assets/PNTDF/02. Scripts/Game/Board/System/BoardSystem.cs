@@ -46,7 +46,7 @@ namespace PNTD
 
         public bool CanOccupy(Vector3Int cellPosition)
         {
-            return !_heroByCell.ContainsKey(cellPosition);
+            return !IsOccupied(cellPosition);
         }
 
         public bool ReleaseByCell(Vector3Int cellPosition)

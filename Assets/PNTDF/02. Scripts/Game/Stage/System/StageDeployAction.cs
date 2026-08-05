@@ -39,6 +39,8 @@ namespace PNTD
                 Object.Destroy(hero.gameObject);
                 return false;
             }
+            
+            hero.NotifyDeployed(cellPosition);
 
             _deploySystem.ExitDeployMode();
             return true;

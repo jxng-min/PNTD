@@ -16,6 +16,8 @@ namespace PNTD
 
         public HeroDataTableRow HeroDataTableRow { get; private set; }
         public int Level { get; private set; }
+        public bool IsSummoned { get; private set; }
+        public Hero Summoner { get; private set; }
         
         public HeroStat Stat { get; private set; }
         public HeroSkill Skill { get; private set; }
@@ -30,7 +32,9 @@ namespace PNTD
         public void Initialize(HeroDataTableRow heroDataTableRow,
                                HeroStat heroStat,
                                HeroSkill heroSkill,
-                               int level)
+                               int level,
+                               bool isSummoned = false,
+                               Hero summoner = null)
         {
             if (heroDataTableRow == null)
             {
@@ -56,6 +60,8 @@ namespace PNTD
             Stat = heroStat;
             Skill = heroSkill;
             Level = level;
+            IsSummoned = isSummoned;
+            Summoner = summoner;
             
             Effector?.Initialize(this);
             if (Effector != null)
@@ -103,6 +109,7 @@ namespace PNTD
             if (triggerOnHitEffect)
             {
                 NotifyHitEnemy(enemy);
+                NotifyAffectedEnemy(enemy);
             }
 
             return true;
@@ -117,6 +124,26 @@ namespace PNTD
             
             Effector?.NotifyHitEnemy(enemy);
         }
+        
+        public void NotifyAffectedEnemy(Enemy enemy)
+        {
+            if (enemy == null)
+            {
+                return;
+            }
+            
+            Effector?.NotifyAffectedEnemy(enemy);
+        }
+        
+        public void NotifyDeployed(Vector3Int cellPosition)
+        {
+            if (!_isInitialized || Skill == null)
+            {
+                return;
+            }
+            
+            Skill.OnDeployed(this, cellPosition);
+        }
 
         public void Release()
         {
@@ -130,8 +157,11 @@ namespace PNTD
                 }
             }
             
+            Skill?.Release(this);
             HeroDataTableRow = null;
             Level = 0;
+            IsSummoned = false;
+            Summoner = null;
             Stat = null;
             Skill = null;
             _isInitialized = false;

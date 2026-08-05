@@ -84,8 +84,11 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Fires <color=#FFCE1B>3</color> bullets in a straight line toward the
-    nearest enemy. Gains <color=#FFCE1B>5</color> Physical Attack Power each level.
+  bodyText: 'Fires <color=#FFCE1B>3</color> bullets in a straight line toward the
+    nearest enemy.
+
+    Gains <color=#FFCE1B>5</color> Physical Attack Power each
+    level.'
   additionalHeaderText: Lv.3
   additionalTagText: <b><color=#FFCE1B>Bullet Barrage</color></b>
   additionalBodyText: Increases bullets fired per attack from <color=#FFCE1B>3</color>
@@ -108,13 +111,16 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: 'Fires a magic orb at the nearest enemy,
+  bodyText: 'Throws a fireball at the nearest enemy,
 
-    dealing immediate damage
-    and <color=red>DoT</color> damage.'
+    dealing immediate Magic
+    Damage and applying a non-stacking burn.
+
+    Reapplying the burn refreshes its
+    duration.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: DoT damage is doubled.
+  additionalTagText: <b><color=#FFCE1B>Intense Flames</color></b>
+  additionalBodyText: Doubles the burn damage.
 --- !u!114 &-6884369581741663124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,8 +139,11 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Fires <color=#FFCE1B>3</color> bullets in a straight line toward the
-    nearest enemy. Gains <color=#FFCE1B>5</color> Physical Attack Power each level.
+  bodyText: 'Fires <color=#FFCE1B>3</color> bullets in a straight line toward the
+    nearest enemy.
+
+    Gains <color=#FFCE1B>5</color> Physical Attack Power each
+    level.'
   additionalHeaderText: Lv.3
   additionalTagText: <b><color=#FFCE1B>Bullet Barrage</color></b>
   additionalBodyText: Increases bullets fired per attack from <color=#FFCE1B>3</color>
@@ -157,11 +166,13 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: "Creates a gravity field at the nearest enemy\u2019s location,\npulling
-    enemies inward."
+  bodyText: 'Creates a gravity field near the nearest enemy.
+
+    The field periodically
+    pulls nearby enemies toward its center but deals no damage.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: "Doubles the gravity field\u2019s duration."
+  additionalTagText: <b><color=#FFCE1B>Persistent Gravity</color></b>
+  additionalBodyText: Doubles the gravity field's duration.
 --- !u!114 &-5729762062693684636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,11 +257,13 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: "Creates a gravity field at the nearest enemy\u2019s location,\npulling
-    enemies inward."
+  bodyText: 'Creates a gravity field near the nearest enemy.
+
+    The field periodically
+    pulls nearby enemies toward its center but deals no damage.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: "Doubles the gravity field\u2019s duration."
+  additionalTagText: <b><color=#FFCE1B>Persistent Gravity</color></b>
+  additionalBodyText: Doubles the gravity field's duration.
 --- !u!114 &-4364496745110579619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,10 +304,13 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Deploys a hextech robot to an adjacent tile.
+  bodyText: 'Periodically installs a magitech robot in an empty adjacent tile.
+
+    Robots
+    independently attack the nearest enemy.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: The hextech robot has a 30% chance to slow enemies.
+  additionalTagText: <b><color=#FFCE1B>Suppression Module</color></b>
+  additionalBodyText: The magitech robot's attacks slow enemies by <color=#FFCE1B>30%</color>.
 --- !u!114 &-3660997445292384664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,28 +378,6 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: <b><color=#FFCE1B>Accelerated Shell</color></b>
   additionalBodyText: Doubles the cannonball's travel speed.
---- !u!114 &-3408669087319653746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
-  m_Name: ShopSlot_Wizard
-  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
-  rowID: ShopSlot_Wizard
-  isEnable: 1
-  layout: 1
-  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
-    <color=#FFCE1B>{deployCost}</color>'
-  tagText: 'Classes : {heroSynergies}'
-  bodyText: Creates <color=red>3</color> magic circles on the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: Increases the magic circle count to 8.
 --- !u!114 &-3296859174731452398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,12 +443,13 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: 'Fires a magic orb at the nearest enemy,
+  bodyText: 'Fires a magic orb at the nearest enemy.
 
-    disabling its abilities.'
+    The orb has a <color=#FFCE1B>30/40/50%</color>
+    chance to disable the target''s abilities for a short duration.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: Roots enemies hit by the magic orb.
+  additionalTagText: <b><color=#FFCE1B>Forced Transmutation</color></b>
+  additionalBodyText: Enemies hit by the magic orb are stunned.
 --- !u!114 &-1121979812204883633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,12 +538,13 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: 'Fires a magic orb at the nearest enemy,
+  bodyText: 'Fires a magic orb at the nearest enemy.
 
-    disabling its abilities.'
+    The orb has a <color=#FFCE1B>30/40/50%</color>
+    chance to disable the target''s abilities for a short duration.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: Roots enemies hit by the magic orb.
+  additionalTagText: <b><color=#FFCE1B>Forced Transmutation</color></b>
+  additionalBodyText: Enemies hit by the magic orb are stunned.
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,7 +573,7 @@ MonoBehaviour:
   - {fileID: -2457573134851214251}
   - {fileID: -8263025100752364036}
   - {fileID: -5158205149220873337}
-  - {fileID: -3408669087319653746}
+  - {fileID: 1699022177185683820}
   - {fileID: -6930952021580110430}
   - {fileID: 6674140233515228183}
   - {fileID: -4435428819657568924}
@@ -646,10 +642,13 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Deploys a hextech robot to an adjacent tile.
+  bodyText: 'Periodically installs a magitech robot in an empty adjacent tile.
+
+    Robots
+    independently attack the nearest enemy.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: The hextech robot has a 30% chance to slow enemies.
+  additionalTagText: <b><color=#FFCE1B>Suppression Module</color></b>
+  additionalBodyText: The magitech robot's attacks slow enemies by <color=#FFCE1B>30%</color>.
 --- !u!114 &1640470927012095785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,12 +667,38 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: "Fires <color=#FFCE1B>3</color> bullets in a <color=#FFCE1B>45\xB0</color>
-    spread toward the nearest enemy."
+  bodyText: Fires <color=#FFCE1B>3</color> bullets in a <color=#FFCE1B>45</color>
+    Degree spread toward the nearest enemy.
   additionalHeaderText: Lv.3
   additionalTagText: <b><color=#FFCE1B>Full Circle</color></b>
-  additionalBodyText: "Expands the firing spread from <color=#FFCE1B>45\xB0</color>
-    to <color=#FFCE1B>360\xB0</color>."
+  additionalBodyText: Expands the firing spread from <color=#FFCE1B>45</color> to
+    <color=#FFCE1B>360</color> Degree.
+--- !u!114 &1699022177185683820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Wizard
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Wizard
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Summons <color=#FFCE1B>3</color> magic circles around the nearest enemy.
+
+    Each
+    circle damages enemies within its area.'
+  additionalHeaderText: Lv.3
+  additionalTagText: <b><color=#FFCE1B>Grand Formation</color></b>
+  additionalBodyText: Increases the number of magic circles from <color=#FFCE1B>3</color>
+    to <color=#FFCE1B>8</color>.
 --- !u!114 &2190952000152984312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,13 +761,14 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: 'Creates a magic circle at the nearest enemy,
+  bodyText: 'Creates a large explosive magic circle near the nearest enemy.
 
-    dealing immediate
-    damage and <color=red>DoT</color> to enemies within it.'
+    The
+    circle deals immediate Magic Damage and repeatedly damages enemies inside it.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: Halves the DoT interval.
+  additionalTagText: <b><color=#FFCE1B>Accelerated Detonation</color></b>
+  additionalBodyText: Halves the damage tick interval, causing the magic circle to
+    deal damage twice as often.
 --- !u!114 &2973448569199304935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,12 +852,12 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: "Fires <color=#FFCE1B>3</color> bullets in a <color=#FFCE1B>45\xB0</color>
-    spread toward the nearest enemy."
+  bodyText: Fires <color=#FFCE1B>3</color> bullets in a <color=#FFCE1B>45</color>
+    Degree spread toward the nearest enemy.
   additionalHeaderText: Lv.3
   additionalTagText: <b><color=#FFCE1B>Full Circle</color></b>
-  additionalBodyText: "Expands the firing spread from <color=#FFCE1B>45\xB0</color>
-    to <color=#FFCE1B>360\xB0</color>."
+  additionalBodyText: Expands the firing spread from <color=#FFCE1B>45</color> to
+    <color=#FFCE1B>360</color> Degree.
 --- !u!114 &3698730121541648144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,13 +920,14 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: 'Creates a magic circle at the nearest enemy,
+  bodyText: 'Creates a large explosive magic circle near the nearest enemy.
 
-    dealing immediate
-    damage and <color=red>DoT</color> damage to enemies within it.'
+    The
+    circle deals immediate Magic Damage and repeatedly damages enemies inside it.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: Halves the DoT interval.
+  additionalTagText: <b><color=#FFCE1B>Accelerated Detonation</color></b>
+  additionalBodyText: Halves the damage tick interval, causing the magic circle to
+    deal damage twice as often.
 --- !u!114 &6737148602292614323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,13 +943,17 @@ MonoBehaviour:
   rowID: PartySlot_Wizard
   isEnable: 1
   layout: 3
-  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Creates <color=red>3</color> magic circles on the nearest enemy.
+  bodyText: 'Summons <color=#FFCE1B>3</color> magic circles around the nearest enemy.
+
+    Each
+    circle damages enemies within its area.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: Increases the magic circles count to 8.
+  additionalTagText: <b><color=#FFCE1B>Grand Formation</color></b>
+  additionalBodyText: Increases the number of magic circles from <color=#FFCE1B>3</color>
+    to <color=#FFCE1B>8</color>.
 --- !u!114 &8628386021169592061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,10 +972,13 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: 'Fires a magic orb at the nearest enemy,
+  bodyText: 'Throws a fireball at the nearest enemy,
 
-    dealing immediate damage
-    and <color=red>DoT</color> damage.'
+    dealing immediate Magic
+    Damage and applying a non-stacking burn.
+
+    Reapplying the burn refreshes its
+    duration.'
   additionalHeaderText: Lv.3
-  additionalTagText: 
-  additionalBodyText: DoT damage is doubled.
+  additionalTagText: <b><color=#FFCE1B>Intense Flames</color></b>
+  additionalBodyText: Doubles the burn damage.

@@ -54,8 +54,8 @@ MonoBehaviour:
   - 0.75
   - 0.5
   secondaryValues:
-  - 2
-  - 2
+  - 1.5
+  - 1.5
 --- !u!114 &-5870998669458701695
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,6 +22,28 @@ MonoBehaviour:
   physicalPercentPenetration: 0.1
   magicFlatPenetration: 0
   magicPercentPenetration: 0
+--- !u!114 &-6397836318384943489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Wizard
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Wizard
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 20
+  attackCooldown: 2
+  attackRange: 5.5
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 3
+  magicPercentPenetration: 0
 --- !u!114 &-4353610550449242165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,6 +63,28 @@ MonoBehaviour:
   attackCooldown: 1.1
   attackRange: 5
   physicalFlatPenetration: 2
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 0
+  magicPercentPenetration: 0
+--- !u!114 &-3884206937945505743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_MageRobo
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_MageRobo
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 0
+  attackCooldown: 0.8
+  attackRange: 4.5
+  physicalFlatPenetration: 0
   physicalPercentPenetration: 0
   magicFlatPenetration: 0
   magicPercentPenetration: 0
@@ -67,6 +111,13 @@ MonoBehaviour:
   - {fileID: -8764002015650534383}
   - {fileID: 1511671501659976113}
   - {fileID: 3883686396700483185}
+  - {fileID: 2243461779543469132}
+  - {fileID: -6397836318384943489}
+  - {fileID: 6046006290034419340}
+  - {fileID: 3108717198606617756}
+  - {fileID: 5534166713787052561}
+  - {fileID: 6125234204392255300}
+  - {fileID: -3884206937945505743}
   dataTableRowScript: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
 --- !u!114 &1511671501659976113
 MonoBehaviour:
@@ -88,6 +139,50 @@ MonoBehaviour:
   attackRange: 8
   physicalFlatPenetration: 18
   physicalPercentPenetration: 0.15
+  magicFlatPenetration: 0
+  magicPercentPenetration: 0
+--- !u!114 &2243461779543469132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Magician
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Magician
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 14
+  attackCooldown: 1.4
+  attackRange: 5
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 2
+  magicPercentPenetration: 0
+--- !u!114 &3108717198606617756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Telekinetic
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Telekinetic
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 0
+  attackCooldown: 6
+  attackRange: 5.5
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
   magicFlatPenetration: 0
   magicPercentPenetration: 0
 --- !u!114 &3883686396700483185
@@ -112,6 +207,28 @@ MonoBehaviour:
   physicalPercentPenetration: 0
   magicFlatPenetration: 0
   magicPercentPenetration: 0
+--- !u!114 &5534166713787052561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Transmuter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Transmuter
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 32
+  attackCooldown: 2.4
+  attackRange: 6
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 5
+  magicPercentPenetration: 0.1
 --- !u!114 &5769363496740986005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +248,50 @@ MonoBehaviour:
   attackCooldown: 1.45
   attackRange: 4.5
   physicalFlatPenetration: 4
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 0
+  magicPercentPenetration: 0
+--- !u!114 &6046006290034419340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Explomancer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Explomancer
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 28
+  attackCooldown: 3
+  attackRange: 5
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 4
+  magicPercentPenetration: 0.05
+--- !u!114 &6125234204392255300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Artificer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Artificer
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 22
+  attackCooldown: 4
+  attackRange: 4.5
+  physicalFlatPenetration: 0
   physicalPercentPenetration: 0
   magicFlatPenetration: 0
   magicPercentPenetration: 0

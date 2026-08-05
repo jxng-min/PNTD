@@ -27,6 +27,7 @@ namespace PNTD
         [Space(30f)]
         [BigHeader("Debug")]
         [SerializeField] private bool seedRangerParty = true;
+        [SerializeField] private bool seedMageParty = false;
         [SerializeField] private List<HeroPartySeed> rangerPartySeeds = new()
         {
             new HeroPartySeed { heroId = "Hero_Archer", level = 1 },
@@ -35,6 +36,15 @@ namespace PNTD
             new HeroPartySeed { heroId = "Hero_Artillery", level = 1 },
             new HeroPartySeed { heroId = "Hero_Sniper", level = 1 },
             new HeroPartySeed { heroId = "Hero_Trickshooter", level = 1 },
+        };
+        [SerializeField] private List<HeroPartySeed> magePartySeeds = new()
+        {
+            new HeroPartySeed { heroId = "Hero_Magician", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Wizard", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Explomancer", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Telekinetic", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Transmuter", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Artificer", level = 1 },
         };
 
         private LobbyModel _model;
@@ -59,7 +69,7 @@ namespace PNTD
             var statusSystem = new StatusSystem();
             var visibilitySystem = new LobbyVisibilitySystem(GetLobbyCanvasGroups());
             
-            var initialParty = seedRangerParty ? CreateRangerParty() : null;
+            var initialParty = CreateSeedParty();
             var domain = new LobbyDomain(shopSystem,
                                          shuffleSystem,
                                          synergySystem,
@@ -117,10 +127,31 @@ namespace PNTD
 
             return canvasGroups.ToArray();
         }
+        
+        private IReadOnlyList<HeroContext> CreateSeedParty()
+        {
+            if (seedMageParty)
+            {
+                return CreateMageParty();
+            }
+
+            return seedRangerParty ? CreateRangerParty() : null;
+        }
 
         private IReadOnlyList<HeroContext> CreateRangerParty()
         {
-            var seeds = rangerPartySeeds is { Count: > 0 } ? rangerPartySeeds : CreateDefaultRangerPartySeeds();
+            return CreateParty(rangerPartySeeds, CreateDefaultRangerPartySeeds());
+        }
+        
+        private IReadOnlyList<HeroContext> CreateMageParty()
+        {
+            return CreateParty(magePartySeeds, CreateDefaultMagePartySeeds());
+        }
+        
+        private IReadOnlyList<HeroContext> CreateParty(IReadOnlyList<HeroPartySeed> configuredSeeds,
+                                                       IReadOnlyList<HeroPartySeed> defaultSeeds)
+        {
+            var seeds = configuredSeeds is { Count: > 0 } ? configuredSeeds : defaultSeeds;
 
             var heroContexts = new List<HeroContext>(seeds.Count);
             foreach (var seed in seeds)
@@ -150,6 +181,19 @@ namespace PNTD
                 new() { heroId = "Hero_Artillery", level = 1 },
                 new() { heroId = "Hero_Sniper", level = 1 },
                 new() { heroId = "Hero_Trickshooter", level = 1 },
+            };
+        }
+        
+        private static List<HeroPartySeed> CreateDefaultMagePartySeeds()
+        {
+            return new List<HeroPartySeed>
+            {
+                new() { heroId = "Hero_Magician", level = 1 },
+                new() { heroId = "Hero_Wizard", level = 1 },
+                new() { heroId = "Hero_Explomancer", level = 1 },
+                new() { heroId = "Hero_Telekinetic", level = 1 },
+                new() { heroId = "Hero_Transmuter", level = 1 },
+                new() { heroId = "Hero_Artificer", level = 1 },
             };
         }
         

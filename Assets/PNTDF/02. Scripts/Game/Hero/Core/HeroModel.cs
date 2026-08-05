@@ -10,6 +10,7 @@ namespace PNTD
         [Header("Body")]
         [SerializeField] private SpriteRenderer bodyRenderer;
         [SerializeField] private Transform rotationAxis;
+        [SerializeField] private float facingAngleOffset = 180f;
         
         [Header("Cool Bar")]
         [SerializeField] private Image coolBarBackground;
@@ -53,10 +54,43 @@ namespace PNTD
             coolBarInner.color = isSealed ? Color.gray : Color;
             bodyRenderer.color = isSealed ? Color.gray : Color;
         }
+
+        public void FaceDirection(Vector2 direction)
+        {
+            if (direction.sqrMagnitude <= Mathf.Epsilon)
+            {
+                return;
+            }
+
+            var target = rotationAxis != null ? rotationAxis : transform;
+            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + facingAngleOffset;
+            target.rotation = Quaternion.Euler(0f, 0f, angle);
+        }
+
+        public void FaceTarget(Enemy target)
+        {
+            if (_hero == null || target == null)
+            {
+                return;
+            }
+
+            FaceDirection(target.transform.position - _hero.transform.position);
+        }
         
         private void UpdateCooldownBar(float currentCoolTime, float maxCoolTime)
         {
             coolBarInner.fillAmount = Mathf.Clamp01(currentCoolTime / maxCoolTime);
+        }
+
+        private void Update()
+        {
+            var target = _hero?.Caster?.FindNearestTarget();
+            if (target == null)
+            {
+                return;
+            }
+
+            FaceTarget(target);
         }
 
         private void OnDestroy()

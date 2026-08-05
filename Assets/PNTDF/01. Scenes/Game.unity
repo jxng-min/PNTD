@@ -198,6 +198,22 @@ MonoBehaviour:
   - {fileID: 1374453495}
   - {fileID: 1188951963}
   - {fileID: 914724644}
+  seedRangerParty: 1
+  seedMageParty: 0
+  rangerPartySeeds: []
+  magePartySeeds:
+  - heroId: Hero_Magician
+    level: 3
+  - heroId: Hero_Wizard
+    level: 3
+  - heroId: Hero_Explomancer
+    level: 3
+  - heroId: Hero_Telekinetic
+    level: 3
+  - heroId: Hero_Transmuter
+    level: 3
+  - heroId: Hero_Artificer
+    level: 1
 --- !u!114 &216071611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,6 +2636,22 @@ MonoBehaviour:
     initialPoolSize: 20
     maxPoolSize: 40
     isExpandable: 0
+  - prefab: {fileID: 5943740814239039241, guid: 63fa48943e6bb3a49b615ffaa5460b78, type: 3}
+    initialPoolSize: 10
+    maxPoolSize: 20
+    isExpandable: 0
+  - prefab: {fileID: 2851312986475265104, guid: 1b2383ee43169e945b3ee67c81daa16d, type: 3}
+    initialPoolSize: 3
+    maxPoolSize: 3
+    isExpandable: 0
+  - prefab: {fileID: 2851312986475265104, guid: 1b2383ee43169e945b3ee67c81daa16d, type: 3}
+    initialPoolSize: 3
+    maxPoolSize: 3
+    isExpandable: 0
+  - prefab: {fileID: 5661273342184995275, guid: 2db086c566bcef84daca1ab587c295f7, type: 3}
+    initialPoolSize: 6
+    maxPoolSize: 6
+    isExpandable: 0
 --- !u!1001 &908702335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4066,6 +4098,10 @@ PrefabInstance:
       propertyPath: 'tooltipViews.Array.data[1]'
       value: 
       objectReference: {fileID: 1983535589}
+    - target: {fileID: 4069782195506482324, guid: 8e9c96543225bfa448ba03070fc50d32, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 579142842}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

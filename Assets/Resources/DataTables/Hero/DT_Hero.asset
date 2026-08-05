@@ -52,10 +52,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
   rowID: Hero_MageRobo
   isEnable: 1
-  displayName: Hextech Robot
+  displayName: Magitech Robot
   color: {r: 0, g: 0.6745098, b: 0.75686276, a: 1}
   tier: 0
-  synergy: 0
+  synergy: 4
   cost: 0
 --- !u!114 &-4981726269066216892
 MonoBehaviour:
@@ -282,9 +282,9 @@ MonoBehaviour:
   isEnable: 1
   displayName: Wizard
   color: {r: 0.69803923, g: 0.92156863, b: 0.9490196, a: 1}
-  tier: 1
+  tier: 2
   synergy: 4
-  cost: 1
+  cost: 2
 --- !u!114 &4071502479712666693
 MonoBehaviour:
   m_ObjectHideFlags: 0

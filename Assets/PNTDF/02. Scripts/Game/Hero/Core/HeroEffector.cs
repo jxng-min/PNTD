@@ -128,6 +128,28 @@ namespace PNTD
 
             _callbackSnapshot.Clear();
         }
+        
+        public void NotifyAffectedEnemy(Enemy enemy)
+        {
+            if (_hero == null || enemy == null)
+            {
+                return;
+            }
+
+            CreateCallbackSnapshot();
+
+            foreach (HeroEffect effect in _callbackSnapshot)
+            {
+                if (!IsEffectActive(effect))
+                {
+                    continue;
+                }
+
+                effect.OnAffectEnemy(_hero, enemy);
+            }
+
+            _callbackSnapshot.Clear();
+        }
 
         private void RemoveAt(int index)
         {

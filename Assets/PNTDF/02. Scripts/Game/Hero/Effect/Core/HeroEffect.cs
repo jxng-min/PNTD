@@ -21,6 +21,7 @@ namespace PNTD
         public virtual void Tick(Hero hero, float deltaTime) {}
         public virtual void Release(Hero hero) {}
         public virtual void OnHitEnemy(Hero hero, Enemy enemy) {}
+        public virtual void OnAffectEnemy(Hero hero, Enemy enemy) {}
         
         protected abstract void OnApply(Hero hero);
     }
