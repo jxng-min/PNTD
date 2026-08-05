@@ -8,6 +8,13 @@ namespace PNTD
 {
     public class LobbyRunner : MonoBehaviour
     {
+        [System.Serializable]
+        private class HeroPartySeed
+        {
+            public string heroId;
+            [Range(1, 3)] public int level = 1;
+        }
+
         [BigHeader("Presenter")]
         [SerializeField] private ShopPresenter shopPresenter;
         [SerializeField] private SynergyPresenter synergyPresenter;
@@ -16,6 +23,19 @@ namespace PNTD
         [SerializeField] private MapRunner mapRunner;
         [SerializeField] private StageRunner stageRunner;
         [SerializeField] private CanvasGroup[] lobbyCanvasGroups;
+
+        [Space(30f)]
+        [BigHeader("Debug")]
+        [SerializeField] private bool seedRangerParty = true;
+        [SerializeField] private List<HeroPartySeed> rangerPartySeeds = new()
+        {
+            new HeroPartySeed { heroId = "Hero_Archer", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Handgunner", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Shotgunner", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Artillery", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Sniper", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Trickshooter", level = 1 },
+        };
 
         private LobbyModel _model;
 
@@ -39,7 +59,14 @@ namespace PNTD
             var statusSystem = new StatusSystem();
             var visibilitySystem = new LobbyVisibilitySystem(GetLobbyCanvasGroups());
             
-            var domain = new LobbyDomain(shopSystem, shuffleSystem, synergySystem, partySystem, statusSystem, visibilitySystem);
+            var initialParty = seedRangerParty ? CreateRangerParty() : null;
+            var domain = new LobbyDomain(shopSystem,
+                                         shuffleSystem,
+                                         synergySystem,
+                                         partySystem,
+                                         statusSystem,
+                                         visibilitySystem,
+                                         initialParty);
             var compositor = new LobbyCompositor(domain, shopPresenter, synergyPresenter, partyPresenter, indexerPresenter);
 
             _model = new LobbyModel(domain, compositor);
@@ -89,6 +116,41 @@ namespace PNTD
             }
 
             return canvasGroups.ToArray();
+        }
+
+        private IReadOnlyList<HeroContext> CreateRangerParty()
+        {
+            var seeds = rangerPartySeeds is { Count: > 0 } ? rangerPartySeeds : CreateDefaultRangerPartySeeds();
+
+            var heroContexts = new List<HeroContext>(seeds.Count);
+            foreach (var seed in seeds)
+            {
+                if (seed == null || string.IsNullOrWhiteSpace(seed.heroId))
+                {
+                    continue;
+                }
+
+                var heroDataTableRow = _heroDataTable?.Find<HeroDataTableRow>(row => row.isEnable && row.rowID == seed.heroId);
+                if (heroDataTableRow != null)
+                {
+                    heroContexts.Add(new HeroContext(heroDataTableRow, Mathf.Clamp(seed.level, 1, 3), 0));
+                }
+            }
+
+            return heroContexts;
+        }
+
+        private static List<HeroPartySeed> CreateDefaultRangerPartySeeds()
+        {
+            return new List<HeroPartySeed>
+            {
+                new() { heroId = "Hero_Archer", level = 1 },
+                new() { heroId = "Hero_Handgunner", level = 1 },
+                new() { heroId = "Hero_Shotgunner", level = 1 },
+                new() { heroId = "Hero_Artillery", level = 1 },
+                new() { heroId = "Hero_Sniper", level = 1 },
+                new() { heroId = "Hero_Trickshooter", level = 1 },
+            };
         }
         
         private void OnDestroy()

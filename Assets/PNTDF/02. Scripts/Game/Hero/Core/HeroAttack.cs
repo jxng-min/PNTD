@@ -118,7 +118,7 @@ namespace PNTD
         {
             CancelAttack();
 
-            if (_hero.Stat != null)
+            if (_hero != null && _hero.Stat != null)
             {
                 _hero.Stat.OnChangedStat -= HandleOnChangedStat;
             }

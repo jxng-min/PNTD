@@ -29,9 +29,33 @@ namespace PNTD
 
         private void AddLevelUnlockEffects(HeroContext heroContext, List<HeroEffect> effects)
         {
+            switch (heroContext.HeroDataTableRow.rowID)
+            {
+                case "Hero_Handgunner" when heroContext.Level > 1:
+                    effects.Add(new HeroStatModifierEffect(EHeroStat.PhysicalAttackPower,
+                                                           EHeroStatModifierOperation.Flat,
+                                                           5f * (heroContext.Level - 1)));
+                    break;
+            }
+
             if (heroContext.Level < 3)
             {
                 return;
+            }
+
+            switch (heroContext.HeroDataTableRow.rowID)
+            {
+                case "Hero_Archer":
+                    effects.Add(new HeroStatModifierEffect(EHeroStat.AttackCooldown,
+                                                           EHeroStatModifierOperation.Multiply,
+                                                           0.70f));
+                    break;
+                
+                case "Hero_Sniper":
+                    effects.Add(new HeroStatModifierEffect(EHeroStat.AttackCooldown,
+                                                           EHeroStatModifierOperation.Multiply,
+                                                           0.50f));
+                    break;
             }
         }
 
@@ -39,6 +63,7 @@ namespace PNTD
                                        SynergyContext synergyContext,
                                        List<HeroEffect> effects)
         {
+            SynergyEffectFactory.AddEffects(heroContext, synergyContext, effects);
         }
     }
 }

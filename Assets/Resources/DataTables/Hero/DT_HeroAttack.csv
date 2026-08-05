@@ -1,1 +1,7 @@
 rowID,physicalAttackPower,magicAttackPower,attackCooldown,attackRange,physicalFlatPenetration,physicalPercentPenetration,magicFlatPenetration,magicPercentPenetration,isEnable
+Hero_Archer,14,0,1.1,5,2,0,0,0,TRUE
+Hero_Handgunner,12,0,1.45,4.5,4,0,0,0,TRUE
+Hero_Shotgunner,18,0,1.7,3.2,1,0,0,0,TRUE
+Hero_Artillery,30,0,2.6,6,10,0.1,0,0,TRUE
+Hero_Sniper,42,0,3.2,8,18,0.15,0,0,TRUE
+Hero_Trickshooter,5,0,0.18,5.5,5,0,0,0,TRUE

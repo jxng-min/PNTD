@@ -58,7 +58,16 @@ namespace PNTD
 
         private HeroSkill CreateSkill(DeployContext deployContext)
         {
-            return new EmptyHeroSkill();
+            return deployContext.HeroDataTableRow.rowID switch
+            {
+                "Hero_Archer" => new ArcherSkill(),
+                "Hero_Handgunner" => new HandgunnerSkill(),
+                "Hero_Shotgunner" => new ShotgunnerSkill(),
+                "Hero_Artillery" => new ArtillerySkill(),
+                "Hero_Sniper" => new SniperSkill(),
+                "Hero_Trickshooter" => new TrickshooterSkill(),
+                _ => new EmptyHeroSkill()
+            };
         }
     }
 }

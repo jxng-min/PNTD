@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c859e99fe240be955d7db0c24d10fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Developers.KJM.ShadowableObject
-  hoverEnable: 1
+  hoverEnable: 0
   rootTransform: {fileID: 2723628388835279874}
   shadowTransform: {fileID: 4142605790710972903}
   rotationAxisTransform: {fileID: 6793575251960841242}
