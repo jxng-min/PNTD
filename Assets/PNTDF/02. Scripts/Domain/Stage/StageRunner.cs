@@ -16,12 +16,18 @@ namespace PNTD
         [SerializeField] private ResultPresenter resultPresenter;
         [SerializeField] private PalettePresenter palettePresenter;
         [SerializeField] private CanvasGroup[] stageCanvasGroups;
+        
+        [Space(30f)]
+        [BigHeader("References")]
+        [SerializeField] private Transform heroRoot;
+        [SerializeField] private DeployPreviewView deployPreviewView;
 
         private StageModel _model;
 
         private DataTable _enemyDataTable;
         private DataTable _enemyAbilityDataTable;
         private DataTable _enragerDataTable;
+        private DataTable _heroAttackDataTable;
         private int _interest;
 
         private void Awake()
@@ -29,6 +35,7 @@ namespace PNTD
             _enemyDataTable = DataTableManager.FindTable<EnemyDataTableRow>("DT_Enemy");
             _enemyAbilityDataTable = DataTableManager.FindTable<EnemyAbilityDataTableRow>("DT_EnemyAbility");
             _enragerDataTable = DataTableManager.FindTable<EnragerDataTableRow>("DT_Enrager");
+            _heroAttackDataTable = DataTableManager.FindTable<HeroAttackDataTableRow>("DT_HeroAttack");
         }
 
         public void Initialize(MapContext mapContext,
@@ -51,18 +58,33 @@ namespace PNTD
             var stageSystem = new StageSystem();
             var waveSystem = new WaveSystem();
             var visibilitySystem = new StageVisibilitySystem(GetStageCanvasGroups());
+            var boardSystem = new BoardSystem();
             var deploySystem = new DeploySystem();
             var deployContextFactory = new DeployContextFactory();
+            var skillContext = new HeroSkillContext(mapContext.Map.BuildMap, heroRoot);
+            var heroPrefab = PrefabManager.CachePrefab<Hero>("[PF] Hero");
+            var heroFactory = new HeroFactory(heroPrefab, _heroAttackDataTable, skillContext, heroRoot);
+            var deployAction = new StageDeployAction(boardSystem, deploySystem, heroFactory, mapContext.Map);
+            var deployPreviewSystem = new DeployPreviewSystem(deploySystem,
+                                                              deployAction,
+                                                              mapContext.Map,
+                                                              deployPreviewView);
             
             enemyFactory.Initialize(mapContext.Map.StagePath, waveSystem);
             
             var runtimeStageContext = new RStageContext();
-            var domain = new StageDomain(stageSystem, waveSystem, visibilitySystem);
-            var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter);
+            var domain = new StageDomain(stageSystem,
+                                         waveSystem,
+                                         visibilitySystem,
+                                         boardSystem,
+                                         deploySystem,
+                                         heroFactory,
+                                         deployPreviewSystem);
+            var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter, deployAction);
 
             _model = new StageModel(domain, compositor, runtimeStageContext);
             _model.Initialize(enemyFactory, mapContext.StageContext, stage);
-            palettePresenter?.Initialize(party, deploySystem, deployContextFactory, synergyContextProvider);
+            palettePresenter?.Initialize(party, domain.DeploySystem, deployContextFactory, synergyContextProvider);
             _model.Show();
         }
 

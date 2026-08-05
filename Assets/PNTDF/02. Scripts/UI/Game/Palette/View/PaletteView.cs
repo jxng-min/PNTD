@@ -54,6 +54,16 @@ namespace PNTD
             }
         }
 
+        public void UpdateSlotState(int slotIndex, bool isUsing)
+        {
+            if (_paletteSlotViews == null || slotIndex < 0 || slotIndex >= _paletteSlotViews.Length)
+            {
+                return;
+            }
+
+            _paletteSlotViews[slotIndex].UpdateState(isUsing);
+        }
+
         public void UpdateSlotState(bool isUsing)
         {
             if (_paletteSlotViews == null)

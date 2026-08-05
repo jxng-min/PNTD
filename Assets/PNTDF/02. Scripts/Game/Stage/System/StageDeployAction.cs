@@ -1,0 +1,58 @@
+using UnityEngine;
+
+namespace PNTD
+{
+    public class StageDeployAction
+    {
+        private readonly BoardSystem _boardSystem;
+        private readonly DeploySystem _deploySystem;
+        private readonly HeroFactory _heroFactory;
+        private readonly StageMap _stageMap;
+
+        public StageDeployAction(BoardSystem boardSystem,
+                                 DeploySystem deploySystem,
+                                 HeroFactory heroFactory,
+                                 StageMap stageMap)
+        {
+            _boardSystem = boardSystem;
+            _deploySystem = deploySystem;
+            _heroFactory = heroFactory;
+            _stageMap = stageMap;
+        }
+
+        public bool TryDeploy(DeployContext deployContext, Vector3Int cellPosition)
+        {
+            if (!CanDeploy(cellPosition))
+            {
+                return false;
+            }
+
+            var position = _stageMap.BuildMap.GetCellCenterWorld(cellPosition);
+            var hero = _heroFactory.Create(deployContext, position);
+            if (hero == null)
+            {
+                return false;
+            }
+
+            if (!_boardSystem.TryOccupy(cellPosition, hero))
+            {
+                Object.Destroy(hero.gameObject);
+                return false;
+            }
+
+            _deploySystem.ExitDeployMode();
+            return true;
+        }
+
+        public bool CanDeploy(Vector3Int cellPosition)
+        {
+            if (_stageMap?.BuildMap == null)
+            {
+                return false;
+            }
+
+            return _stageMap.BuildMap.HasTile(cellPosition) &&
+                   _boardSystem.CanOccupy(cellPosition);
+        }
+    }
+}

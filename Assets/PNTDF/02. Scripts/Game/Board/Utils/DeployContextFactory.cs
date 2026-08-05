@@ -4,7 +4,7 @@ namespace PNTD
 {
     public class DeployContextFactory
     {
-        public DeployContext Create(HeroContext heroContext, SynergyContext synergyContext)
+        public DeployContext Create(int slotIndex, HeroContext heroContext, SynergyContext synergyContext)
         {
             if (heroContext == null || heroContext.HeroDataTableRow == null)
             {
@@ -17,7 +17,8 @@ namespace PNTD
             AddLevelUnlockEffects(heroContext, effects);
             AddSynergyEffects(heroContext, synergyContext, effects);
 
-            return new DeployContext(heroContext.HeroDataTableRow,
+            return new DeployContext(slotIndex,
+                                     heroContext.HeroDataTableRow,
                                      heroContext.Level,
                                      effects);
         }

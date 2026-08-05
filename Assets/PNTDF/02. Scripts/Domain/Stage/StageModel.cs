@@ -61,6 +61,7 @@ namespace PNTD
 
             Domain.StageSystem.Tick(deltaTime);
             Domain.WaveSystem.Tick(deltaTime);
+            Domain.DeployPreviewSystem.Tick();
         }
 
         public IEnumerator WaitUntilStageEnd()
@@ -73,6 +74,7 @@ namespace PNTD
             Domain.StageSystem.OnStageCleared -= HandleOnStageCleared;
             _runtimeStageContext.OnStageOvered -= HandleOnStageOvered;
             Compositor.ReleaseEvents();
+            Domain.DeployPreviewSystem.Dispose();
             Domain.WaveSystem.Dispose();
         }
 

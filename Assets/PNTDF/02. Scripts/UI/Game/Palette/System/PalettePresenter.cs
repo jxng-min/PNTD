@@ -60,7 +60,7 @@ namespace PNTD
 
             var heroContext = _heroContexts[slotIndex];
             var synergyContext = _synergyContextProvider?.Invoke() ?? SynergyContext.Empty;
-            var deployContext = _deployContextFactory.Create(heroContext, synergyContext);
+            var deployContext = _deployContextFactory.Create(slotIndex, heroContext, synergyContext);
 
             _deploySystem.EnterDeployMode(deployContext);
         }
