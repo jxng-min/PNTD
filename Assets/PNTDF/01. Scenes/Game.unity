@@ -2608,6 +2608,10 @@ MonoBehaviour:
     initialPoolSize: 3
     maxPoolSize: 3
     isExpandable: 0
+  - prefab: {fileID: 1250001235587268254, guid: e4099aaca4d2c7542b1d787172cbbd9d, type: 3}
+    initialPoolSize: 7
+    maxPoolSize: 10
+    isExpandable: 0
 --- !u!1001 &908702335
 PrefabInstance:
   m_ObjectHideFlags: 0
