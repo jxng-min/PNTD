@@ -10,6 +10,7 @@ namespace PNTD
         public event Action<DeployContext> OnEnterDeployMode;
         public event Action OnExitDeployMode;
         public event Action<DeployContext, Vector3Int> OnDeployRequested;
+        public event Action<DeployContext> OnDeployCompleted;
         
         public bool DeployMode { get; private set; }
 
@@ -40,6 +41,11 @@ namespace PNTD
             _deployContext = null;
             DeployMode = false;
             OnExitDeployMode?.Invoke();
+        }
+
+        public void CompleteDeploy(DeployContext deployContext)
+        {
+            OnDeployCompleted?.Invoke(deployContext);
         }
     }
 }

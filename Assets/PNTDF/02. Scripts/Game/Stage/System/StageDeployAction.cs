@@ -42,7 +42,7 @@ namespace PNTD
 
             if (!_boardSystem.TryOccupy(cellPosition, hero))
             {
-                Object.Destroy(hero.gameObject);
+                _heroFactory.Release(hero);
                 return false;
             }
             
@@ -51,6 +51,7 @@ namespace PNTD
             _clericSanctuarySystem?.Register(hero);
             _clericSanctuarySystem?.Refresh();
 
+            _deploySystem.CompleteDeploy(deployContext);
             _deploySystem.ExitDeployMode();
             return true;
         }

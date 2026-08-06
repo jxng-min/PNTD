@@ -31,6 +31,11 @@ namespace PNTD
             {
                 paletteView.OnClickedSlot += HandleOnClickedSlot;
             }
+
+            if (_deploySystem != null)
+            {
+                _deploySystem.OnDeployCompleted += HandleOnDeployCompleted;
+            }
         }
 
         public void Release()
@@ -38,6 +43,11 @@ namespace PNTD
             if (paletteView != null)
             {
                 paletteView.OnClickedSlot -= HandleOnClickedSlot;
+            }
+
+            if (_deploySystem != null)
+            {
+                _deploySystem.OnDeployCompleted -= HandleOnDeployCompleted;
             }
 
             _heroContexts = null;
@@ -63,6 +73,16 @@ namespace PNTD
             var deployContext = _deployContextFactory.Create(slotIndex, heroContext, synergyContext);
 
             _deploySystem.EnterDeployMode(deployContext);
+        }
+
+        private void HandleOnDeployCompleted(DeployContext deployContext)
+        {
+            if (deployContext == null)
+            {
+                return;
+            }
+            
+            paletteView?.UpdateSlotState(deployContext.SlotIndex, true);
         }
 
         private void OnDestroy()
