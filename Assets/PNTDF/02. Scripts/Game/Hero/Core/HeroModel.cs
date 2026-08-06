@@ -17,6 +17,7 @@ namespace PNTD
         [SerializeField] private Image coolBarInner;
 
         private Hero _hero;
+        private bool _isRotationPaused;
         
         public Color Color { get; private set; }
         public Transform RotationAxis => rotationAxis;
@@ -55,6 +56,11 @@ namespace PNTD
             bodyRenderer.color = isSealed ? Color.gray : Color;
         }
 
+        public void SetRotationPaused(bool isPaused)
+        {
+            _isRotationPaused = isPaused;
+        }
+
         public void FaceDirection(Vector2 direction)
         {
             if (direction.sqrMagnitude <= Mathf.Epsilon)
@@ -84,6 +90,11 @@ namespace PNTD
 
         private void Update()
         {
+            if (_isRotationPaused)
+            {
+                return;
+            }
+
             var target = _hero?.Caster?.FindNearestTarget();
             if (target == null)
             {

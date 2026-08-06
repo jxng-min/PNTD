@@ -38,6 +38,16 @@ namespace PNTD
             ApplyVisuals();
         }
 
+        public void SetCollisionEnabled(bool isEnabled)
+        {
+            CacheReferences();
+
+            if (circleCollider != null)
+            {
+                circleCollider.enabled = isEnabled;
+            }
+        }
+
         public void SetOrbitPosition(float angle, float radius)
         {
             var radians = angle * Mathf.Deg2Rad;
@@ -164,6 +174,7 @@ namespace PNTD
 
             if (circleCollider != null)
             {
+                circleCollider.enabled = true;
                 circleCollider.isTrigger = true;
                 circleCollider.radius = _controller.Data.orbRadius;
             }

@@ -7,16 +7,19 @@ namespace PNTD
         private readonly BoardSystem _boardSystem;
         private readonly DeploySystem _deploySystem;
         private readonly HeroFactory _heroFactory;
+        private readonly HeroMoveSystem _heroMoveSystem;
         private readonly StageMap _stageMap;
 
         public StageDeployAction(BoardSystem boardSystem,
                                  DeploySystem deploySystem,
                                  HeroFactory heroFactory,
+                                 HeroMoveSystem heroMoveSystem,
                                  StageMap stageMap)
         {
             _boardSystem = boardSystem;
             _deploySystem = deploySystem;
             _heroFactory = heroFactory;
+            _heroMoveSystem = heroMoveSystem;
             _stageMap = stageMap;
         }
 
@@ -41,6 +44,7 @@ namespace PNTD
             }
             
             hero.NotifyDeployed(cellPosition);
+            _heroMoveSystem?.Register(hero);
 
             _deploySystem.ExitDeployMode();
             return true;

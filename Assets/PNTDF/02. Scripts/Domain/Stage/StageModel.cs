@@ -75,6 +75,7 @@ namespace PNTD
             _runtimeStageContext.OnStageOvered -= HandleOnStageOvered;
             Compositor.ReleaseEvents();
             Domain.DeployPreviewSystem.Dispose();
+            Domain.HeroMoveSystem.Dispose();
             Domain.WaveSystem.Dispose();
         }
 

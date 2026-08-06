@@ -18,6 +18,7 @@ namespace PNTD
         private int _baseOrbCount;
         private int _synergyOrbBonus;
         private bool _canDamage = true;
+        private bool _isOrbitPaused;
         private bool _isInitialized;
 
         public Hero Owner => _owner;
@@ -36,6 +37,7 @@ namespace PNTD
             _angleOffset = 0f;
             _radiusCycleTime = 0f;
             _canDamage = true;
+            _isOrbitPaused = false;
             _isInitialized = _owner != null && _data != null;
 
             if (_owner?.Dragger != null)
@@ -74,6 +76,7 @@ namespace PNTD
             _data = null;
             _isInitialized = false;
             _canDamage = true;
+            _isOrbitPaused = false;
         }
 
         private void RefreshOrbs()
@@ -143,7 +146,7 @@ namespace PNTD
 
         private void Update()
         {
-            if (!_isInitialized || _data == null)
+            if (!_isInitialized || _data == null || _isOrbitPaused)
             {
                 return;
             }
@@ -255,6 +258,8 @@ namespace PNTD
             if (hero == _owner)
             {
                 _canDamage = false;
+                _isOrbitPaused = true;
+                SetOrbCollisions(false);
             }
         }
 
@@ -263,6 +268,16 @@ namespace PNTD
             if (hero == _owner)
             {
                 _canDamage = true;
+                _isOrbitPaused = false;
+                SetOrbCollisions(true);
+            }
+        }
+
+        private void SetOrbCollisions(bool isEnabled)
+        {
+            foreach (var orb in _orbs)
+            {
+                orb?.SetCollisionEnabled(isEnabled);
             }
         }
 

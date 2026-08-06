@@ -46,6 +46,7 @@ namespace PNTD
             _deployContext = deployContext;
             _previewView?.Initialize(deployContext.HeroDataTableRow);
             _previewView?.Show();
+            _stageMap?.MapEffect?.SetHighlight(true);
 
             _waitUntilPrimaryReleased = Input.GetMouseButton(0);
 
@@ -113,6 +114,7 @@ namespace PNTD
         private void ClearPreview()
         {
             _previewView?.Hide();
+            _stageMap?.MapEffect?.SetHighlight(false);
 
             _deployContext = null;
             _currentCellPosition = default;

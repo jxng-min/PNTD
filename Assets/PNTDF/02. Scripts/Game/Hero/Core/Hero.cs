@@ -30,7 +30,7 @@ namespace PNTD
         public HeroEffector Effector => effector;
 
         public bool IsSkillSealed => Effector != null && Effector.IsSkillSealed;
-        public bool CanShowTooltip => _isInitialized && HeroDataTableRow != null && Stat != null;
+        public bool CanShowTooltip => _isInitialized && HeroDataTableRow != null && Stat != null && !HeroDragger.AnyDragging;
 
         public void Initialize(HeroDataTableRow heroDataTableRow,
                                HeroStat heroStat,

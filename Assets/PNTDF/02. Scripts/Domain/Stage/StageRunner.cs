@@ -67,7 +67,10 @@ namespace PNTD
             var heroPrefab = PrefabManager.CachePrefab<Hero>("[PF] Hero");
             var magitechRobotPrefab = PrefabManager.CachePrefab<Hero>("[PF] Magitech Robot");
             var heroFactory = new HeroFactory(heroPrefab, magitechRobotPrefab, _heroDataTable, _heroAttackDataTable, skillContext, heroRoot);
-            var deployAction = new StageDeployAction(boardSystem, deploySystem, heroFactory, mapContext.Map);
+            var heroMoveSystem = new HeroMoveSystem(boardSystem,
+                                                    deploySystem,
+                                                    mapContext.Map);
+            var deployAction = new StageDeployAction(boardSystem, deploySystem, heroFactory, heroMoveSystem, mapContext.Map);
             var deployPreviewSystem = new DeployPreviewSystem(deploySystem,
                                                               deployAction,
                                                               mapContext.Map,
@@ -82,7 +85,8 @@ namespace PNTD
                                          boardSystem,
                                          deploySystem,
                                          heroFactory,
-                                         deployPreviewSystem);
+                                         deployPreviewSystem,
+                                         heroMoveSystem);
             var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter, deployAction);
 
             _model = new StageModel(domain, compositor, runtimeStageContext);
