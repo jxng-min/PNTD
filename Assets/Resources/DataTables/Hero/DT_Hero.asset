@@ -57,6 +57,25 @@ MonoBehaviour:
   tier: 0
   synergy: 4
   cost: 0
+--- !u!114 &-5196461661551828572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Saturnian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Saturnian
+  isEnable: 1
+  displayName: Saturnian
+  color: {r: 0.9254902, g: 0.89411765, b: 0.827451, a: 1}
+  tier: 3
+  synergy: 64
+  cost: 3
 --- !u!114 &-4981726269066216892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,13 +214,18 @@ MonoBehaviour:
   - {fileID: -585649596675210853}
   - {fileID: 4201738370495130994}
   - {fileID: 7325909315835556372}
-  - {fileID: 3269799351450931619}
   - {fileID: 6876907272863570738}
+  - {fileID: 3269799351450931619}
   - {fileID: 8505830292631284896}
   - {fileID: -2561357900620779495}
   - {fileID: -1072018602865270898}
   - {fileID: 9208774785752481754}
   - {fileID: -6166521136080056606}
+  - {fileID: 2573819167478548389}
+  - {fileID: 9031383864300409721}
+  - {fileID: 6786126936164208821}
+  - {fileID: -5196461661551828572}
+  - {fileID: 8835671180606308191}
   - {fileID: 4071502479712666693}
   - {fileID: -3243047386131535863}
   - {fileID: -3452042158845359732}
@@ -247,6 +271,25 @@ MonoBehaviour:
   tier: 3
   synergy: 40
   cost: 3
+--- !u!114 &2573819167478548389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Martian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Martian
+  isEnable: 1
+  displayName: Martian
+  color: {r: 0.9607843, g: 0.9529412, b: 0.9254902, a: 1}
+  tier: 1
+  synergy: 64
+  cost: 1
 --- !u!114 &3202663529469924615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +385,25 @@ MonoBehaviour:
   tier: 1
   synergy: 2
   cost: 1
+--- !u!114 &6786126936164208821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Jovian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Jovian
+  isEnable: 1
+  displayName: Jovian
+  color: {r: 0.9372549, g: 0.91764706, b: 0.8627451, a: 1}
+  tier: 2
+  synergy: 64
+  cost: 2
 --- !u!114 &6876907272863570738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +460,44 @@ MonoBehaviour:
   color: {r: 0.3019608, g: 0.8156863, b: 0.88235295, a: 1}
   tier: 2
   synergy: 4
+  cost: 2
+--- !u!114 &8835671180606308191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Uranian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Uranian
+  isEnable: 1
+  displayName: Uranian
+  color: {r: 0.9098039, g: 0.8745098, b: 0.8039216, a: 1}
+  tier: 3
+  synergy: 64
+  cost: 3
+--- !u!114 &9031383864300409721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Venusian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Venusian
+  isEnable: 1
+  displayName: Venusian
+  color: {r: 0.94509804, g: 0.93333334, b: 0.9254902, a: 1}
+  tier: 2
+  synergy: 64
   cost: 2
 --- !u!114 &9208774785752481754
 MonoBehaviour:

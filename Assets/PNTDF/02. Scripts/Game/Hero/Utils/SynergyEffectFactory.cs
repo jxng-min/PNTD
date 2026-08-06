@@ -69,6 +69,9 @@ namespace PNTD
                 ESynergyEffect.EnemySlowOnHit =>
                     new MageSynergySlowEffect(tier.PrimaryValue, tier.SecondaryValue),
 
+                ESynergyEffect.StarbornOrbCountBonus =>
+                    new StarbornOrbCountEffect((int)tier.PrimaryValue),
+
                 _ => null
             };
         }

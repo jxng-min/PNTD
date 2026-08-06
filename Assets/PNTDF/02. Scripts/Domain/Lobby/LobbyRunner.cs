@@ -28,6 +28,7 @@ namespace PNTD
         [BigHeader("Debug")]
         [SerializeField] private bool seedRangerParty = true;
         [SerializeField] private bool seedMageParty = false;
+        [SerializeField] private bool seedStarbornParty = false;
         [SerializeField] private List<HeroPartySeed> rangerPartySeeds = new()
         {
             new HeroPartySeed { heroId = "Hero_Archer", level = 1 },
@@ -45,6 +46,14 @@ namespace PNTD
             new HeroPartySeed { heroId = "Hero_Telekinetic", level = 1 },
             new HeroPartySeed { heroId = "Hero_Transmuter", level = 1 },
             new HeroPartySeed { heroId = "Hero_Artificer", level = 1 },
+        };
+        [SerializeField] private List<HeroPartySeed> starbornPartySeeds = new()
+        {
+            new HeroPartySeed { heroId = "Hero_Martian", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Venusian", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Jovian", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Saturnian", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Uranian", level = 1 },
         };
 
         private LobbyModel _model;
@@ -134,6 +143,11 @@ namespace PNTD
             {
                 return CreateMageParty();
             }
+            
+            if (seedStarbornParty)
+            {
+                return CreateStarbornParty();
+            }
 
             return seedRangerParty ? CreateRangerParty() : null;
         }
@@ -146,6 +160,11 @@ namespace PNTD
         private IReadOnlyList<HeroContext> CreateMageParty()
         {
             return CreateParty(magePartySeeds, CreateDefaultMagePartySeeds());
+        }
+        
+        private IReadOnlyList<HeroContext> CreateStarbornParty()
+        {
+            return CreateParty(starbornPartySeeds, CreateDefaultStarbornPartySeeds());
         }
         
         private IReadOnlyList<HeroContext> CreateParty(IReadOnlyList<HeroPartySeed> configuredSeeds,
@@ -194,6 +213,18 @@ namespace PNTD
                 new() { heroId = "Hero_Telekinetic", level = 1 },
                 new() { heroId = "Hero_Transmuter", level = 1 },
                 new() { heroId = "Hero_Artificer", level = 1 },
+            };
+        }
+        
+        private static List<HeroPartySeed> CreateDefaultStarbornPartySeeds()
+        {
+            return new List<HeroPartySeed>
+            {
+                new() { heroId = "Hero_Martian", level = 1 },
+                new() { heroId = "Hero_Venusian", level = 1 },
+                new() { heroId = "Hero_Jovian", level = 1 },
+                new() { heroId = "Hero_Saturnian", level = 1 },
+                new() { heroId = "Hero_Uranian", level = 1 },
             };
         }
         

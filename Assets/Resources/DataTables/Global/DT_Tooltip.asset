@@ -1,5 +1,56 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8783864919403786630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Martian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Martian
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit and deal Magic
+    Damage to enemies on contact.
+
+    Gains <color=#FFCE1B>1</color> orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-8756589256827044054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Jovian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Jovian
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+    deals Magic Damage and slows enemies by <color=#FFCE1B>20%</color>.
+
+    Reapplying
+    the slow refreshes its duration. Gains <color=#FFCE1B>1</color> orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &-8660629544793340129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +451,84 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &-3078851126290405302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Saturnian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Saturnian
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit and deal Magic
+    Damage on contact.
+
+    The orbs periodically move between an inner and outer
+    orbit. Gains <color=#FFCE1B>1</color> orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-2975033846966948805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Venusian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Venusian
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+    deals Magic Damage and applies a non-stacking corrosion effect.
+
+    Reapplying
+    corrosion refreshes its duration. Gains <color=#FFCE1B>1</color> orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-2755503068237090929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Uranian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Uranian
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs each orbit this unit on a separate
+    elongated elliptical path and deal Magic Damage on contact.
+
+    Gains <color=#FFCE1B>1</color>
+    orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &-2457573134851214251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +554,32 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: <b><color=#FFCE1B>Accelerated Shell</color></b>
   additionalBodyText: Doubles the cannonball's travel speed.
+--- !u!114 &-1989806804114844001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Jovian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Jovian
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+    deals Magic Damage and slows enemies by <color=#FFCE1B>20%</color>.
+
+    Reapplying
+    the slow refreshes its duration. Gains <color=#FFCE1B>1</color> orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &-1966398779979702416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +628,57 @@ MonoBehaviour:
 
     Tier
     3 : <color=#FFCE1B>{tier3}%</color>'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-944315291029305916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Venusian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Venusian
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+    deals Magic Damage and applies a non-stacking corrosion effect.
+
+    Reapplying
+    corrosion refreshes its duration. Gains <color=#FFCE1B>1</color> orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-290775157014858661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Martian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Martian
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit and deal Magic
+    Damage to enemies on contact.
+
+    Gains <color=#FFCE1B>1</color> orb per level.'
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
@@ -567,6 +773,7 @@ MonoBehaviour:
   - {fileID: -3580987167551410345}
   - {fileID: 774613932428472910}
   - {fileID: 2973448569199304935}
+  - {fileID: 8534492456864804181}
   - {fileID: -116728777385230161}
   - {fileID: -6884369581741663124}
   - {fileID: 3611242458745414179}
@@ -579,6 +786,11 @@ MonoBehaviour:
   - {fileID: -4435428819657568924}
   - {fileID: -1966398779979702416}
   - {fileID: 1293446296369619535}
+  - {fileID: -8783864919403786630}
+  - {fileID: -2975033846966948805}
+  - {fileID: -1989806804114844001}
+  - {fileID: 6179258527769203022}
+  - {fileID: 9069810818781530283}
   - {fileID: -3296859174731452398}
   - {fileID: -7923684813743525335}
   - {fileID: 2226383079057414324}
@@ -596,6 +808,11 @@ MonoBehaviour:
   - {fileID: -6027951029969353178}
   - {fileID: -50861297353769831}
   - {fileID: -4091699713014423893}
+  - {fileID: -290775157014858661}
+  - {fileID: -944315291029305916}
+  - {fileID: -8756589256827044054}
+  - {fileID: -3078851126290405302}
+  - {fileID: -2755503068237090929}
   - {fileID: 3342089571823679747}
   - {fileID: 3150096473019469862}
   - {fileID: -79396210413289152}
@@ -902,6 +1119,32 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: 
   additionalBodyText: Deals double damage to enemies.
+--- !u!114 &6179258527769203022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Saturnian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Saturnian
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit and deal Magic
+    Damage on contact.
+
+    The orbs periodically move between an inner and outer
+    orbit. Gains <color=#FFCE1B>1</color> orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &6674140233515228183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,6 +1197,28 @@ MonoBehaviour:
   additionalTagText: <b><color=#FFCE1B>Grand Formation</color></b>
   additionalBodyText: Increases the number of magic circles from <color=#FFCE1B>3</color>
     to <color=#FFCE1B>8</color>.
+--- !u!114 &8534492456864804181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_StarBorn
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_StarBorn
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - All Starborn units gain {valueText} additional orbiting
+    orbs.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &8628386021169592061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,3 +1247,29 @@ MonoBehaviour:
   additionalHeaderText: Lv.3
   additionalTagText: <b><color=#FFCE1B>Intense Flames</color></b>
   additionalBodyText: Doubles the burn damage.
+--- !u!114 &9069810818781530283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Uranian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Uranian
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs each orbit this unit on a separate
+    elongated elliptical path and deal Magic Damage on contact.
+
+    Gains <color=#FFCE1B>1</color>
+    orb per level.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 

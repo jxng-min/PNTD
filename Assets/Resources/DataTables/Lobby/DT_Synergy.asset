@@ -102,6 +102,7 @@ MonoBehaviour:
   - {fileID: 415518375296735064}
   - {fileID: -8709759790448241555}
   - {fileID: 8203193127465119820}
+  - {fileID: 4871671666516077100}
   dataTableRowScript: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
 --- !u!114 &415518375296735064
 MonoBehaviour:
@@ -128,6 +129,34 @@ MonoBehaviour:
   primaryValues:
   - 0.7
   - 0.4
+  secondaryValues:
+  - 0
+  - 0
+--- !u!114 &4871671666516077100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a865d44d19994ebebbec59f582287269, type: 3}
+  m_Name: Synergy_StarBorn
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyDataTableRow
+  rowID: Synergy_StarBorn
+  isEnable: 1
+  synergy: 64
+  displayName: Starborn
+  description: 
+  maxStep: 4
+  icon: {fileID: -1653461277, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
+  color: {r: 1, g: 1, b: 0.9411765, a: 1}
+  thresholds: 0200000004000000
+  synergyEffects: 0500000005000000
+  primaryValues:
+  - 1
+  - 3
   secondaryValues:
   - 0
   - 0

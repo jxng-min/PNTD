@@ -136,6 +136,11 @@ namespace PNTD
                 "Hero_Transmuter" => new TransmuterSkill(),
                 "Hero_Artificer" => new ArtificerSkill(),
                 MagitechRobotHeroId => new ArtificerRobotSkill(),
+                "Hero_Martian" => new MartianSkill(),
+                "Hero_Venusian" => new VenusianSkill(),
+                "Hero_Jovian" => new JovianSkill(),
+                "Hero_Saturnian" => new SaturnianSkill(),
+                "Hero_Uranian" => new UranianSkill(),
                 _ => new EmptyHeroSkill()
             };
         }

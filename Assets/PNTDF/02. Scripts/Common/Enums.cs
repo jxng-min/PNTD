@@ -31,6 +31,7 @@ namespace PNTD
         EnemyGoldDropOnKill = 2,
         OraRangeMultiplier = 3,
         OraEffectMultiplier = 4,
+        StarbornOrbCountBonus = 5,
     }
 
     public enum ETooltipLayout

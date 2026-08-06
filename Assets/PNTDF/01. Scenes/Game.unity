@@ -198,8 +198,9 @@ MonoBehaviour:
   - {fileID: 1374453495}
   - {fileID: 1188951963}
   - {fileID: 914724644}
-  seedRangerParty: 1
+  seedRangerParty: 0
   seedMageParty: 0
+  seedStarbornParty: 1
   rangerPartySeeds: []
   magePartySeeds:
   - heroId: Hero_Magician
@@ -214,6 +215,17 @@ MonoBehaviour:
     level: 3
   - heroId: Hero_Artificer
     level: 1
+  starbornPartySeeds:
+  - heroId: Hero_Martian
+    level: 3
+  - heroId: Hero_Venusian
+    level: 3
+  - heroId: Hero_Jovian
+    level: 3
+  - heroId: Hero_Saturnian
+    level: 3
+  - heroId: Hero_Uranian
+    level: 3
 --- !u!114 &216071611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2652,6 +2664,10 @@ MonoBehaviour:
     initialPoolSize: 6
     maxPoolSize: 6
     isExpandable: 0
+  - prefab: {fileID: 2680181627230565799, guid: e9779c6ed3f0cfb4ab4a111259a8ed5a, type: 3}
+    initialPoolSize: 12
+    maxPoolSize: 30
+    isExpandable: 1
 --- !u!1001 &908702335
 PrefabInstance:
   m_ObjectHideFlags: 0

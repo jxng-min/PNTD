@@ -44,6 +44,50 @@ MonoBehaviour:
   physicalPercentPenetration: 0
   magicFlatPenetration: 3
   magicPercentPenetration: 0
+--- !u!114 &-4753074251270016202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Martian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Martian
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 14
+  attackCooldown: 0
+  attackRange: 1.5
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 2
+  magicPercentPenetration: 0
+--- !u!114 &-4624839981938933224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Venusian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Venusian
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 22
+  attackCooldown: 0
+  attackRange: 1.55
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 3
+  magicPercentPenetration: 0
 --- !u!114 &-4353610550449242165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +132,28 @@ MonoBehaviour:
   physicalPercentPenetration: 0
   magicFlatPenetration: 0
   magicPercentPenetration: 0
+--- !u!114 &-2422772065379600573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Uranian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Uranian
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 36
+  attackCooldown: 0
+  attackRange: 2.3
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 4
+  magicPercentPenetration: 0.05
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +184,11 @@ MonoBehaviour:
   - {fileID: 5534166713787052561}
   - {fileID: 6125234204392255300}
   - {fileID: -3884206937945505743}
+  - {fileID: -4753074251270016202}
+  - {fileID: -4624839981938933224}
+  - {fileID: 6872391523051501073}
+  - {fileID: 5629992740602583972}
+  - {fileID: -2422772065379600573}
   dataTableRowScript: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
 --- !u!114 &1511671501659976113
 MonoBehaviour:
@@ -229,6 +300,28 @@ MonoBehaviour:
   physicalPercentPenetration: 0
   magicFlatPenetration: 5
   magicPercentPenetration: 0.1
+--- !u!114 &5629992740602583972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Saturnian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Saturnian
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 34
+  attackCooldown: 0
+  attackRange: 2.15
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 4
+  magicPercentPenetration: 0.05
 --- !u!114 &5769363496740986005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,11 +382,33 @@ MonoBehaviour:
   isEnable: 1
   physicalAttackPower: 0
   magicAttackPower: 22
-  attackCooldown: 4
-  attackRange: 4.5
+  attackCooldown: 0
+  attackRange: 0
   physicalFlatPenetration: 0
   physicalPercentPenetration: 0
   magicFlatPenetration: 0
+  magicPercentPenetration: 0
+--- !u!114 &6872391523051501073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Jovian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Jovian
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 22
+  attackCooldown: 0
+  attackRange: 1.6
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 3
   magicPercentPenetration: 0
 --- !u!114 &7865298556758355439
 MonoBehaviour:

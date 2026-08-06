@@ -9,13 +9,19 @@ Hero_Artillery,Artillery,#43A047,2,Ranger,2,TRUE
 Hero_Sniper,Sniper,#388E3C,3,Ranger,3,TRUE
 Hero_Trickshooter,Trickshooter,#2E7D32,3,Ranger,3,TRUE
 ,,,,,,
-Hero_Wizard,Wizard,#B2EBF2,2,Mage,2,TRUE
 Hero_Magician,Magician,#80DEEA,1,Mage,1,TRUE
+Hero_Wizard,Wizard,#B2EBF2,2,Mage,2,TRUE
 Hero_Explomancer,Explomancer,#4DD0E1,2,Mage,2,TRUE
 Hero_Telekinetic,Telekinetic,#26C6DA,2,Mage,2,TRUE
 Hero_Transmuter,Transmuter,#00BCD4,3,Mage,3,TRUE
 Hero_Artificer,Artificer,#00ACC1,3,Mage,3,TRUE
 Hero_MageRobo,Magitech Robot,#00ACC1,0,Mage,0,TRUE
+,,,,,,
+Hero_Martian,Martian,#F5F3EC,1,StarBorn,1,TRUE
+Hero_Venusian,Venusian,#F1EEEC,2,StarBorn,2,TRUE
+Hero_Jovian,Jovian,#EFEADC,2,StarBorn,2,TRUE
+Hero_Saturnian,Saturnian,#ECE4D3,3,StarBorn,3,TRUE
+Hero_Uranian,Uranian,#E8DFCD,3,StarBorn,3,TRUE
 ,,,,,,
 Hero_Miner,Miner,#FFC54F,1,Plunder,1,TRUE
 Hero_Alchemist,Alchemist,#D98CFF,2,"Plunder,Cleric",2,TRUE
