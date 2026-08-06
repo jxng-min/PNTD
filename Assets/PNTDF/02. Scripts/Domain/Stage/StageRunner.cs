@@ -63,7 +63,10 @@ namespace PNTD
             var boardSystem = new BoardSystem();
             var deploySystem = new DeploySystem();
             var deployContextFactory = new DeployContextFactory();
-            var skillContext = new HeroSkillContext(mapContext.Map.BuildMap, heroRoot, boardSystem);
+            var runtimeStageContext = new RStageContext();
+            var goldSpawner = new GoldSpawner(runtimeStageContext, heroRoot);
+            var plunderSystem = new PlunderSystem(goldSpawner, synergyContextProvider);
+            var skillContext = new HeroSkillContext(mapContext.Map.BuildMap, heroRoot, boardSystem, goldSpawner);
             var heroPrefab = PrefabManager.CachePrefab<Hero>("[PF] Hero");
             var magitechRobotPrefab = PrefabManager.CachePrefab<Hero>("[PF] Magitech Robot");
             var heroFactory = new HeroFactory(heroPrefab, magitechRobotPrefab, _heroDataTable, _heroAttackDataTable, skillContext, heroRoot);
@@ -80,7 +83,6 @@ namespace PNTD
             
             enemyFactory.Initialize(mapContext.Map.StagePath, waveSystem);
             
-            var runtimeStageContext = new RStageContext();
             var domain = new StageDomain(stageSystem,
                                          waveSystem,
                                          visibilitySystem,
@@ -89,7 +91,9 @@ namespace PNTD
                                          heroFactory,
                                          deployPreviewSystem,
                                          heroMoveSystem,
-                                         clericSanctuarySystem);
+                                         clericSanctuarySystem,
+                                         plunderSystem,
+                                         goldSpawner);
             var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter, deployAction);
 
             _model = new StageModel(domain, compositor, runtimeStageContext);

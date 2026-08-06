@@ -78,12 +78,14 @@
         {
             _stageDomain.WaveSystem.OnWaveEnd += _stageDomain.StageSystem.HandleOnWaveEnd;
             _stageDomain.WaveSystem.OnDestinationReached += HandleOnDestinationReached;
+            _stageDomain.WaveSystem.OnEnemyDied += _stageDomain.PlunderSystem.HandleEnemyKilled;
         }
 
         private void ReleaseWaveEvents()
         {
             _stageDomain.WaveSystem.OnWaveEnd -= _stageDomain.StageSystem.HandleOnWaveEnd;
             _stageDomain.WaveSystem.OnDestinationReached -= HandleOnDestinationReached;
+            _stageDomain.WaveSystem.OnEnemyDied -= _stageDomain.PlunderSystem.HandleEnemyKilled;
         }
 
         private void BindDeployEvents()

@@ -77,6 +77,7 @@ namespace PNTD
             Domain.DeployPreviewSystem.Dispose();
             Domain.HeroMoveSystem.Dispose();
             Domain.ClericSanctuarySystem.Dispose();
+            Domain.GoldSpawner?.Clear();
             Domain.WaveSystem.Dispose();
         }
 

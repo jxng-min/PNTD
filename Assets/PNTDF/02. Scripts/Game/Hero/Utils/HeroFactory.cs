@@ -135,6 +135,7 @@ namespace PNTD
                 "Hero_Telekinetic" => new TelekineticSkill(),
                 "Hero_Transmuter" => new TransmuterSkill(),
                 "Hero_Artificer" => new ArtificerSkill(),
+                "Hero_Miner" => new MinerSkill(),
                 "Hero_Alchemist" => new AlchemistSkill(),
                 "Hero_Saint" => new SaintSkill(),
                 "Hero_Sancitifier" => new SanctifierSkill(),

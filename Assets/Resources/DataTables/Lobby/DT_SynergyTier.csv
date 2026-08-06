@@ -1,4 +1,6 @@
 rowID,synergy,threshold,effect,primaryValue,secondaryValue,tierDescription,isEnable
+Synergy_Plunder_Tier2,Plunder,2,2,0.2,0,"Whenever an allied unit defeats an enemy, there is a <color=#FFCE1B>20%</color> chance\nto drop <color=#FFCE1B>1 Gold</color> near the defeated enemy. Dropped Gold must be collected manually.",TRUE
+Synergy_Plunder_Tier4,Plunder,4,2,0.4,0,"Whenever an allied unit defeats an enemy, there is a <color=#FFCE1B>40%</color> chance\nto drop <color=#FFCE1B>1 Gold</color> near the defeated enemy. Dropped Gold must be collected manually.",TRUE
 Synergy_Cleric_Tier2,Cleric,2,3,1.3,0,Increases the radius of all Cleric sanctuaries by <color=#FFCE1B>30%</color>.,TRUE
 Synergy_Cleric_Tier4,Cleric,4,4,1.25,0,Allied units affected by at least <color=#FFCE1B>2</color> different Cleric sanctuaries receive <color=#FFCE1B>25%</color> stronger Cleric sanctuary effects.,TRUE
 Synergy_StarBorn_Tier2,StarBorn,2,5,1,0,All Starborn units gain <color=#FFCE1B>1</color> additional orbiting orb.,TRUE

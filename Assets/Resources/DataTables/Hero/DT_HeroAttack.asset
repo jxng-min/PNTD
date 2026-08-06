@@ -211,6 +211,7 @@ MonoBehaviour:
   - {fileID: 6872391523051501073}
   - {fileID: 5629992740602583972}
   - {fileID: -2422772065379600573}
+  - {fileID: 8965968129146066095}
   - {fileID: 1067432854140893665}
   - {fileID: 6966872235583688341}
   - {fileID: 20722742148499511}
@@ -520,6 +521,28 @@ MonoBehaviour:
   magicAttackPower: 0
   attackCooldown: 1.7
   attackRange: 3.2
+  physicalFlatPenetration: 1
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 0
+  magicPercentPenetration: 0
+--- !u!114 &8965968129146066095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Miner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Miner
+  isEnable: 1
+  physicalAttackPower: 18
+  magicAttackPower: 0
+  attackCooldown: 1.5
+  attackRange: 4.5
   physicalFlatPenetration: 1
   physicalPercentPenetration: 0
   magicFlatPenetration: 0

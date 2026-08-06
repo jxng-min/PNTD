@@ -471,7 +471,11 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Drops <color=red>1</color> gold every 5/4/3 attacks.
+  bodyText: 'Fires a single ore projectile at the nearest enemy.
+
+    After performing
+    <color=#FFCE1B>5/4/3</color> attacks, drops <color=#FFCE1B>1 Gold</color> near
+    itself.'
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
@@ -1122,7 +1126,11 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Drops <color=red>1</color> gold every 5/4/3 attacks.
+  bodyText: 'Fires a single ore projectile at the nearest enemy.
+
+    After performing
+    <color=#FFCE1B>5 / 4 / 3</color> attacks, drops <color=#FFCE1B>1 Gold</color>
+    near itself.'
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
