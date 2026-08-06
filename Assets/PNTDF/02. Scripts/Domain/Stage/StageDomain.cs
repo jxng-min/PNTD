@@ -10,6 +10,7 @@
         private readonly HeroFactory _heroFactory;
         private readonly DeployPreviewSystem _deployPreviewSystem;
         private readonly HeroMoveSystem _heroMoveSystem;
+        private readonly ClericSanctuarySystem _clericSanctuarySystem;
         
         public StageSystem StageSystem => _stageSystem;
         public WaveSystem WaveSystem => _waveSystem;
@@ -19,6 +20,7 @@
         public HeroFactory HeroFactory => _heroFactory;
         public DeployPreviewSystem DeployPreviewSystem => _deployPreviewSystem;
         public HeroMoveSystem HeroMoveSystem => _heroMoveSystem;
+        public ClericSanctuarySystem ClericSanctuarySystem => _clericSanctuarySystem;
 
         public StageDomain(StageSystem stageSystem,
                            WaveSystem waveSystem,
@@ -27,7 +29,8 @@
                            DeploySystem deploySystem,
                            HeroFactory heroFactory,
                            DeployPreviewSystem deployPreviewSystem,
-                           HeroMoveSystem heroMoveSystem)
+                           HeroMoveSystem heroMoveSystem,
+                           ClericSanctuarySystem clericSanctuarySystem)
         {
             _stageSystem = stageSystem;
             _waveSystem = waveSystem;
@@ -37,6 +40,7 @@
             _heroFactory = heroFactory;
             _deployPreviewSystem = deployPreviewSystem;
             _heroMoveSystem = heroMoveSystem;
+            _clericSanctuarySystem = clericSanctuarySystem;
         }
 
         public void Initialize(EnemyFactory enemyFactory, StageContext stageContext)

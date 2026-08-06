@@ -110,6 +110,28 @@ MonoBehaviour:
   physicalPercentPenetration: 0
   magicFlatPenetration: 0
   magicPercentPenetration: 0
+--- !u!114 &-4022091242060666904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Crusader
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Crusader
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 30
+  attackCooldown: 0
+  attackRange: 1.75
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 4
+  magicPercentPenetration: 0.05
 --- !u!114 &-3884206937945505743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +211,55 @@ MonoBehaviour:
   - {fileID: 6872391523051501073}
   - {fileID: 5629992740602583972}
   - {fileID: -2422772065379600573}
+  - {fileID: 1067432854140893665}
+  - {fileID: 6966872235583688341}
+  - {fileID: 20722742148499511}
+  - {fileID: -4022091242060666904}
   dataTableRowScript: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+--- !u!114 &20722742148499511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Sancitifier
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Sancitifier
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 0
+  attackCooldown: 0
+  attackRange: 1.75
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 0
+  magicPercentPenetration: 0
+--- !u!114 &1067432854140893665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Alchemist
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Alchemist
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 0
+  attackCooldown: 0
+  attackRange: 1.75
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 0
+  magicPercentPenetration: 0
 --- !u!114 &1511671501659976113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +479,28 @@ MonoBehaviour:
   physicalFlatPenetration: 0
   physicalPercentPenetration: 0
   magicFlatPenetration: 3
+  magicPercentPenetration: 0
+--- !u!114 &6966872235583688341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc9de6a070b49cdb948fd57709858af, type: 3}
+  m_Name: Hero_Saint
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroAttackDataTableRow
+  rowID: Hero_Saint
+  isEnable: 1
+  physicalAttackPower: 0
+  magicAttackPower: 0
+  attackCooldown: 0
+  attackRange: 1.75
+  physicalFlatPenetration: 0
+  physicalPercentPenetration: 0
+  magicFlatPenetration: 0
   magicPercentPenetration: 0
 --- !u!114 &7865298556758355439
 MonoBehaviour:

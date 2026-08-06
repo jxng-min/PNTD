@@ -24,8 +24,8 @@ Hero_Saturnian,Saturnian,#ECE4D3,3,StarBorn,3,TRUE
 Hero_Uranian,Uranian,#E8DFCD,3,StarBorn,3,TRUE
 ,,,,,,
 Hero_Miner,Miner,#FFC54F,1,Plunder,1,TRUE
-Hero_Alchemist,Alchemist,#D98CFF,2,"Plunder,Cleric",2,TRUE
+Hero_Alchemist,Alchemist,#D98CFF,1,"Cleric, Plunder",1,TRUE
 Hero_Saint,Saint,#978FF9,2,Cleric,2,TRUE
-Hero_Sancitifier,Sancitifier,#8F00FF,2,"Cleric,Mage",2,TRUE
-Hero_Crusader,Crusader,#790963,3,"Cleric,Warrior",3,TRUE
+Hero_Sancitifier,Sanctifier,#8F00FF,2,Cleric,2,TRUE
+Hero_Crusader,Crusader,#790963,3,"Cleric, Warrior, Mage",3,TRUE
 Hero_Theif,Theif,#EE4B2B,3,"Plunder,Rogue",3,TRUE

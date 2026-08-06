@@ -9,6 +9,7 @@ namespace PNTD
         private readonly BoardSystem _boardSystem;
         private readonly DeploySystem _deploySystem;
         private readonly StageMap _stageMap;
+        private readonly ClericSanctuarySystem _clericSanctuarySystem;
         private readonly HashSet<Hero> _heroes = new();
 
         private Hero _draggingHero;
@@ -18,11 +19,13 @@ namespace PNTD
 
         public HeroMoveSystem(BoardSystem boardSystem,
                               DeploySystem deploySystem,
-                              StageMap stageMap)
+                              StageMap stageMap,
+                              ClericSanctuarySystem clericSanctuarySystem)
         {
             _boardSystem = boardSystem;
             _deploySystem = deploySystem;
             _stageMap = stageMap;
+            _clericSanctuarySystem = clericSanctuarySystem;
         }
 
         public void Register(Hero hero)
@@ -110,6 +113,7 @@ namespace PNTD
             hero.Model?.SetRotationPaused(false);
 
             ClearDrag();
+            _clericSanctuarySystem?.Refresh();
         }
 
         private void UpdateDragPosition(Vector2 screenPosition)

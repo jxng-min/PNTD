@@ -107,7 +107,11 @@ namespace PNTD
             }
             
             enemy.SetLastHitHero(this);
-            enemy.Health.TakeDamage(damageContext);
+
+            var sourcedDamageContext = damageContext.SourceHero == null
+                ? damageContext.WithSource(this)
+                : damageContext;
+            enemy.Health.TakeDamage(sourcedDamageContext);
 
             if (triggerOnHitEffect)
             {

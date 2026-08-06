@@ -76,6 +76,7 @@ namespace PNTD
             Compositor.ReleaseEvents();
             Domain.DeployPreviewSystem.Dispose();
             Domain.HeroMoveSystem.Dispose();
+            Domain.ClericSanctuarySystem.Dispose();
             Domain.WaveSystem.Dispose();
         }
 

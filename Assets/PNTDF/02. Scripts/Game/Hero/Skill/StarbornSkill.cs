@@ -32,6 +32,11 @@ namespace PNTD
             _controller?.SetSynergyOrbBonus(bonusOrbCount);
         }
 
+        public void SetClericOrbitSpeedMultiplier(float multiplier)
+        {
+            _controller?.SetOrbitSpeedMultiplier(multiplier);
+        }
+
         public override void Release(Hero hero)
         {
             _controller?.Release();

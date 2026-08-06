@@ -8,18 +8,21 @@ namespace PNTD
         private readonly DeploySystem _deploySystem;
         private readonly HeroFactory _heroFactory;
         private readonly HeroMoveSystem _heroMoveSystem;
+        private readonly ClericSanctuarySystem _clericSanctuarySystem;
         private readonly StageMap _stageMap;
 
         public StageDeployAction(BoardSystem boardSystem,
                                  DeploySystem deploySystem,
                                  HeroFactory heroFactory,
                                  HeroMoveSystem heroMoveSystem,
+                                 ClericSanctuarySystem clericSanctuarySystem,
                                  StageMap stageMap)
         {
             _boardSystem = boardSystem;
             _deploySystem = deploySystem;
             _heroFactory = heroFactory;
             _heroMoveSystem = heroMoveSystem;
+            _clericSanctuarySystem = clericSanctuarySystem;
             _stageMap = stageMap;
         }
 
@@ -45,6 +48,8 @@ namespace PNTD
             
             hero.NotifyDeployed(cellPosition);
             _heroMoveSystem?.Register(hero);
+            _clericSanctuarySystem?.Register(hero);
+            _clericSanctuarySystem?.Refresh();
 
             _deploySystem.ExitDeployMode();
             return true;

@@ -43,7 +43,9 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit.
+
+    Orb contact
     deals Magic Damage and slows enemies by <color=#FFCE1B>20%</color>.
 
     Reapplying
@@ -113,10 +115,13 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Nearby heroes gain <color=red>20</color>% DEF Ignore.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a sanctuary that grants allied units within it
+
+    <color=#FFCE1B>5/9/13</color>
+    Flat Penetration matching their attack type.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: "Nearby heroes\u2019 DEF Ignore increases to 40%."
+  additionalBodyText: 
 --- !u!114 &-7088913061269769240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,10 +247,16 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Nearby heroes decrease cooldown by <color=red>20</color>%.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a sanctuary that reduces the Attack Cooldown of
+
+    allied
+    units within it by <color=#FFCE1B>10/15/20%</color>.
+
+    Starborn units instead
+    gain the same amount of Orbit Speed.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: "Nearby heroes\u2019 cooldown decreases by 40%."
+  additionalBodyText: 
 --- !u!114 &-5158205149220873337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,10 +297,16 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Nearby heroes decrease <color=red>20</color>% Cooldown.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a sanctuary that reduces the Attack Cooldown of
+
+    allied
+    units within it by <color=#FFCE1B>10/15/20%</color>.
+
+    Starborn units instead
+    gain the same amount of Orbit Speed.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: "Nearby heroes\u2019 cooldown decreases to 40%."
+  additionalBodyText: 
 --- !u!114 &-4435428819657568924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,10 +350,17 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Periodically deals damage to enemies within range.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a consecrated sanctuary that deals Magic Damage
+
+    to enemies
+    inside it every <color=#FFCE1B>0.5</color> seconds.
+
+    Enemies inside take
+    <color=#FFCE1B>6/8/10%</color> more damage from allied units affected by a Cleric
+    sanctuary.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: Deals double damage to enemies.
+  additionalBodyText: 
 --- !u!114 &-4091699713014423893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +519,9 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit.
+
+    Orb contact
     deals Magic Damage and applies a non-stacking corrosion effect.
 
     Reapplying
@@ -522,9 +548,9 @@ MonoBehaviour:
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: '<color=#FFCE1B>{orbCount}</color> orbs each orbit this unit on a separate
-    elongated elliptical path and deal Magic Damage on contact.
+    elongated elliptical path
 
-    Gains <color=#FFCE1B>1</color>
+    and deal Magic Damage on contact. Gains <color=#FFCE1B>1</color>
     orb per level.'
   additionalHeaderText: 
   additionalTagText: 
@@ -572,7 +598,9 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit.
+
+    Orb contact
     deals Magic Damage and slows enemies by <color=#FFCE1B>20%</color>.
 
     Reapplying
@@ -649,7 +677,9 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit. Orb contact
+  bodyText: '<color=#FFCE1B>{orbCount}</color> orbs orbit this unit.
+
+    Orb contact
     deals Magic Damage and applies a non-stacking corrosion effect.
 
     Reapplying
@@ -722,10 +752,13 @@ MonoBehaviour:
   headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Nearby heroes gain <color=red>20</color>% ATK.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a sanctuary that increases the Physical and
+
+    Magic Attack
+    Power of allied units within it by <color=#FFCE1B>20/ 30/40%</color>.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: "Nearby heroes\u2019 ATK increases to 40%."
+  additionalBodyText: 
 --- !u!114 &-50861297353769831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,10 +1025,13 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Nearby heroes gain <color=red>20</color>% ATK.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a sanctuary that increases the Physical and
+
+    Magic Attack
+    Power of allied units within it by <color=#FFCE1B>20/ 30/40%</color>.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: "Nearby heroes\u2019 ATK increases to 40%."
+  additionalBodyText: 
 --- !u!114 &2633636106520911367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,13 +1094,16 @@ MonoBehaviour:
   rowID: PartySlot_Alchemist
   isEnable: 1
   layout: 3
-  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Nearby heroes gain <color=red>20</color>% DEF Ignore.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a sanctuary that grants allied units within it
+
+    <color=#FFCE1B>5/9/13</color>
+    Flat Penetration matching their attack type.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: "Nearby heroes\u2019 DEF Ignore increases to 40%."
+  additionalBodyText: 
 --- !u!114 &3342089571823679747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,10 +1190,17 @@ MonoBehaviour:
   headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
-  bodyText: Periodically deals damage to enemies within range.
-  additionalHeaderText: Lv.3
+  bodyText: 'Creates a consecrated sanctuary that deals Magic Damage
+
+    to enemies
+    inside it every <color=#FFCE1B>0.5</color> seconds.
+
+    Enemies inside take
+    <color=#FFCE1B>6/8/10%</color> more damage from allied units affected by a Cleric
+    sanctuary.'
+  additionalHeaderText: 
   additionalTagText: 
-  additionalBodyText: Deals double damage to enemies.
+  additionalBodyText: 
 --- !u!114 &6179258527769203022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,9 +1348,9 @@ MonoBehaviour:
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: '<color=#FFCE1B>{orbCount}</color> orbs each orbit this unit on a separate
-    elongated elliptical path and deal Magic Damage on contact.
+    elongated elliptical path
 
-    Gains <color=#FFCE1B>1</color>
+    and deal Magic Damage on contact. Gains <color=#FFCE1B>1</color>
     orb per level.'
   additionalHeaderText: 
   additionalTagText: 

@@ -200,7 +200,7 @@ MonoBehaviour:
   - {fileID: 914724644}
   seedRangerParty: 0
   seedMageParty: 0
-  seedStarbornParty: 1
+  seedStarbornParty: 0
   rangerPartySeeds: []
   magePartySeeds:
   - heroId: Hero_Magician
@@ -2685,6 +2685,10 @@ MonoBehaviour:
     initialPoolSize: 12
     maxPoolSize: 30
     isExpandable: 1
+  - prefab: {fileID: 3017585742819037171, guid: 7e497db1292d9f647bbbd4db5552b5cf, type: 3}
+    initialPoolSize: 4
+    maxPoolSize: 4
+    isExpandable: 0
 --- !u!1001 &908702335
 PrefabInstance:
   m_ObjectHideFlags: 0

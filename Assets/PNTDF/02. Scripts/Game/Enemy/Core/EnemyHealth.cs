@@ -67,7 +67,21 @@ namespace PNTD
                                                                    damageContext.FlatPenetration,
                                                                    damageContext.PercentPenetration);
             
-            return ApplyResistance(damageContext.Damage, effectiveResistance);
+            var damage = ApplyResistance(damageContext.Damage, effectiveResistance);
+            return ApplyJudgedMultiplier(damage, damageContext.SourceHero);
+        }
+
+        private float ApplyJudgedMultiplier(float damage, Hero sourceHero)
+        {
+            if (_status == null ||
+                !_status.IsJudgedByCrusader ||
+                sourceHero == null ||
+                !ClericSanctuaryRegistry.HasAlliedAura(sourceHero))
+            {
+                return damage;
+            }
+
+            return damage * (1f + _status.CrusaderJudgedDamageTakenBonus);
         }
 
         private float GetResistance(EAttack attackType)

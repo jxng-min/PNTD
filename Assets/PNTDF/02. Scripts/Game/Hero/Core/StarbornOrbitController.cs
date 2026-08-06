@@ -17,6 +17,7 @@ namespace PNTD
         private float _radiusCycleTime;
         private int _baseOrbCount;
         private int _synergyOrbBonus;
+        private float _orbitSpeedMultiplier = 1f;
         private bool _canDamage = true;
         private bool _isOrbitPaused;
         private bool _isInitialized;
@@ -34,6 +35,7 @@ namespace PNTD
             _data = data;
             _baseOrbCount = Mathf.Clamp(owner != null ? owner.Level : 0, 0, MaxOrbCount);
             _synergyOrbBonus = 0;
+            _orbitSpeedMultiplier = 1f;
             _angleOffset = 0f;
             _radiusCycleTime = 0f;
             _canDamage = true;
@@ -53,6 +55,11 @@ namespace PNTD
         {
             _synergyOrbBonus = Mathf.Max(0, bonusOrbCount);
             RefreshOrbs();
+        }
+
+        public void SetOrbitSpeedMultiplier(float multiplier)
+        {
+            _orbitSpeedMultiplier = Mathf.Max(0f, multiplier);
         }
 
         public void Release()
@@ -77,6 +84,7 @@ namespace PNTD
             _isInitialized = false;
             _canDamage = true;
             _isOrbitPaused = false;
+            _orbitSpeedMultiplier = 1f;
         }
 
         private void RefreshOrbs()
@@ -151,7 +159,7 @@ namespace PNTD
                 return;
             }
 
-            _angleOffset = Mathf.Repeat(_angleOffset + _data.orbitSpeed * Time.deltaTime, 360f);
+            _angleOffset = Mathf.Repeat(_angleOffset + _data.orbitSpeed * _orbitSpeedMultiplier * Time.deltaTime, 360f);
             _radiusCycleTime += Time.deltaTime;
             UpdateOrbPositions();
         }

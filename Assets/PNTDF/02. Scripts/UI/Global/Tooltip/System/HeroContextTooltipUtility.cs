@@ -25,8 +25,9 @@ namespace PNTD
             }
 
             var heroColor = ColorUtility.ToHtmlStringRGB(heroDataTableRow.color);
+            var tooltipSuffix = GetTooltipSuffix(heroDataTableRow);
             return new TooltipContent(
-                $"PartySlot_{heroDataTableRow.displayName}",
+                $"PartySlot_{tooltipSuffix}",
                 new Dictionary<string, object>
                 {
                     { "heroName", $"<color=#{heroColor}>{heroDataTableRow.displayName}</color>" },
@@ -48,8 +49,9 @@ namespace PNTD
             }
             
             var heroColor = ColorUtility.ToHtmlStringRGB(heroDataTableRow.color);
+            var tooltipSuffix = GetTooltipSuffix(heroDataTableRow);
             return new TooltipContent(
-                $"ShopSlot_{heroDataTableRow.displayName}",
+                $"ShopSlot_{tooltipSuffix}",
                 new Dictionary<string, object>
                 {
                     { "heroName", $"<color=#{heroColor}>{heroDataTableRow.displayName}</color>" },
@@ -70,6 +72,18 @@ namespace PNTD
             }
 
             return Mathf.Clamp(heroLevel + GetStarbornSynergyOrbCount(synergyContext?.GetCount(ESynergy.StarBorn) ?? 0), 1, 6);
+        }
+
+        private static string GetTooltipSuffix(HeroDataTableRow heroDataTableRow)
+        {
+            const string heroPrefix = "Hero_";
+
+            if (!string.IsNullOrEmpty(heroDataTableRow.rowID) && heroDataTableRow.rowID.StartsWith(heroPrefix))
+            {
+                return heroDataTableRow.rowID.Substring(heroPrefix.Length);
+            }
+
+            return heroDataTableRow.displayName;
         }
 
         private static int GetStarbornSynergyOrbCount(int starbornCount)

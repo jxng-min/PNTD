@@ -17,3 +17,7 @@ Hero_Venusian,0,22,0,1.55,0,0,3,0,TRUE
 Hero_Jovian,0,22,0,1.6,0,0,3,0,TRUE
 Hero_Saturnian,0,34,0,2.15,0,0,4,0.05,TRUE
 Hero_Uranian,0,36,0,2.3,0,0,4,0.05,TRUE
+Hero_Alchemist,0,0,0,1.75,0,0,0,0,TRUE
+Hero_Saint,0,0,0,1.75,0,0,0,0,TRUE
+Hero_Sancitifier,0,0,0,1.75,0,0,0,0,TRUE
+Hero_Crusader,0,30,0,1.75,0,0,4,0.05,TRUE

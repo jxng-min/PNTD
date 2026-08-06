@@ -167,7 +167,10 @@ namespace PNTD
         {
             FinalPhysicalAttackPower = Mathf.Max(0f, CalculateStat(EHeroStat.PhysicalAttackPower, BasePhysicalAttackPower));
             FinalMagicAttackPower = Mathf.Max(0f, CalculateStat(EHeroStat.MagicAttackPower, BaseMagicAttackPower));
-            FinalAttackCooldown = Mathf.Max(0f, CalculateStat(EHeroStat.AttackCooldown, BaseAttackCooldown));
+            var calculatedAttackCooldown = Mathf.Max(0f, CalculateStat(EHeroStat.AttackCooldown, BaseAttackCooldown));
+            FinalAttackCooldown = BaseAttackCooldown > 0f
+                ? Mathf.Max(calculatedAttackCooldown, BaseAttackCooldown * 0.25f)
+                : calculatedAttackCooldown;
             FinalAttackRange = Mathf.Max(0f, CalculateStat(EHeroStat.AttackRange, BaseAttackRange));
             FinalFlatPhysicalPenetration = Mathf.Max(0f, CalculateStat(EHeroStat.PhysicalFlatPenetration, BaseFlatPhysicalPenetration));
             FinalPercentPhysicalPenetration = Mathf.Clamp01(CalculateStat(EHeroStat.PhysicalPercentPenetration, BasePercentPhysicalPenetration));

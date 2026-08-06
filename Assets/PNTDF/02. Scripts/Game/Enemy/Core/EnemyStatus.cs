@@ -7,6 +7,7 @@ namespace PNTD
     public class EnemyStatus : MonoBehaviour
     {
         private readonly List<EnemyStatusEffect> _effects = new();
+        private readonly Dictionary<object, float> _crusaderJudgedBySource = new();
 
         private Enemy _owner;
 
@@ -23,6 +24,8 @@ namespace PNTD
         public bool IsDisabled => HasEffect(effect => effect.IsDisabled);
         public bool IsInvincible => HasEffect(effect => effect.IsInvincible);
         public bool IsEffectImmune => HasEffect(effect => effect.IsEffectImmune);
+        public bool IsJudgedByCrusader => _crusaderJudgedBySource.Count > 0;
+        public float CrusaderJudgedDamageTakenBonus => CalculateCrusaderJudgedDamageTakenBonus();
         
         public bool IsMovementDisabled => IsStunned || _isTrapped;
         public bool IsAbilityDisabled => IsStunned || IsDisabled;
@@ -157,8 +160,29 @@ namespace PNTD
             _baseMagicResistance = baseMagicResistance;
             _baseSlowResistance = baseSlowResistance;
             _isTrapped = false;
+            _crusaderJudgedBySource.Clear();
             
             OnChanged?.Invoke();
+        }
+
+        public void AddCrusaderJudged(object source, float damageTakenBonus)
+        {
+            if (source == null)
+            {
+                return;
+            }
+
+            _crusaderJudgedBySource[source] = Mathf.Max(0f, damageTakenBonus);
+        }
+
+        public void RemoveCrusaderJudged(object source)
+        {
+            if (source == null)
+            {
+                return;
+            }
+
+            _crusaderJudgedBySource.Remove(source);
         }
 
         public bool AddMoveSpeedEffect(string effectId, 
@@ -290,6 +314,18 @@ namespace PNTD
             }
             
             _effects.Clear();
+            _crusaderJudgedBySource.Clear();
+        }
+
+        private float CalculateCrusaderJudgedDamageTakenBonus()
+        {
+            var bonus = 0f;
+            foreach (var pair in _crusaderJudgedBySource)
+            {
+                bonus = Mathf.Max(bonus, pair.Value);
+            }
+
+            return bonus;
         }
 
         private EnemyStatusEffect FindEffect(string effectId)
