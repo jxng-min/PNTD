@@ -30,6 +30,11 @@ namespace PNTD
         private DataTable _heroDataTable;
         private DataTable _heroAttackDataTable;
         private int _interest;
+        
+        public StageModel.EStageResult StageResult => _model?.StageResult ?? StageModel.EStageResult.None;
+        public int RewardGold => _model?.RewardGold ?? 0;
+        public int BonusGold => _model?.BonusGold ?? 0;
+        public int Interest => _interest;
 
         private void Awake()
         {
@@ -66,6 +71,7 @@ namespace PNTD
             var runtimeStageContext = new RStageContext();
             var goldSpawner = new GoldSpawner(runtimeStageContext, heroRoot);
             var plunderSystem = new PlunderSystem(goldSpawner, synergyContextProvider);
+            var stagePooledObjectCleaner = new StagePooledObjectCleaner();
             var skillContext = new HeroSkillContext(mapContext.Map.BuildMap, heroRoot, boardSystem, goldSpawner);
             var heroPrefab = PrefabManager.CachePrefab<Hero>("[PF] Hero");
             var magitechRobotPrefab = PrefabManager.CachePrefab<Hero>("[PF] Magitech Robot");
@@ -93,7 +99,8 @@ namespace PNTD
                                          heroMoveSystem,
                                          clericSanctuarySystem,
                                          plunderSystem,
-                                         goldSpawner);
+                                         goldSpawner,
+                                         stagePooledObjectCleaner);
             var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter, deployAction);
 
             _model = new StageModel(domain, compositor, runtimeStageContext);
@@ -141,6 +148,12 @@ namespace PNTD
 
         private void OnDestroy()
         {
+            DisposeModel();
+        }
+
+        public void DisposeStage()
+        {
+            _model?.Hide();
             DisposeModel();
         }
 

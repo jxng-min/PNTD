@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using JxModule;
 using JxModule.DataTable;
 using UnityEngine;
 
@@ -13,6 +15,7 @@ namespace PNTD
         private readonly DataTable _heroAttackDataTable;
         private readonly HeroSkillContext _skillContext;
         private readonly Transform _defaultParent;
+        private readonly HashSet<Hero> _activeHeroes = new();
 
         public HeroFactory(Hero heroPrefab,
                            Hero magitechRobotPrefab,
@@ -37,7 +40,12 @@ namespace PNTD
                 return null;
             }
 
-            var hero = Object.Instantiate(_heroPrefab, position, Quaternion.identity, parent != null ? parent : _defaultParent);
+            var hero = CreateHeroInstance(_heroPrefab, position, parent);
+            if (hero == null)
+            {
+                return null;
+            }
+            
             var stat = CreateStat(deployContext);
             var skill = CreateSkill(deployContext);
             
@@ -54,6 +62,7 @@ namespace PNTD
                 hero.TryAddEffect(effect);
             }
 
+            _activeHeroes.Add(hero);
             return hero;
         }
         
@@ -91,14 +100,69 @@ namespace PNTD
                 return null;
             }
             
-            var hero = Object.Instantiate(prefab, position, Quaternion.identity, parent != null ? parent : _defaultParent);
+            var hero = CreateHeroInstance(prefab, position, parent);
+            if (hero == null)
+            {
+                return null;
+            }
+            
             var stat = CreateStat(heroDataTableRow);
             var skill = CreateSkill(heroDataTableRow.rowID);
             
             skill.Initialize(_skillContext);
             hero.Initialize(heroDataTableRow, stat, skill, level, isSummoned, summoner);
 
+            _activeHeroes.Add(hero);
             return hero;
+        }
+
+        public void Release(Hero hero)
+        {
+            if (hero == null || !_activeHeroes.Remove(hero))
+            {
+                return;
+            }
+            
+            hero.Release();
+            ObjectPoolManager.Instance.Return(hero.gameObject);
+        }
+
+        public void ReleaseAll()
+        {
+            var heroes = new List<Hero>(_activeHeroes);
+            foreach (var hero in heroes)
+            {
+                Release(hero);
+            }
+            
+            _activeHeroes.Clear();
+        }
+
+        private Hero CreateHeroInstance(Hero prefab, Vector3 position, Transform parent)
+        {
+            if (prefab == null)
+            {
+                return null;
+            }
+            
+            var heroObject = ObjectPoolManager.Instance.Get(prefab.gameObject);
+            if (heroObject == null)
+            {
+                return null;
+            }
+
+            heroObject.transform.SetParent(parent != null ? parent : _defaultParent, false);
+            heroObject.transform.position = position;
+            heroObject.transform.rotation = Quaternion.identity;
+
+            var hero = heroObject.GetComponent<Hero>();
+            if (hero != null)
+            {
+                return hero;
+            }
+            
+            ObjectPoolManager.Instance.Return(heroObject);
+            return null;
         }
 
         private HeroStat CreateStat(DeployContext deployContext)

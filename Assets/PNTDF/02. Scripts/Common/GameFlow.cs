@@ -43,6 +43,11 @@ namespace PNTD
             
             yield return LoadingManager.Instance.VirtualLoadScene(loadingText, LoadStageRoutine);
             yield return _stageRunner.PlayStageRoutine();
+            
+            if (_stageRunner.StageResult == StageModel.EStageResult.Clear)
+            {
+                yield return LoadingManager.Instance.VirtualLoadScene("loading...", ReturnToLobbyRoutine);
+            }
 
             _isPlaying = false;
         }
@@ -66,6 +71,20 @@ namespace PNTD
                                         party,
                                         () => _lobbyModel.Domain.SynergySystem.CurrentContext);
             }
+
+            yield break;
+        }
+
+        private IEnumerator ReturnToLobbyRoutine()
+        {
+            _lobbyModel.Domain.StatusSystem.UpdateGold(_stageRunner.RewardGold + _stageRunner.BonusGold + _stageRunner.Interest);
+            _lobbyModel.Domain.StatusSystem.UpdateStage(1);
+            
+            _stageRunner.DisposeStage();
+            _mapRunner.UnloadMap();
+            _currentMapContext = null;
+            
+            _lobbyModel.ShowShop();
 
             yield break;
         }

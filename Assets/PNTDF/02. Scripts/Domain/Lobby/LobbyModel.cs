@@ -28,6 +28,13 @@
             Domain.VisibilitySystem.Show();
         }
 
+        public void ShowShop()
+        {
+            Show();
+            Compositor.ShowShop();
+            Domain.ShopSystem.Initialize();
+        }
+
         public void Hide()
         {
             Domain.VisibilitySystem.Hide();

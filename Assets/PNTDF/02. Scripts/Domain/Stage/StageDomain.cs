@@ -13,6 +13,7 @@
         private readonly ClericSanctuarySystem _clericSanctuarySystem;
         private readonly PlunderSystem _plunderSystem;
         private readonly GoldSpawner _goldSpawner;
+        private readonly StagePooledObjectCleaner _stagePooledObjectCleaner;
         
         public StageSystem StageSystem => _stageSystem;
         public WaveSystem WaveSystem => _waveSystem;
@@ -25,6 +26,7 @@
         public ClericSanctuarySystem ClericSanctuarySystem => _clericSanctuarySystem;
         public PlunderSystem PlunderSystem => _plunderSystem;
         public GoldSpawner GoldSpawner => _goldSpawner;
+        public StagePooledObjectCleaner StagePooledObjectCleaner => _stagePooledObjectCleaner;
 
         public StageDomain(StageSystem stageSystem,
                            WaveSystem waveSystem,
@@ -36,7 +38,8 @@
                            HeroMoveSystem heroMoveSystem,
                            ClericSanctuarySystem clericSanctuarySystem,
                            PlunderSystem plunderSystem,
-                           GoldSpawner goldSpawner)
+                           GoldSpawner goldSpawner,
+                           StagePooledObjectCleaner stagePooledObjectCleaner)
         {
             _stageSystem = stageSystem;
             _waveSystem = waveSystem;
@@ -49,6 +52,7 @@
             _clericSanctuarySystem = clericSanctuarySystem;
             _plunderSystem = plunderSystem;
             _goldSpawner = goldSpawner;
+            _stagePooledObjectCleaner = stagePooledObjectCleaner;
         }
 
         public void Initialize(EnemyFactory enemyFactory, StageContext stageContext)

@@ -37,6 +37,11 @@ namespace PNTD
             _indexerPresenter.Initialize();
         }
 
+        public void ShowShop()
+        {
+            _indexerPresenter.ShowShop();
+        }
+
 #region Event Handlings
         private void HandleOnRequestShopRoll()
         {

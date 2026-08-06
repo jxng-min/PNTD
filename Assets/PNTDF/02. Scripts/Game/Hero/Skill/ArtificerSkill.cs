@@ -43,7 +43,7 @@ namespace PNTD
 
             if (!_context.BoardSystem.TryOccupy(robotCell, robot))
             {
-                Object.Destroy(robot.gameObject);
+                _context.HeroFactory.Release(robot);
                 yield break;
             }
 
@@ -122,7 +122,7 @@ namespace PNTD
                 }
 
                 _context?.BoardSystem?.ReleaseByHero(robot);
-                Object.Destroy(robot.gameObject);
+                _context?.HeroFactory?.Release(robot);
             }
             
             _robots.Clear();

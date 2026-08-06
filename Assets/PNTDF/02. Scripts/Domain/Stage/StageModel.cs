@@ -78,6 +78,8 @@ namespace PNTD
             Domain.HeroMoveSystem.Dispose();
             Domain.ClericSanctuarySystem.Dispose();
             Domain.GoldSpawner?.Clear();
+            Domain.HeroFactory.ReleaseAll();
+            Domain.StagePooledObjectCleaner?.ReturnStagePooledObjects();
             Domain.WaveSystem.Dispose();
         }
 

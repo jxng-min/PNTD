@@ -35,6 +35,11 @@ namespace PNTD
 
         public void Initialize()
         {
+            ShowShop();
+        }
+
+        public void ShowShop()
+        {
             HandleEnableCanvasGroup(0);
         }
 

@@ -198,7 +198,7 @@ MonoBehaviour:
   - {fileID: 1374453495}
   - {fileID: 1188951963}
   - {fileID: 914724644}
-  seedRangerParty: 0
+  seedRangerParty: 1
   seedMageParty: 0
   seedStarbornParty: 0
   rangerPartySeeds: []
