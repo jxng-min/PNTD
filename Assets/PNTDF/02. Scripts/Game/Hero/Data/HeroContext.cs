@@ -23,14 +23,14 @@
             Exp = exp;
         }
 
+        public bool CanGetExp(int amount)
+        {
+            return amount > 0 && Level < MaxLevel;
+        }
+
         public bool TryGetExp(int amount)
         {
-            if (amount <= 0)
-            {
-                return false;
-            }
-
-            if (Level >= MaxLevel)
+            if (!CanGetExp(amount))
             {
                 return false;
             }

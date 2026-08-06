@@ -18,9 +18,10 @@ namespace PNTD
                 return false;
             }
             
+            var canIncreaseHeroExp = _lobbyDomain.PartySystem.CanIncreaseHeroExp(heroDataTableRow.rowID);
             var currentHeroCount = _lobbyDomain.PartySystem.HeroContexts.Count;
             var maxHeroCount = _lobbyDomain.StatusSystem.HeroCountLimit;
-            if (currentHeroCount >= maxHeroCount)
+            if (!canIncreaseHeroExp && currentHeroCount >= maxHeroCount)
             {
                 return false;
             }
