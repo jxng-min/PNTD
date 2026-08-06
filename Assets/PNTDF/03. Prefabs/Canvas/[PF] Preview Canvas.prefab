@@ -30,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 1301285257837228865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1989579945045752648}
@@ -50,7 +50,7 @@ Canvas:
   m_GameObject: {fileID: 1301285257837228865}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3033337490313475337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0195f91ef3ad2549b3e11832af4aa11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.DeployPreviewView
+  manualLabel: {fileID: 5912803925040253377}
   virtualRenderer: {fileID: 0}
 --- !u!225 &6262131286405812946
 CanvasGroup:
@@ -296,6 +297,8 @@ GameObject:
   - component: {fileID: 2509340297393573218}
   - component: {fileID: 7930963116970753374}
   - component: {fileID: 7214220720470512377}
+  - component: {fileID: 1905156542739890613}
+  - component: {fileID: 5912803925040253377}
   m_Layer: 0
   m_Name: Manual Group
   m_TagString: Untagged
@@ -440,3 +443,27 @@ MonoBehaviour:
   playMode: 1
   onceDuration: 1
   restoreWhenFinished: 1
+--- !u!225 &1905156542739890613
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685971423320127267}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &5912803925040253377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685971423320127267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58533a16371249428298061ef6d90f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.LabelView
