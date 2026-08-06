@@ -238,7 +238,8 @@ GameObject:
   - component: {fileID: 4493394625792165668}
   - component: {fileID: 271198533023448378}
   - component: {fileID: 7184645213107245940}
-  m_Layer: 0
+  - component: {fileID: 3767721902525417161}
+  m_Layer: 7
   m_Name: '[PF] Magitech Robot'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,6 +385,19 @@ MonoBehaviour:
   facingAngleOffset: 90
   coolBarBackground: {fileID: 5081041553933024349}
   coolBarInner: {fileID: 2066384856119870782}
+--- !u!114 &3767721902525417161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661273342184995275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272cefd938b123d4db8967d8daf60a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipObject
+  tooltipOffset: {x: 0, y: -30}
 --- !u!1 &6795504149166132190
 GameObject:
   m_ObjectHideFlags: 0

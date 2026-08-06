@@ -70,8 +70,8 @@ MonoBehaviour:
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: Rapidly fires low-damage machine-gun rounds at the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Piercing Rounds</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Piercing Rounds</color></b>'
+  additionalTagText: 
   additionalBodyText: Machine-gun rounds pierce enemies.
 --- !u!114 &-8263025100752364036
 MonoBehaviour:
@@ -92,8 +92,8 @@ MonoBehaviour:
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: Fires a powerful piercing bullet toward the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Rapid Chamber</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Rapid Chamber</color></b>'
+  additionalTagText: 
   additionalBodyText: Reduces attack cooldown by <color=#FFCE1B>50%</color> in total.
 --- !u!114 &-7923684813743525335
 MonoBehaviour:
@@ -140,8 +140,8 @@ MonoBehaviour:
 
     Gains <color=#FFCE1B>5</color> Physical Attack Power each
     level.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Bullet Barrage</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Bullet Barrage</color></b>'
+  additionalTagText: 
   additionalBodyText: Increases bullets fired per attack from <color=#FFCE1B>3</color>
     to <color=#FFCE1B>8</color>.
 --- !u!114 &-6930952021580110430
@@ -169,8 +169,8 @@ MonoBehaviour:
 
     Reapplying the burn refreshes its
     duration.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Intense Flames</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Intense Flames</color></b>'
+  additionalTagText: 
   additionalBodyText: Doubles the burn damage.
 --- !u!114 &-6884369581741663124
 MonoBehaviour:
@@ -195,8 +195,8 @@ MonoBehaviour:
 
     Gains <color=#FFCE1B>5</color> Physical Attack Power each
     level.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Bullet Barrage</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Bullet Barrage</color></b>'
+  additionalTagText: 
   additionalBodyText: Increases bullets fired per attack from <color=#FFCE1B>3</color>
     to <color=#FFCE1B>8</color>.
 --- !u!114 &-6027951029969353178
@@ -221,8 +221,8 @@ MonoBehaviour:
 
     The field periodically
     pulls nearby enemies toward its center but deals no damage.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Persistent Gravity</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Persistent Gravity</color></b>'
+  additionalTagText: 
   additionalBodyText: Doubles the gravity field's duration.
 --- !u!114 &-5729762062693684636
 MonoBehaviour:
@@ -265,8 +265,8 @@ MonoBehaviour:
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: Rapidly fires low-damage machine-gun rounds at the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Piercing Rounds</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Piercing Rounds</color></b>'
+  additionalTagText: 
   additionalBodyText: Machine-gun rounds pierce enemies.
 --- !u!114 &-5137200904876929411
 MonoBehaviour:
@@ -312,8 +312,8 @@ MonoBehaviour:
 
     The field periodically
     pulls nearby enemies toward its center but deals no damage.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Persistent Gravity</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Persistent Gravity</color></b>'
+  additionalTagText: 
   additionalBodyText: Doubles the gravity field's duration.
 --- !u!114 &-4364496745110579619
 MonoBehaviour:
@@ -359,8 +359,8 @@ MonoBehaviour:
 
     Robots
     independently attack the nearest enemy.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Suppression Module</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Suppression Module</color></b>'
+  additionalTagText: 
   additionalBodyText: The magitech robot's attacks slow enemies by <color=#FFCE1B>30%</color>.
 --- !u!114 &-3660997445292384664
 MonoBehaviour:
@@ -426,8 +426,8 @@ MonoBehaviour:
 
     piercing
     enemies along its path.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Accelerated Shell</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Accelerated Shell</color></b>'
+  additionalTagText: 
   additionalBodyText: Doubles the cannonball's travel speed.
 --- !u!114 &-3296859174731452398
 MonoBehaviour:
@@ -551,8 +551,8 @@ MonoBehaviour:
 
     piercing
     enemies along its path.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Accelerated Shell</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Accelerated Shell</color></b>'
+  additionalTagText: 
   additionalBodyText: Doubles the cannonball's travel speed.
 --- !u!114 &-1989806804114844001
 MonoBehaviour:
@@ -602,8 +602,8 @@ MonoBehaviour:
 
     The orb has a <color=#FFCE1B>30/40/50%</color>
     chance to disable the target''s abilities for a short duration.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Forced Transmutation</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Forced Transmutation</color></b>'
+  additionalTagText: 
   additionalBodyText: Enemies hit by the magic orb are stunned.
 --- !u!114 &-1121979812204883633
 MonoBehaviour:
@@ -701,8 +701,8 @@ MonoBehaviour:
     <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: Fires a single bullet at the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Rapid Fire</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Rapid Fire</color></b>'
+  additionalTagText: 
   additionalBodyText: Reduces attack cooldown by <color=#FFCE1B>30%</color> in total.
 --- !u!114 &-79396210413289152
 MonoBehaviour:
@@ -748,8 +748,8 @@ MonoBehaviour:
 
     The orb has a <color=#FFCE1B>30/40/50%</color>
     chance to disable the target''s abilities for a short duration.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Forced Transmutation</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Forced Transmutation</color></b>'
+  additionalTagText: 
   additionalBodyText: Enemies hit by the magic orb are stunned.
 --- !u!114 &11400000
 MonoBehaviour:
@@ -769,6 +769,7 @@ MonoBehaviour:
   remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=1012159398
   dataTableRows:
   - {fileID: -1121979812204883633}
+  - {fileID: 928073452166325240}
   - {fileID: -3660997445292384664}
   - {fileID: -3580987167551410345}
   - {fileID: 774613932428472910}
@@ -841,6 +842,41 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &928073452166325240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Hero
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Hero
+  isEnable: 1
+  layout: 6
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: '{physicalAttackIcon} : <color=#FFCE1B>{finalPhysicalAttackPower}</color>
+
+    {magicAttackIcon}
+    : <color=#FFCE1B>{finalMagicAttackPower}</color>
+
+    {cooldownIcon} : <color=#FFCE1B>{finalAttackCooldown}</color>
+
+    {rangeIcon}
+    : <color=#FFCE1B>{finalAttackRange}</color>
+
+    {physicalPenetrationIcon} :
+    <color=#FFCE1B>{finalFlatPhysicalPenetration}</color> / <color=#FFCE1B>{finalPercentPhysicalPenetration}</color>
+
+    {magicPenetrationIcon}
+    : <color=#FFCE1B>{finalFlatMagicPenetration}</color> / <color=#FFCE1B>{finalPercentMagicPenetration}</color>'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &1293446296369619535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,8 +899,8 @@ MonoBehaviour:
 
     Robots
     independently attack the nearest enemy.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Suppression Module</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Suppression Module</color></b>'
+  additionalTagText: 
   additionalBodyText: The magitech robot's attacks slow enemies by <color=#FFCE1B>30%</color>.
 --- !u!114 &1640470927012095785
 MonoBehaviour:
@@ -886,8 +922,8 @@ MonoBehaviour:
   tagText: 'Classes : {heroSynergies}'
   bodyText: Fires <color=#FFCE1B>3</color> bullets in a <color=#FFCE1B>45</color>
     Degree spread toward the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Full Circle</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Full Circle</color></b>'
+  additionalTagText: 
   additionalBodyText: Expands the firing spread from <color=#FFCE1B>45</color> to
     <color=#FFCE1B>360</color> Degree.
 --- !u!114 &1699022177185683820
@@ -912,8 +948,8 @@ MonoBehaviour:
 
     Each
     circle damages enemies within its area.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Grand Formation</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Grand Formation</color></b>'
+  additionalTagText: 
   additionalBodyText: Increases the number of magic circles from <color=#FFCE1B>3</color>
     to <color=#FFCE1B>8</color>.
 --- !u!114 &2190952000152984312
@@ -935,8 +971,8 @@ MonoBehaviour:
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: Fires a powerful piercing bullet toward the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Rapid Chamber</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Rapid Chamber</color></b>'
+  additionalTagText: 
   additionalBodyText: Reduces attack cooldown by <color=#FFCE1B>50%</color> in total.
 --- !u!114 &2226383079057414324
 MonoBehaviour:
@@ -982,8 +1018,8 @@ MonoBehaviour:
 
     The
     circle deals immediate Magic Damage and repeatedly damages enemies inside it.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Accelerated Detonation</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Accelerated Detonation</color></b>'
+  additionalTagText: 
   additionalBodyText: Halves the damage tick interval, causing the magic circle to
     deal damage twice as often.
 --- !u!114 &2973448569199304935
@@ -1071,8 +1107,8 @@ MonoBehaviour:
   tagText: 'Classes : {heroSynergies}'
   bodyText: Fires <color=#FFCE1B>3</color> bullets in a <color=#FFCE1B>45</color>
     Degree spread toward the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Full Circle</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Full Circle</color></b>'
+  additionalTagText: 
   additionalBodyText: Expands the firing spread from <color=#FFCE1B>45</color> to
     <color=#FFCE1B>360</color> Degree.
 --- !u!114 &3698730121541648144
@@ -1094,8 +1130,8 @@ MonoBehaviour:
     {mode} - for <color=#FFCE1B>{deployCost}</color>'
   tagText: 'Classes : {heroSynergies}'
   bodyText: Fires a single bullet at the nearest enemy.
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Rapid Fire</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Rapid Fire</color></b>'
+  additionalTagText: 
   additionalBodyText: Reduces attack cooldown by <color=#FFCE1B>30%</color> in total.
 --- !u!114 &4332845355646647889
 MonoBehaviour:
@@ -1167,8 +1203,8 @@ MonoBehaviour:
 
     The
     circle deals immediate Magic Damage and repeatedly damages enemies inside it.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Accelerated Detonation</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Accelerated Detonation</color></b>'
+  additionalTagText: 
   additionalBodyText: Halves the damage tick interval, causing the magic circle to
     deal damage twice as often.
 --- !u!114 &6737148602292614323
@@ -1193,8 +1229,8 @@ MonoBehaviour:
 
     Each
     circle damages enemies within its area.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Grand Formation</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Grand Formation</color></b>'
+  additionalTagText: 
   additionalBodyText: Increases the number of magic circles from <color=#FFCE1B>3</color>
     to <color=#FFCE1B>8</color>.
 --- !u!114 &8534492456864804181
@@ -1244,8 +1280,8 @@ MonoBehaviour:
 
     Reapplying the burn refreshes its
     duration.'
-  additionalHeaderText: Lv.3
-  additionalTagText: <b><color=#FFCE1B>Intense Flames</color></b>
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Intense Flames</color></b>'
+  additionalTagText: 
   additionalBodyText: Doubles the burn damage.
 --- !u!114 &9069810818781530283
 MonoBehaviour:

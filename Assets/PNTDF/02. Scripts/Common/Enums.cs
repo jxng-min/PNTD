@@ -42,6 +42,7 @@ namespace PNTD
         PartySlot       = 3,
         PaletteSlot     = 4,
         ShopLevel       = 5,
+        Hero            = 6,
     }
 
     public enum EAttack

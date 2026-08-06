@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 5263327306709685705}
   - component: {fileID: 3798309213596802799}
   - component: {fileID: 7989227596677498148}
-  m_Layer: 0
+  - component: {fileID: 1936445304519321465}
+  m_Layer: 7
   m_Name: '[PF] Hero'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,6 +161,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e46ce5a234d948ad88ec131216373b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroEffector
+--- !u!114 &1936445304519321465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250001235587268254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272cefd938b123d4db8967d8daf60a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipObject
+  tooltipOffset: {x: 0, y: -30}
 --- !u!1 &1297361473194927632
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,11 @@
-﻿using JxModule;
+using System.Collections.Generic;
+using System.Linq;
+using JxModule;
 using UnityEngine;
 
 namespace PNTD
 {
-    public class Hero : MonoBehaviour
+    public class Hero : MonoBehaviour, ITooltipProvider
     {
         [BigHeader("Hero Core")]
         [SerializeField] private HeroAttack attack;
@@ -28,6 +30,7 @@ namespace PNTD
         public HeroEffector Effector => effector;
 
         public bool IsSkillSealed => Effector != null && Effector.IsSkillSealed;
+        public bool CanShowTooltip => _isInitialized && HeroDataTableRow != null && Stat != null;
 
         public void Initialize(HeroDataTableRow heroDataTableRow,
                                HeroStat heroStat,
@@ -166,11 +169,75 @@ namespace PNTD
             Skill = null;
             _isInitialized = false;
         }
+
+        public TooltipContent GetTooltipContent()
+        {
+            if (!CanShowTooltip)
+            {
+                return null;
+            }
+
+            var heroColor = ColorUtility.ToHtmlStringRGB(HeroDataTableRow.color);
+            return new TooltipContent(
+                "Hero",
+                new Dictionary<string, object>
+                {
+                    { "heroName", $"<color=#{heroColor}>{HeroDataTableRow.displayName}</color>" },
+                    { "heroLevel", Level },
+                    { "heroSynergies", BuildHeroSynergies(HeroDataTableRow.synergy) },
+                    { "physicalAttackIcon", "<sprite=\"Stat\" name=\"Physical ATK\">" },
+                    { "magicAttackIcon", "<sprite=\"Stat\" name=\"Magic ATK\">" },
+                    { "cooldownIcon", "<sprite=\"Stat\" name=\"Cooldown\">" },
+                    { "rangeIcon", "<sprite=\"Stat\" name=\"Range\">" },
+                    { "physicalPenetrationIcon", "<sprite=\"Stat\" name=\"Physical Penetration\">" },
+                    { "magicPenetrationIcon", "<sprite=\"Stat\" name=\"Magic Penetration\">" },
+                    { "finalPhysicalAttackPower", Stat.FinalPhysicalAttackPower },
+                    { "finalMagicAttackPower", Stat.FinalMagicAttackPower },
+                    { "finalAttackCooldown", Stat.FinalAttackCooldown },
+                    { "finalAttackRange", Stat.FinalAttackRange },
+                    { "finalFlatPhysicalPenetration", Stat.FinalFlatPhysicalPenetration },
+                    { "finalPercentPhysicalPenetration", FormatPercent(Stat.FinalPercentPhysicalPenetration) },
+                    { "finalFlatMagicPenetration", Stat.FinalFlatMagicPenetration },
+                    { "finalPercentMagicPenetration", FormatPercent(Stat.FinalPercentMagicPenetration) },
+                });
+        }
         
         private void HandleOnSkillSealChanged(bool isSealed)
         {
             Attack?.SetSealed(isSealed);
             Model?.SetSealed(isSealed);
+        }
+
+        private static string BuildHeroSynergies(ESynergy synergy)
+        {
+            if (synergy == ESynergy.None)
+            {
+                return "None";
+            }
+
+            var synergies = EnumUtility.GetValues<ESynergy>()
+                .Where(type => type != ESynergy.None && EnumUtility.HasAnyFlag(synergy, type))
+                .Select(FormatSynergyName)
+                .ToList();
+
+            return synergies.Count > 0 ? string.Join(", ", synergies) : "None";
+        }
+
+        private static string FormatSynergyName(ESynergy synergyType)
+        {
+            if (!SynergyDataTableUtility.TryGetSynergyDataTableRow(synergyType, out var synergyDataTableRow) ||
+                synergyDataTableRow == null)
+            {
+                return synergyType.ToString();
+            }
+
+            var synergyColor = ColorUtility.ToHtmlStringRGB(synergyDataTableRow.color);
+            return $"<color=#{synergyColor}>{synergyDataTableRow.displayName}</color>";
+        }
+
+        private static string FormatPercent(float value)
+        {
+            return $"{Mathf.RoundToInt(value * 100f)}%";
         }
 
         private void OnDisable()
