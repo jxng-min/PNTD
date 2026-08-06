@@ -80,7 +80,8 @@ namespace PNTD
             var heroMoveSystem = new HeroMoveSystem(boardSystem,
                                                     deploySystem,
                                                     mapContext.Map,
-                                                    clericSanctuarySystem);
+                                                    clericSanctuarySystem,
+                                                    deployPreviewView);
             var deployAction = new StageDeployAction(boardSystem, deploySystem, heroFactory, heroMoveSystem, clericSanctuarySystem, mapContext.Map);
             var deployPreviewSystem = new DeployPreviewSystem(deploySystem,
                                                               deployAction,

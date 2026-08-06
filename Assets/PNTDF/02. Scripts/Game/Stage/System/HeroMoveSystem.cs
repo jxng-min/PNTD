@@ -10,6 +10,7 @@ namespace PNTD
         private readonly DeploySystem _deploySystem;
         private readonly StageMap _stageMap;
         private readonly ClericSanctuarySystem _clericSanctuarySystem;
+        private readonly DeployPreviewView _deployPreviewView;
         private readonly HashSet<Hero> _heroes = new();
 
         private Hero _draggingHero;
@@ -20,12 +21,14 @@ namespace PNTD
         public HeroMoveSystem(BoardSystem boardSystem,
                               DeploySystem deploySystem,
                               StageMap stageMap,
-                              ClericSanctuarySystem clericSanctuarySystem)
+                              ClericSanctuarySystem clericSanctuarySystem,
+                              DeployPreviewView deployPreviewView)
         {
             _boardSystem = boardSystem;
             _deploySystem = deploySystem;
             _stageMap = stageMap;
             _clericSanctuarySystem = clericSanctuarySystem;
+            _deployPreviewView = deployPreviewView;
         }
 
         public void Register(Hero hero)
@@ -58,6 +61,16 @@ namespace PNTD
             ClearDrag();
         }
 
+        public void Tick()
+        {
+            if (_draggingHero == null || !Input.GetMouseButtonDown(1))
+            {
+                return;
+            }
+
+            CancelDrag();
+        }
+
         private void HandleOnBeginDragRequested(Hero hero, PointerEventData eventData)
         {
             if (hero == null ||
@@ -75,6 +88,7 @@ namespace PNTD
             hero.Model?.SetRotationPaused(true);
 
             _stageMap.MapEffect?.SetHighlight(true);
+            _deployPreviewView?.Show(false);
 
             UpdateDragPosition(eventData.position);
         }
@@ -125,7 +139,9 @@ namespace PNTD
 
             var worldPosition = GetWorldPosition(screenPosition);
             _currentCellPosition = _stageMap.BuildMap.WorldToCell(worldPosition);
-            _draggingHero.transform.position = _stageMap.BuildMap.GetCellCenterWorld(_currentCellPosition);
+            var cellCenter = _stageMap.BuildMap.GetCellCenterWorld(_currentCellPosition);
+            _draggingHero.transform.position = cellCenter;
+            _deployPreviewView?.SetWorldPosition(cellCenter);
 
             _canMove = CanMove(_currentCellPosition);
         }
@@ -183,11 +199,27 @@ namespace PNTD
             _draggingHero?.Attack?.Resume();
             _draggingHero?.Model?.SetRotationPaused(false);
             _stageMap?.MapEffect?.SetHighlight(_deploySystem is { DeployMode: true });
+            _deployPreviewView?.Hide();
 
             _draggingHero = null;
             _originCellPosition = default;
             _currentCellPosition = default;
             _canMove = false;
+        }
+
+        private void CancelDrag()
+        {
+            var hero = _draggingHero;
+            if (hero == null)
+            {
+                return;
+            }
+
+            MoveToCell(hero, _originCellPosition);
+            _boardSystem.TryOccupy(_originCellPosition, hero);
+            hero.NotifyDeployed(_originCellPosition);
+            ClearDrag();
+            _clericSanctuarySystem?.Refresh();
         }
     }
 }

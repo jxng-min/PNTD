@@ -62,6 +62,7 @@ namespace PNTD
             Domain.StageSystem.Tick(deltaTime);
             Domain.WaveSystem.Tick(deltaTime);
             Domain.DeployPreviewSystem.Tick();
+            Domain.HeroMoveSystem.Tick();
         }
 
         public IEnumerator WaitUntilStageEnd()

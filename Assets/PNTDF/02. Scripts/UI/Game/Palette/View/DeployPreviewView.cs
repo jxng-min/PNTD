@@ -1,9 +1,11 @@
+using JxModule;
 using UnityEngine;
 
 namespace PNTD
 {
-    public class DeployPreviewView : MonoBehaviour
+    public class DeployPreviewView : ViewBase
     {
+        [SerializeField] private LabelView manualLabel;
         [SerializeField] private SpriteRenderer virtualRenderer;
 
         private void Awake()
@@ -17,13 +19,19 @@ namespace PNTD
             SetColor(heroDataTableRow != null ? heroDataTableRow.color : Color.white);
         }
 
-        public void Show()
+        public void Show(bool withVirtualHero = true)
         {
-            SetRendererActive(true);
+            manualLabel.CanvasGroup.alpha = 1f;
+
+            if (withVirtualHero)
+            {
+                SetRendererActive(true);
+            }
         }
 
         public void Hide()
         {
+            manualLabel.CanvasGroup.alpha = 0f;
             SetRendererActive(false);
         }
 
