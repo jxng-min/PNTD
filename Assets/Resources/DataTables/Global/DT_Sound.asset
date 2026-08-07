@@ -1,0 +1,456 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9122642291099502306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_HandShot
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_HandShot
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/HandShot1.ogg
+  - Sound/SFX/HandShot2.ogg
+  channelCount: 20
+  loop: 0
+--- !u!114 &-8295711869260757722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Error
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Error
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Error.ogg
+  channelCount: 20
+  loop: 0
+--- !u!114 &-8049625550615906976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Magician
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Magician
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Magician1.ogg
+  - Sound/SFX/Magician2.ogg
+  - Sound/SFX/Magician3.ogg
+  channelCount: 6
+  loop: 0
+--- !u!114 &-7405257883993618139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_LevelUp
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_LevelUp
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/LevelUp.ogg
+  channelCount: 2
+  loop: 0
+--- !u!114 &-6575637351184524024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Archer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Archer
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Archer1.ogg
+  - Sound/SFX/Archer2.ogg
+  channelCount: 5
+  loop: 0
+--- !u!114 &-6258485078878673946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Hover2
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Hover2
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Hover2.ogg
+  channelCount: 10
+  loop: 0
+--- !u!114 &-6002747072761131844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Hover1
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Hover1
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Hover1.ogg
+  channelCount: 10
+  loop: 0
+--- !u!114 &-3957443202613404722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Starborn
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Starborn
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Starborn.ogg
+  channelCount: 50
+  loop: 0
+--- !u!114 &-3656946927172846788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Transmuter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Transmuter
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Transmuter1.ogg
+  - Sound/SFX/Transmuter2.ogg
+  - Sound/SFX/Transmuter3.ogg
+  channelCount: 10
+  loop: 0
+--- !u!114 &-880238938816921738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: BGM_Main
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: BGM_Main
+  isEnable: 1
+  type: 0
+  soundAddresses:
+  - Sound/BGM/Main.mp3
+  channelCount: 1
+  loop: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_Sound
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: 9d9fbdd8eb8f32c4b832bba39c6d612b, type: 3}
+  dataTableRowName: PNTD.SoundDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=44672979
+  dataTableRows:
+  - {fileID: -880238938816921738}
+  - {fileID: 8244328941425465684}
+  - {fileID: -8295711869260757722}
+  - {fileID: -6002747072761131844}
+  - {fileID: -6258485078878673946}
+  - {fileID: -7405257883993618139}
+  - {fileID: 8455850734068215216}
+  - {fileID: 4783045281186117046}
+  - {fileID: -6575637351184524024}
+  - {fileID: -9122642291099502306}
+  - {fileID: 8888348209649068494}
+  - {fileID: 8512343456054941394}
+  - {fileID: 6285277928447752484}
+  - {fileID: -3957443202613404722}
+  - {fileID: -8049625550615906976}
+  - {fileID: 6820454847338146393}
+  - {fileID: 6066573653911171450}
+  - {fileID: 3935131382966365665}
+  - {fileID: -3656946927172846788}
+  - {fileID: 9051256569126879243}
+  - {fileID: 4532156398452089494}
+  dataTableRowScript: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+--- !u!114 &3935131382966365665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Telekinetic
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Telekinetic
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Telekinetic1.ogg
+  - Sound/SFX/Telekinetic2.ogg
+  channelCount: 5
+  loop: 0
+--- !u!114 &4532156398452089494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Count
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Count
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Count.ogg
+  channelCount: 5
+  loop: 0
+--- !u!114 &4783045281186117046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Damage
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Damage
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Damage1.ogg
+  - Sound/SFX/Damage2.ogg
+  - Sound/SFX/Damage3.ogg
+  channelCount: 50
+  loop: 0
+--- !u!114 &6066573653911171450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Explomancer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Explomancer
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Explomancer.ogg
+  channelCount: 5
+  loop: 0
+--- !u!114 &6285277928447752484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Trickshooter
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Trickshooter
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Trickshooter.ogg
+  channelCount: 30
+  loop: 0
+--- !u!114 &6820454847338146393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Wizard
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Wizard
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Wizard1.ogg
+  - Sound/SFX/Wizard2.ogg
+  channelCount: 24
+  loop: 0
+--- !u!114 &8244328941425465684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Click
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Click
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Click.ogg
+  channelCount: 20
+  loop: 0
+--- !u!114 &8455850734068215216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Coin
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Coin
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Coin1.ogg
+  - Sound/SFX/Coin2.ogg
+  - Sound/SFX/Coin3.ogg
+  channelCount: 3
+  loop: 0
+--- !u!114 &8512343456054941394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Sniper
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Sniper
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Sniper.ogg
+  channelCount: 5
+  loop: 0
+--- !u!114 &8888348209649068494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Artillery
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Artillery
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Artillery1.ogg
+  - Sound/SFX/Artillery2.ogg
+  channelCount: 5
+  loop: 0
+--- !u!114 &9051256569126879243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Typing
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Typing
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Typing1.ogg
+  - Sound/SFX/Typing2.ogg
+  - Sound/SFX/Typing3.ogg
+  - Sound/SFX/Typing4.ogg
+  channelCount: 20
+  loop: 0

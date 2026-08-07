@@ -18,5 +18,10 @@ namespace PNTD
                 ? LevelThreeDotDamageMultiplier
                 : LevelOneDotDamageMultiplier;
         }
+        
+        protected override void PlayFireSound()
+        {
+            SoundManager.Instance.PlaySFX("SFX_Magician");
+        }
     }
 }

@@ -124,4 +124,10 @@ namespace PNTD
         Additive            = 1,
         Multiply            = 2,
     }
+
+    public enum ESound
+    {
+        BGM                 = 0,
+        SFX                 = 1,
+    }
 }

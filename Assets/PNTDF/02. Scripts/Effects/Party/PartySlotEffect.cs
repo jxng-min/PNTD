@@ -26,6 +26,7 @@ namespace PNTD
 
         public Tween PlayPointerEnterEffect(RectTransform rectTransform, Image hoverImage)
         {
+            SoundManager.Instance.PlaySFX("SFX_Hover2");
             var sequence = DOTween.Sequence();
 
             sequence.Append(
@@ -47,6 +48,7 @@ namespace PNTD
 
         public Tween PlayPointerDownEffect(RectTransform rectTransform, Vector2 originAnchoredPosition)
         {
+            SoundManager.Instance.PlaySFX("SFX_Click");
             return rectTransform.DOAnchorPosY(originAnchoredPosition.y - yOffset, translateDuration);
         }
 

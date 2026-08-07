@@ -52,6 +52,7 @@ namespace PNTD
         
         public override void OnPointerEnter()
         {
+            SoundManager.Instance.PlaySFX("SFX_Hover1");
             _hoverTween?.Kill();
             _hoverTween = _rectTransform.DOPunchScale(new Vector3(punchScaleAmount, punchScaleAmount, 0f), punchDuration);
         }
@@ -78,6 +79,7 @@ namespace PNTD
 
         public override void OnPointerDown()
         {
+            SoundManager.Instance.PlaySFX("SFX_Click");
             _clickTween?.Kill();
             _clickTween = _rectTransform.DOAnchorPosY(_originAnchoredPosition.y - yOffset, translationDuration).SetEase(Ease.OutQuad);
         }

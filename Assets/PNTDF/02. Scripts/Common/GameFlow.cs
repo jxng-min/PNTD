@@ -17,6 +17,8 @@ namespace PNTD
             _lobbyModel = lobbyModel;
             _mapRunner = mapRunner;
             _stageRunner = stageRunner;
+            
+            StartCoroutine(WaitSoundLoad());
         }
 
         public void Play()
@@ -88,6 +90,16 @@ namespace PNTD
             _lobbyModel.ShowShop();
 
             yield break;
+        }
+
+        private IEnumerator WaitSoundLoad()
+        {
+            while (!SoundManager.Instance.IsLoaded)
+            {
+                yield return null;
+            }
+            
+            SoundManager.Instance.PlayBGM("BGM_Main");
         }
     }
 }

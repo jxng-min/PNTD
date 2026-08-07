@@ -7,5 +7,10 @@ namespace PNTD
         protected override int GetBulletCount(Hero hero) => 3;
         protected override float GetSpreadAngle(Hero hero) => 45f;
         protected override bool UseFullCircle(Hero hero) => hero != null && hero.Level >= 3;
+        
+        protected override void PlayFireSound()
+        {
+            SoundManager.Instance.PlaySFX("SFX_HandShot");
+        }
     }
 }

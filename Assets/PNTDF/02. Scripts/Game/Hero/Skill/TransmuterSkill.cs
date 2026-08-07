@@ -36,5 +36,10 @@ namespace PNTD
         {
             return hero != null && hero.Level >= 3 ? 0.75f : 0f;
         }
+
+        protected override void PlayFireSound()
+        {
+            SoundManager.Instance.PlaySFX("SFX_Transmuter");
+        }
     }
 }

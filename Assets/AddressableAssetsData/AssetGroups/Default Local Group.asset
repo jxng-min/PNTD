@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: b68114ab1352bc242bc09bafd5baf1e4
   m_SerializeEntries:
+  - m_GUID: 0821b95c0722d954697838b09886da7c
+    m_Address: Sound/SFX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 71d29722ef3c1744b9ccbe12a99a62ee
     m_Address: Synergy
     m_ReadOnly: 0
@@ -22,6 +27,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 73660a34fe18165459517e1959f0190d
     m_Address: Map
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7800f8927dbb734db8ef79857f2f76e
+    m_Address: Sound/BGM
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

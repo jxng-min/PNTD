@@ -36,6 +36,7 @@ namespace PNTD
 
             if (Exp + 1 >= MaxExp)
             {
+                SoundManager.Instance.PlaySFX("SFX_LevelUp");
                 Level += 1;
                 Exp = 0;
             }

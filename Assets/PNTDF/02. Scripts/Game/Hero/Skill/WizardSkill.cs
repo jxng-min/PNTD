@@ -31,10 +31,10 @@ namespace PNTD
                 yield break;
             }
 
-            CreateMagicCircles(hero, target.transform.position);
+            CoroutineRunner.Instance.Run(CreateMagicCircles(hero, target.transform.position));
         }
 
-        private void CreateMagicCircles(Hero hero, Vector3 targetPosition)
+        private IEnumerator CreateMagicCircles(Hero hero, Vector3 targetPosition)
         {
             var circleCount = GetCircleCount(hero);
             var damageMultiplier = GetDamageMultiplier(hero);
@@ -48,6 +48,8 @@ namespace PNTD
                 var position = targetPosition + (Vector3)(AngleToDirection(angle) * spawnRadius);
 
                 CreateMagicCircle(hero, position, damageMultiplier);
+                SoundManager.Instance.PlaySFX("SFX_Wizard");
+                yield return new WaitForSeconds(0.1f);
             }
         }
 

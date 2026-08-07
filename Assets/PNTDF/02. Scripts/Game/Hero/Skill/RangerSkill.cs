@@ -74,6 +74,7 @@ namespace PNTD
                 for (var index = 0; index < bulletCount; index++)
                 {
                     FireBullet(hero, direction);
+                    PlayFireSound();
                     yield return new WaitForSeconds(0.15f);
                 }
 
@@ -87,6 +88,8 @@ namespace PNTD
                 FireBullet(hero, Rotate(direction, startAngle + stepAngle * index));
             }
         }
+        
+        protected virtual void PlayFireSound() {}
 
         private void FireFullCircle(Hero hero, Vector2 direction, int bulletCount)
         {

@@ -51,6 +51,8 @@ namespace PNTD
             {
                 OnEnemyDied?.Invoke();
             }
+            
+            SoundManager.Instance.PlaySFX("SFX_Damage");
 
             return true;
         }

@@ -32,6 +32,7 @@ namespace PNTD
 
             for (var second = delay; second > 0; second--)
             {
+                SoundManager.Instance.PlaySFX("SFX_Count");
                 countLabel.SetText($"{second}");
                 yield return new WaitForSeconds(1f);
             }

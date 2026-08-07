@@ -68,6 +68,7 @@ namespace PNTD
                                                pullDistance: PullDistance);
 
             circle.Initialize(position, config);
+            SoundManager.Instance.PlaySFX("SFX_Telekinetic");
         }
 
         private static float GetDuration(Hero hero)

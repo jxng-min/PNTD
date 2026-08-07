@@ -81,6 +81,8 @@ namespace PNTD
 
         public override void OnPointerEnter(PointerEventData eventData)
         {
+            SoundManager.Instance.PlaySFX("SFX_Hover2");
+            
             _fadeTween?.Kill();
             _fadeTween = shopSlotEffect.PlayPointerEnterEffect(hoverImage);
         }
@@ -97,6 +99,8 @@ namespace PNTD
             {
                 return;
             }
+            
+            SoundManager.Instance.PlaySFX("SFX_Click");
 
             _clickTween?.Kill();
             _clickTween = shopSlotEffect.PlayPointerDownEffect(RectTransform, _originAnchoredPosition);

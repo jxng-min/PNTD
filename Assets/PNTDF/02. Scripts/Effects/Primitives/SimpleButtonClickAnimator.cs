@@ -50,6 +50,7 @@ namespace PNTD
         
         public override void OnPointerEnter()
         {
+            SoundManager.Instance.PlaySFX("SFX_Hover1");
             _hoverTween?.Kill();
             
             var sequence = DOTween.Sequence();
@@ -75,6 +76,7 @@ namespace PNTD
 
         public override IEnumerator OnPointerClick()
         {
+            SoundManager.Instance.PlaySFX("SFX_Click");
             yield break;
         }
 
