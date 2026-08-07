@@ -9,14 +9,23 @@ namespace PNTD
         private readonly DataTable _enemyDataTable;
         private readonly DataTable _enemyAbilityDataTable;
         private readonly DataTable _enragerDataTable;
+        private readonly DataTable _blinkerDataTable;
+        private readonly DataTable _hexerDataTable;
+        private readonly DataTable _summonerDataTable;
 
         public EnemyBuilder(DataTable enemyDataTable,
                             DataTable enemyAbilityDataTable,
-                            DataTable enragerDataTable)
+                            DataTable enragerDataTable,
+                            DataTable blinkerDataTable,
+                            DataTable hexerDataTable,
+                            DataTable summonerDataTable)
         {
             _enemyDataTable = enemyDataTable;
             _enemyAbilityDataTable = enemyAbilityDataTable;
             _enragerDataTable = enragerDataTable;
+            _blinkerDataTable = blinkerDataTable;
+            _hexerDataTable = hexerDataTable;
+            _summonerDataTable = summonerDataTable;
         }
 
         public EnemyContext Build(string enemyId)
@@ -50,6 +59,9 @@ namespace PNTD
             return abilityDataTableRow.ability switch
             {
                 EEnemyAbility.Enrager       => BuildEnragerAbility(abilityId),
+                EEnemyAbility.Blinker       => BuildBlinkerAbility(abilityId),
+                EEnemyAbility.Hexer         => BuildHexerAbility(abilityId),
+                EEnemyAbility.Summoner      => BuildSummonerAbility(abilityId),
                 _                           => null
             };
         }
@@ -71,6 +83,60 @@ namespace PNTD
                 enragerDataTableRow.recoverDuration,
                 enragerDataTableRow.overrideColor
             );
+        }
+
+        private EnemyAbilityData BuildBlinkerAbility(string abilityId)
+        {
+            var row = _blinkerDataTable?.Find<BlinkerDataTableRow>(data => data.isEnable && data.rowID == abilityId);
+            if (row == null)
+            {
+                DebugExtension.LogColor($"EnemyBuilder: Blinker ability not found. Ability ID: {abilityId}", Color.red);
+                return null;
+            }
+
+            return new BlinkerData(row.rowID,
+                                   row.firstCastDelay,
+                                   row.coolDown,
+                                   row.blinkDistance,
+                                   row.invincibleDuration);
+        }
+
+        private EnemyAbilityData BuildHexerAbility(string abilityId)
+        {
+            var row = _hexerDataTable?.Find<HexerDataTableRow>(data => data.isEnable && data.rowID == abilityId);
+            if (row == null)
+            {
+                DebugExtension.LogColor($"EnemyBuilder: Hexer ability not found. Ability ID: {abilityId}", Color.red);
+                return null;
+            }
+
+            return new HexerData(row.rowID,
+                                 row.firstCastDelay,
+                                 row.coolDown,
+                                 row.castRange,
+                                 row.duration,
+                                 row.attackDamagePenalty,
+                                 row.attackSpeedPenalty,
+                                 row.maxActiveHexPerHexer);
+        }
+
+        private EnemyAbilityData BuildSummonerAbility(string abilityId)
+        {
+            var row = _summonerDataTable?.Find<SummonerDataTableRow>(data => data.isEnable && data.rowID == abilityId);
+            if (row == null)
+            {
+                DebugExtension.LogColor($"EnemyBuilder: Summoner ability not found. Ability ID: {abilityId}", Color.red);
+                return null;
+            }
+
+            return new SummonerData(row.rowID,
+                                    row.firstCastDelay,
+                                    row.coolDown,
+                                    row.spawnCount,
+                                    row.maxCasts,
+                                    row.spawnedEnemyID,
+                                    row.minSpawnOffset,
+                                    row.maxSpawnOffset);
         }
     }
 }

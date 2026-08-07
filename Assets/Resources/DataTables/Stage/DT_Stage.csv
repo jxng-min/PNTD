@@ -1,2 +1,13 @@
 rowID,maxLife,rewardGold,mapID,isEnable
 Stage_01,5,5,Map_01,TRUE
+Stage_02,5,5,Map_02,TRUE
+Stage_03,5,5,Map_03,TRUE
+Stage_04,5,5,Map_04,TRUE
+Stage_05,5,5,Map_05,TRUE
+Stage_06,5,5,Map_06,TRUE
+Stage_07,5,5,Map_07,TRUE
+Stage_08,5,5,Map_08,TRUE
+Stage_09,5,5,Map_09,TRUE
+Stage_10,5,5,Map_10,TRUE
+Stage_11,5,5,Map_11,TRUE
+Stage_12,5,5,Map_12,TRUE

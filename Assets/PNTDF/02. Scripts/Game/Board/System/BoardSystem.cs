@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PNTD
 {
-    public class BoardSystem
+    public class BoardSystem : IHeroProvider
     {
         private readonly Dictionary<Vector3Int, Hero> _heroByCell = new();
         private readonly Dictionary<Hero, Vector3Int> _cellByHero = new();

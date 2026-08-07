@@ -31,7 +31,13 @@ namespace PNTD
         public Hero LastHitHero { get; private set; }
         public Collider2D Collider => collider2d;
 
-        public void Initialize(EnemyContext enemyContext, StagePath stagePath, IEnemyProvider enemyProvider)
+        public void Initialize(EnemyContext enemyContext,
+                               StagePath stagePath,
+                               IEnemyProvider enemyProvider,
+                               IEnemySpawner enemySpawner,
+                               IHeroProvider heroProvider,
+                               Vector3? startPosition = null,
+                               int pathPointIndex = 1)
         {
             Context = enemyContext;
             IsResolved = false;
@@ -52,7 +58,9 @@ namespace PNTD
             
             movement.Initialize(
                 status,
-                stagePath
+                stagePath,
+                startPosition,
+                pathPointIndex
             );
             
             model.Initialize(
@@ -64,7 +72,9 @@ namespace PNTD
             abiliter.Initialize(
                 this,
                 enemyContext.AbilityData,
-                enemyProvider
+                enemyProvider,
+                enemySpawner,
+                heroProvider
             );
             
             health.OnEnemyDied += HandleOnEnemyDied;

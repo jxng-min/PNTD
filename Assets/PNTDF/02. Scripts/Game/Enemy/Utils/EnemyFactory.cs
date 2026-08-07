@@ -9,16 +9,23 @@ namespace PNTD
 
         private StagePath _stagePath;
         private IEnemyProvider _enemyProvider;
+        private IEnemySpawner _enemySpawner;
+        private IHeroProvider _heroProvider;
 
         public EnemyFactory(EnemyBuilder enemyBuilder)
         {
             _enemyBuilder = enemyBuilder;
         }
 
-        public void Initialize(StagePath stagePath, IEnemyProvider enemyProvider)
+        public void Initialize(StagePath stagePath,
+                               IEnemyProvider enemyProvider,
+                               IEnemySpawner enemySpawner,
+                               IHeroProvider heroProvider)
         {
             _stagePath = stagePath;
             _enemyProvider = enemyProvider;
+            _enemySpawner = enemySpawner;
+            _heroProvider = heroProvider;
         }
 
         public Enemy Create(string enemyId)
@@ -35,10 +42,27 @@ namespace PNTD
                 return null;
             }
 
-            return Create(enemyContext);
+            return Create(enemyContext, null, 1);
         }
 
-        private Enemy Create(EnemyContext enemyContext)
+        public Enemy Create(string enemyId, Vector3 position, int pathPointIndex)
+        {
+            if (_stagePath == null || string.IsNullOrEmpty(enemyId))
+            {
+                return null;
+            }
+
+            var enemyContext = _enemyBuilder.Build(enemyId);
+            if (enemyContext == null)
+            {
+                DebugExtension.LogColor($"Enemy Factory: Enemy Context not found. Enemy ID: {enemyId}", Color.red);
+                return null;
+            }
+
+            return Create(enemyContext, position, pathPointIndex);
+        }
+
+        private Enemy Create(EnemyContext enemyContext, Vector3? startPosition, int pathPointIndex)
         {
             var enemyPrefab = PrefabManager.CachePrefab<Enemy>();
             if (enemyPrefab == null)
@@ -58,7 +82,13 @@ namespace PNTD
                 return null;
             }
             
-            enemy.Initialize(enemyContext, _stagePath, _enemyProvider);
+            enemy.Initialize(enemyContext,
+                             _stagePath,
+                             _enemyProvider,
+                             _enemySpawner,
+                             _heroProvider,
+                             startPosition,
+                             pathPointIndex);
             return enemy;
         }
     }

@@ -1,0 +1,2 @@
+rowID,firstCastDelay,coolDown,castRange,duration,attackDamagePenalty,attackSpeedPenalty,maxActiveHexPerHexer,isEnable
+Ability_Hexer,2,6,3.5,4,0.2,0.15,1,TRUE

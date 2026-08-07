@@ -113,6 +113,15 @@ namespace PNTD
             return resistance;
         }
 
+        public static float CalculateDamageForDebug(float damage,
+                                                    float resistance,
+                                                    float flatPenetration = 0f,
+                                                    float percentPenetration = 0f)
+        {
+            var effectiveResistance = CalculateEffectiveResistance(resistance, flatPenetration, percentPenetration);
+            return ApplyResistance(damage, effectiveResistance);
+        }
+
         private static float ApplyResistance(float damage, float resistance)
         {
             damage = Mathf.Max(0f, damage);
