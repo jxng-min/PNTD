@@ -17,7 +17,7 @@ namespace PNTD
             return Create(heroContext.HeroDataTableRow, heroContext.Level, mode);
         }
 
-        public static TooltipContent Create(HeroDataTableRow heroDataTableRow, int heroLevel, string mode, bool omitHeroLevel = false)
+        public static TooltipContent Create(HeroDataTableRow heroDataTableRow, int heroLevel, string mode, bool omitHeroLevel = false, SynergyContext synergyContext = null)
         {
             if (heroDataTableRow == null)
             {
@@ -25,8 +25,9 @@ namespace PNTD
             }
 
             var heroColor = ColorUtility.ToHtmlStringRGB(heroDataTableRow.color);
+            var tooltipSuffix = GetTooltipSuffix(heroDataTableRow);
             return new TooltipContent(
-                $"PartySlot_{heroDataTableRow.displayName}",
+                $"PartySlot_{tooltipSuffix}",
                 new Dictionary<string, object>
                 {
                     { "heroName", $"<color=#{heroColor}>{heroDataTableRow.displayName}</color>" },
@@ -35,11 +36,12 @@ namespace PNTD
                     { "heroSynergies", BuildHeroSynergies(heroDataTableRow.synergy) },
                     { "mode", mode },
                     { "omitHeroLevel", omitHeroLevel },
+                    { "orbCount", CalculateStarbornOrbCount(heroDataTableRow, heroLevel, synergyContext) },
                 }
             );
         }
 
-        public static TooltipContent CreateShopSlot(HeroDataTableRow heroDataTableRow)
+        public static TooltipContent CreateShopSlot(HeroDataTableRow heroDataTableRow, SynergyContext synergyContext = null)
         {
             if (heroDataTableRow == null)
             {
@@ -47,8 +49,9 @@ namespace PNTD
             }
             
             var heroColor = ColorUtility.ToHtmlStringRGB(heroDataTableRow.color);
+            var tooltipSuffix = GetTooltipSuffix(heroDataTableRow);
             return new TooltipContent(
-                $"ShopSlot_{heroDataTableRow.displayName}",
+                $"ShopSlot_{tooltipSuffix}",
                 new Dictionary<string, object>
                 {
                     { "heroName", $"<color=#{heroColor}>{heroDataTableRow.displayName}</color>" },
@@ -56,8 +59,41 @@ namespace PNTD
                     { "deployCost", heroDataTableRow.cost },
                     { "heroSynergies", BuildHeroSynergies(heroDataTableRow.synergy) },
                     { "mode", "Buys" },
+                    { "orbCount", CalculateStarbornOrbCount(heroDataTableRow, 1, synergyContext) },
                 }
             );
+        }
+
+        private static int CalculateStarbornOrbCount(HeroDataTableRow heroDataTableRow, int heroLevel, SynergyContext synergyContext)
+        {
+            if (heroDataTableRow == null || !EnumUtility.HasAnyFlag(heroDataTableRow.synergy, ESynergy.StarBorn))
+            {
+                return 0;
+            }
+
+            return Mathf.Clamp(heroLevel + GetStarbornSynergyOrbCount(synergyContext?.GetCount(ESynergy.StarBorn) ?? 0), 1, 6);
+        }
+
+        private static string GetTooltipSuffix(HeroDataTableRow heroDataTableRow)
+        {
+            const string heroPrefix = "Hero_";
+
+            if (!string.IsNullOrEmpty(heroDataTableRow.rowID) && heroDataTableRow.rowID.StartsWith(heroPrefix))
+            {
+                return heroDataTableRow.rowID.Substring(heroPrefix.Length);
+            }
+
+            return heroDataTableRow.displayName;
+        }
+
+        private static int GetStarbornSynergyOrbCount(int starbornCount)
+        {
+            if (starbornCount >= 4)
+            {
+                return 3;
+            }
+
+            return starbornCount >= 2 ? 1 : 0;
         }
         
         private static string BuildHeroSynergies(ESynergy synergy)

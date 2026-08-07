@@ -15,6 +15,7 @@ MonoBehaviour:
   dataTableCsv: {fileID: 4900000, guid: 71b61b155eed5254aaf4ea72f80eff0d, type: 3}
   dataTableRowName: PNTD.EnragerDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=1028762358
   dataTableRows:
   - {fileID: 7121321984362942738}
   dataTableRowScript: {fileID: 11500000, guid: fdb39a1fd2a84c0b8399e6c2bfbd9ec0, type: 3}

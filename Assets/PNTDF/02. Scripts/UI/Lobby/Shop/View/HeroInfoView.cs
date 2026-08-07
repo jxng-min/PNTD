@@ -13,12 +13,14 @@ namespace PNTD
         [SerializeField] private TMP_Text costLabel;
         
         private HeroDataTableRow _heroDataTableRow;
+        private SynergyContext _synergyContext = SynergyContext.Empty;
         
         public bool CanShowTooltip => _heroDataTableRow != null;
 
-        public void Initialize(HeroDataTableRow heroDataTableRow)
+        public void Initialize(HeroDataTableRow heroDataTableRow, SynergyContext synergyContext = null)
         {
             _heroDataTableRow = heroDataTableRow;
+            _synergyContext = synergyContext ?? SynergyContext.Empty;
             
             colorImage.color = _heroDataTableRow.color;
             nameLabel.text = _heroDataTableRow.displayName;
@@ -27,7 +29,7 @@ namespace PNTD
 
         public TooltipContent GetTooltipContent()
         {
-            return HeroContextTooltipUtility.CreateShopSlot(_heroDataTableRow);
+            return HeroContextTooltipUtility.CreateShopSlot(_heroDataTableRow, _synergyContext);
         }
     }
 }

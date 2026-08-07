@@ -87,12 +87,12 @@ namespace PNTD
 
         private void OnDisable()
         {
-            if (_health != null)
+            if (_status != null)
             {
-                _status.OnChanged -= RefreshColor;
+                _status.OnChanged -= HandleOnStatusUpdated;
             }
 
-            if (_status != null)
+            if (_health != null)
             {
                 _health.OnEnemyDamaged -= HandleOnEnemyDamaged;
                 _health.OnEnemyDied -= HandleOnEnemyDied;

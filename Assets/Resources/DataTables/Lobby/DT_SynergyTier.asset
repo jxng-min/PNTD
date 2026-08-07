@@ -1,5 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8771375437061037271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
+  m_Name: Synergy_StarBorn_Tier2
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyTierDataTableRow
+  rowID: Synergy_StarBorn_Tier2
+  isEnable: 1
+  synergy: 64
+  threshold: 2
+  effect: 5
+  primaryValue: 1
+  secondaryValue: 0
+  tierDescription: All Starborn units gain <color=#FFCE1B>1</color> additional orbiting
+    orb.
 --- !u!114 &-8540261929321151387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,9 +38,30 @@ MonoBehaviour:
   synergy: 16
   threshold: 2
   effect: 3
-  primaryValue: 1.5
+  primaryValue: 1.3
   secondaryValue: 0
-  tierDescription: Increases the effect radius by 1.5x
+  tierDescription: Increases the radius of all Cleric sanctuaries by <color=#FFCE1B>30%</color>.
+--- !u!114 &-5131862654454876262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
+  m_Name: Synergy_StarBorn_Tier4
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyTierDataTableRow
+  rowID: Synergy_StarBorn_Tier4
+  isEnable: 1
+  synergy: 64
+  threshold: 4
+  effect: 5
+  primaryValue: 3
+  secondaryValue: 0
+  tierDescription: All Starborn units gain <color=#FFCE1B>3</color> additional orbiting
+    orbs.
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,10 +77,39 @@ MonoBehaviour:
   dataTableCsv: {fileID: 4900000, guid: 0db8e36a7120fdd4bbb13be747f2dba9, type: 3}
   dataTableRowName: PNTD.SynergyTierDataTableRow, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=1364560182
   dataTableRows:
+  - {fileID: 504066996502082979}
+  - {fileID: 3363678631874390276}
   - {fileID: -8540261929321151387}
   - {fileID: 2976783520264928242}
+  - {fileID: -8771375437061037271}
+  - {fileID: -5131862654454876262}
   dataTableRowScript: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
+--- !u!114 &504066996502082979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
+  m_Name: Synergy_Plunder_Tier2
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyTierDataTableRow
+  rowID: Synergy_Plunder_Tier2
+  isEnable: 1
+  synergy: 8
+  threshold: 2
+  effect: 2
+  primaryValue: 0.2
+  secondaryValue: 0
+  tierDescription: 'Whenever an allied unit defeats an enemy, there is a <color=#FFCE1B>20%</color>
+    chance
+
+    to drop <color=#FFCE1B>1 Gold</color> near the defeated enemy. Dropped
+    Gold must be collected manually.'
 --- !u!114 &2976783520264928242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,6 +127,34 @@ MonoBehaviour:
   synergy: 16
   threshold: 4
   effect: 4
-  primaryValue: 2
+  primaryValue: 1.25
   secondaryValue: 0
-  tierDescription: Doubles the applied effect value
+  tierDescription: 'Allied units affected by at least <color=#FFCE1B>2</color> different
+    Cleric sanctuaries
+
+    receive <color=#FFCE1B>25%</color> stronger Cleric sanctuary
+    effects.'
+--- !u!114 &3363678631874390276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
+  m_Name: Synergy_Plunder_Tier4
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyTierDataTableRow
+  rowID: Synergy_Plunder_Tier4
+  isEnable: 1
+  synergy: 8
+  threshold: 4
+  effect: 2
+  primaryValue: 0.4
+  secondaryValue: 0
+  tierDescription: 'Whenever an allied unit defeats an enemy, there is a <color=#FFCE1B>40%</color>
+    chance
+
+    to drop <color=#FFCE1B>1 Gold</color> near the defeated enemy. Dropped
+    Gold must be collected manually.'

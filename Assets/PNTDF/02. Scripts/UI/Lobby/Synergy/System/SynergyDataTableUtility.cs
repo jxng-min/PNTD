@@ -162,6 +162,9 @@ namespace PNTD
                 case ESynergyEffect.OraRangeMultiplier:
                 case ESynergyEffect.OraEffectMultiplier:
                     return $"{synergyTierContent.PrimaryValue:0.#}x";
+
+                case ESynergyEffect.StarbornOrbCountBonus:
+                    return $"+{Mathf.RoundToInt(synergyTierContent.PrimaryValue)}";
             }
 
             return synergyTierContent.PrimaryValue.ToString("0.#");
@@ -190,6 +193,9 @@ namespace PNTD
 
                 case ESynergyEffect.OraEffectMultiplier:
                     return $"Doubles the applied effect value";
+
+                case ESynergyEffect.StarbornOrbCountBonus:
+                    return $"All Starborn units gain {Mathf.RoundToInt(synergyTierContent.PrimaryValue)} additional orbiting orb";
             }
 
             return FormatDisplayValue(synergyTierContent);

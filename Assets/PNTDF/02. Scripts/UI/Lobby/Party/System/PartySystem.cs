@@ -127,6 +127,12 @@ namespace PNTD
                 .ToList();
         }
 
+        public bool CanIncreaseHeroExp(string heroId)
+        {
+            var targetContext = FindHeroContext(heroId);
+            return targetContext != null && targetContext.CanGetExp(1);
+        }
+
         public bool TryFindMergeTargets(string heroId, int requiredCount, out List<HeroContext> mergeTargets)
         {
             mergeTargets = GetHeroContexts(heroId)

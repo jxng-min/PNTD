@@ -1,6 +1,7 @@
-﻿rowID,synergy,displayName,description,maxStep,icon,color,thresholds,synergyEffects,primaryValues,secondaryValues,isEnable
+rowID,synergy,displayName,description,maxStep,icon,color,thresholds,synergyEffects,primaryValues,secondaryValues,isEnable
 Synergy_Warrior,Warrior,Warrior,,6,Synergy[Warrior].png,#FFCE1B,,,,,TRUE
-Synergy_Mage,Mage,Mage,,6,Synergy[Mage].png,#9BC5DA,3|6,1|1,0.75|0.5,2|2,TRUE
+Synergy_Mage,Mage,Mage,,6,Synergy[Mage].png,#9BC5DA,3|6,1|1,0.75|0.5,1.5|1.5,TRUE
 Synergy_Ranger,Ranger,Ranger,,6,Synergy[Ranger].png,#88E788,3|6,0|0,0.7|0.4,0|0,TRUE
 Synergy_Plunder,Plunder,Plunder,,4,Synergy[Plunder].png,#F2B134,2|4,2|2,0.2|0.4,0|0,TRUE
-Synergy_Cleric,Cleric,Cleric,,4,Synergy[Cleric].png,#C6A8FF,2|4,3|4,1.5|2,0|0,TRUE
+Synergy_Cleric,Cleric,Cleric,,4,Synergy[Cleric].png,#C6A8FF,2|4,3|4,1.3|1.25,0|0,TRUE
+Synergy_StarBorn,StarBorn,Starborn,,4,Synergy[Starborn].png,#FFFFF0,2|4,5|5,1|3,0|0,TRUE

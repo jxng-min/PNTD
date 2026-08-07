@@ -43,6 +43,11 @@ namespace PNTD
             
             yield return LoadingManager.Instance.VirtualLoadScene(loadingText, LoadStageRoutine);
             yield return _stageRunner.PlayStageRoutine();
+            
+            if (_stageRunner.StageResult == StageModel.EStageResult.Clear)
+            {
+                yield return LoadingManager.Instance.VirtualLoadScene("loading...", ReturnToLobbyRoutine);
+            }
 
             _isPlaying = false;
         }
@@ -58,8 +63,28 @@ namespace PNTD
             if (_currentMapContext != null)
             {
                 var interest = _lobbyModel.Domain.StatusSystem.Interest;
-                _stageRunner.Initialize(_currentMapContext, stage, interest);
+                var party = _lobbyModel.Domain.PartySystem.HeroContexts;
+                
+                _stageRunner.Initialize(_currentMapContext,
+                                        stage,
+                                        interest,
+                                        party,
+                                        () => _lobbyModel.Domain.SynergySystem.CurrentContext);
             }
+
+            yield break;
+        }
+
+        private IEnumerator ReturnToLobbyRoutine()
+        {
+            _lobbyModel.Domain.StatusSystem.UpdateGold(_stageRunner.RewardGold + _stageRunner.BonusGold + _stageRunner.Interest);
+            _lobbyModel.Domain.StatusSystem.UpdateStage(1);
+            
+            _stageRunner.DisposeStage();
+            _mapRunner.UnloadMap();
+            _currentMapContext = null;
+            
+            _lobbyModel.ShowShop();
 
             yield break;
         }

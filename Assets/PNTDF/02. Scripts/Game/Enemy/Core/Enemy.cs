@@ -28,14 +28,14 @@ namespace PNTD
         public EnemyHealth Health => health;
         public EnemyModel Model => model;
         
-        //public Hero LastHitHero { get; private set; }
+        public Hero LastHitHero { get; private set; }
         public Collider2D Collider => collider2d;
 
         public void Initialize(EnemyContext enemyContext, StagePath stagePath, IEnemyProvider enemyProvider)
         {
             Context = enemyContext;
             IsResolved = false;
-            // LastHitHero = null;
+            LastHitHero = null;
             
             status.Initialize(
                 this, 
@@ -71,10 +71,10 @@ namespace PNTD
             movement.OnDestinationReached += HandleOnDestinationReached;
         }
         
-        // public void SetLastHitHero(Hero hero)
-        // {
-        //     LastHitHero = hero;
-        // }
+        public void SetLastHitHero(Hero hero)
+        {
+            LastHitHero = hero;
+        }
 
         private void HandleOnEnemyDied()
         {

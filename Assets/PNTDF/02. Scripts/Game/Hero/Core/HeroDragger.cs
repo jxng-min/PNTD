@@ -1,0 +1,53 @@
+﻿using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+namespace PNTD
+{
+    public class HeroDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    {
+        private Hero _hero;
+
+        public static bool AnyDragging { get; private set; }
+        public bool IsDragging { get; private set; }
+        
+        public event Action<Hero, PointerEventData> OnBeginDragRequested;
+        public event Action<Hero, PointerEventData> OnDragRequested;
+        public event Action<Hero, PointerEventData> OnEndDragRequested;
+
+        public void Initialize(Hero hero)
+        {
+            _hero = hero;
+            IsDragging = false;
+        }
+        
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            IsDragging = true;
+            AnyDragging = true;
+            OnBeginDragRequested?.Invoke(_hero, eventData);
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        {
+            OnDragRequested?.Invoke(_hero, eventData);
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            OnEndDragRequested?.Invoke(_hero, eventData);
+            IsDragging = false;
+            AnyDragging = false;
+        }
+
+        private void OnDisable()
+        {
+            if (IsDragging)
+            {
+                AnyDragging = false;
+            }
+
+            IsDragging = false;
+        }
+    }
+}

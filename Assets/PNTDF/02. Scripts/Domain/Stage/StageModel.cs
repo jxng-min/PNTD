@@ -61,6 +61,8 @@ namespace PNTD
 
             Domain.StageSystem.Tick(deltaTime);
             Domain.WaveSystem.Tick(deltaTime);
+            Domain.DeployPreviewSystem.Tick();
+            Domain.HeroMoveSystem.Tick();
         }
 
         public IEnumerator WaitUntilStageEnd()
@@ -73,6 +75,12 @@ namespace PNTD
             Domain.StageSystem.OnStageCleared -= HandleOnStageCleared;
             _runtimeStageContext.OnStageOvered -= HandleOnStageOvered;
             Compositor.ReleaseEvents();
+            Domain.DeployPreviewSystem.Dispose();
+            Domain.HeroMoveSystem.Dispose();
+            Domain.ClericSanctuarySystem.Dispose();
+            Domain.GoldSpawner?.Clear();
+            Domain.HeroFactory.ReleaseAll();
+            Domain.StagePooledObjectCleaner?.ReturnStagePooledObjects();
             Domain.WaveSystem.Dispose();
         }
 

@@ -39,7 +39,15 @@ namespace PNTD
             BindLabel(additionalBodyLabel, tooltipDataTableRow.additionalBodyText, tooltipContent);
             
             Canvas.ForceUpdateCanvases();
-            BuildSeparateLine();
+
+            if (!string.IsNullOrEmpty(tooltipDataTableRow.additionalHeaderText))
+            {
+                BuildSeparateLine();
+            }
+            else
+            {
+                separateLabel.text = string.Empty;
+            }
         }
 
         private void BindLabel(TMP_Text label, string template, TooltipContent tooltipContent)

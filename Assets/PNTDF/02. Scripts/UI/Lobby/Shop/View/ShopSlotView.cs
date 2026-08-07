@@ -42,7 +42,7 @@ namespace PNTD
             var synergyDataTableRows = shopSlotContext.SynergyDataTableRows;
             var canIncreaseSynergy = shopSlotContext.CanIncreaseSynergy;
 
-            heroInfoView.Initialize(_heroDataTableRow);
+            heroInfoView.Initialize(_heroDataTableRow, synergyContext);
 
             foreach (var synergySlotView in synergySlotViews)
             {

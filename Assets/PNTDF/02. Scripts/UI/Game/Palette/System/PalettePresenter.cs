@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace PNTD
+{
+    public class PalettePresenter : MonoBehaviour
+    {
+        [SerializeField] private PaletteView paletteView;
+
+        private IReadOnlyList<HeroContext> _heroContexts;
+        private DeploySystem _deploySystem;
+        private DeployContextFactory _deployContextFactory;
+        private Func<SynergyContext> _synergyContextProvider;
+
+        public void Initialize(IReadOnlyList<HeroContext> heroContexts,
+                               DeploySystem deploySystem,
+                               DeployContextFactory deployContextFactory,
+                               Func<SynergyContext> synergyContextProvider)
+        {
+            Release();
+
+            _heroContexts = heroContexts;
+            _deploySystem = deploySystem;
+            _deployContextFactory = deployContextFactory;
+            _synergyContextProvider = synergyContextProvider;
+
+            paletteView?.Initialize(_heroContexts);
+
+            if (paletteView != null)
+            {
+                paletteView.OnClickedSlot += HandleOnClickedSlot;
+            }
+
+            if (_deploySystem != null)
+            {
+                _deploySystem.OnDeployCompleted += HandleOnDeployCompleted;
+            }
+        }
+
+        public void Release()
+        {
+            if (paletteView != null)
+            {
+                paletteView.OnClickedSlot -= HandleOnClickedSlot;
+            }
+
+            if (_deploySystem != null)
+            {
+                _deploySystem.OnDeployCompleted -= HandleOnDeployCompleted;
+            }
+
+            _heroContexts = null;
+            _deploySystem = null;
+            _deployContextFactory = null;
+            _synergyContextProvider = null;
+        }
+
+        private void HandleOnClickedSlot(int slotIndex)
+        {
+            if (_heroContexts == null || slotIndex < 0 || slotIndex >= _heroContexts.Count)
+            {
+                return;
+            }
+
+            if (_deploySystem == null || _deployContextFactory == null)
+            {
+                return;
+            }
+
+            var heroContext = _heroContexts[slotIndex];
+            var synergyContext = _synergyContextProvider?.Invoke() ?? SynergyContext.Empty;
+            var deployContext = _deployContextFactory.Create(slotIndex, heroContext, synergyContext);
+
+            _deploySystem.EnterDeployMode(deployContext);
+        }
+
+        private void HandleOnDeployCompleted(DeployContext deployContext)
+        {
+            if (deployContext == null)
+            {
+                return;
+            }
+            
+            paletteView?.UpdateSlotState(deployContext.SlotIndex, true);
+        }
+
+        private void OnDestroy()
+        {
+            Release();
+        }
+    }
+}

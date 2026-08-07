@@ -1,0 +1,95 @@
+using JxModule;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+namespace PNTD
+{
+    public class TooltipObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    {
+        [BigHeader("Settings")]
+        [SerializeField] private Vector2 tooltipOffset;
+
+        private ITooltipProvider _tooltipProvider;
+        private bool _isPointerOver;
+
+        private void Awake()
+        {
+            _tooltipProvider = GetComponent<ITooltipProvider>();
+            if (_tooltipProvider == null)
+            {
+                enabled = false;
+            }
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            _isPointerOver = true;
+            Show();
+        }
+
+        private void LateUpdate()
+        {
+            Refresh();
+        }
+
+        public void Refresh()
+        {
+            if (!_isPointerOver)
+            {
+                return;
+            }
+
+            if (_tooltipProvider is not { CanShowTooltip: true })
+            {
+                TooltipPresenter.Instance.Hide();
+                return;
+            }
+
+            var content = _tooltipProvider.GetTooltipContent();
+            if (content is not { IsValid: true })
+            {
+                TooltipPresenter.Instance.Hide();
+                return;
+            }
+
+            TooltipPresenter.Instance.Refresh(content);
+            TooltipPresenter.Instance.Move(GetScreenPosition(), tooltipOffset);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            _isPointerOver = false;
+            TooltipPresenter.Instance.Hide();
+        }
+
+        private void Show()
+        {
+            if (_tooltipProvider is not { CanShowTooltip: true })
+            {
+                TooltipPresenter.Instance.Hide();
+                return;
+            }
+
+            var content = _tooltipProvider.GetTooltipContent();
+            if (content is not { IsValid: true })
+            {
+                TooltipPresenter.Instance.Hide();
+                return;
+            }
+
+            TooltipPresenter.Instance.Show(content, GetScreenPosition(), tooltipOffset);
+        }
+
+        private Vector2 GetScreenPosition()
+        {
+            var camera = Camera.main;
+            return camera != null ? camera.WorldToScreenPoint(transform.position) : transform.position;
+        }
+
+        private void OnDisable()
+        {
+            _isPointerOver = false;
+            TooltipPresenter.Instance.Hide();
+        }
+    }
+}

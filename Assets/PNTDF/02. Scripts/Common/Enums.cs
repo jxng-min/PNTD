@@ -31,6 +31,7 @@ namespace PNTD
         EnemyGoldDropOnKill = 2,
         OraRangeMultiplier = 3,
         OraEffectMultiplier = 4,
+        StarbornOrbCountBonus = 5,
     }
 
     public enum ETooltipLayout
@@ -41,6 +42,7 @@ namespace PNTD
         PartySlot       = 3,
         PaletteSlot     = 4,
         ShopLevel       = 5,
+        Hero            = 6,
     }
 
     public enum EAttack
@@ -95,5 +97,24 @@ namespace PNTD
         OnHpThreshold       = 4,
         OnInterval          = 5,
         OnPassive           = 6,
+    }
+
+    public enum EHeroStat
+    {
+        PhysicalAttackPower             = 0,
+        MagicAttackPower                = 1,
+        AttackCooldown                  = 2,
+        AttackRange                     = 3,
+        PhysicalFlatPenetration         = 4,
+        PhysicalPercentPenetration      = 5,
+        MagicFlatPenetration            = 6,
+        MagicPercentPenetration         = 7,
+    }
+
+    public enum EHeroStatModifierOperation
+    {
+        Flat                = 0,
+        Additive            = 1,
+        Multiply            = 2,
     }
 }

@@ -6,16 +6,19 @@
         private readonly RStageContext _runtimeStageContext;
         private readonly ProgressView _progressView;
         private readonly FlowPresenter _flowPresenter;
+        private readonly StageDeployAction _deployAction;
 
         public StageCompositor(StageDomain stageDomain,
                                RStageContext runtimeStageContext,
                                ProgressView progressView,
-                               FlowPresenter flowPresenter)
+                               FlowPresenter flowPresenter,
+                               StageDeployAction deployAction)
         {
             _stageDomain = stageDomain;
             _runtimeStageContext = runtimeStageContext;
             _progressView = progressView;
             _flowPresenter = flowPresenter;
+            _deployAction = deployAction;
         }
 
         public void Initialize(StageContext stageContext, int stage)
@@ -29,12 +32,14 @@
         {
             BindStageEvents();
             BindWaveEvents();
+            BindDeployEvents();
         }
 
         public void ReleaseEvents()
         {
             ReleaseStageEvents();
             ReleaseWaveEvents();
+            ReleaseDeployEvents();
         }
         
 #region Event Bindings
@@ -73,12 +78,33 @@
         {
             _stageDomain.WaveSystem.OnWaveEnd += _stageDomain.StageSystem.HandleOnWaveEnd;
             _stageDomain.WaveSystem.OnDestinationReached += HandleOnDestinationReached;
+            _stageDomain.WaveSystem.OnEnemyDied += _stageDomain.PlunderSystem.HandleEnemyKilled;
         }
 
         private void ReleaseWaveEvents()
         {
             _stageDomain.WaveSystem.OnWaveEnd -= _stageDomain.StageSystem.HandleOnWaveEnd;
             _stageDomain.WaveSystem.OnDestinationReached -= HandleOnDestinationReached;
+            _stageDomain.WaveSystem.OnEnemyDied -= _stageDomain.PlunderSystem.HandleEnemyKilled;
+        }
+
+        private void BindDeployEvents()
+        {
+            _stageDomain.DeploySystem.OnEnterDeployMode += _stageDomain.DeployPreviewSystem.HandleOnEnterDeployMode;
+            _stageDomain.DeploySystem.OnExitDeployMode += _stageDomain.DeployPreviewSystem.HandleOnExitDeployMode;
+            _stageDomain.DeploySystem.OnDeployRequested += HandleOnDeployRequested;
+        }
+
+        private void ReleaseDeployEvents()
+        {
+            _stageDomain.DeploySystem.OnEnterDeployMode -= _stageDomain.DeployPreviewSystem.HandleOnEnterDeployMode;
+            _stageDomain.DeploySystem.OnExitDeployMode -= _stageDomain.DeployPreviewSystem.HandleOnExitDeployMode;
+            _stageDomain.DeploySystem.OnDeployRequested -= HandleOnDeployRequested;
+        }
+
+        private void HandleOnDeployRequested(DeployContext deployContext, UnityEngine.Vector3Int cellPosition)
+        {
+            _deployAction.TryDeploy(deployContext, cellPosition);
         }
 #endregion
     }
