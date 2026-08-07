@@ -22,6 +22,7 @@ namespace PNTD
         [SerializeField] private IndexerPresenter indexerPresenter;
         [SerializeField] private MapRunner mapRunner;
         [SerializeField] private StageRunner stageRunner;
+        [SerializeField] private LabelBoxView stageView;
         [SerializeField] private CanvasGroup[] lobbyCanvasGroups;
 
         [Space(30f)]
@@ -86,7 +87,12 @@ namespace PNTD
                                          statusSystem,
                                          visibilitySystem,
                                          initialParty);
-            var compositor = new LobbyCompositor(domain, shopPresenter, synergyPresenter, partyPresenter, indexerPresenter);
+            var compositor = new LobbyCompositor(domain, 
+                                                 shopPresenter, 
+                                                 synergyPresenter, 
+                                                 partyPresenter, 
+                                                 indexerPresenter, 
+                                                 stageView);
 
             _model = new LobbyModel(domain, compositor);
             _model.Initialize();

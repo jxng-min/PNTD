@@ -462,6 +462,8 @@ GameObject:
   - component: {fileID: 4301864360626733388}
   - component: {fileID: 1566402816440141037}
   - component: {fileID: 4588024824177961664}
+  - component: {fileID: 6561275969036158032}
+  - component: {fileID: 2497890684677768502}
   m_Layer: 5
   m_Name: Stage View
   m_TagString: Untagged
@@ -542,6 +544,31 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_EffectDistance: {x: -12, y: -8}
   m_UseGraphicAlpha: 1
+--- !u!225 &6561275969036158032
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369470648043622919}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2497890684677768502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369470648043622919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beeab87f96624800ac1b77fe59d270ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.LabelBoxView
+  label: {fileID: 5551320722236683523}
 --- !u!1 &1610230088934338265
 GameObject:
   m_ObjectHideFlags: 0

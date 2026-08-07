@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using JxModule;
 
 namespace PNTD
 {
@@ -10,6 +11,7 @@ namespace PNTD
         private readonly SynergyPresenter _synergyPresenter;
         private readonly PartyPresenter _partyPresenter;
         private readonly IndexerPresenter _indexerPresenter;
+        private readonly LabelBoxView _stageView;
         
         private readonly LobbyShopAction _lobbyShopAction;
         private readonly LobbyPartyAction _lobbyPartyAction;
@@ -18,7 +20,8 @@ namespace PNTD
                                ShopPresenter shopPresenter,
                                SynergyPresenter synergyPresenter,
                                PartyPresenter partyPresenter,
-                               IndexerPresenter indexerPresenter)
+                               IndexerPresenter indexerPresenter,
+                               LabelBoxView stageView)
         {
             _lobbyDomain = lobbyDomain;
             
@@ -26,6 +29,7 @@ namespace PNTD
             _synergyPresenter = synergyPresenter;
             _partyPresenter = partyPresenter;
             _indexerPresenter = indexerPresenter;
+            _stageView = stageView;
             
             _lobbyShopAction = new LobbyShopAction(_lobbyDomain);
             _lobbyPartyAction = new LobbyPartyAction(_lobbyDomain);
@@ -131,6 +135,11 @@ namespace PNTD
         {
             GameFlow.Instance.Play();
         }
+
+        private void HandleOnUpdateStage(int stage)
+        {
+            _stageView.Label.text = $"Stage {stage}";
+        }
 #endregion
 
 #region Event Bindings
@@ -140,6 +149,7 @@ namespace PNTD
             BindLobbyPartyEvents();
             BindLobbySynergyEvents();
             BindLobbyFlowEvents();
+            BindLobbyStatusEvents();
         }
 
         public void ReleaseEvents()
@@ -148,6 +158,7 @@ namespace PNTD
             ReleaseLobbyPartyEvents();
             ReleaseLobbySynergyEvents();
             ReleaseLobbyFlowEvents();
+            ReleaseLobbyStatusEvents();
         }
 
         private void BindLobbyShopEvents()
@@ -230,6 +241,16 @@ namespace PNTD
         private void ReleaseLobbyFlowEvents()
         {
             _indexerPresenter.OnClickedPlay -= HandleOnClickedPlay;
+        }
+
+        private void BindLobbyStatusEvents()
+        {
+            _lobbyDomain.StatusSystem.OnUpdateStage += HandleOnUpdateStage;
+        }
+
+        private void ReleaseLobbyStatusEvents()
+        {
+            _lobbyDomain.StatusSystem.OnUpdateStage -= HandleOnUpdateStage;
         }
 #endregion
     }

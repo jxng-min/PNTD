@@ -129,9 +129,11 @@ MonoBehaviour:
   effect: 4
   primaryValue: 1.25
   secondaryValue: 0
-  tierDescription: Allied units affected by at least <color=#FFCE1B>2</color> different
-    Cleric sanctuaries receive <color=#FFCE1B>25%</color> stronger Cleric sanctuary
-    effects.
+  tierDescription: 'Allied units affected by at least <color=#FFCE1B>2</color> different
+    Cleric sanctuaries
+
+    receive <color=#FFCE1B>25%</color> stronger Cleric sanctuary
+    effects.'
 --- !u!114 &3363678631874390276
 MonoBehaviour:
   m_ObjectHideFlags: 0
