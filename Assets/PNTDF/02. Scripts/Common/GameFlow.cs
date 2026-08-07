@@ -79,6 +79,7 @@ namespace PNTD
         {
             _lobbyModel.Domain.StatusSystem.UpdateGold(_stageRunner.RewardGold + _stageRunner.BonusGold + _stageRunner.Interest);
             _lobbyModel.Domain.StatusSystem.UpdateStage(1);
+            _lobbyModel.Domain.ShopSystem.UpdateLevel();
             
             _stageRunner.DisposeStage();
             _mapRunner.UnloadMap();
