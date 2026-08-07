@@ -21,6 +21,8 @@ namespace PNTD
         [BigHeader("References")]
         [SerializeField] private Transform heroRoot;
         [SerializeField] private DeployPreviewView deployPreviewView;
+        [SerializeField] private JxCameraShaker cameraShaker;
+        [SerializeField] private TimeSlowEffect timeSlowEffect;
 
         private StageModel _model;
 
@@ -113,7 +115,13 @@ namespace PNTD
                                          plunderSystem,
                                          goldSpawner,
                                          stagePooledObjectCleaner);
-            var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter, deployAction);
+            var compositor = new StageCompositor(domain, 
+                                                 runtimeStageContext, 
+                                                 progressView, 
+                                                 flowPresenter, 
+                                                 deployAction, 
+                                                 cameraShaker, 
+                                                 timeSlowEffect);
 
             _model = new StageModel(domain, compositor, runtimeStageContext);
             _model.Initialize(enemyFactory, mapContext.StageContext, stage);

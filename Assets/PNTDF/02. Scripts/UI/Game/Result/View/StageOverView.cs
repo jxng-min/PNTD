@@ -23,7 +23,7 @@ namespace PNTD
 
         private IEnumerator OnClickedRestart()
         {
-            yield return LoadingManager.Instance.LoadScene("Game");
+            yield return LoadingManager.Instance.LoadScene("Game", "<pop>loading...</pop>");
         }
 
         private void OnDestroy()

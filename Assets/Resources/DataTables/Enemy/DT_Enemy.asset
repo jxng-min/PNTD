@@ -15,7 +15,7 @@ MonoBehaviour:
   rowID: Enemy_Normal
   isEnable: 1
   color: {r: 1, g: 0.21176471, b: 0.21176471, a: 1}
-  maxHp: 60
+  maxHp: 50
   moveSpeed: 1
   type: 0
   physicalDefense: 15

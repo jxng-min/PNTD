@@ -264,6 +264,8 @@ MonoBehaviour:
   - {fileID: 1990079751}
   heroRoot: {fileID: 1567388505}
   deployPreviewView: {fileID: 1990079746}
+  cameraShaker: {fileID: 579142846}
+  timeSlowEffect: {fileID: 599359651}
 --- !u!1 &220425414
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,10 +312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxCameraParallax
   parallaxTransform: {fileID: 220425415}
-  followTime: 0.15
-  maxOffsetX: 1
-  maxOffsetY: 0.75
-  useUnscaledTime: 0
+  followTime: 0.3
+  maxOffsetX: 0.5
+  maxOffsetY: 0.375
+  useUnscaledTime: 1
 --- !u!1001 &301354409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2307,6 +2309,7 @@ GameObject:
   - component: {fileID: 579142841}
   - component: {fileID: 579142844}
   - component: {fileID: 579142845}
+  - component: {fileID: 579142846}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2448,6 +2451,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 182
   m_MaxRayIntersections: 0
+--- !u!114 &579142846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579142840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d87a3776e76462fbad38c5d1b09d050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxCameraShaker
 --- !u!1 &599359648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,6 +2473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599359649}
   - component: {fileID: 599359650}
+  - component: {fileID: 599359651}
   m_Layer: 0
   m_Name: Game Flow
   m_TagString: Untagged
@@ -2492,6 +2508,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8200fe059d3148b9a1ee965b7c8a3454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PNTD.GameFlow
+--- !u!114 &599359651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599359648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1c45a695dd49f8b25b64e56d466756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TimeSlowEffect
+  reachScale: 0.2
+  reachDuration: 0.3
 --- !u!225 &684135332 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8277208602228078483, guid: 67ac0c4bac782a74f9afc8f60b3d00a4, type: 3}

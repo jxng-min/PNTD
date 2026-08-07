@@ -46,7 +46,7 @@ namespace PNTD
             
             if (_stageRunner.StageResult == StageModel.EStageResult.Clear)
             {
-                yield return LoadingManager.Instance.VirtualLoadScene("loading...", ReturnToLobbyRoutine);
+                yield return LoadingManager.Instance.VirtualLoadScene("<pop>loading...</pop>", ReturnToLobbyRoutine);
             }
 
             _isPlaying = false;

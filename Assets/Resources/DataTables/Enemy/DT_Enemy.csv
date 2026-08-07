@@ -1,5 +1,5 @@
 rowID,color,maxHp,moveSpeed,type,physicalDefense,magicResistance,slowResistance,rewardWeight,baseGoldReward,lifeDamage,spawnCostWeight,countsForWaveClear,grantsKillReward,canDropPlunderGold,abilityID,isEnable
-Enemy_Normal,#FF3636,60,1,Normal,15,15,0,1,5,1,1,TRUE,TRUE,TRUE,,TRUE
+Enemy_Normal,#FF3636,50,1,Normal,15,15,0,1,5,1,1,TRUE,TRUE,TRUE,,TRUE
 Enemy_Enrager,#7CFC00,60,1,Enrager,20,20,0.2,1.2,5,1,1.35,TRUE,TRUE,TRUE,Ability_Enrager,TRUE
 Enemy_Tanker,#8E8E8E,400,0.55,Tanker,80,35,0.6,3,5,2,4,TRUE,TRUE,TRUE,,TRUE
 Enemy_Blinker,#9B6DFF,150,1.05,Blinker,30,30,0.25,1.8,5,1,2.1,TRUE,TRUE,TRUE,Ability_Blinker,TRUE
