@@ -156,7 +156,7 @@ MonoBehaviour:
   isEnable: 1
   waveID: Stage_01_01
   enemyID: Enemy_Normal
-  spawnCount: 6
+  spawnCount: 5
   startTime: 0
   spawnInterval: 0.8
   order: 0
@@ -776,7 +776,7 @@ MonoBehaviour:
   isEnable: 1
   waveID: Stage_01_03
   enemyID: Enemy_Normal
-  spawnCount: 10
+  spawnCount: 5
   startTime: 0
   spawnInterval: 0.7
   order: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   isEnable: 1
   waveID: Stage_02_03
   enemyID: Enemy_Normal
-  spawnCount: 12
+  spawnCount: 9
   startTime: 0
   spawnInterval: 0.65
   order: 0
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   isEnable: 1
   waveID: Stage_02_02
   enemyID: Enemy_Normal
-  spawnCount: 10
+  spawnCount: 8
   startTime: 0
   spawnInterval: 0.7
   order: 0
@@ -1515,7 +1515,7 @@ MonoBehaviour:
   isEnable: 1
   waveID: Stage_02_01
   enemyID: Enemy_Normal
-  spawnCount: 8
+  spawnCount: 7
   startTime: 0
   spawnInterval: 0.75
   order: 0
@@ -1555,7 +1555,7 @@ MonoBehaviour:
   isEnable: 1
   waveID: Stage_01_02
   enemyID: Enemy_Normal
-  spawnCount: 8
+  spawnCount: 5
   startTime: 0
   spawnInterval: 0.75
   order: 0

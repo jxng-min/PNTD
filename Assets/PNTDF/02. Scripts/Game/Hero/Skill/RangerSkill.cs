@@ -35,7 +35,7 @@ namespace PNTD
                 yield break;
             }
 
-            FireBullets(hero, direction);
+            CoroutineRunner.Instance.Run(FireBullets(hero, direction));
         }
 
         protected bool TryGetFireDirection(Hero hero, out Vector2 direction)
@@ -58,14 +58,14 @@ namespace PNTD
             return true;
         }
 
-        protected void FireBullets(Hero hero, Vector2 direction)
+        protected IEnumerator FireBullets(Hero hero, Vector2 direction)
         {
             var bulletCount = Mathf.Max(1, GetBulletCount(hero));
 
             if (UseFullCircle(hero))
             {
                 FireFullCircle(hero, direction, bulletCount);
-                return;
+                yield break;
             }
 
             var spreadAngle = GetSpreadAngle(hero);
@@ -74,9 +74,10 @@ namespace PNTD
                 for (var index = 0; index < bulletCount; index++)
                 {
                     FireBullet(hero, direction);
+                    yield return new WaitForSeconds(0.15f);
                 }
 
-                return;
+                yield break;
             }
 
             var startAngle = -spreadAngle * 0.5f;

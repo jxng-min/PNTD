@@ -15,7 +15,7 @@ MonoBehaviour:
   rowID: Enemy_Normal
   isEnable: 1
   color: {r: 1, g: 0.21176471, b: 0.21176471, a: 1}
-  maxHp: 50
+  maxHp: 45
   moveSpeed: 1
   type: 0
   physicalDefense: 15
@@ -44,7 +44,7 @@ MonoBehaviour:
   rowID: Enemy_Summoner
   isEnable: 1
   color: {r: 1, g: 0.7019608, b: 0.2784314, a: 1}
-  maxHp: 125
+  maxHp: 100
   moveSpeed: 0.7
   type: 7
   physicalDefense: 30
@@ -73,7 +73,7 @@ MonoBehaviour:
   rowID: Enemy_Blinker
   isEnable: 1
   color: {r: 0.60784316, g: 0.42745098, b: 1, a: 1}
-  maxHp: 150
+  maxHp: 125
   moveSpeed: 1.05
   type: 5
   physicalDefense: 30
@@ -102,7 +102,7 @@ MonoBehaviour:
   rowID: Enemy_Baby
   isEnable: 1
   color: {r: 1, g: 0.9490196, b: 0.65882355, a: 1}
-  maxHp: 50
+  maxHp: 30
   moveSpeed: 1.55
   type: 9
   physicalDefense: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   rowID: Enemy_Enrager
   isEnable: 1
   color: {r: 0.4862745, g: 0.9882353, b: 0, a: 1}
-  maxHp: 60
+  maxHp: 50
   moveSpeed: 1
   type: 3
   physicalDefense: 20
@@ -244,7 +244,7 @@ MonoBehaviour:
   rowID: Enemy_Swarmer
   isEnable: 1
   color: {r: 1, g: 0.47843137, b: 0.47843137, a: 1}
-  maxHp: 125
+  maxHp: 100
   moveSpeed: 1.1
   type: 8
   physicalDefense: 10

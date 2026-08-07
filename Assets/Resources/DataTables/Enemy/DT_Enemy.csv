@@ -1,9 +1,9 @@
 rowID,color,maxHp,moveSpeed,type,physicalDefense,magicResistance,slowResistance,rewardWeight,baseGoldReward,lifeDamage,spawnCostWeight,countsForWaveClear,grantsKillReward,canDropPlunderGold,abilityID,isEnable
-Enemy_Normal,#FF3636,50,1,Normal,15,15,0,1,5,1,1,TRUE,TRUE,TRUE,,TRUE
-Enemy_Enrager,#7CFC00,60,1,Enrager,20,20,0.2,1.2,5,1,1.35,TRUE,TRUE,TRUE,Ability_Enrager,TRUE
+Enemy_Normal,#FF3636,45,1,Normal,15,15,0,1,5,1,1,TRUE,TRUE,TRUE,,TRUE
+Enemy_Enrager,#7CFC00,50,1,Enrager,20,20,0.2,1.2,5,1,1.35,TRUE,TRUE,TRUE,Ability_Enrager,TRUE
 Enemy_Tanker,#8E8E8E,400,0.55,Tanker,80,35,0.6,3,5,2,4,TRUE,TRUE,TRUE,,TRUE
-Enemy_Blinker,#9B6DFF,150,1.05,Blinker,30,30,0.25,1.8,5,1,2.1,TRUE,TRUE,TRUE,Ability_Blinker,TRUE
+Enemy_Blinker,#9B6DFF,125,1.05,Blinker,30,30,0.25,1.8,5,1,2.1,TRUE,TRUE,TRUE,Ability_Blinker,TRUE
 Enemy_Hexer,#59D3FF,200,0.9,Hexer,20,50,0.35,1.7,5,1,2,TRUE,TRUE,TRUE,Ability_Hexer,TRUE
-Enemy_Summoner,#FFB347,125,0.7,Summoner,30,60,0.45,2.4,5,1,3.2,TRUE,TRUE,TRUE,Ability_Summoner,TRUE
-Enemy_Swarmer,#FF7A7A,125,1.1,Swarmer,10,15,0.1,0.85,5,1,0.8,TRUE,TRUE,TRUE,,TRUE
-Enemy_Baby,#FFF2A8,50,1.55,Baby,0,0,0,0,0,1,0,TRUE,FALSE,FALSE,,TRUE
+Enemy_Summoner,#FFB347,100,0.7,Summoner,30,60,0.45,2.4,5,1,3.2,TRUE,TRUE,TRUE,Ability_Summoner,TRUE
+Enemy_Swarmer,#FF7A7A,100,1.1,Swarmer,10,15,0.1,0.85,5,1,0.8,TRUE,TRUE,TRUE,,TRUE
+Enemy_Baby,#FFF2A8,30,1.55,Baby,0,0,0,0,0,1,0,TRUE,FALSE,FALSE,,TRUE
