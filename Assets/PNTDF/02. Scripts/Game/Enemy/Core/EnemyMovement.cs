@@ -63,6 +63,7 @@ namespace PNTD
             }
 
             transform.position = startPosition ?? _stagePath.SpawnPoint.position;
+            SnapRotationToCurrentTarget();
             if (_currentPointIndex >= _stagePath.PointCount)
             {
                 ReachDestination();
@@ -144,6 +145,27 @@ namespace PNTD
             var targetRotation = Quaternion.Euler(0f, 0f, angle);
             
             rotationAxis.rotation = Quaternion.RotateTowards(rotationAxis.rotation, targetRotation, rotationSpeed * deltaTime);
+        }
+        
+        private void SnapRotationToCurrentTarget()
+        {
+            if (rotationAxis == null || !HasValidTarget())
+            {
+                return;
+            }
+
+            var targetPosition = _stagePath.GetPointPosition(_currentPointIndex);
+            targetPosition.z = transform.position.z;
+
+            var direction = targetPosition - transform.position;
+            direction.z = 0f;
+            if (direction.sqrMagnitude <= Mathf.Epsilon)
+            {
+                return;
+            }
+
+            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            rotationAxis.rotation = Quaternion.Euler(0f, 0f, angle);
         }
 
         private bool HasArrived(Vector3 targetPosition)
