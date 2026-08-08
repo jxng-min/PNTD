@@ -211,11 +211,13 @@ namespace PNTD
 
         public bool AddStunEffect(string effectId, float duration, Color? overrideColor = null)
         {
+            SoundManager.Instance.PlaySFX("SFX_Stun");
             return AddEffect(new EnemyStunEffect(effectId, duration, overrideColor));
         }
 
         public bool AddDisabledEffect(string effectId, float duration, Color? overrideColor = null)
         {
+            SoundManager.Instance.PlaySFX("SFX_Disable");
             return AddEffect(new EnemyDisableEffect(effectId, duration, overrideColor));
         }
 

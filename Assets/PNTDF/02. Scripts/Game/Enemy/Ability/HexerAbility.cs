@@ -82,6 +82,8 @@ namespace PNTD
             {
                 _activeHexEffects.Add(newHex);
             }
+            
+            SoundManager.Instance.PlaySFX("SFX_Hexer");
         }
 
         private void PruneActiveEffects()

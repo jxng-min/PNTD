@@ -44,6 +44,8 @@ namespace PNTD
 
         private void Blink()
         {
+            SoundManager.Instance.PlaySFX("SFX_Blinker");
+            
             var owner = _context.Owner;
             if (owner.Movement == null || owner.Movement.IsReached)
             {

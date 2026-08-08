@@ -341,9 +341,9 @@ MonoBehaviour:
   - {fileID: 1374453495}
   - {fileID: 1188951963}
   - {fileID: 914724644}
-  seedRangerParty: 1
+  seedRangerParty: 0
   seedMageParty: 0
-  seedStarbornParty: 0
+  seedStarbornParty: 1
   rangerPartySeeds: []
   magePartySeeds:
   - heroId: Hero_Magician
@@ -2870,8 +2870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JxModule.ObjectPoolManager
   poolConfigs:
   - prefab: {fileID: 69457163131605798, guid: 0b9a9b61faeef0c45949e049b43881e8, type: 3}
-    initialPoolSize: 10
-    maxPoolSize: 50
+    initialPoolSize: 100
+    maxPoolSize: 200
     isExpandable: 1
   - prefab: {fileID: 2971872994421524407, guid: 869b72b020c82d14d8e862f877c9e6ab, type: 3}
     initialPoolSize: 20

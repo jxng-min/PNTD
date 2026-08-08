@@ -186,6 +186,7 @@ namespace PNTD
                 return;
             }
 
+            SoundManager.Instance.PlaySFX("SFX_Coin");
             OnSlotClicked?.Invoke(HeroContext, (int)HeroContext.HeroDataTableRow.tier);
         }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace PNTD
@@ -41,7 +42,7 @@ namespace PNTD
                 return;
             }
 
-            Summon();
+            CoroutineRunner.Instance.Run(Summon());
             _castCount++;
             _coolDownRemaining = _data.CoolDown;
         }
@@ -53,12 +54,12 @@ namespace PNTD
             _castCount = 0;
         }
 
-        private void Summon()
+        private IEnumerator Summon()
         {
             var owner = _context.Owner;
             if (owner == null || owner.Movement == null || string.IsNullOrEmpty(_data.SpawnedEnemyID))
             {
-                return;
+                yield break;
             }
 
             var spawnCount = Mathf.Max(0, _data.SpawnCount);
@@ -68,6 +69,9 @@ namespace PNTD
                 _context.EnemySpawner?.SpawnEnemy(_data.SpawnedEnemyID,
                                                   position,
                                                   owner.Movement.CurrentPointIndex);
+
+                SoundManager.Instance.PlaySFX("SFX_Summoner");
+                yield return new WaitForSeconds(0.1f);
             }
         }
 

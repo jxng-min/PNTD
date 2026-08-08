@@ -44,6 +44,8 @@ namespace PNTD
             {
                 return;
             }
+            
+            SoundManager.Instance.PlaySFX("SFX_Enrager");
 
             foreach (var enemy in _abilityContext.EnemyProvider.AliveEnemies)
             {

@@ -122,10 +122,11 @@ namespace PNTD
                 _boardSystem.TryOccupy(_originCellPosition, hero);
                 hero.NotifyDeployed(_originCellPosition);
             }
+            
+            SoundManager.Instance.PlaySFX("SFX_Deploy");
 
             hero.Attack?.Resume();
             hero.Model?.SetRotationPaused(false);
-
             ClearDrag();
             _clericSanctuarySystem?.Refresh();
         }

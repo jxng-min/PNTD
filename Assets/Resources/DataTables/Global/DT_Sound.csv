@@ -5,7 +5,7 @@ SFX_Error,SFX,Sound/SFX/Error.ogg,20,FALSE,TRUE
 SFX_Hover1,SFX,Sound/SFX/Hover1.ogg,10,FALSE,TRUE
 SFX_Hover2,SFX,Sound/SFX/Hover2.ogg,10,FALSE,TRUE
 SFX_LevelUp,SFX,Sound/SFX/LevelUp.ogg,2,FALSE,TRUE
-SFX_Coin,SFX,Sound/SFX/Coin1.ogg|Sound/SFX/Coin2.ogg|Sound/SFX/Coin3.ogg,3,FALSE,TRUE
+SFX_Coin,SFX,Sound/SFX/Coin1.ogg|Sound/SFX/Coin2.ogg|Sound/SFX/Coin3.ogg,10,FALSE,TRUE
 SFX_Damage,SFX,Sound/SFX/Damage1.ogg|Sound/SFX/Damage2.ogg|Sound/SFX/Damage3.ogg,50,FALSE,TRUE
 SFX_Archer,SFX,Sound/SFX/Archer1.ogg|Sound/SFX/Archer2.ogg,5,FALSE,TRUE
 SFX_HandShot,SFX,Sound/SFX/HandShot1.ogg|Sound/SFX/HandShot2.ogg,20,FALSE,TRUE
@@ -20,3 +20,13 @@ SFX_Telekinetic,SFX,Sound/SFX/Telekinetic1.ogg|Sound/SFX/Telekinetic2.ogg,5,FALS
 SFX_Transmuter,SFX,Sound/SFX/Transmuter1.ogg|Sound/SFX/Transmuter2.ogg|Sound/SFX/Transmuter3.ogg,10,FALSE,TRUE
 SFX_Typing,SFX,Sound/SFX/Typing1.ogg|Sound/SFX/Typing2.ogg|Sound/SFX/Typing3.ogg|Sound/SFX/Typing4.ogg,20,FALSE,TRUE
 SFX_Count,SFX,Sound/SFX/Count.ogg,5,FALSE,TRUE
+SFX_Warning,SFX,Sound/SFX/Warning.ogg,3,FALSE,TRUE
+SFX_Dissolve,SFX,Sound/SFX/Dissolve.ogg,5,FALSE,TRUE
+SFX_Disable,SFX,Sound/SFX/Disable.ogg,5,FALSE,TRUE
+SFX_Stun,SFX,Sound/SFX/Stun.ogg,5,FALSE,TRUE
+SFX_Blinker,SFX,Sound/SFX/Blinker.ogg,5,FALSE,TRUE
+SFX_Reached,SFX,Sound/SFX/Reached.ogg,5,FALSE,TRUE
+SFX_Enrager,SFX,Sound/SFX/Enrager.ogg,5,FALSE,TRUE
+SFX_Deploy,SFX,Sound/SFX/Deploy.ogg,5,FALSE,TRUE
+SFX_Hexer,SFX,Sound/SFX/Hexer.ogg,5,FALSE,TRUE
+SFX_Summoner,SFX,Sound/SFX/Summoner.ogg,20,FALSE,TRUE

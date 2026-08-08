@@ -26,10 +26,11 @@ namespace PNTD
             clearGroup.blocksRaycasts = false;
 
             yield return clearLabel.TypeRoutine(typingSpeed);
-
+            
             clearGroup.Hide();
             
             CreateDissolveParticle(clearParticleColor, clearParticleScale, clearLabel.transform as RectTransform);
+            SoundManager.Instance.PlaySFX("SFX_Dissolve");
             
             yield return new WaitForSeconds(delayTime);
         }

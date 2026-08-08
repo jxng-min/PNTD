@@ -59,6 +59,7 @@ namespace PNTD
 
         private void HandleOnDestinationReached(Enemy enemy)
         {
+            SoundManager.Instance.PlaySFX("SFX_Reached");
             _runtimeStageContext.UpdateLife(-1);
             _cameraShaker.ShakePosition(0.25f, 0.15f, 20);
             _timeSlowEffect.PlayReachEffect();
