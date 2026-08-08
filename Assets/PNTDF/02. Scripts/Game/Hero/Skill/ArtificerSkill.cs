@@ -16,6 +16,14 @@ namespace PNTD
         {
             _context = context;
         }
+        
+        public override void Attach(Hero hero)
+        {
+            if (hero?.Dragger != null)
+            {
+                hero.Dragger.OnBeginDragRequested += HandleOnBeginDragRequested;
+            }
+        }
 
         public override IEnumerator Execute(Hero hero)
         {
@@ -108,6 +116,21 @@ namespace PNTD
         }
 
         public override void Release(Hero hero)
+        {
+            if (hero?.Dragger != null)
+            {
+                hero.Dragger.OnBeginDragRequested -= HandleOnBeginDragRequested;
+            }
+            
+            ReleaseRobots();
+        }
+        
+        private void HandleOnBeginDragRequested(Hero hero, UnityEngine.EventSystems.PointerEventData eventData)
+        {
+            ReleaseRobots();
+        }
+
+        private void ReleaseRobots()
         {
             if (_robots.Count <= 0)
             {

@@ -37,7 +37,7 @@ namespace PNTD
 
         private void UpdateWaveLabelView(int currentWave, int maxWave)
         {
-            waveLabel.SetText($"wave:<size=14> </size><color=#10EFFF><size=26>{currentWave}/{maxWave}</size></color>");
+            waveLabel.SetText($"wave:<size=14> </size><color=#10EFFF><size=26>{currentWave - 1}/{maxWave - 1}</size></color>");
         }
 
         private void Release()

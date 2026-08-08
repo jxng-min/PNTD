@@ -453,7 +453,7 @@ MonoBehaviour:
   isEnable: 1
   physicalAttackPower: 0
   magicAttackPower: 22
-  attackCooldown: 0
+  attackCooldown: 3
   attackRange: 0
   physicalFlatPenetration: 0
   physicalPercentPenetration: 0
