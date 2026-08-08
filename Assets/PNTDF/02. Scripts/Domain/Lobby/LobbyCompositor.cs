@@ -132,6 +132,12 @@ namespace PNTD
 
         private void HandleOnClickedPlay()
         {
+            if (_lobbyDomain.PartySystem.HeroContexts.Count <= 0)
+            {
+                ToastPresenter.Instance.Show("At least one hero is required to play.", 1f);
+                return;
+            }
+            
             GameFlow.Instance.Play();
         }
 
