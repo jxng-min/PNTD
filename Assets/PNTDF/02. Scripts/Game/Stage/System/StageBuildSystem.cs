@@ -59,7 +59,7 @@ namespace PNTD
                         continue;
                     }
                     
-                    turnContexts.Add(new TurnContext(enemyDataTableRow.rowID, 
+                    turnContexts.Add(new TurnContext(turnDataTableRow.enemyID, 
                                                      turnDataTableRow.spawnCount, 
                                                      turnDataTableRow.startTime, 
                                                      turnDataTableRow.spawnInterval));

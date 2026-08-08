@@ -41,6 +41,7 @@ namespace PNTD
 
         private void OnMouseDown()
         {
+            SoundManager.Instance.PlaySFX("SFX_Coin");
             Collect();
         }
 

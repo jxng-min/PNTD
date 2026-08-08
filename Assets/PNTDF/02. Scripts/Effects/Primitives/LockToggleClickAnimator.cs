@@ -35,6 +35,7 @@ namespace PNTD
 
         private RectTransform _rectTransform;
         private Vector2 _originAnchoredPosition;
+        private Vector3 _originScale;
         private Color _originColor;
         
         private void Awake()
@@ -47,11 +48,13 @@ namespace PNTD
             }
             
             _originAnchoredPosition = _rectTransform.anchoredPosition;
+            _originScale = _rectTransform.localScale;
             _originColor = targetImage.color;    
         }
         
         public override void OnPointerEnter()
         {
+            SoundManager.Instance.PlaySFX("SFX_Hover1");
             _hoverTween?.Kill();
             _hoverTween = _rectTransform.DOPunchScale(new Vector3(punchScaleAmount, punchScaleAmount, 0f), punchDuration);
         }
@@ -72,12 +75,18 @@ namespace PNTD
             targetLabel.text = $"lock";
         }
 
-        public override void OnPointerExit() { }
+        public override void OnPointerExit()
+        {
+            _hoverTween?.Kill();
+            _hoverTween = null;
+            _rectTransform.localScale = _originScale;
+        }
 
         public override IEnumerator OnPointerClick() { yield break; }
 
         public override void OnPointerDown()
         {
+            SoundManager.Instance.PlaySFX("SFX_Click");
             _clickTween?.Kill();
             _clickTween = _rectTransform.DOAnchorPosY(_originAnchoredPosition.y - yOffset, translationDuration).SetEase(Ease.OutQuad);
         }

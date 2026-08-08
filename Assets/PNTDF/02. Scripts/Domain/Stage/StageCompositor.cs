@@ -1,4 +1,6 @@
-﻿namespace PNTD
+﻿using JxModule;
+
+namespace PNTD
 {
     public class StageCompositor
     {
@@ -7,18 +9,24 @@
         private readonly ProgressView _progressView;
         private readonly FlowPresenter _flowPresenter;
         private readonly StageDeployAction _deployAction;
+        private readonly JxCameraShaker _cameraShaker;
+        private readonly TimeSlowEffect _timeSlowEffect;
 
         public StageCompositor(StageDomain stageDomain,
                                RStageContext runtimeStageContext,
                                ProgressView progressView,
                                FlowPresenter flowPresenter,
-                               StageDeployAction deployAction)
+                               StageDeployAction deployAction,
+                               JxCameraShaker cameraShaker,
+                               TimeSlowEffect timeSlowEffect)
         {
             _stageDomain = stageDomain;
             _runtimeStageContext = runtimeStageContext;
             _progressView = progressView;
             _flowPresenter = flowPresenter;
             _deployAction = deployAction;
+            _cameraShaker = cameraShaker;
+            _timeSlowEffect = timeSlowEffect;
         }
 
         public void Initialize(StageContext stageContext, int stage)
@@ -51,7 +59,10 @@
 
         private void HandleOnDestinationReached(Enemy enemy)
         {
+            SoundManager.Instance.PlaySFX("SFX_Reached");
             _runtimeStageContext.UpdateLife(-1);
+            _cameraShaker.ShakePosition(0.25f, 0.15f, 20);
+            _timeSlowEffect.PlayReachEffect();
         }
 
         private void HandleOnWaveEnd(int waveIndex, WaveContext waveContext, float endDelay)
@@ -60,6 +71,11 @@
             {
                 _flowPresenter.StartCoroutine(_flowPresenter.Ready(endDelay));
             }
+        }
+
+        private void HandleOnEnemyDied(Enemy enemy)
+        {
+            _cameraShaker.ShakePosition(0.25f, 0.15f, 20);
         }
 
         private void BindStageEvents()
@@ -79,6 +95,7 @@
             _stageDomain.WaveSystem.OnWaveEnd += _stageDomain.StageSystem.HandleOnWaveEnd;
             _stageDomain.WaveSystem.OnDestinationReached += HandleOnDestinationReached;
             _stageDomain.WaveSystem.OnEnemyDied += _stageDomain.PlunderSystem.HandleEnemyKilled;
+            _stageDomain.WaveSystem.OnEnemyDied += HandleOnEnemyDied;
         }
 
         private void ReleaseWaveEvents()
@@ -86,6 +103,7 @@
             _stageDomain.WaveSystem.OnWaveEnd -= _stageDomain.StageSystem.HandleOnWaveEnd;
             _stageDomain.WaveSystem.OnDestinationReached -= HandleOnDestinationReached;
             _stageDomain.WaveSystem.OnEnemyDied -= _stageDomain.PlunderSystem.HandleEnemyKilled;
+            _stageDomain.WaveSystem.OnEnemyDied -= HandleOnEnemyDied;
         }
 
         private void BindDeployEvents()

@@ -32,6 +32,7 @@ namespace PNTD
 
             for (var second = delay; second > 0; second--)
             {
+                SoundManager.Instance.PlaySFX("SFX_Count");
                 countLabel.SetText($"{second}");
                 yield return new WaitForSeconds(1f);
             }
@@ -40,6 +41,9 @@ namespace PNTD
             
             CreateDissolveParticle(readyParticleColor, readyParticleScale, readyLabel.transform as RectTransform);
             CreateDissolveParticle(countParticleColor, countParticleScale, countLabel.transform as RectTransform);
+            
+            SoundManager.Instance.PlaySFX("SFX_Warning");
+            SoundManager.Instance.PlaySFX("SFX_Dissolve");
         }
 
         private void CreateDissolveParticle(Color color, float scale, RectTransform rectTransform)

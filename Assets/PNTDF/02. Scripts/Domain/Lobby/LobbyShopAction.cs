@@ -48,11 +48,13 @@ namespace PNTD
 
             if (_lobbyDomain.ShopSystem.IsLock)
             {
+                SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
             
             if (_lobbyDomain.StatusSystem.Gold < _lobbyDomain.ShopSystem.RerollCost)
             {
+                SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
             
@@ -66,11 +68,13 @@ namespace PNTD
         {
             if (_lobbyDomain.ShopSystem.IsMaxLevel)
             {
+                SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
             
             if (_lobbyDomain.StatusSystem.Gold < _lobbyDomain.ShopSystem.LevelCost)
             {
+                SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
             

@@ -33,6 +33,7 @@ namespace PNTD
 
         private RectTransform _rectTransform;
         private Vector2 _originAnchoredPosition;
+        private Vector3 _originScale;
         private Color _originColor;
         
         private void Awake()
@@ -45,11 +46,13 @@ namespace PNTD
             }
             
             _originAnchoredPosition = _rectTransform.anchoredPosition;
+            _originScale = _rectTransform.localScale;
             _originColor = targetImage.color;    
         }
         
         public override void OnPointerEnter()
         {
+            SoundManager.Instance.PlaySFX("SFX_Hover1");
             _hoverTween?.Kill();
             
             var sequence = DOTween.Sequence();
@@ -71,10 +74,13 @@ namespace PNTD
         {
             _hoverTween?.Kill();
             _hoverTween = targetImage.DOColor(_originColor, highlightDuration);
+            
+            _rectTransform.localScale = _originScale;
         }
 
         public override IEnumerator OnPointerClick()
         {
+            SoundManager.Instance.PlaySFX("SFX_Click");
             yield break;
         }
 

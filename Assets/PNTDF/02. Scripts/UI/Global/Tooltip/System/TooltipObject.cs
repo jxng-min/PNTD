@@ -41,43 +41,44 @@ namespace PNTD
 
             if (_tooltipProvider is not { CanShowTooltip: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
 
             var content = _tooltipProvider.GetTooltipContent();
             if (content is not { IsValid: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
 
-            TooltipPresenter.Instance.Refresh(content);
-            TooltipPresenter.Instance.Move(GetScreenPosition(), tooltipOffset);
+            var tooltipPresenter = TooltipPresenter.Instance;
+            tooltipPresenter?.Refresh(content);
+            tooltipPresenter?.Move(GetScreenPosition(), tooltipOffset);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             _isPointerOver = false;
-            TooltipPresenter.Instance.Hide();
+            TooltipPresenter.Instance?.Hide();
         }
 
         private void Show()
         {
             if (_tooltipProvider is not { CanShowTooltip: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
 
             var content = _tooltipProvider.GetTooltipContent();
             if (content is not { IsValid: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
 
-            TooltipPresenter.Instance.Show(content, GetScreenPosition(), tooltipOffset);
+            TooltipPresenter.Instance?.Show(content, GetScreenPosition(), tooltipOffset);
         }
 
         private Vector2 GetScreenPosition()
@@ -89,7 +90,7 @@ namespace PNTD
         private void OnDisable()
         {
             _isPointerOver = false;
-            TooltipPresenter.Instance.Hide();
+            TooltipPresenter.Instance?.Hide();
         }
     }
 }

@@ -14,6 +14,14 @@ namespace PNTD
         public float magicResistance;
         public float slowResistance;
 
+        public float rewardWeight = 1f;
+        public int baseGoldReward = 5;
+        public int lifeDamage = 1;
+        public float spawnCostWeight = 1f;
+        public bool countsForWaveClear = true;
+        public bool grantsKillReward = true;
+        public bool canDropPlunderGold = true;
+
         public string abilityID;
     }
 }

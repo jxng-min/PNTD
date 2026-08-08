@@ -5,9 +5,13 @@ namespace PNTD
 {
     public class StatusSystem
     {
-        private int _currentStage = 1;
-        private int _currentGold = 999;
-        private int _heroCountLimit = 7;
+        private const int InitialStage = 1;
+        private const int InitialGold = 5;
+        private const int InitialHeroCountLimit = 7;
+        
+        private int _currentStage = InitialStage;
+        private int _currentGold = InitialGold;
+        private int _heroCountLimit = InitialHeroCountLimit;
 
         public event Action<int> OnUpdateGold;
         public event Action<int> OnUpdateStage;
@@ -23,6 +27,15 @@ namespace PNTD
             OnUpdateStage?.Invoke(_currentStage);
             OnUpdateGold?.Invoke(_currentGold);
             OnUpdateHeroCountLimit?.Invoke(_heroCountLimit);
+        }
+        
+        public void Reset()
+        {
+            _currentStage = InitialStage;
+            _currentGold = InitialGold;
+            _heroCountLimit = InitialHeroCountLimit;
+            
+            Initialize();
         }
 
         public void UpdateGold(int amount)
@@ -41,6 +54,7 @@ namespace PNTD
         public void UpdateHeroCountLimit(int amount)
         {
             _heroCountLimit += amount;
+            OnUpdateHeroCountLimit?.Invoke(_heroCountLimit);
         }
     }
 }

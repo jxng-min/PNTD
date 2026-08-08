@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PNTD
 {
-    public class WaveSystem : IEnemyProvider
+    public class WaveSystem : IEnemyProvider, IEnemySpawner
     {
 #region TurnContext
         private sealed class TurnStateContext
@@ -151,6 +151,20 @@ namespace PNTD
 
             var enemy = _enemyFactory.Create(enemyId);
             RegisterEnemy(enemy);
+        }
+
+        public Enemy SpawnEnemy(string enemyId, Vector3 position, int pathPointIndex)
+        {
+            if (_enemyFactory == null)
+            {
+                DebugExtension.LogColor($"Wave System: Enemy Factory is null.", Color.red);
+                return null;
+            }
+
+            var enemy = _enemyFactory.Create(enemyId, position, pathPointIndex);
+            RegisterEnemy(enemy);
+            TryCompleteWave();
+            return enemy;
         }
 
         private void ReleaseEnemy(Enemy enemy)

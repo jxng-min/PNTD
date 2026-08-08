@@ -6,6 +6,8 @@ namespace PNTD
     public abstract class StarbornSkill : HeroSkill
     {
         private StarbornOrbitController _controller;
+        private float _clericOrbitSpeedMultiplier = 1f;
+        private float _hexOrbitSpeedMultiplier = 1f;
 
         public override bool IsContinuous => true;
 
@@ -24,6 +26,8 @@ namespace PNTD
                 _controller = hero.gameObject.AddComponent<StarbornOrbitController>();
             }
 
+            _clericOrbitSpeedMultiplier = 1f;
+            _hexOrbitSpeedMultiplier = 1f;
             _controller.Initialize(hero, AttackData);
         }
 
@@ -34,18 +38,32 @@ namespace PNTD
 
         public void SetClericOrbitSpeedMultiplier(float multiplier)
         {
-            _controller?.SetOrbitSpeedMultiplier(multiplier);
+            _clericOrbitSpeedMultiplier = Mathf.Max(0f, multiplier);
+            RefreshOrbitSpeedMultiplier();
+        }
+
+        public void SetHexOrbitSpeedMultiplier(float multiplier)
+        {
+            _hexOrbitSpeedMultiplier = Mathf.Max(0f, multiplier);
+            RefreshOrbitSpeedMultiplier();
         }
 
         public override void Release(Hero hero)
         {
             _controller?.Release();
             _controller = null;
+            _clericOrbitSpeedMultiplier = 1f;
+            _hexOrbitSpeedMultiplier = 1f;
         }
 
         public override IEnumerator Execute(Hero hero)
         {
             yield break;
+        }
+
+        private void RefreshOrbitSpeedMultiplier()
+        {
+            _controller?.SetOrbitSpeedMultiplier(_clericOrbitSpeedMultiplier * _hexOrbitSpeedMultiplier);
         }
     }
 }

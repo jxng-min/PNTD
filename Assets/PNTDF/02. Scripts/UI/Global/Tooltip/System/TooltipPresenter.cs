@@ -5,8 +5,23 @@ using UnityEngine;
 
 namespace PNTD
 {
-    public class TooltipPresenter : LocalSingleton<TooltipPresenter>
+    public class TooltipPresenter : MonoBehaviour
     {
+        private static TooltipPresenter _instance;
+
+        public static TooltipPresenter Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = FindFirstObjectByType<TooltipPresenter>(FindObjectsInactive.Include);
+                }
+
+                return _instance;
+            }
+        }
+
         [BigHeader("UI")]
         [SerializeField] private Canvas tooltipCanvas;
         [SerializeField] private TooltipView[] tooltipViews;
@@ -16,9 +31,15 @@ namespace PNTD
         private RectTransform _canvasRectTransform;
         private TooltipView _currentTooltipView;
 
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();
+            if (_instance != null && _instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            _instance = this;
 
             tooltipCanvas ??= GetComponent<Canvas>();
             if (tooltipCanvas == null)
@@ -29,6 +50,14 @@ namespace PNTD
             
             _canvasRectTransform = tooltipCanvas.GetComponent<RectTransform>();
             Initialize();
+        }
+
+        private void OnDestroy()
+        {
+            if (_instance == this)
+            {
+                _instance = null;
+            }
         }
 
         private void Initialize()

@@ -10,7 +10,9 @@ namespace PNTD
 
         public void Initialize(Enemy owner, 
                                EnemyAbilityData abilityData, 
-                               IEnemyProvider enemyProvider)
+                               IEnemyProvider enemyProvider,
+                               IEnemySpawner enemySpawner,
+                               IHeroProvider heroProvider)
         {
             Release();
             
@@ -27,7 +29,7 @@ namespace PNTD
                 return;
             }
 
-            var abilityContext = new EnemyAbilityContext(_owner, enemyProvider);
+            var abilityContext = new EnemyAbilityContext(_owner, enemyProvider, enemySpawner, heroProvider);
             _ability.Initialize(abilityContext);
         }
 

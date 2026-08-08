@@ -1,5 +1,124 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9112756296329065001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_08_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_08_03
+  isEnable: 1
+  stageID: Stage_08
+  endDelay: 4
+  order: 3
+--- !u!114 &-8735228022308984681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_10_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_10_01
+  isEnable: 1
+  stageID: Stage_10
+  endDelay: 4
+  order: 1
+--- !u!114 &-7540717365229550526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_03_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_03_03
+  isEnable: 1
+  stageID: Stage_03
+  endDelay: 0
+  order: 3
+--- !u!114 &-7273322926859239341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_05_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_05_04
+  isEnable: 1
+  stageID: Stage_05
+  endDelay: 0
+  order: 4
+--- !u!114 &-7266996769457676535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_04_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_04_02
+  isEnable: 1
+  stageID: Stage_04
+  endDelay: 4
+  order: 2
+--- !u!114 &-7004475586077384138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_12_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_12_Prepare
+  isEnable: 1
+  stageID: Stage_12
+  endDelay: 10
+  order: 0
+--- !u!114 &-6984999471101882202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_11_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_11_04
+  isEnable: 1
+  stageID: Stage_11
+  endDelay: 4
+  order: 4
 --- !u!114 &-6896550902535595195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,6 +134,295 @@ MonoBehaviour:
   rowID: Stage_01_Prepare
   isEnable: 1
   stageID: Stage_01
+  endDelay: 10
+  order: 0
+--- !u!114 &-6382218864865124468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_02_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_02_02
+  isEnable: 1
+  stageID: Stage_02
+  endDelay: 4
+  order: 2
+--- !u!114 &-5949066399967332263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_02_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_02_03
+  isEnable: 1
+  stageID: Stage_02
+  endDelay: 0
+  order: 3
+--- !u!114 &-5711528756703386954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_02_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_02_Prepare
+  isEnable: 1
+  stageID: Stage_02
+  endDelay: 10
+  order: 0
+--- !u!114 &-5174014354442785154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_04_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_04_Prepare
+  isEnable: 1
+  stageID: Stage_04
+  endDelay: 10
+  order: 0
+--- !u!114 &-4844824110545407760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_10_06
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_10_06
+  isEnable: 1
+  stageID: Stage_10
+  endDelay: 0
+  order: 6
+--- !u!114 &-3805633446025991447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_05_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_05_Prepare
+  isEnable: 1
+  stageID: Stage_05
+  endDelay: 10
+  order: 0
+--- !u!114 &-3411792833286706784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_05_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_05_03
+  isEnable: 1
+  stageID: Stage_05
+  endDelay: 4
+  order: 3
+--- !u!114 &-3411465414423080364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_04_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_04_04
+  isEnable: 1
+  stageID: Stage_04
+  endDelay: 0
+  order: 4
+--- !u!114 &-2788889817751952362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_11_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_11_Prepare
+  isEnable: 1
+  stageID: Stage_11
+  endDelay: 10
+  order: 0
+--- !u!114 &-2538309308071074366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_11_06
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_11_06
+  isEnable: 1
+  stageID: Stage_11
+  endDelay: 0
+  order: 6
+--- !u!114 &-2516138350603142193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_05_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_05_01
+  isEnable: 1
+  stageID: Stage_05
+  endDelay: 4
+  order: 1
+--- !u!114 &-2437320311184215650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_09_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_09_Prepare
+  isEnable: 1
+  stageID: Stage_09
+  endDelay: 10
+  order: 0
+--- !u!114 &-2166885781435288107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_05_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_05_02
+  isEnable: 1
+  stageID: Stage_05
+  endDelay: 4
+  order: 2
+--- !u!114 &-1849859548396064283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_11_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_11_01
+  isEnable: 1
+  stageID: Stage_11
+  endDelay: 4
+  order: 1
+--- !u!114 &-1587300122827576116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_09_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_09_03
+  isEnable: 1
+  stageID: Stage_09
+  endDelay: 4
+  order: 3
+--- !u!114 &-840156760058406021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_11_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_11_03
+  isEnable: 1
+  stageID: Stage_11
+  endDelay: 4
+  order: 3
+--- !u!114 &-466039504987576506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_06_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_06_Prepare
+  isEnable: 1
+  stageID: Stage_06
   endDelay: 10
   order: 0
 --- !u!114 &11400000
@@ -37,7 +445,359 @@ MonoBehaviour:
   - {fileID: -6896550902535595195}
   - {fileID: 4176093755316651786}
   - {fileID: 4545613742441878676}
+  - {fileID: 7233719307454442854}
+  - {fileID: -5711528756703386954}
+  - {fileID: 1316695950039347782}
+  - {fileID: -6382218864865124468}
+  - {fileID: -5949066399967332263}
+  - {fileID: 7543949543120916477}
+  - {fileID: 1340019430018885249}
+  - {fileID: 2280312182372727446}
+  - {fileID: -7540717365229550526}
+  - {fileID: -5174014354442785154}
+  - {fileID: 8007750204882593979}
+  - {fileID: -7266996769457676535}
+  - {fileID: 4236098988034976866}
+  - {fileID: -3411465414423080364}
+  - {fileID: -3805633446025991447}
+  - {fileID: -2516138350603142193}
+  - {fileID: -2166885781435288107}
+  - {fileID: -3411792833286706784}
+  - {fileID: -7273322926859239341}
+  - {fileID: -466039504987576506}
+  - {fileID: 1528972325609436123}
+  - {fileID: 3691235703272872928}
+  - {fileID: 4579018434810611859}
+  - {fileID: 6349618543970013572}
+  - {fileID: 1307049174366101965}
+  - {fileID: 4682651913117123}
+  - {fileID: 357024379290314676}
+  - {fileID: 1276683526571014711}
+  - {fileID: 2185844253278609935}
+  - {fileID: 4499436094754523809}
+  - {fileID: 6934902613900118159}
+  - {fileID: 8763338754457128975}
+  - {fileID: 1813245593744521832}
+  - {fileID: -9112756296329065001}
+  - {fileID: 5500338948050749384}
+  - {fileID: 1221537163511403021}
+  - {fileID: -2437320311184215650}
+  - {fileID: 5157742315587239668}
+  - {fileID: 5365596152191774887}
+  - {fileID: -1587300122827576116}
+  - {fileID: 175925638163098075}
+  - {fileID: 1708741257549028436}
+  - {fileID: 3807443032620709029}
+  - {fileID: -8735228022308984681}
+  - {fileID: 5512436292052012808}
+  - {fileID: 8884189780397434902}
+  - {fileID: 8796427189993449443}
+  - {fileID: 5936974886045772005}
+  - {fileID: -4844824110545407760}
+  - {fileID: -2788889817751952362}
+  - {fileID: -1849859548396064283}
+  - {fileID: 7601371860288832432}
+  - {fileID: -840156760058406021}
+  - {fileID: -6984999471101882202}
+  - {fileID: 7180129647039094496}
+  - {fileID: -2538309308071074366}
+  - {fileID: -7004475586077384138}
+  - {fileID: 1147194475849437529}
+  - {fileID: 8979589736721965582}
+  - {fileID: 4686679182120017168}
+  - {fileID: 2984103497389364986}
+  - {fileID: 6170368521889478146}
+  - {fileID: 6024710702972184711}
   dataTableRowScript: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+--- !u!114 &4682651913117123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_07_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_07_01
+  isEnable: 1
+  stageID: Stage_07
+  endDelay: 4
+  order: 1
+--- !u!114 &175925638163098075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_09_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_09_04
+  isEnable: 1
+  stageID: Stage_09
+  endDelay: 4
+  order: 4
+--- !u!114 &357024379290314676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_07_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_07_02
+  isEnable: 1
+  stageID: Stage_07
+  endDelay: 4
+  order: 2
+--- !u!114 &1147194475849437529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_12_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_12_01
+  isEnable: 1
+  stageID: Stage_12
+  endDelay: 4
+  order: 1
+--- !u!114 &1221537163511403021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_08_05
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_08_05
+  isEnable: 1
+  stageID: Stage_08
+  endDelay: 0
+  order: 5
+--- !u!114 &1276683526571014711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_07_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_07_03
+  isEnable: 1
+  stageID: Stage_07
+  endDelay: 4
+  order: 3
+--- !u!114 &1307049174366101965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_07_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_07_Prepare
+  isEnable: 1
+  stageID: Stage_07
+  endDelay: 10
+  order: 0
+--- !u!114 &1316695950039347782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_02_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_02_01
+  isEnable: 1
+  stageID: Stage_02
+  endDelay: 4
+  order: 1
+--- !u!114 &1340019430018885249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_03_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_03_01
+  isEnable: 1
+  stageID: Stage_03
+  endDelay: 4
+  order: 1
+--- !u!114 &1528972325609436123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_06_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_06_01
+  isEnable: 1
+  stageID: Stage_06
+  endDelay: 4
+  order: 1
+--- !u!114 &1708741257549028436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_09_05
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_09_05
+  isEnable: 1
+  stageID: Stage_09
+  endDelay: 0
+  order: 5
+--- !u!114 &1813245593744521832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_08_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_08_02
+  isEnable: 1
+  stageID: Stage_08
+  endDelay: 4
+  order: 2
+--- !u!114 &2185844253278609935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_07_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_07_04
+  isEnable: 1
+  stageID: Stage_07
+  endDelay: 4
+  order: 4
+--- !u!114 &2280312182372727446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_03_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_03_02
+  isEnable: 1
+  stageID: Stage_03
+  endDelay: 4
+  order: 2
+--- !u!114 &2984103497389364986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_12_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_12_04
+  isEnable: 1
+  stageID: Stage_12
+  endDelay: 4
+  order: 4
+--- !u!114 &3691235703272872928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_06_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_06_02
+  isEnable: 1
+  stageID: Stage_06
+  endDelay: 4
+  order: 2
+--- !u!114 &3807443032620709029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_10_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_10_Prepare
+  isEnable: 1
+  stageID: Stage_10
+  endDelay: 10
+  order: 0
 --- !u!114 &4176093755316651786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,8 +813,42 @@ MonoBehaviour:
   rowID: Stage_01_01
   isEnable: 1
   stageID: Stage_01
-  endDelay: 5
+  endDelay: 4
   order: 1
+--- !u!114 &4236098988034976866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_04_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_04_03
+  isEnable: 1
+  stageID: Stage_04
+  endDelay: 4
+  order: 3
+--- !u!114 &4499436094754523809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_07_05
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_07_05
+  isEnable: 1
+  stageID: Stage_07
+  endDelay: 0
+  order: 5
 --- !u!114 &4545613742441878676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,5 +864,345 @@ MonoBehaviour:
   rowID: Stage_01_02
   isEnable: 1
   stageID: Stage_01
+  endDelay: 4
+  order: 2
+--- !u!114 &4579018434810611859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_06_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_06_03
+  isEnable: 1
+  stageID: Stage_06
+  endDelay: 4
+  order: 3
+--- !u!114 &4686679182120017168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_12_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_12_03
+  isEnable: 1
+  stageID: Stage_12
+  endDelay: 4
+  order: 3
+--- !u!114 &5157742315587239668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_09_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_09_01
+  isEnable: 1
+  stageID: Stage_09
+  endDelay: 4
+  order: 1
+--- !u!114 &5365596152191774887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_09_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_09_02
+  isEnable: 1
+  stageID: Stage_09
+  endDelay: 4
+  order: 2
+--- !u!114 &5500338948050749384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_08_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_08_04
+  isEnable: 1
+  stageID: Stage_08
+  endDelay: 4
+  order: 4
+--- !u!114 &5512436292052012808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_10_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_10_02
+  isEnable: 1
+  stageID: Stage_10
+  endDelay: 4
+  order: 2
+--- !u!114 &5936974886045772005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_10_05
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_10_05
+  isEnable: 1
+  stageID: Stage_10
+  endDelay: 4
+  order: 5
+--- !u!114 &6024710702972184711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_12_06
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_12_06
+  isEnable: 1
+  stageID: Stage_12
   endDelay: 0
+  order: 6
+--- !u!114 &6170368521889478146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_12_05
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_12_05
+  isEnable: 1
+  stageID: Stage_12
+  endDelay: 4
+  order: 5
+--- !u!114 &6349618543970013572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_06_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_06_04
+  isEnable: 1
+  stageID: Stage_06
+  endDelay: 0
+  order: 4
+--- !u!114 &6934902613900118159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_08_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_08_Prepare
+  isEnable: 1
+  stageID: Stage_08
+  endDelay: 10
+  order: 0
+--- !u!114 &7180129647039094496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_11_05
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_11_05
+  isEnable: 1
+  stageID: Stage_11
+  endDelay: 4
+  order: 5
+--- !u!114 &7233719307454442854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_01_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_01_03
+  isEnable: 1
+  stageID: Stage_01
+  endDelay: 0
+  order: 3
+--- !u!114 &7543949543120916477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_03_Prepare
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_03_Prepare
+  isEnable: 1
+  stageID: Stage_03
+  endDelay: 10
+  order: 0
+--- !u!114 &7601371860288832432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_11_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_11_02
+  isEnable: 1
+  stageID: Stage_11
+  endDelay: 4
+  order: 2
+--- !u!114 &8007750204882593979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_04_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_04_01
+  isEnable: 1
+  stageID: Stage_04
+  endDelay: 4
+  order: 1
+--- !u!114 &8763338754457128975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_08_01
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_08_01
+  isEnable: 1
+  stageID: Stage_08
+  endDelay: 4
+  order: 1
+--- !u!114 &8796427189993449443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_10_04
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_10_04
+  isEnable: 1
+  stageID: Stage_10
+  endDelay: 4
+  order: 4
+--- !u!114 &8884189780397434902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_10_03
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_10_03
+  isEnable: 1
+  stageID: Stage_10
+  endDelay: 4
+  order: 3
+--- !u!114 &8979589736721965582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb2d16cdbea4824a0703616008471e6, type: 3}
+  m_Name: Stage_12_02
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.WaveDataTableRow
+  rowID: Stage_12_02
+  isEnable: 1
+  stageID: Stage_12
+  endDelay: 4
   order: 2

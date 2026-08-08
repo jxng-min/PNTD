@@ -1,0 +1,2 @@
+rowID,firstCastDelay,coolDown,spawnCount,maxCasts,spawnedEnemyID,minSpawnOffset,maxSpawnOffset,isEnable
+Ability_Summoner,2.5,5.5,2,3,Enemy_Baby,0.2,0.4,TRUE

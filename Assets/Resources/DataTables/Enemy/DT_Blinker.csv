@@ -1,0 +1,2 @@
+rowID,firstCastDelay,coolDown,blinkDistance,invincibleDuration,isEnable
+Ability_Blinker,1.5,5,1.25,0.35,TRUE

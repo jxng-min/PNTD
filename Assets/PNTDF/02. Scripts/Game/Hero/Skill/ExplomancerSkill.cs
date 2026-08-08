@@ -68,6 +68,7 @@ namespace PNTD
                                                tickInterval: GetTickInterval(hero));
 
             circle.Initialize(position, config);
+            SoundManager.Instance.PlaySFX("SFX_Explomancer");
         }
 
         private static float GetTickInterval(Hero hero)

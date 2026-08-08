@@ -50,7 +50,7 @@ MonoBehaviour:
   shadowTransform: {fileID: 7660752265089005559}
   rotationAxisTransform: {fileID: 5163046467221570894}
   shadowRenderer: {fileID: 3780752161811974403}
-  baseShadowPositionOffset: 0.02
+  baseShadowPositionOffset: 0.04
   hoverShadowPositionOffset: 0.14
   positionInterpolationSpeed: 24
   nearShadowAlpha: 0.75
@@ -219,7 +219,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 28
+  m_SortingOrder: 40
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 0baf6536b7af5db45a0730bbed6e015a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -310,7 +310,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 27
+  m_SortingOrder: 39
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 0baf6536b7af5db45a0730bbed6e015a, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}

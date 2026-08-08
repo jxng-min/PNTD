@@ -20,6 +20,7 @@ namespace PNTD
         
         public Tween PlayPointerEnterEffect(Image indexerImage)
         {
+            SoundManager.Instance.PlaySFX("SFX_Hover1");
             return indexerImage.DOColor(hoverColor, hoverDuration);
         }
         
@@ -30,6 +31,7 @@ namespace PNTD
 
         public Tween PlayPointerDownEffect(RectTransform rectTransform, Vector2 originAnchoredPosition)
         {
+            SoundManager.Instance.PlaySFX("SFX_Click");
             return rectTransform.DOAnchorPosX(originAnchoredPosition.x + xOffset, translateDuration);
         }
 

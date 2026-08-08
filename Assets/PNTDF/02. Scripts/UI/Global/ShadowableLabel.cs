@@ -39,6 +39,11 @@ namespace PNTD
 
             foreach (var ch in targetText)
             {
+                if (ch != ' ')
+                {
+                    SoundManager.Instance.PlaySFX("SFX_Typing");
+                }
+                
                 currentText += ch;
                 visualLabel.text = currentText;
                 shadowLabel.text = currentText;

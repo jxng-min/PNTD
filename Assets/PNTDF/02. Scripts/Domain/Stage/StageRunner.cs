@@ -21,12 +21,17 @@ namespace PNTD
         [BigHeader("References")]
         [SerializeField] private Transform heroRoot;
         [SerializeField] private DeployPreviewView deployPreviewView;
+        [SerializeField] private JxCameraShaker cameraShaker;
+        [SerializeField] private TimeSlowEffect timeSlowEffect;
 
         private StageModel _model;
 
         private DataTable _enemyDataTable;
         private DataTable _enemyAbilityDataTable;
         private DataTable _enragerDataTable;
+        private DataTable _blinkerDataTable;
+        private DataTable _hexerDataTable;
+        private DataTable _summonerDataTable;
         private DataTable _heroDataTable;
         private DataTable _heroAttackDataTable;
         private int _interest;
@@ -41,6 +46,9 @@ namespace PNTD
             _enemyDataTable = DataTableManager.FindTable<EnemyDataTableRow>("DT_Enemy");
             _enemyAbilityDataTable = DataTableManager.FindTable<EnemyAbilityDataTableRow>("DT_EnemyAbility");
             _enragerDataTable = DataTableManager.FindTable<EnragerDataTableRow>("DT_Enrager");
+            _blinkerDataTable = DataTableManager.FindTable<BlinkerDataTableRow>("DT_Blinker");
+            _hexerDataTable = DataTableManager.FindTable<HexerDataTableRow>("DT_Hexer");
+            _summonerDataTable = DataTableManager.FindTable<SummonerDataTableRow>("DT_Summoner");
             _heroDataTable = DataTableManager.FindTable<HeroDataTableRow>("DT_Hero");
             _heroAttackDataTable = DataTableManager.FindTable<HeroAttackDataTableRow>("DT_HeroAttack");
         }
@@ -60,7 +68,12 @@ namespace PNTD
 
             _interest = interest;
 
-            var enemyBuilder = new EnemyBuilder(_enemyDataTable, _enemyAbilityDataTable, _enragerDataTable);
+            var enemyBuilder = new EnemyBuilder(_enemyDataTable,
+                                                _enemyAbilityDataTable,
+                                                _enragerDataTable,
+                                                _blinkerDataTable,
+                                                _hexerDataTable,
+                                                _summonerDataTable);
             var enemyFactory = new EnemyFactory(enemyBuilder);
             var stageSystem = new StageSystem();
             var waveSystem = new WaveSystem();
@@ -88,7 +101,7 @@ namespace PNTD
                                                               mapContext.Map,
                                                               deployPreviewView);
             
-            enemyFactory.Initialize(mapContext.Map.StagePath, waveSystem);
+            enemyFactory.Initialize(mapContext.Map.StagePath, waveSystem, waveSystem, boardSystem);
             
             var domain = new StageDomain(stageSystem,
                                          waveSystem,
@@ -102,7 +115,13 @@ namespace PNTD
                                          plunderSystem,
                                          goldSpawner,
                                          stagePooledObjectCleaner);
-            var compositor = new StageCompositor(domain, runtimeStageContext, progressView, flowPresenter, deployAction);
+            var compositor = new StageCompositor(domain, 
+                                                 runtimeStageContext, 
+                                                 progressView, 
+                                                 flowPresenter, 
+                                                 deployAction, 
+                                                 cameraShaker, 
+                                                 timeSlowEffect);
 
             _model = new StageModel(domain, compositor, runtimeStageContext);
             _model.Initialize(enemyFactory, mapContext.StageContext, stage);

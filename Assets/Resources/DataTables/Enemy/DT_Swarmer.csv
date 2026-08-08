@@ -1,0 +1,2 @@
+rowID,radius,requiredCount,moveSpeedMultiplier,isEnable
+Ability_SwarmerPackPressure,2,4,1.1,FALSE

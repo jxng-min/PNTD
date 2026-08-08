@@ -17,6 +17,8 @@ namespace PNTD
             _lobbyModel = lobbyModel;
             _mapRunner = mapRunner;
             _stageRunner = stageRunner;
+            
+            StartCoroutine(WaitSoundLoad());
         }
 
         public void Play()
@@ -27,6 +29,20 @@ namespace PNTD
             }
 
             StartCoroutine(PlayRoutine());
+        }
+        
+        public IEnumerator ResetGameRoutine()
+        {
+            _isPlaying = false;
+            
+            _stageRunner?.DisposeStage();
+            _mapRunner?.UnloadMap();
+            _currentMapContext = null;
+            
+            _lobbyModel?.Domain.ResetGameState();
+            _lobbyModel?.ShowShop(false);
+            
+            yield break;
         }
 
         private IEnumerator PlayRoutine()
@@ -46,7 +62,7 @@ namespace PNTD
             
             if (_stageRunner.StageResult == StageModel.EStageResult.Clear)
             {
-                yield return LoadingManager.Instance.VirtualLoadScene("loading...", ReturnToLobbyRoutine);
+                yield return LoadingManager.Instance.VirtualLoadScene("<pop>loading...</pop>", ReturnToLobbyRoutine);
             }
 
             _isPlaying = false;
@@ -79,6 +95,7 @@ namespace PNTD
         {
             _lobbyModel.Domain.StatusSystem.UpdateGold(_stageRunner.RewardGold + _stageRunner.BonusGold + _stageRunner.Interest);
             _lobbyModel.Domain.StatusSystem.UpdateStage(1);
+            _lobbyModel.Domain.ShopSystem.UpdateLevel();
             
             _stageRunner.DisposeStage();
             _mapRunner.UnloadMap();
@@ -87,6 +104,16 @@ namespace PNTD
             _lobbyModel.ShowShop();
 
             yield break;
+        }
+
+        private IEnumerator WaitSoundLoad()
+        {
+            while (!SoundManager.Instance.IsLoaded)
+            {
+                yield return null;
+            }
+            
+            SoundManager.Instance.PlayBGM("BGM_Main");
         }
     }
 }

@@ -51,6 +51,8 @@ namespace PNTD
             {
                 OnEnemyDied?.Invoke();
             }
+            
+            SoundManager.Instance.PlaySFX("SFX_Damage");
 
             return true;
         }
@@ -111,6 +113,15 @@ namespace PNTD
             resistance *= 1f - percentPenetration;
             
             return resistance;
+        }
+
+        public static float CalculateDamageForDebug(float damage,
+                                                    float resistance,
+                                                    float flatPenetration = 0f,
+                                                    float percentPenetration = 0f)
+        {
+            var effectiveResistance = CalculateEffectiveResistance(resistance, flatPenetration, percentPenetration);
+            return ApplyResistance(damage, effectiveResistance);
         }
 
         private static float ApplyResistance(float damage, float resistance)

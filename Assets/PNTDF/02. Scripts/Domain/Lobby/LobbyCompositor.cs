@@ -38,7 +38,6 @@ namespace PNTD
         public void Initialize()
         {
             _shopPresenter.Initialize(_lobbyDomain.ShopSystem);
-            _indexerPresenter.Initialize();
         }
 
         public void ShowShop()

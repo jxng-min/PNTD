@@ -55,6 +55,7 @@ namespace PNTD
 
         public void HandleOnExitDeployMode()
         {
+            SoundManager.Instance.PlaySFX("SFX_Deploy");
             ClearPreview();
         }
 

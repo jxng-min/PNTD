@@ -57,6 +57,13 @@ namespace PNTD
         Normal          = 0,
         Mini            = 1,
         Elite           = 2,
+        Enrager         = 3,
+        Tanker          = 4,
+        Blinker         = 5,
+        Hexer           = 6,
+        Summoner        = 7,
+        Swarmer         = 8,
+        Baby            = 9,
     }
 
     public enum EStackPolicy
@@ -116,5 +123,11 @@ namespace PNTD
         Flat                = 0,
         Additive            = 1,
         Multiply            = 2,
+    }
+
+    public enum ESound
+    {
+        BGM                 = 0,
+        SFX                 = 1,
     }
 }

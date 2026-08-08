@@ -1,2 +1,5 @@
 rowID,ability,coolDown,trigger,isEnable
 Ability_Enrager,Enrager,0,OnDeath,TRUE
+Ability_Blinker,Blinker,5,OnInterval,TRUE
+Ability_Hexer,Hexer,6,OnInterval,TRUE
+Ability_Summoner,Summoner,5.5,OnInterval,TRUE

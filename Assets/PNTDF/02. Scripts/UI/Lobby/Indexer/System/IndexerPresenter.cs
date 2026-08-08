@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using System;
+using System.Collections;
 using System.Linq;
 using JxModule;
 using UnityEngine;
@@ -31,11 +32,6 @@ namespace PNTD
             playButton ??= GetComponentsInChildren<JxButton>(true)
                 .FirstOrDefault(button => button != null && button.name == "Play Button");
             playButton?.AddListener(HandleOnClickedPlay);
-        }
-
-        public void Initialize()
-        {
-            ShowShop();
         }
 
         public void ShowShop()
@@ -88,7 +84,12 @@ namespace PNTD
 
         private void HandleGameRestart()
         {
-            // TODO: 씬 재로드
+            StartCoroutine(GameRestartRoutine());
+        }
+        
+        private IEnumerator GameRestartRoutine()
+        {
+            yield return LoadingManager.Instance.VirtualLoadScene("<pop>loading...</pop>", GameFlow.Instance.ResetGameRoutine);
         }
 
         private void HandleOnClickedPlay()

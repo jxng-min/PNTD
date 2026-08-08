@@ -16,7 +16,7 @@ namespace PNTD
 
         public void HandleEnemyKilled(Enemy enemy)
         {
-            if (enemy == null)
+            if (enemy == null || enemy.Context?.CanDropPlunderGold == false)
             {
                 return;
             }

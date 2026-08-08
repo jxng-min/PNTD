@@ -103,6 +103,9 @@ namespace PNTD
                                                   StunOverrideColor);
 
             projectile.Initialize(origin, direction, config);
+            PlayFireSound();
         }
+        
+        protected virtual void PlayFireSound() {}
     }
 }

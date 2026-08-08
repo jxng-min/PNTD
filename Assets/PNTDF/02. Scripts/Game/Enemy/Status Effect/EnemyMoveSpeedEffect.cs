@@ -9,6 +9,7 @@ namespace PNTD
         public override float MoveSpeedMultiplier { get; }
         public override string EffectID { get; }
         public override EStackPolicy StackPolicy => _stackPolicy;
+        public override EEffectCategory Category => MoveSpeedMultiplier >= 1f ? EEffectCategory.Buff : EEffectCategory.Debuff;
         
         public EnemyMoveSpeedEffect(string effectId, 
                                     float multiplier, 
