@@ -35,6 +35,7 @@ namespace PNTD
 
         private RectTransform _rectTransform;
         private Vector2 _originAnchoredPosition;
+        private Vector3 _originScale;
         private Color _originColor;
         
         private void Awake()
@@ -47,6 +48,7 @@ namespace PNTD
             }
             
             _originAnchoredPosition = _rectTransform.anchoredPosition;
+            _originScale = _rectTransform.localScale;
             _originColor = targetImage.color;    
         }
         
@@ -73,7 +75,12 @@ namespace PNTD
             targetLabel.text = $"lock";
         }
 
-        public override void OnPointerExit() { }
+        public override void OnPointerExit()
+        {
+            _hoverTween?.Kill();
+            _hoverTween = null;
+            _rectTransform.localScale = _originScale;
+        }
 
         public override IEnumerator OnPointerClick() { yield break; }
 
