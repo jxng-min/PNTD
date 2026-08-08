@@ -174,6 +174,7 @@ namespace PNTD
         public void DisposeStage()
         {
             _model?.Hide();
+            _model?.ReturnStagePooledObjects();
             DisposeModel();
         }
 

@@ -7,6 +7,7 @@ namespace PNTD
     {
         private static readonly string[] StagePoolPrefabNames =
         {
+            "[PF] Enemy",
             "[PF] Ranger Bullet",
             "[PF] Mage Sphere",
             "[PF] Mage Circle",
