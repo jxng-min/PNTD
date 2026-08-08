@@ -20,6 +20,7 @@ namespace PNTD
         [SerializeField] private SynergyPresenter synergyPresenter;
         [SerializeField] private PartyPresenter partyPresenter;
         [SerializeField] private IndexerPresenter indexerPresenter;
+        [SerializeField] private TitlePresenter titlePresenter;
         [SerializeField] private MapRunner mapRunner;
         [SerializeField] private StageRunner stageRunner;
         [SerializeField] private LabelBoxView stageView;
@@ -96,6 +97,9 @@ namespace PNTD
 
             _model = new LobbyModel(domain, compositor);
             _model.Initialize();
+            
+            titlePresenter ??= FindFirstObjectByType<TitlePresenter>(FindObjectsInactive.Include);
+            titlePresenter?.Initialize(_model);
             
             mapRunner ??= FindFirstObjectByType<MapRunner>();
             stageRunner ??= FindFirstObjectByType<StageRunner>();

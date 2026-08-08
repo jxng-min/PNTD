@@ -34,11 +34,6 @@ namespace PNTD
             playButton?.AddListener(HandleOnClickedPlay);
         }
 
-        public void Initialize()
-        {
-            ShowShop();
-        }
-
         public void ShowShop()
         {
             HandleEnableCanvasGroup(0);

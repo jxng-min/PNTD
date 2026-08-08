@@ -15,11 +15,11 @@ MonoBehaviour:
   rowID: Enemy_Normal
   isEnable: 1
   color: {r: 1, g: 0.21176471, b: 0.21176471, a: 1}
-  maxHp: 45
+  maxHp: 35
   moveSpeed: 1
   type: 0
-  physicalDefense: 15
-  magicResistance: 15
+  physicalDefense: 5
+  magicResistance: 5
   slowResistance: 0
   rewardWeight: 1
   baseGoldReward: 5
@@ -102,7 +102,7 @@ MonoBehaviour:
   rowID: Enemy_Baby
   isEnable: 1
   color: {r: 1, g: 0.9490196, b: 0.65882355, a: 1}
-  maxHp: 30
+  maxHp: 35
   moveSpeed: 1.55
   type: 9
   physicalDefense: 0
@@ -218,8 +218,8 @@ MonoBehaviour:
   maxHp: 50
   moveSpeed: 1
   type: 3
-  physicalDefense: 20
-  magicResistance: 20
+  physicalDefense: 10
+  magicResistance: 10
   slowResistance: 0.2
   rewardWeight: 1.2
   baseGoldReward: 5

@@ -6,7 +6,7 @@ namespace PNTD
     public class StatusSystem
     {
         private const int InitialStage = 1;
-        private const int InitialGold = 3;
+        private const int InitialGold = 5;
         private const int InitialHeroCountLimit = 7;
         
         private int _currentStage = InitialStage;
