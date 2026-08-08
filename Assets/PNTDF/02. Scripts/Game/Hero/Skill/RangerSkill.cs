@@ -6,7 +6,7 @@ namespace PNTD
 {
     public abstract class RangerSkill : HeroSkill
     {
-        private const string BulletPrefabName = "[PF] Ranger Bullet";
+        protected const string BulletPrefabName = "[PF] Ranger Bullet";
 
         protected virtual float DamageMultiplier => 1f;
         protected virtual float BulletSpeed => 10f;
@@ -103,7 +103,7 @@ namespace PNTD
             }
         }
 
-        private void FireBullet(Hero hero, Vector2 direction)
+        protected virtual void FireBullet(Hero hero, Vector2 direction)
         {
             var bulletPrefab = PrefabManager.CachePrefab<RangerBullet>(BulletPrefabName);
             if (bulletPrefab == null)

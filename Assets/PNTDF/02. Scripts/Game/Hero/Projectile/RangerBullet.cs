@@ -14,6 +14,7 @@ namespace PNTD
         [BigHeader("References")]
         [SerializeField] private Transform rotationAxis;
         [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private PNTD.ShadowableObject shadow;
 
         private readonly HashSet<Enemy> _hitEnemies = new();
 
@@ -26,9 +27,11 @@ namespace PNTD
         private bool _hasBaseVisualScale;
         private bool _isInitialized;
 
-        public void Initialize(Vector3 origin, Vector2 direction, RangerBulletConfig config)
+        public void Initialize(Vector3 origin, Vector2 direction, RangerBulletConfig config, bool isHover = false)
         {
             _hitEnemies.Clear();
+            
+            shadow.SetHoverState(isHover);
 
             _origin = origin;
             _direction = direction.sqrMagnitude > Mathf.Epsilon ? direction.normalized : Vector2.right;
@@ -88,9 +91,7 @@ namespace PNTD
         private void ApplyVisualScale()
         {
             CacheReferences();
-
-            var target = rotationAxis != null ? rotationAxis : transform;
-            target.localScale = _baseVisualScale * Mathf.Max(0.01f, _config.VisualScale);
+            transform.localScale = _baseVisualScale * Mathf.Max(0.01f, _config.VisualScale);
         }
 
         private void TryHitEnemies()

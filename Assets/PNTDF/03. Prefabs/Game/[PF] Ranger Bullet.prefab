@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985315048578813802}
-  - component: {fileID: 333341666448635865}
+  - component: {fileID: 4899923297488463144}
   m_Layer: 0
   m_Name: Rotation Axis
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 6265663661801020940}
   m_Father: {fileID: 8007855574710611783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &333341666448635865
+--- !u!114 &4899923297488463144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,19 +42,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2727413663030984489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c859e99fe240be955d7db0c24d10fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a8e3fbc646e4556a74b6d4ae5e9d86a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Developers.KJM.ShadowableObject
-  hoverEnable: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.PNTD.ShadowableObject
+  hoverEnable: 1
   rootTransform: {fileID: 8007855574710611783}
   shadowTransform: {fileID: 1779426180120340757}
   rotationAxisTransform: {fileID: 2985315048578813802}
   shadowRenderer: {fileID: 8822534875407708215}
   baseShadowPositionOffset: 0.02
-  hoverShadowPositionOffset: 0.14
+  hoverShadowPositionOffset: 0.04
   positionInterpolationSpeed: 24
-  nearShadowAlpha: 0.75
-  farShadowAlpha: 0.5
+  nearShadowAlpha: 0.58
+  farShadowAlpha: 0.58
   alphaInterpolationSpeed: 4
 --- !u!1 &3267524264099487220
 GameObject:
@@ -337,3 +337,4 @@ MonoBehaviour:
   lifetimePadding: 0.1
   rotationAxis: {fileID: 2985315048578813802}
   spriteRenderer: {fileID: 2497373428390898554}
+  shadow: {fileID: 4899923297488463144}
