@@ -343,7 +343,7 @@ MonoBehaviour:
   - {fileID: 914724644}
   seedRangerParty: 0
   seedMageParty: 0
-  seedStarbornParty: 1
+  seedStarbornParty: 0
   rangerPartySeeds: []
   magePartySeeds:
   - heroId: Hero_Magician
@@ -4381,6 +4381,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 579142842}
+    - target: {fileID: 4634620033294872253, guid: 8e9c96543225bfa448ba03070fc50d32, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

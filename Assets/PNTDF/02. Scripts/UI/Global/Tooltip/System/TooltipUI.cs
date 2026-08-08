@@ -39,48 +39,48 @@ namespace PNTD
 
             if (_tooltipProvider is not { CanShowTooltip: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
 
             var content = _tooltipProvider.GetTooltipContent();
             if (content is not { IsValid: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
 
-            TooltipPresenter.Instance.Refresh(content);
+            TooltipPresenter.Instance?.Refresh(content);
         }
 
         private void Show(Vector2 screenPosition)
         {
             if (_tooltipProvider is not { CanShowTooltip: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
             
             var content = _tooltipProvider.GetTooltipContent();
             if (content is not { IsValid: true })
             {
-                TooltipPresenter.Instance.Hide();
+                TooltipPresenter.Instance?.Hide();
                 return;
             }
 
-            TooltipPresenter.Instance.Show(content, screenPosition, tooltipOffset);
+            TooltipPresenter.Instance?.Show(content, screenPosition, tooltipOffset);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             _isPointerOver = false;
-            TooltipPresenter.Instance.Hide();
+            TooltipPresenter.Instance?.Hide();
         }
         
         private void OnDisable()
         {
             _isPointerOver = false;
-            TooltipPresenter.Instance.Hide();
+            TooltipPresenter.Instance?.Hide();
         }
         
         private Vector2 GetScreenPosition(PointerEventData eventData)

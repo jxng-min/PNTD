@@ -19,6 +19,12 @@ namespace PNTD
         {
             RefreshSynergies(heroContexts);
         }
+        
+        public void Reset()
+        {
+            CurrentContext = SynergyContext.Empty;
+            OnSynergyUpdated?.Invoke(CurrentContext);
+        }
 
         public void RefreshSynergies(IReadOnlyList<HeroContext> heroContexts)
         {

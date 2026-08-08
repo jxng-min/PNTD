@@ -23,7 +23,8 @@ namespace PNTD
 
         private IEnumerator OnClickedRestart()
         {
-            yield return LoadingManager.Instance.LoadScene("Game", "<pop>loading...</pop>");
+            CanvasGroup.Hide();
+            yield return LoadingManager.Instance.VirtualLoadScene("<pop>loading...</pop>", GameFlow.Instance.ResetGameRoutine);
         }
 
         private void OnDestroy()

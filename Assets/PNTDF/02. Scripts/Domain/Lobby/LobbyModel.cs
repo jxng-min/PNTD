@@ -28,11 +28,15 @@
             Domain.VisibilitySystem.Show();
         }
 
-        public void ShowShop()
+        public void ShowShop(bool refreshShop = true)
         {
             Show();
             Compositor.ShowShop();
-            Domain.ShopSystem.Initialize();
+
+            if (refreshShop)
+            {
+                Domain.ShopSystem.Initialize();
+            }
         }
 
         public void Hide()

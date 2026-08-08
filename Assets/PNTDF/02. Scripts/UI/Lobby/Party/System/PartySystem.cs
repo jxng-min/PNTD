@@ -19,24 +19,22 @@ namespace PNTD
         {
             _heroContexts.Clear();
 
-            if (heroContexts == null)
+            if (heroContexts != null)
             {
-                return;
-            }
-
-            foreach (var heroContext in heroContexts)
-            {
-                if (IsInvalidHeroContext(heroContext))
+                foreach (var heroContext in heroContexts)
                 {
-                    continue;
-                }
+                    if (IsInvalidHeroContext(heroContext))
+                    {
+                        continue;
+                    }
 
-                if (_heroContexts.Contains(heroContext))
-                {
-                    continue;
+                    if (_heroContexts.Contains(heroContext))
+                    {
+                        continue;
+                    }
+                    
+                    _heroContexts.Add(heroContext);
                 }
-                
-                _heroContexts.Add(heroContext);
             }
             
             OnPartyChanged?.Invoke();

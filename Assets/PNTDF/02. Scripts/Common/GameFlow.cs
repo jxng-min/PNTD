@@ -30,6 +30,20 @@ namespace PNTD
 
             StartCoroutine(PlayRoutine());
         }
+        
+        public IEnumerator ResetGameRoutine()
+        {
+            _isPlaying = false;
+            
+            _stageRunner?.DisposeStage();
+            _mapRunner?.UnloadMap();
+            _currentMapContext = null;
+            
+            _lobbyModel?.Domain.ResetGameState();
+            _lobbyModel?.ShowShop(false);
+            
+            yield break;
+        }
 
         private IEnumerator PlayRoutine()
         {

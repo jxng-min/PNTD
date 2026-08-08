@@ -34,9 +34,41 @@ namespace PNTD
         {
             ShuffleSystem.Initialize();
             ShopSystem.Initialize();
-            PartySystem.Initialize(_initialParty);
+            PartySystem.Initialize(CloneInitialParty());
             SynergySystem.Initialize(PartySystem.HeroContexts);
             StatusSystem.Initialize();
+        }
+        
+        public void ResetGameState()
+        {
+            StatusSystem.Reset();
+            PartySystem.Initialize(CloneInitialParty());
+            SynergySystem.Reset();
+            SynergySystem.Initialize(PartySystem.HeroContexts);
+            ShopSystem.Reset();
+        }
+        
+        private IReadOnlyList<HeroContext> CloneInitialParty()
+        {
+            if (_initialParty == null)
+            {
+                return null;
+            }
+
+            var heroContexts = new List<HeroContext>();
+            foreach (var heroContext in _initialParty)
+            {
+                if (heroContext?.HeroDataTableRow == null)
+                {
+                    continue;
+                }
+
+                heroContexts.Add(new HeroContext(heroContext.HeroDataTableRow,
+                                                heroContext.Level,
+                                                heroContext.Exp));
+            }
+
+            return heroContexts;
         }
     }
 }
