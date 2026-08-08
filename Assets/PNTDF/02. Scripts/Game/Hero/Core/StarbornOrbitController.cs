@@ -8,6 +8,7 @@ namespace PNTD
     {
         private const string OrbPrefabName = "[PF] Starborn Orb";
         private const int MaxOrbCount = 6;
+        private const float DragRadiusTransitionDuration = 0.15f;
 
         private readonly List<StarbornOrb> _orbs = new();
 
@@ -15,6 +16,8 @@ namespace PNTD
         private StarbornAttackData _data;
         private float _angleOffset;
         private float _radiusCycleTime;
+        private float _radiusScale = 1f;
+        private float _targetRadiusScale = 1f;
         private int _baseOrbCount;
         private int _synergyOrbBonus;
         private float _orbitSpeedMultiplier = 1f;
@@ -38,6 +41,8 @@ namespace PNTD
             _orbitSpeedMultiplier = 1f;
             _angleOffset = 0f;
             _radiusCycleTime = 0f;
+            _radiusScale = 1f;
+            _targetRadiusScale = 1f;
             _canDamage = true;
             _isOrbitPaused = false;
             _isInitialized = _owner != null && _data != null;
@@ -84,6 +89,8 @@ namespace PNTD
             _isInitialized = false;
             _canDamage = true;
             _isOrbitPaused = false;
+            _radiusScale = 1f;
+            _targetRadiusScale = 1f;
             _orbitSpeedMultiplier = 1f;
         }
 
@@ -154,13 +161,18 @@ namespace PNTD
 
         private void Update()
         {
-            if (!_isInitialized || _data == null || _isOrbitPaused)
+            if (!_isInitialized || _data == null)
             {
                 return;
             }
 
-            _angleOffset = Mathf.Repeat(_angleOffset + _data.orbitSpeed * _orbitSpeedMultiplier * Time.deltaTime, 360f);
-            _radiusCycleTime += Time.deltaTime;
+            if (!_isOrbitPaused)
+            {
+                _angleOffset = Mathf.Repeat(_angleOffset + _data.orbitSpeed * _orbitSpeedMultiplier * Time.deltaTime, 360f);
+                _radiusCycleTime += Time.deltaTime;
+            }
+            
+            UpdateRadiusScale(Time.deltaTime);
             UpdateOrbPositions();
         }
 
@@ -188,12 +200,24 @@ namespace PNTD
                 {
                     var ellipseRotationStep = _data.distributeEllipseRotationByOrb ? 180f / orbCount : 0f;
                     var position = GetEllipsePosition(angle, ellipseRotationStep * index);
-                    orb.transform.localPosition = position;
+                    orb.transform.localPosition = position * _radiusScale;
                     continue;
                 }
 
-                orb.SetOrbitPosition(angle, radius);
+                orb.SetOrbitPosition(angle, radius * _radiusScale);
             }
+        }
+        
+        private void UpdateRadiusScale(float deltaTime)
+        {
+            if (Mathf.Approximately(_radiusScale, _targetRadiusScale))
+            {
+                _radiusScale = _targetRadiusScale;
+                return;
+            }
+
+            var transitionDuration = Mathf.Max(0.001f, DragRadiusTransitionDuration);
+            _radiusScale = Mathf.MoveTowards(_radiusScale, _targetRadiusScale, deltaTime / transitionDuration);
         }
 
         private Vector3 GetEllipsePosition(float angle, float orbRotationOffset)
@@ -267,6 +291,7 @@ namespace PNTD
             {
                 _canDamage = false;
                 _isOrbitPaused = true;
+                _targetRadiusScale = 0f;
                 SetOrbCollisions(false);
             }
         }
@@ -277,6 +302,7 @@ namespace PNTD
             {
                 _canDamage = true;
                 _isOrbitPaused = false;
+                _targetRadiusScale = 1f;
                 SetOrbCollisions(true);
             }
         }

@@ -40,7 +40,15 @@ namespace PNTD
 
             hero?.Stat?.AddModifier(this, EHeroStat.PhysicalAttackPower, EHeroStatModifierOperation.Multiply, attackMultiplier);
             hero?.Stat?.AddModifier(this, EHeroStat.MagicAttackPower, EHeroStatModifierOperation.Multiply, attackMultiplier);
-            hero?.Stat?.AddModifier(this, EHeroStat.AttackCooldown, EHeroStatModifierOperation.Multiply, cooldownMultiplier);
+
+            if (hero?.Skill is StarbornSkill starbornSkill)
+            {
+                starbornSkill.SetHexOrbitSpeedMultiplier(1f / cooldownMultiplier);
+            }
+            else
+            {
+                hero?.Stat?.AddModifier(this, EHeroStat.AttackCooldown, EHeroStatModifierOperation.Multiply, cooldownMultiplier);
+            }
         }
 
         public override void Tick(Hero hero, float deltaTime)
@@ -60,6 +68,10 @@ namespace PNTD
         public override void Release(Hero hero)
         {
             hero?.Stat?.RemoveModifiersFrom(this);
+            if (hero?.Skill is StarbornSkill starbornSkill)
+            {
+                starbornSkill.SetHexOrbitSpeedMultiplier(1f);
+            }
         }
     }
 }
