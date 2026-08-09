@@ -88,6 +88,12 @@ namespace PNTD
             _lobbyShopAction.TryLevelUp();
         }
 
+        private void HandleOnChangedShopLock(bool isOn)
+        {
+            _lobbyDomain.ShopSystem.UpdateLock(isOn);
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
+        }
+
         private void HandleOnUpdateShopSynergies(SynergyContext synergyContext)
         {
             _shopPresenter.RefreshSlotsSynergies(synergyContext, _lobbyDomain.PartySystem.HeroContexts);
@@ -178,7 +184,7 @@ namespace PNTD
 
             _shopPresenter.OnClickedSlot += HandleOnClickedShopSlot;
             _shopPresenter.OnClickedReroll += HandleOnClickedShopReroll;
-            _shopPresenter.OnChangedLock += _lobbyDomain.ShopSystem.UpdateLock;
+            _shopPresenter.OnChangedLock += HandleOnChangedShopLock;
             _shopPresenter.OnRequestLevelUp += HandleOnRequestShopLevelUp;
         }
         
@@ -194,7 +200,7 @@ namespace PNTD
 
             _shopPresenter.OnClickedSlot -= HandleOnClickedShopSlot;
             _shopPresenter.OnClickedReroll -= HandleOnClickedShopReroll;
-            _shopPresenter.OnChangedLock -= _lobbyDomain.ShopSystem.UpdateLock;
+            _shopPresenter.OnChangedLock -= HandleOnChangedShopLock;
             _shopPresenter.OnRequestLevelUp -= HandleOnRequestShopLevelUp;
         }
 

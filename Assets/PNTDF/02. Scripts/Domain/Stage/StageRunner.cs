@@ -156,6 +156,7 @@ namespace PNTD
                     break;
                 
                 case StageModel.EStageResult.Over:
+                    PNTDSaveSystem.ResetGameData();
                     yield return resultPresenter.StageOver(_model.ReachedStage);
                     break;
             }

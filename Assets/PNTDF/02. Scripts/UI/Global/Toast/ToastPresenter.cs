@@ -9,6 +9,11 @@ namespace PNTD
 
         public void Show(string toastText, float duration)
         {
+            if (!PNTDSaveSystem.Settings.enableToast)
+            {
+                return;
+            }
+
             toastView.Show(toastText, duration);
         }
     }

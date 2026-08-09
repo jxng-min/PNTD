@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8374110603971846409}
   - component: {fileID: 1293875608114575633}
   - component: {fileID: 7443196289878439134}
+  - component: {fileID: 21941562968141576}
   m_Layer: 0
   m_Name: '[PF] Setting Canvas'
   m_TagString: Untagged
@@ -26,9 +27,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3026028481047578027}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.00925926, y: 0.00925926, z: 0.00925926}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1952544523672719391}
@@ -37,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 960, y: 540}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 1919.9999, y: 1079.9999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8374110603971846409
 Canvas:
@@ -102,6 +103,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &21941562968141576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026028481047578027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab47b1556cb87f4287fca618bd67c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SettingPresenter
+  settingView: {fileID: 8996330937457538499}
 --- !u!1 &3324342556755371842
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952544523672719391}
   - component: {fileID: 8417762690918791819}
+  - component: {fileID: 8996330937457538499}
   m_Layer: 0
   m_Name: Setting View
   m_TagString: Untagged
@@ -233,6 +248,25 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &8996330937457538499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809690690648335428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d55b93d8d277fb499c3f7893d4bfa96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SettingView
+  sfxVolumeButton: {fileID: 393083471354579328}
+  bgmVolumeButton: {fileID: 6104040643263632245}
+  screenShakeButton: {fileID: 887596543943584269}
+  screenMovementButton: {fileID: 3156304705355998667}
+  enableTooltipButton: {fileID: 7759464993847991522}
+  enableToastButton: {fileID: 6639854843667537707}
+  quitGameButton: {fileID: 7445249976990099384}
 --- !u!1001 &355262629011613356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -369,6 +403,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 8025413177044764737}
     - target: {fileID: 8052366470039147351, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -405,6 +443,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8025413177044764737}
     - targetCorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3153867233188455676}
@@ -415,6 +456,41 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6312212684530017077}
   m_SourcePrefab: {fileID: 100100000, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+--- !u!1 &4643778417647492902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 355262629011613356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8025413177044764737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643778417647492902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912f8549375462981c92df39d6821d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SimpleButtonClickAnimator
+  targetImage: {fileID: 5139090407646051874}
+  punchScaleAmount: 0.1
+  punchDuration: 0.5
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightDuration: 0.2
+  yOffset: 10
+  translationDuration: 0.1
+--- !u!114 &5139090407646051874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881781075500161166, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 355262629011613356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6065176226157638285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &6065176226157638285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -475,6 +551,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &7759464993847991522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 355262629011613356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643778417647492902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
 --- !u!224 &7830740964885526332 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -534,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Name
-      value: Enable Toast Button (1)
+      value: Quit Game Button
       objectReference: {fileID: 0}
     - target: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
@@ -616,6 +703,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 8306655982865488306}
     - target: {fileID: 8052366470039147351, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -652,6 +743,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8306655982865488306}
     - targetCorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4053819897456621488}
@@ -662,6 +756,41 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8949027788057730842}
   m_SourcePrefab: {fileID: 100100000, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+--- !u!114 &5452812807928382840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881781075500161166, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 582048875048394230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401350650660948439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &5516906216348492924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 582048875048394230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8306655982865488306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516906216348492924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912f8549375462981c92df39d6821d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SimpleButtonClickAnimator
+  targetImage: {fileID: 5452812807928382840}
+  punchScaleAmount: 0.1
+  punchDuration: 0.5
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightDuration: 0.2
+  yOffset: 10
+  translationDuration: 0.1
 --- !u!1 &6401350650660948439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -727,6 +856,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
   m_PrefabInstance: {fileID: 582048875048394230}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7445249976990099384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 582048875048394230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516906216348492924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
 --- !u!1001 &3703240904889591141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -863,6 +1003,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2045016978514405569}
     - target: {fileID: 8052366470039147351, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -899,6 +1043,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2045016978514405569}
     - targetCorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4323601152983875961}
@@ -914,6 +1061,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
   m_PrefabInstance: {fileID: 3703240904889591141}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6639854843667537707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 3703240904889591141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644847896867871983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
 --- !u!1 &7179156880849350980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -974,6 +1132,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &8132128730107264491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881781075500161166, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 3703240904889591141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179156880849350980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &8644847896867871983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 3703240904889591141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045016978514405569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644847896867871983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912f8549375462981c92df39d6821d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SimpleButtonClickAnimator
+  targetImage: {fileID: 8132128730107264491}
+  punchScaleAmount: 0.1
+  punchDuration: 0.5
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightDuration: 0.2
+  yOffset: 10
+  translationDuration: 0.1
 --- !u!1001 &4320330459336714555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1110,6 +1303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4457393013508785673}
     - target: {fileID: 8052366470039147351, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1146,6 +1343,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4457393013508785673}
     - targetCorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8289248088201303444}
@@ -1161,6 +1361,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
   m_PrefabInstance: {fileID: 4320330459336714555}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6104040643263632245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 4320330459336714555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180802308624404657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
 --- !u!1 &7723978439671217434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -1221,6 +1432,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &8668153489923895733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881781075500161166, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 4320330459336714555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7723978439671217434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &9180802308624404657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 4320330459336714555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4457393013508785673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180802308624404657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912f8549375462981c92df39d6821d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SimpleButtonClickAnimator
+  targetImage: {fileID: 8668153489923895733}
+  punchScaleAmount: 0.1
+  punchDuration: 0.5
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightDuration: 0.2
+  yOffset: 10
+  translationDuration: 0.1
 --- !u!1001 &4939462934716047237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,6 +1603,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2158100705034424081}
     - target: {fileID: 8052366470039147351, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1393,6 +1643,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2158100705034424081}
     - targetCorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8770085846362243603}
@@ -1403,6 +1656,41 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1005159605252770338}
   m_SourcePrefab: {fileID: 100100000, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+--- !u!1 &4602525730809359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 4939462934716047237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2158100705034424081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4602525730809359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912f8549375462981c92df39d6821d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SimpleButtonClickAnimator
+  targetImage: {fileID: 519019359735908107}
+  punchScaleAmount: 0.1
+  punchDuration: 0.5
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightDuration: 0.2
+  yOffset: 10
+  translationDuration: 0.1
+--- !u!114 &519019359735908107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881781075500161166, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 4939462934716047237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461857335797681060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1461857335797681060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -1463,6 +1751,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &3156304705355998667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 4939462934716047237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4602525730809359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
 --- !u!224 &3228583196930723349 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -1604,6 +1903,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1020935402941387989}
     - target: {fileID: 8052366470039147351, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -1640,6 +1943,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1020935402941387989}
     - targetCorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7853900343022322754}
@@ -1655,6 +1961,52 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
   m_PrefabInstance: {fileID: 7138325723643187267}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &887596543943584269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 7138325723643187267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2849736002614684105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
+--- !u!114 &2355381957189191885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881781075500161166, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 7138325723643187267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735064857305236578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &2849736002614684105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 7138325723643187267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020935402941387989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2849736002614684105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912f8549375462981c92df39d6821d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SimpleButtonClickAnimator
+  targetImage: {fileID: 2355381957189191885}
+  punchScaleAmount: 0.1
+  punchDuration: 0.5
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightDuration: 0.2
+  yOffset: 10
+  translationDuration: 0.1
 --- !u!1 &3735064857305236578 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
@@ -1851,6 +2203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4959037453083953406}
     - target: {fileID: 8052366470039147351, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -1887,6 +2243,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4959037453083953406}
     - targetCorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3327313612230510999}
@@ -1902,6 +2261,52 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7512641971168252304, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
   m_PrefabInstance: {fileID: 7653179701338108878}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &393083471354579328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8016703339311282766, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 7653179701338108878}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3362404159793433156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae31a7f3be4f8740b022c8684d9f40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTDF.DynamicButton
+--- !u!114 &2993236127291648832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881781075500161166, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 7653179701338108878}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247033802381895663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &3362404159793433156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4943868991320127882, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}
+  m_PrefabInstance: {fileID: 7653179701338108878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4959037453083953406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3362404159793433156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912f8549375462981c92df39d6821d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SimpleButtonClickAnimator
+  targetImage: {fileID: 2993236127291648832}
+  punchScaleAmount: 0.1
+  punchDuration: 0.5
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightDuration: 0.2
+  yOffset: 10
+  translationDuration: 0.1
 --- !u!1 &4247033802381895663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5820322929861219361, guid: 8bd33804e7e83ac43963471bbce73ebb, type: 3}

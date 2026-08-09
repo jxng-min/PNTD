@@ -40,6 +40,7 @@ namespace PNTD
             }
             
             _lobbyDomain.StatusSystem.UpdateGold(-heroDataTableRow.cost);
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
 
             return true;
         }
@@ -65,6 +66,7 @@ namespace PNTD
             _lobbyDomain.StatusSystem.UpdateGold(-_lobbyDomain.ShopSystem.RerollCost);
 
             contexts = CreateShopSlotContexts();
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
             return true;
         }
 
@@ -87,6 +89,7 @@ namespace PNTD
             _lobbyDomain.StatusSystem.UpdateGold(-_lobbyDomain.ShopSystem.LevelCost);
             
             _lobbyDomain.ShopSystem.UpdateLevel();
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
             return true;
         }
 

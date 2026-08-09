@@ -83,6 +83,8 @@ namespace PNTD
 
         private void Start()
         {
+            PNTDSaveSystem.LoadOrCreate();
+            
             var shopSystem = new ShopSystem();
             var shuffleSystem = new ShuffleSystem(_heroDataTable, _synergyDataTable, _shopRateDataTable);
             var synergySystem = new SynergySystem(_synergyDataTable.FindAll<SynergyDataTableRow>().ToArray());
@@ -107,6 +109,7 @@ namespace PNTD
 
             _model = new LobbyModel(domain, compositor);
             _model.Initialize();
+            PNTDSaveSystem.ApplyGameData(_model.Domain, _heroDataTable);
             
             titlePresenter ??= FindFirstObjectByType<TitlePresenter>(FindObjectsInactive.Include);
             titlePresenter?.Initialize(_model);
