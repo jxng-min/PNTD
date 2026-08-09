@@ -172,6 +172,7 @@ namespace PNTD
             
             _lobbyDomain.ShopSystem.OnRequestShopRoll += HandleOnRequestShopRoll;
             _lobbyDomain.ShopSystem.OnUpdateLevel += _shopPresenter.HandleOnUpdateLevel;
+            _lobbyDomain.ShopSystem.OnUpdateLock += _shopPresenter.HandleOnUpdateLock;
             
             _lobbyDomain.SynergySystem.OnSynergyUpdated += HandleOnUpdateShopSynergies;
 
@@ -187,6 +188,7 @@ namespace PNTD
             
             _lobbyDomain.ShopSystem.OnRequestShopRoll -= HandleOnRequestShopRoll;
             _lobbyDomain.ShopSystem.OnUpdateLevel -= _shopPresenter.HandleOnUpdateLevel;
+            _lobbyDomain.ShopSystem.OnUpdateLock -= _shopPresenter.HandleOnUpdateLock;
             
             _lobbyDomain.SynergySystem.OnSynergyUpdated -= HandleOnUpdateShopSynergies;
 

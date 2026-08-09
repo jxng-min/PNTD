@@ -49,6 +49,7 @@ namespace PNTD
         public void Initialize(ShopSystem shopSystem)
         {
             shopLevelView.Initialize(shopSystem.Level, shopSystem.Exp);
+            HandleOnUpdateLock(shopSystem.IsLock);
         }
         
         public void SetSoldOut(int slotIndex)
@@ -110,6 +111,11 @@ namespace PNTD
         public void HandleOnUpdateLevel(int level, int exp)
         {
             shopLevelView.UpdateLevel(level, exp);
+        }
+
+        public void HandleOnUpdateLock(bool isLock)
+        {
+            lockToggle?.SetIsOn(isLock, false);
         }
 
         public void HandleOnRerollShop(IReadOnlyList<ShopSlotContext> contexts)
