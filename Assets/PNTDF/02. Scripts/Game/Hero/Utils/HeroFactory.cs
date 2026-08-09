@@ -193,6 +193,8 @@ namespace PNTD
                 "Hero_Artillery" => new ArtillerySkill(),
                 "Hero_Sniper" => new SniperSkill(),
                 "Hero_Trickshooter" => new TrickshooterSkill(),
+                "Hero_Raven" => new RavenSkill(),
+                "Hero_Thief" => new ThiefSkill(),
                 "Hero_Magician" => new MagicianSkill(),
                 "Hero_Wizard" => new WizardSkill(),
                 "Hero_Explomancer" => new ExplomancerSkill(),

@@ -159,6 +159,10 @@ namespace PNTD
                 case ESynergyEffect.EnemyGoldDropOnKill:
                     return $"{Mathf.RoundToInt(synergyTierContent.PrimaryValue * 100f)}%";
 
+                case ESynergyEffect.PhysicalAttackPowerMultiplier:
+                case ESynergyEffect.LowHpEnemyDamageMultiplier:
+                    return $"{Mathf.RoundToInt((synergyTierContent.PrimaryValue - 1f) * 100f)}%";
+
                 case ESynergyEffect.OraRangeMultiplier:
                 case ESynergyEffect.OraEffectMultiplier:
                     return $"{synergyTierContent.PrimaryValue:0.#}x";
@@ -196,6 +200,9 @@ namespace PNTD
 
                 case ESynergyEffect.StarbornOrbCountBonus:
                     return $"All Starborn units gain {Mathf.RoundToInt(synergyTierContent.PrimaryValue)} additional orbiting orb";
+
+                case ESynergyEffect.LowHpEnemyDamageMultiplier:
+                    return $"Deals {FormatDisplayValue(synergyTierContent)} more damage to enemies below {Mathf.RoundToInt(synergyTierContent.SecondaryValue * 100f)}% HP";
             }
 
             return FormatDisplayValue(synergyTierContent);

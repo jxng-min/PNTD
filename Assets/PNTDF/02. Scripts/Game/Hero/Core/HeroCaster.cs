@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using JxModule;
+using System.Linq;
 using UnityEngine;
 
 namespace PNTD
@@ -64,6 +65,22 @@ namespace PNTD
             var targets = enemies.GetRange(0, Mathf.Min(count, enemies.Count));
 
             return targets;
+        }
+
+        public List<Enemy> FindLowestCurrentHpTargets(int count)
+        {
+            if (count <= 0)
+            {
+                return new List<Enemy>();
+            }
+
+            var enemies = FindTargetsInRange()
+                .Where(IsValidTarget)
+                .Distinct()
+                .ToList();
+
+            enemies.Sort((a, b) => a.Health.CurrentHp.CompareTo(b.Health.CurrentHp));
+            return enemies.GetRange(0, Mathf.Min(count, enemies.Count));
         }
 
         public List<Enemy> FindTargetsInRange()

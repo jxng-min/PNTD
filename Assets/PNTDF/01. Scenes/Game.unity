@@ -346,6 +346,7 @@ MonoBehaviour:
   seedWarriorParty: 0
   seedMageParty: 0
   seedStarbornParty: 0
+  seedRogueParty: 0
   warriorPartySeeds:
   - heroId: Hero_Swordman
     level: 3
@@ -384,6 +385,15 @@ MonoBehaviour:
     level: 3
   - heroId: Hero_Uranian
     level: 3
+  roguePartySeeds:
+  - heroId: Hero_Raven
+    level: 1
+  - heroId: Hero_Thief
+    level: 1
+  - heroId: Hero_Slayer
+    level: 1
+  - heroId: Hero_Sniper
+    level: 1
 --- !u!114 &216071611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2998,6 +3008,14 @@ MonoBehaviour:
     initialPoolSize: 2
     maxPoolSize: 2
     isExpandable: 0
+  - prefab: {fileID: 6632417212741026415, guid: 419c911caa70af54f92d23ad0a4cec6e, type: 3}
+    initialPoolSize: 3
+    maxPoolSize: 3
+    isExpandable: 0
+  - prefab: {fileID: 2388723393458880942, guid: 461ea59f54579de4c899cd89404230d8, type: 3}
+    initialPoolSize: 3
+    maxPoolSize: 8
+    isExpandable: 1
 --- !u!1001 &908702335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8614,18 +8632,6 @@ PrefabInstance:
     - target: {fileID: 8553046832282050725, guid: ee8751586dac6f4488d246324c67c72f, type: 3}
       propertyPath: m_SizeDelta.y
       value: 1079.9999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553046832282050725, guid: ee8751586dac6f4488d246324c67c72f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.00925926
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553046832282050725, guid: ee8751586dac6f4488d246324c67c72f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.00925926
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553046832282050725, guid: ee8751586dac6f4488d246324c67c72f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.00925926
       objectReference: {fileID: 0}
     - target: {fileID: 8553046832282050725, guid: ee8751586dac6f4488d246324c67c72f, type: 3}
       propertyPath: m_LocalPosition.x

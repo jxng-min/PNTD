@@ -7,6 +7,5 @@ Synergy_StarBorn_Tier2,StarBorn,2,5,1,0,All Starborn units gain <color=#FFCE1B>1
 Synergy_StarBorn_Tier4,StarBorn,4,5,3,0,All Starborn units gain <color=#FFCE1B>3</color> additional orbiting orbs.,TRUE
 Synergy_Warrior_Tier3,Warrior,3,6,1.2,0,Warrior units gain <color=#FFCE1B>20%</color> Physical Attack Power.,TRUE
 Synergy_Warrior_Tier6,Warrior,6,6,1.4,0,Warrior units gain <color=#FFCE1B>40%</color> Physical Attack Power.,TRUE
-,,,,,,,
-,,,,,,,TRUE
-,,,,,,,TRUE
+Synergy_Rogue_Tier2,Rogue,2,7,1.15,0.5,Rogue units deal <color=#FFCE1B>15%</color> more damage to enemies at or below <color=#FFCE1B>50%</color> HP.,TRUE
+Synergy_Rogue_Tier4,Rogue,4,7,1.3,0.5,Rogue units deal <color=#FFCE1B>30%</color> more damage to enemies at or below <color=#FFCE1B>50%</color> HP.,TRUE

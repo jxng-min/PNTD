@@ -2,15 +2,18 @@ rowID,displayName,color,tier,synergy,cost,isEnable
 ,,,,,,
 Hero_Swordman,Swordman,#FFF834,1,Warrior,1,TRUE
 Hero_Barbarian,Barbarian,#FF8A3D,2,Warrior,2,TRUE
-Hero_Slayer,Slayer,#D94B4B,2,Warrior,2,TRUE
-Hero_Guardian,Guardian,#6FA8FF,3,Warrior,3,TRUE
+Hero_Slayer,Slayer,#D94B4B,2,"Warrior, Rogue",2,TRUE
+Hero_Guardian,Guardian,#6FA8FF,2,Warrior,2,TRUE
 Hero_Paladin,Paladin,#FFE680,3,"Warrior, Mage",3,TRUE
+,,,,,,
+Hero_Raven,Raven,#071A4C,1,Rogue,1,TRUE
+Hero_Thief,Thief,#3D2CFF,2,"Rogue,Plunder",2,TRUE
 ,,,,,,
 Hero_Archer,Archer,#81C784,1,Ranger,1,TRUE
 Hero_Handgunner,Handgunner,#66BB6A,2,"Ranger,Plunder",2,TRUE
 Hero_Shotgunner,Shotgunner,#4CAF50,2,Ranger,2,TRUE
 Hero_Artillery,Artillery,#43A047,2,Ranger,2,TRUE
-Hero_Sniper,Sniper,#388E3C,3,Ranger,3,TRUE
+Hero_Sniper,Sniper,#388E3C,3,"Ranger, Rogue",3,TRUE
 Hero_Trickshooter,Trickshooter,#2E7D32,3,Ranger,3,TRUE
 ,,,,,,
 Hero_Magician,Magician,#80DEEA,1,Mage,1,TRUE
@@ -25,7 +28,7 @@ Hero_Martian,Martian,#F5F3EC,1,StarBorn,1,TRUE
 Hero_Venusian,Venusian,#F1EEEC,2,StarBorn,2,TRUE
 Hero_Jovian,Jovian,#EFEADC,2,StarBorn,2,TRUE
 Hero_Saturnian,Saturnian,#ECE4D3,3,StarBorn,3,TRUE
-Hero_Uranian,Uranian,#E8DFCD,3,StarBorn,3,TRUE
+Hero_Uranian,Uranian,#E8DFCD,3,"StarBorn, Mage",3,TRUE
 ,,,,,,
 Hero_Miner,Miner,#FFC54F,1,Plunder,1,TRUE
 Hero_Alchemist,Alchemist,#D98CFF,1,"Cleric, Plunder",1,TRUE

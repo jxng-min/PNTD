@@ -128,6 +128,30 @@ namespace PNTD
 
             _callbackSnapshot.Clear();
         }
+
+        public float ModifyDamageToEnemy(Enemy enemy, float damage)
+        {
+            if (_hero == null || enemy == null || damage <= 0f)
+            {
+                return damage;
+            }
+
+            CreateCallbackSnapshot();
+
+            var modifiedDamage = damage;
+            foreach (HeroEffect effect in _callbackSnapshot)
+            {
+                if (!IsEffectActive(effect))
+                {
+                    continue;
+                }
+
+                modifiedDamage = effect.ModifyDamageToEnemy(_hero, enemy, modifiedDamage);
+            }
+
+            _callbackSnapshot.Clear();
+            return modifiedDamage;
+        }
         
         public void NotifyAffectedEnemy(Enemy enemy)
         {

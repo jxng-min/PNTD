@@ -17,6 +17,8 @@ namespace PNTD
             "[PF] Warrior Space",
             "[PF] Warrior Fan",
             "[PF] Warrior Axe",
+            "[PF] Rogue Crow",
+            "[PF] Rogue Dagger",
         };
 
         public void ReturnStagePooledObjects()

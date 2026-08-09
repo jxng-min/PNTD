@@ -32,6 +32,7 @@ namespace PNTD
         [SerializeField] private bool seedWarriorParty = false;
         [SerializeField] private bool seedMageParty = false;
         [SerializeField] private bool seedStarbornParty = false;
+        [SerializeField] private bool seedRogueParty = false;
         [SerializeField] private List<HeroPartySeed> warriorPartySeeds = new()
         {
             new HeroPartySeed { heroId = "Hero_Swordman", level = 1 },
@@ -66,6 +67,13 @@ namespace PNTD
             new HeroPartySeed { heroId = "Hero_Jovian", level = 1 },
             new HeroPartySeed { heroId = "Hero_Saturnian", level = 1 },
             new HeroPartySeed { heroId = "Hero_Uranian", level = 1 },
+        };
+        [SerializeField] private List<HeroPartySeed> roguePartySeeds = new()
+        {
+            new HeroPartySeed { heroId = "Hero_Raven", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Thief", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Slayer", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Sniper", level = 1 },
         };
 
         private LobbyModel _model;
@@ -176,6 +184,11 @@ namespace PNTD
             {
                 return CreateStarbornParty();
             }
+            
+            if (seedRogueParty)
+            {
+                return CreateRogueParty();
+            }
 
             return seedRangerParty ? CreateRangerParty() : null;
         }
@@ -198,6 +211,11 @@ namespace PNTD
         private IReadOnlyList<HeroContext> CreateStarbornParty()
         {
             return CreateParty(starbornPartySeeds, CreateDefaultStarbornPartySeeds());
+        }
+        
+        private IReadOnlyList<HeroContext> CreateRogueParty()
+        {
+            return CreateParty(roguePartySeeds, CreateDefaultRoguePartySeeds());
         }
         
         private IReadOnlyList<HeroContext> CreateParty(IReadOnlyList<HeroPartySeed> configuredSeeds,
@@ -271,6 +289,17 @@ namespace PNTD
                 new() { heroId = "Hero_Jovian", level = 1 },
                 new() { heroId = "Hero_Saturnian", level = 1 },
                 new() { heroId = "Hero_Uranian", level = 1 },
+            };
+        }
+        
+        private static List<HeroPartySeed> CreateDefaultRoguePartySeeds()
+        {
+            return new List<HeroPartySeed>
+            {
+                new() { heroId = "Hero_Raven", level = 1 },
+                new() { heroId = "Hero_Thief", level = 1 },
+                new() { heroId = "Hero_Slayer", level = 1 },
+                new() { heroId = "Hero_Sniper", level = 1 },
             };
         }
         

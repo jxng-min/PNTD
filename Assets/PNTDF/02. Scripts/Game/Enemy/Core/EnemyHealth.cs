@@ -70,7 +70,15 @@ namespace PNTD
                                                                    damageContext.PercentPenetration);
             
             var damage = ApplyResistance(damageContext.Damage, effectiveResistance);
+            damage = ApplySourceHeroDamageModifiers(damage, damageContext.SourceHero);
             return ApplyJudgedMultiplier(damage, damageContext.SourceHero);
+        }
+
+        private float ApplySourceHeroDamageModifiers(float damage, Hero sourceHero)
+        {
+            return sourceHero != null
+                ? sourceHero.ModifyDamageToEnemy(_status != null ? _status.GetComponent<Enemy>() : null, damage)
+                : damage;
         }
 
         private float ApplyJudgedMultiplier(float damage, Hero sourceHero)
