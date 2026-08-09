@@ -88,6 +88,12 @@ namespace PNTD
             _lobbyShopAction.TryLevelUp();
         }
 
+        private void HandleOnChangedShopLock(bool isOn)
+        {
+            _lobbyDomain.ShopSystem.UpdateLock(isOn);
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
+        }
+
         private void HandleOnUpdateShopSynergies(SynergyContext synergyContext)
         {
             _shopPresenter.RefreshSlotsSynergies(synergyContext, _lobbyDomain.PartySystem.HeroContexts);
@@ -132,6 +138,12 @@ namespace PNTD
 
         private void HandleOnClickedPlay()
         {
+            if (_lobbyDomain.PartySystem.HeroContexts.Count <= 0)
+            {
+                ToastPresenter.Instance.Show("At least one hero is required to play.", 1f);
+                return;
+            }
+            
             GameFlow.Instance.Play();
         }
 
@@ -166,12 +178,13 @@ namespace PNTD
             
             _lobbyDomain.ShopSystem.OnRequestShopRoll += HandleOnRequestShopRoll;
             _lobbyDomain.ShopSystem.OnUpdateLevel += _shopPresenter.HandleOnUpdateLevel;
+            _lobbyDomain.ShopSystem.OnUpdateLock += _shopPresenter.HandleOnUpdateLock;
             
             _lobbyDomain.SynergySystem.OnSynergyUpdated += HandleOnUpdateShopSynergies;
 
             _shopPresenter.OnClickedSlot += HandleOnClickedShopSlot;
             _shopPresenter.OnClickedReroll += HandleOnClickedShopReroll;
-            _shopPresenter.OnChangedLock += _lobbyDomain.ShopSystem.UpdateLock;
+            _shopPresenter.OnChangedLock += HandleOnChangedShopLock;
             _shopPresenter.OnRequestLevelUp += HandleOnRequestShopLevelUp;
         }
         
@@ -181,12 +194,13 @@ namespace PNTD
             
             _lobbyDomain.ShopSystem.OnRequestShopRoll -= HandleOnRequestShopRoll;
             _lobbyDomain.ShopSystem.OnUpdateLevel -= _shopPresenter.HandleOnUpdateLevel;
+            _lobbyDomain.ShopSystem.OnUpdateLock -= _shopPresenter.HandleOnUpdateLock;
             
             _lobbyDomain.SynergySystem.OnSynergyUpdated -= HandleOnUpdateShopSynergies;
 
             _shopPresenter.OnClickedSlot -= HandleOnClickedShopSlot;
             _shopPresenter.OnClickedReroll -= HandleOnClickedShopReroll;
-            _shopPresenter.OnChangedLock -= _lobbyDomain.ShopSystem.UpdateLock;
+            _shopPresenter.OnChangedLock -= HandleOnChangedShopLock;
             _shopPresenter.OnRequestLevelUp -= HandleOnRequestShopLevelUp;
         }
 

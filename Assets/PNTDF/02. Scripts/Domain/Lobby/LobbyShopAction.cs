@@ -23,11 +23,13 @@ namespace PNTD
             var maxHeroCount = _lobbyDomain.StatusSystem.HeroCountLimit;
             if (!canIncreaseHeroExp && currentHeroCount >= maxHeroCount)
             {
+                ToastPresenter.Instance.Show("Your party is already full.", 1f);
                 return false;
             }
 
             if (_lobbyDomain.StatusSystem.Gold < heroDataTableRow.cost)
             {
+                ToastPresenter.Instance.Show("Not enough gold to purchase hero.", 1f);
                 return false;
             }
             
@@ -38,6 +40,7 @@ namespace PNTD
             }
             
             _lobbyDomain.StatusSystem.UpdateGold(-heroDataTableRow.cost);
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
 
             return true;
         }
@@ -48,12 +51,14 @@ namespace PNTD
 
             if (_lobbyDomain.ShopSystem.IsLock)
             {
+                ToastPresenter.Instance.Show("The shop is locked. Unlock it to continue.", 1f);
                 SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
             
             if (_lobbyDomain.StatusSystem.Gold < _lobbyDomain.ShopSystem.RerollCost)
             {
+                ToastPresenter.Instance.Show("Not enough gold to reroll.", 1f);
                 SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
@@ -61,6 +66,7 @@ namespace PNTD
             _lobbyDomain.StatusSystem.UpdateGold(-_lobbyDomain.ShopSystem.RerollCost);
 
             contexts = CreateShopSlotContexts();
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
             return true;
         }
 
@@ -68,12 +74,14 @@ namespace PNTD
         {
             if (_lobbyDomain.ShopSystem.IsMaxLevel)
             {
+                ToastPresenter.Instance.Show("The shop is already at max level.", 1f);
                 SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
             
             if (_lobbyDomain.StatusSystem.Gold < _lobbyDomain.ShopSystem.LevelCost)
             {
+                ToastPresenter.Instance.Show("Not enough gold to upgrade shop.", 1f);
                 SoundManager.Instance.PlaySFX("SFX_Error");
                 return false;
             }
@@ -81,6 +89,7 @@ namespace PNTD
             _lobbyDomain.StatusSystem.UpdateGold(-_lobbyDomain.ShopSystem.LevelCost);
             
             _lobbyDomain.ShopSystem.UpdateLevel();
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
             return true;
         }
 

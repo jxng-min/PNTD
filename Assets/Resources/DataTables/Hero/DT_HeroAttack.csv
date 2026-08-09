@@ -1,8 +1,15 @@
 rowID,physicalAttackPower,magicAttackPower,attackCooldown,attackRange,physicalFlatPenetration,physicalPercentPenetration,magicFlatPenetration,magicPercentPenetration,isEnable
+Hero_Swordman,24,0,2.5,3,2,0,0,0,TRUE
+Hero_Barbarian,28,0,3.5,2.4,3,0,0,0,TRUE
+Hero_Slayer,26,0,2.4,5,4,0,0,0,TRUE
+Hero_Guardian,26,0,1.4,4.5,2,0,0,0,TRUE
+Hero_Paladin,30,0,2.8,5,5,0,0,0,TRUE
+Hero_Raven,30,0,1.8,5.5,2,0,0,0,TRUE
+Hero_Thief,20,0,2.4,4.5,3,0,0,0,TRUE
 Hero_Archer,14,0,1.1,5,2,0,0,0,TRUE
 Hero_Handgunner,12,0,1.45,4.5,4,0,0,0,TRUE
 Hero_Shotgunner,18,0,1.7,3.2,1,0,0,0,TRUE
-Hero_Artillery,30,0,2.6,6,10,0.1,0,0,TRUE
+Hero_Artillery,25,0,3,4,5,0.1,0,0,TRUE
 Hero_Sniper,42,0,3.2,8,18,0.15,0,0,TRUE
 Hero_Trickshooter,5,0,0.18,5.5,5,0,0,0,TRUE
 Hero_Magician,0,14,1.4,5,0,0,2,0,TRUE

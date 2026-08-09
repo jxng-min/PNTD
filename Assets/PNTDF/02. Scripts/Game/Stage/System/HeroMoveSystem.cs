@@ -118,6 +118,7 @@ namespace PNTD
             }
             else
             {
+                ToastPresenter.Instance.Show("You can't place a hero there.", 1f);
                 MoveToCell(hero, _originCellPosition);
                 _boardSystem.TryOccupy(_originCellPosition, hero);
                 hero.NotifyDeployed(_originCellPosition);

@@ -96,6 +96,12 @@ namespace PNTD
                          Vector2 screenPosition,
                          Vector2 tooltipOffset)
         {
+            if (!PNTDSaveSystem.Settings.enableTooltip)
+            {
+                Hide();
+                return;
+            }
+
             if (tooltipContent is not { IsValid: true })
             {
                 return;
@@ -130,6 +136,12 @@ namespace PNTD
 
         public void Refresh(TooltipContent tooltipContent)
         {
+            if (!PNTDSaveSystem.Settings.enableTooltip)
+            {
+                Hide();
+                return;
+            }
+
             if (_currentTooltipView == null)
             {
                 return;

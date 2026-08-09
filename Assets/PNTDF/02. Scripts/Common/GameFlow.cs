@@ -40,6 +40,7 @@ namespace PNTD
             _currentMapContext = null;
             
             _lobbyModel?.Domain.ResetGameState();
+            PNTDSaveSystem.ResetGameData();
             _lobbyModel?.ShowShop(false);
             
             yield break;
@@ -96,6 +97,7 @@ namespace PNTD
             _lobbyModel.Domain.StatusSystem.UpdateGold(_stageRunner.RewardGold + _stageRunner.BonusGold + _stageRunner.Interest);
             _lobbyModel.Domain.StatusSystem.UpdateStage(1);
             _lobbyModel.Domain.ShopSystem.UpdateLevel();
+            PNTDSaveSystem.SaveGameData(_lobbyModel.Domain);
             
             _stageRunner.DisposeStage();
             _mapRunner.UnloadMap();
@@ -114,6 +116,14 @@ namespace PNTD
             }
             
             SoundManager.Instance.PlayBGM("BGM_Main");
+        }
+
+        private void OnApplicationQuit()
+        {
+            if (_lobbyModel?.Domain != null && PNTDSaveSystem.HasGameData)
+            {
+                PNTDSaveSystem.SaveGameData(_lobbyModel.Domain);
+            }
         }
     }
 }

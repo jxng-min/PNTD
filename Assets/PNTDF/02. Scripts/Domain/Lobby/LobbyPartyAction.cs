@@ -31,7 +31,10 @@ namespace PNTD
 
         public void ReorderParty(List<HeroContext> heroContexts)
         {
-            _lobbyDomain.PartySystem.TryReorderParty(heroContexts);
+            if (_lobbyDomain.PartySystem.TryReorderParty(heroContexts))
+            {
+                PNTDSaveSystem.SaveGameData(_lobbyDomain);
+            }
         }
 
         public void SellHero(HeroContext heroContext, int price)
@@ -43,6 +46,7 @@ namespace PNTD
             
             _lobbyDomain.StatusSystem.UpdateGold(price);
             _lobbyDomain.PartySystem.RemoveHeroContext(heroContext);
+            PNTDSaveSystem.SaveGameData(_lobbyDomain);
         }
     }
 }

@@ -21,6 +21,8 @@ namespace PNTD
         private readonly List<AsyncOperationHandle<AudioClip>> _clipHandles = new();
 
         private string _lastBgmKey;
+        private float BgmVolume => PNTDSaveSystem.Settings.BgmVolume;
+        private float SfxVolume => PNTDSaveSystem.Settings.SfxVolume;
         
         public bool IsLoaded { get; private set; }
 
@@ -65,7 +67,7 @@ namespace PNTD
             else
             {
                 _lastBgmKey = soundKey;
-                _bgmSource.volume = 1f;
+                _bgmSource.volume = BgmVolume;
                 _bgmSource.loop = soundDataTableRow.loop;
                 _bgmSource.clip = audioClip;
                 _bgmSource.Play();
@@ -88,6 +90,14 @@ namespace PNTD
                 _bgmSource.Stop();
                 _bgmSource.clip = null;
                 _lastBgmKey = string.Empty;
+            }
+        }
+
+        public void RefreshVolume()
+        {
+            if (_bgmSource != null)
+            {
+                _bgmSource.volume = BgmVolume;
             }
         }
 
@@ -143,7 +153,7 @@ namespace PNTD
             
             sfxSource.Stop();
             sfxSource.clip = null;
-            sfxSource.volume = 1f;
+            sfxSource.volume = SfxVolume;
             sfxSource.pitch = 1f;
             sfxSource.clip = audioClip;
             sfxSource.loop = soundDataTableRow.loop;
@@ -273,17 +283,18 @@ namespace PNTD
         {
             var elapsedTime = 0f;
             var targetTime = 0.3f;
+            var targetVolume = BgmVolume;
 
             while (elapsedTime < targetTime)
             {
                 var delta =  elapsedTime / targetTime;
-                source.volume = isFadeOut ? Mathf.Lerp(1f, 0f, delta) : Mathf.Lerp(0f, 1f, delta);
+                source.volume = isFadeOut ? Mathf.Lerp(targetVolume, 0f, delta) : Mathf.Lerp(0f, targetVolume, delta);
                 
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            source.volume = isFadeOut ? 0f : 1f;
+            source.volume = isFadeOut ? 0f : targetVolume;
             callback?.Invoke();
         }
         

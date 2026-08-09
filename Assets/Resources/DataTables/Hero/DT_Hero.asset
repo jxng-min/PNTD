@@ -57,6 +57,25 @@ MonoBehaviour:
   tier: 0
   synergy: 4
   cost: 0
+--- !u!114 &-5240584739170968351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Barbarian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Barbarian
+  isEnable: 1
+  displayName: Barbarian
+  color: {r: 1, g: 0.5411765, b: 0.23921569, a: 1}
+  tier: 2
+  synergy: 1
+  cost: 2
 --- !u!114 &-5196461661551828572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +190,25 @@ MonoBehaviour:
   tier: 3
   synergy: 4
   cost: 3
+--- !u!114 &-773039339734316923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Thief
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Thief
+  isEnable: 1
+  displayName: Thief
+  color: {r: 0.23921569, g: 0.17254902, b: 1, a: 1}
+  tier: 2
+  synergy: 40
+  cost: 2
 --- !u!114 &-585649596675210853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +228,25 @@ MonoBehaviour:
   tier: 2
   synergy: 2
   cost: 2
+--- !u!114 &-485259001225307637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Slayer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Slayer
+  isEnable: 1
+  displayName: Slayer
+  color: {r: 0.8509804, g: 0.29411766, b: 0.29411766, a: 1}
+  tier: 2
+  synergy: 33
+  cost: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +265,12 @@ MonoBehaviour:
   remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=0
   dataTableRows:
   - {fileID: 717412596325567598}
+  - {fileID: -5240584739170968351}
+  - {fileID: -485259001225307637}
+  - {fileID: 3287388204076594404}
+  - {fileID: 3565478613697842083}
+  - {fileID: 1785069300134640132}
+  - {fileID: -773039339734316923}
   - {fileID: 6201986173345399165}
   - {fileID: -7482934987075978659}
   - {fileID: -4981726269066216892}
@@ -250,6 +313,25 @@ MonoBehaviour:
   color: {r: 1, g: 0.972549, b: 0.20392157, a: 1}
   tier: 1
   synergy: 1
+  cost: 1
+--- !u!114 &1785069300134640132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Raven
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Raven
+  isEnable: 1
+  displayName: Raven
+  color: {r: 0.02745098, g: 0.101960786, b: 0.29803923, a: 1}
+  tier: 1
+  synergy: 32
   cost: 1
 --- !u!114 &2573819167478548389
 MonoBehaviour:
@@ -308,6 +390,44 @@ MonoBehaviour:
   tier: 2
   synergy: 4
   cost: 2
+--- !u!114 &3287388204076594404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Guardian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Guardian
+  isEnable: 1
+  displayName: Guardian
+  color: {r: 0.43529412, g: 0.65882355, b: 1, a: 1}
+  tier: 2
+  synergy: 1
+  cost: 2
+--- !u!114 &3565478613697842083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff710478533b47fda12447419431f7b8, type: 3}
+  m_Name: Hero_Paladin
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HeroDataTableRow
+  rowID: Hero_Paladin
+  isEnable: 1
+  displayName: Paladin
+  color: {r: 1, g: 0.9019608, b: 0.5019608, a: 1}
+  tier: 3
+  synergy: 5
+  cost: 3
 --- !u!114 &4071502479712666693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +464,7 @@ MonoBehaviour:
   displayName: Sniper
   color: {r: 0.21960784, g: 0.5568628, b: 0.23529412, a: 1}
   tier: 3
-  synergy: 2
+  synergy: 34
   cost: 3
 --- !u!114 &6201986173345399165
 MonoBehaviour:
@@ -458,7 +578,7 @@ MonoBehaviour:
   displayName: Uranian
   color: {r: 0.9098039, g: 0.8745098, b: 0.8039216, a: 1}
   tier: 3
-  synergy: 64
+  synergy: 68
   cost: 3
 --- !u!114 &9031383864300409721
 MonoBehaviour:

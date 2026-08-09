@@ -75,6 +75,32 @@ MonoBehaviour:
   additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Piercing Rounds</color></b>'
   additionalTagText: 
   additionalBodyText: Machine-gun rounds pierce enemies.
+--- !u!114 &-8510275720608439371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Swordman
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Swordman
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Creates a square sword space at
+
+    the nearest enemy''s position and
+    deals Physical Damage.'
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Sharpened Space</color></b>'
+  additionalTagText: 
+  additionalBodyText: Increases sword space damage to <color=#FFCE1B>120%</color>
+    Physical Attack Power.
 --- !u!114 &-8263025100752364036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +283,31 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &-5566823944632450838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Barbarian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Barbarian
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Spins a fan around itself.
+
+    The fan deals Physical Damage once per
+    enemy each revolution.'
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Triple Rampage</color></b>'
+  additionalTagText: 
+  additionalBodyText: Increases the fan's revolutions to <color=#FFCE1B>3</color>.
 --- !u!114 &-5158205149220873337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +358,29 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &-4580678646608646032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Paladin
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Paladin
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Creates sword spaces along the movement direction of the nearest enemy.
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Divine Formation</color></b>'
+  additionalTagText: 
+  additionalBodyText: Increases sword spaces per target from <color=#FFCE1B>3</color>
+    to <color=#FFCE1B>6</color>.
 --- !u!114 &-4435428819657568924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +460,29 @@ MonoBehaviour:
   additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Suppression Module</color></b>'
   additionalTagText: 
   additionalBodyText: The magitech robot's attacks slow enemies by <color=#FFCE1B>30%</color>.
+--- !u!114 &-4083686760042709217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Slayer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Slayer
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Throws an axe toward the nearest enemy damaging enemies along its path.
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Returning Axe</color></b>'
+  additionalTagText: 
+  additionalBodyText: The axe returns after reaching max range and can damage enemies
+    again.
 --- !u!114 &-3660997445292384664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +504,29 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &-3607246226519487355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Guardian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Guardian
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires bullets in the four cardinal directions.
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Defensive Barrage</color></b>'
+  additionalTagText: 
+  additionalBodyText: Fires <color=#FFCE1B>3</color> consecutive bullets in each
+    direction.
 --- !u!114 &-3580987167551410345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +599,29 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &-3190765810869832360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Paladin
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Paladin
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>3</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Creates sword spaces along the movement direction of the nearest enemy.
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Divine Formation</color></b>'
+  additionalTagText: 
+  additionalBodyText: Increases sword spaces per target from <color=#FFCE1B>3</color>
+    to <color=#FFCE1B>6</color>.
 --- !u!114 &-3078851126290405302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +702,56 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &-2599323834062129005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Warrior
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Warrior
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Warriors gain {valueText} Physical Attack Power.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &-2544060228423199771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Raven
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Raven
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>1</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Sends a raven toward the enemy with the lowest current HP
+
+    and deals
+    Physical Damage on arrival.'
+  additionalHeaderText: Lv.2 / Lv.3
+  additionalTagText: 
+  additionalBodyText: 'Lv.2: Increases raven damage by <color=#FFCE1B>20%</color>.
+
+    Lv.3:
+    Sends ravens toward up to <color=#FFCE1B>3</color> enemies with the lowest current
+    HP.'
 --- !u!114 &-2457573134851214251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,7 +846,7 @@ MonoBehaviour:
   isEnable: 1
   layout: 5
   headerText: Shop - <color=#FFCE1B>Lv.{level}</color>
-  tagText: 
+  tagText: '{levelUpCostText}'
   bodyText: 'Tier 1 : <color=#FFCE1B>{tier1}%
 
     </color>Tier 2 : <color=#FFCE1B>{tier2}%</color>
@@ -691,6 +884,35 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &-763806722385437306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Raven
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Raven
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Sends a raven toward the enemy with the lowest current HP
+
+    and deals
+    Physical Damage on arrival.'
+  additionalHeaderText: Lv.2 / Lv.3
+  additionalTagText: 
+  additionalBodyText: 'Lv.2: Increases raven damage by <color=#FFCE1B>20%</color>.
+
+    Lv.3:
+    Sends ravens toward up to <color=#FFCE1B>3</color> enemies with the lowest current
+    HP.'
 --- !u!114 &-290775157014858661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,11 +1029,21 @@ MonoBehaviour:
   dataTableRows:
   - {fileID: -1121979812204883633}
   - {fileID: 928073452166325240}
+  - {fileID: 816561294480232232}
+  - {fileID: -2599323834062129005}
   - {fileID: -3660997445292384664}
   - {fileID: -3580987167551410345}
   - {fileID: 774613932428472910}
   - {fileID: 2973448569199304935}
   - {fileID: 8534492456864804181}
+  - {fileID: 298968930281101870}
+  - {fileID: 6429576674540616460}
+  - {fileID: 3254237362245064009}
+  - {fileID: 8442467773938428290}
+  - {fileID: 4707877442886851368}
+  - {fileID: -4580678646608646032}
+  - {fileID: -763806722385437306}
+  - {fileID: 6752527083861080803}
   - {fileID: -116728777385230161}
   - {fileID: -6884369581741663124}
   - {fileID: 3611242458745414179}
@@ -834,6 +1066,13 @@ MonoBehaviour:
   - {fileID: 2226383079057414324}
   - {fileID: -5729762062693684636}
   - {fileID: 4332845355646647889}
+  - {fileID: -8510275720608439371}
+  - {fileID: -5566823944632450838}
+  - {fileID: -4083686760042709217}
+  - {fileID: -3607246226519487355}
+  - {fileID: -3190765810869832360}
+  - {fileID: -2544060228423199771}
+  - {fileID: 1561989150229908932}
   - {fileID: 3698730121541648144}
   - {fileID: -7088913061269769240}
   - {fileID: 1640470927012095785}
@@ -857,6 +1096,28 @@ MonoBehaviour:
   - {fileID: -5137200904876929411}
   - {fileID: -4364496745110579619}
   dataTableRowScript: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+--- !u!114 &298968930281101870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: Synergy_Rogue
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: Synergy_Rogue
+  isEnable: 1
+  layout: 2
+  headerText: '{synergyName} - owned: {synergyCount}'
+  tagText: 
+  bodyText: '{thresholdText} - Rogues deal {valueText} more damage to enemies at
+    or below <color=#FFCE1B>50%</color> HP.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
 --- !u!114 &774613932428472910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,6 +1137,27 @@ MonoBehaviour:
   tagText: 
   bodyText: '{thresholdText} - Defeated enemies have a {valueText} chance to drop
     gold.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &816561294480232232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PaletteSlot
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PaletteSlot
+  isEnable: 1
+  layout: 4
+  headerText: '{heroName}'
+  tagText: '{combatState}'
+  bodyText: 
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
@@ -939,6 +1221,33 @@ MonoBehaviour:
   additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Suppression Module</color></b>'
   additionalTagText: 
   additionalBodyText: The magitech robot's attacks slow enemies by <color=#FFCE1B>30%</color>.
+--- !u!114 &1561989150229908932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PartySlot_Thief
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PartySlot_Thief
+  isEnable: 1
+  layout: 3
+  headerText: '{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>, tier <color=#FFCE1B>2</color>,
+    {mode} - for <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Throws <color=#FFCE1B>3</color> returning daggers in a spread.
+
+    Daggers
+    damage enemies while traveling and returning and apply Bleed for <color=#FFCE1B>2</color>
+    seconds.'
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Circle of Knives</color></b>'
+  additionalTagText: 
+  additionalBodyText: Throws <color=#FFCE1B>8</color> daggers in a full <color=#FFCE1B>360</color>
+    degree circle.
 --- !u!114 &1640470927012095785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,6 +1417,31 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &3254237362245064009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Barbarian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Barbarian
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Spins a fan around itself.
+
+    The fan deals Physical Damage once per
+    enemy each revolution.'
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Triple Rampage</color></b>'
+  additionalTagText: 
+  additionalBodyText: Increases the fan's revolutions to <color=#FFCE1B>3</color>.
 --- !u!114 &3342089571823679747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1209,6 +1543,29 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &4707877442886851368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Guardian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Guardian
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Fires bullets in the four cardinal directions.
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Defensive Barrage</color></b>'
+  additionalTagText: 
+  additionalBodyText: Fires <color=#FFCE1B>3</color> consecutive bullets in each
+    direction.
 --- !u!114 &6179258527769203022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1592,32 @@ MonoBehaviour:
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 
+--- !u!114 &6429576674540616460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Swordman
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Swordman
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Creates a square sword space at
+
+    the nearest enemy''s position and
+    deals Physical Damage.'
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Sharpened Space</color></b>'
+  additionalTagText: 
+  additionalBodyText: Increases sword space damage to <color=#FFCE1B>120%</color>
+    Physical Attack Power.
 --- !u!114 &6674140233515228183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,6 +1670,56 @@ MonoBehaviour:
   additionalTagText: 
   additionalBodyText: Increases the number of magic circles from <color=#FFCE1B>3</color>
     to <color=#FFCE1B>8</color>.
+--- !u!114 &6752527083861080803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Thief
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Thief
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: 'Throws <color=#FFCE1B>3</color> returning daggers in a spread.
+
+    Daggers
+    damage enemies while traveling and returning and apply Bleed for <color=#FFCE1B>2</color>
+    seconds.'
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Circle of Knives</color></b>'
+  additionalTagText: 
+  additionalBodyText: Throws <color=#FFCE1B>8</color> daggers in a full <color=#FFCE1B>360</color>
+    degree circle.
+--- !u!114 &8442467773938428290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: ShopSlot_Slayer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: ShopSlot_Slayer
+  isEnable: 1
+  layout: 1
+  headerText: '{heroName} - tier <color=#FFCE1B>{heroTier}</color>, {mode} - for
+    <color=#FFCE1B>{deployCost}</color>'
+  tagText: 'Classes : {heroSynergies}'
+  bodyText: Throws an axe toward the nearest enemy damaging enemies along its path.
+  additionalHeaderText: 'Lv.3: <b><color=#FFCE1B>Returning Axe</color></b>'
+  additionalTagText: 
+  additionalBodyText: The axe returns after reaching max range and can damage enemies
+    again.
 --- !u!114 &8534492456864804181
 MonoBehaviour:
   m_ObjectHideFlags: 0

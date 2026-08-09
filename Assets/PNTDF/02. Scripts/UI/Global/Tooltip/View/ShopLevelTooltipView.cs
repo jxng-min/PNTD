@@ -9,6 +9,7 @@ namespace PNTD
         [Space(30f)]
         [BigHeader("Lines")]
         [SerializeField] private TMP_Text headerLabel;
+        [SerializeField] private TMP_Text tagLabel;
         [SerializeField] private TMP_Text bodyLabel;
 
         protected override void Bind(TooltipDataTableRow tooltipDataTableRow, TooltipContent tooltipContent)
@@ -20,6 +21,7 @@ namespace PNTD
             }
 
             BindLabel(headerLabel, tooltipDataTableRow.headerText, tooltipContent);
+            BindLabel(tagLabel, tooltipDataTableRow.tagText, tooltipContent);
             BindLabel(bodyLabel, tooltipDataTableRow.bodyText, tooltipContent);
         }
 
@@ -38,6 +40,7 @@ namespace PNTD
         private void Clear()
         {
             ClearLabel(headerLabel);
+            ClearLabel(tagLabel);
             ClearLabel(bodyLabel);
         }
 

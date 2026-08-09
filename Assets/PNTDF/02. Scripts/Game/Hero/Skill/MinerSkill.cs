@@ -22,7 +22,7 @@ namespace PNTD
             }
 
             IncreaseMiningProgress(hero);
-            FireBullets(hero, direction);
+            yield return FireBullets(hero, direction);
         }
 
         public override void Release(Hero hero)

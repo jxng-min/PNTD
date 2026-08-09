@@ -7,12 +7,18 @@ namespace PNTD
     {
         private static readonly string[] StagePoolPrefabNames =
         {
+            "[PF] Enemy",
             "[PF] Ranger Bullet",
             "[PF] Mage Sphere",
             "[PF] Mage Circle",
             "[PF] Starborn Orb",
             "[PF] Cleric Sancutuary",
             "[PF] Gold",
+            "[PF] Warrior Space",
+            "[PF] Warrior Fan",
+            "[PF] Warrior Axe",
+            "[PF] Rogue Crow",
+            "[PF] Rogue Dagger",
         };
 
         public void ReturnStagePooledObjects()

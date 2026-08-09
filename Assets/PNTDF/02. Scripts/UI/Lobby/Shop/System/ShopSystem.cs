@@ -11,6 +11,7 @@ namespace PNTD
         private const int MaxExp = 7;
 
         public event Action<int, int> OnUpdateLevel;
+        public event Action<bool> OnUpdateLock;
         public event Action OnRequestShopRoll;
         
         public int Level { get; private set; } = InitialLevel;
@@ -33,12 +34,24 @@ namespace PNTD
             IsLock = false;
             
             OnUpdateLevel?.Invoke(Level, Exp);
+            OnUpdateLock?.Invoke(IsLock);
             Roll();
+        }
+
+        public void SetState(int level, int exp, bool isLock)
+        {
+            Level = Math.Clamp(level, InitialLevel, MaxLevel);
+            Exp = Level >= MaxLevel ? 0 : Math.Clamp(exp, InitialExp, MaxExp - 1);
+            IsLock = isLock;
+
+            OnUpdateLevel?.Invoke(Level, Exp);
+            OnUpdateLock?.Invoke(IsLock);
         }
 
         public void UpdateLock(bool isOn)
         {
             IsLock = isOn;
+            OnUpdateLock?.Invoke(IsLock);
         }
 
         public void UpdateLevel()

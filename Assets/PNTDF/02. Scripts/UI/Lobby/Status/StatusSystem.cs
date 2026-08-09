@@ -38,6 +38,14 @@ namespace PNTD
             Initialize();
         }
 
+        public void SetState(int stage, int gold)
+        {
+            _currentStage = Mathf.Max(InitialStage, stage);
+            _currentGold = Mathf.Clamp(gold, 0, int.MaxValue);
+            
+            Initialize();
+        }
+
         public void UpdateGold(int amount)
         {
             _currentGold += amount;
@@ -54,6 +62,7 @@ namespace PNTD
         public void UpdateHeroCountLimit(int amount)
         {
             _heroCountLimit += amount;
+            _heroCountLimit = Mathf.Clamp(_heroCountLimit, 0, 10);
             OnUpdateHeroCountLimit?.Invoke(_heroCountLimit);
         }
     }

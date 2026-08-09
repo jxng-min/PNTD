@@ -156,6 +156,7 @@ namespace PNTD
                     break;
                 
                 case StageModel.EStageResult.Over:
+                    PNTDSaveSystem.ResetGameData();
                     yield return resultPresenter.StageOver(_model.ReachedStage);
                     break;
             }
@@ -174,6 +175,7 @@ namespace PNTD
         public void DisposeStage()
         {
             _model?.Hide();
+            _model?.ReturnStagePooledObjects();
             DisposeModel();
         }
 

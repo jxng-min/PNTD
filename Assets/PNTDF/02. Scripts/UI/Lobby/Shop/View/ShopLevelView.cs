@@ -11,6 +11,7 @@ namespace PNTD
     public class ShopLevelView : ViewBase, ITooltipProvider
     {
         private const string TooltipId = "ShopLevel";
+        private const int MaxLevel = 5;
 
         [BigHeader("UI")]
         [SerializeField] private JxButton levelUpButton;
@@ -60,6 +61,8 @@ namespace PNTD
                 new Dictionary<string, object>
                 {
                     { "level", shopRateDataTableRow.level },
+                    { "cost", _level + 1 },
+                    { "levelUpCostText", GetLevelUpCostText() },
                     { "tier1", shopRateDataTableRow.tier1 },
                     { "tier2", shopRateDataTableRow.tier2 },
                     { "tier3", shopRateDataTableRow.tier3 },
@@ -82,6 +85,16 @@ namespace PNTD
         private ShopRateDataTableRow GetShopRateDataTableRow()
         {
             return DataTableManager.FindRow<ShopRateDataTableRow>(row => row.level == _level);
+        }
+
+        private string GetLevelUpCostText()
+        {
+            if (_level >= MaxLevel)
+            {
+                return "<color=green>Already at max level.</color>";
+            }
+
+            return $"Gold Required to Level Up: <color=#FFCE1B>{_level + 1}</color>";
         }
 
         private void OnDestroy()

@@ -18,7 +18,27 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/HandShot1.ogg
   - Sound/SFX/HandShot2.ogg
-  channelCount: 20
+  channelCount: 30
+  loop: 0
+--- !u!114 &-9086356805307504410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Thief
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Thief
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Thief1.ogg
+  - Sound/SFX/Thief2.ogg
+  channelCount: 8
   loop: 0
 --- !u!114 &-8945067539999322933
 MonoBehaviour:
@@ -38,6 +58,26 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/Enrager.ogg
   channelCount: 5
+  loop: 0
+--- !u!114 &-8642211051374668530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Paladin
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Paladin
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Paladin1.ogg
+  - Sound/SFX/Paladin2.ogg
+  channelCount: 8
   loop: 0
 --- !u!114 &-8295711869260757722
 MonoBehaviour:
@@ -154,7 +194,7 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/Archer1.ogg
   - Sound/SFX/Archer2.ogg
-  channelCount: 5
+  channelCount: 12
   loop: 0
 --- !u!114 &-6258485078878673946
 MonoBehaviour:
@@ -212,6 +252,25 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/Summoner.ogg
   channelCount: 20
+  loop: 0
+--- !u!114 &-4430608136080087334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Swordman
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Swordman
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Swordman.ogg
+  channelCount: 3
   loop: 0
 --- !u!114 &-4127897061488573943
 MonoBehaviour:
@@ -396,7 +455,32 @@ MonoBehaviour:
   - {fileID: -4127897061488573943}
   - {fileID: -4102424827457243605}
   - {fileID: -4619671150428738468}
+  - {fileID: -4430608136080087334}
+  - {fileID: 8575824210603995562}
+  - {fileID: 6761233218041451416}
+  - {fileID: -8642211051374668530}
+  - {fileID: -9086356805307504410}
+  - {fileID: 692877567781612561}
   dataTableRowScript: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+--- !u!114 &692877567781612561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Raven
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Raven
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Raven.ogg
+  channelCount: 4
+  loop: 0
 --- !u!114 &930787276151017340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,6 +617,25 @@ MonoBehaviour:
   - Sound/SFX/Trickshooter.ogg
   channelCount: 30
   loop: 0
+--- !u!114 &6761233218041451416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Barbarian
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Barbarian
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Barbarian.ogg
+  channelCount: 5
+  loop: 0
 --- !u!114 &6820454847338146393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,6 +713,25 @@ MonoBehaviour:
   type: 1
   soundAddresses:
   - Sound/SFX/Sniper.ogg
+  channelCount: 12
+  loop: 0
+--- !u!114 &8575824210603995562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2804900061d4c218ebe7a2425effd15, type: 3}
+  m_Name: SFX_Slayer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SoundDataTableRow
+  rowID: SFX_Slayer
+  isEnable: 1
+  type: 1
+  soundAddresses:
+  - Sound/SFX/Slayer.ogg
   channelCount: 5
   loop: 0
 --- !u!114 &8888348209649068494
@@ -630,7 +752,7 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/Artillery1.ogg
   - Sound/SFX/Artillery2.ogg
-  channelCount: 5
+  channelCount: 12
   loop: 0
 --- !u!114 &9051256569126879243
 MonoBehaviour:

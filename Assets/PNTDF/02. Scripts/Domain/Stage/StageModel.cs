@@ -84,6 +84,11 @@ namespace PNTD
             Domain.WaveSystem.Dispose();
         }
 
+        public void ReturnStagePooledObjects()
+        {
+            Domain.StagePooledObjectCleaner?.ReturnStagePooledObjects();
+        }
+
         public void Show()
         {
             Domain.VisibilitySystem.Show();

@@ -97,6 +97,13 @@ namespace PNTD
             Effector?.Clear();
         }
 
+        public float ModifyDamageToEnemy(Enemy enemy, float damage)
+        {
+            return Effector != null
+                ? Effector.ModifyDamageToEnemy(enemy, damage)
+                : damage;
+        }
+
         public bool TryDamagedToEnemy(Enemy enemy, 
                                       DamageContext damageContext, 
                                       bool triggerOnHitEffect = true)

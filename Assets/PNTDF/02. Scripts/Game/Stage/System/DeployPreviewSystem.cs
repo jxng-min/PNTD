@@ -93,10 +93,18 @@ namespace PNTD
                 return;
             }
 
-            if (Input.GetMouseButtonDown(0) && _canDeploy)
+            if (!Input.GetMouseButtonDown(0))
+            {
+                return;
+            }
+
+            if (_canDeploy)
             {
                 _deploySystem.RequestTryDeploy(_currentCellPosition);
+                return;
             }
+
+            ToastPresenter.Instance.Show("You can't place a hero there.", 1f);
         }
 
         private Vector3 GetMouseWorldPosition()
