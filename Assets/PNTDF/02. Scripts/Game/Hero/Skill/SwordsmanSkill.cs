@@ -16,6 +16,7 @@ namespace PNTD
             }
 
             SpawnSpace(target.transform.position, SpaceSize, hero, GetDamageMultiplier(hero));
+            SoundManager.Instance.PlaySFX("SFX_Swordman");
         }
 
         private static float GetDamageMultiplier(Hero hero)

@@ -817,7 +817,7 @@ MonoBehaviour:
   isEnable: 1
   layout: 5
   headerText: Shop - <color=#FFCE1B>Lv.{level}</color>
-  tagText: 
+  tagText: '{levelUpCostText}'
   bodyText: 'Tier 1 : <color=#FFCE1B>{tier1}%
 
     </color>Tier 2 : <color=#FFCE1B>{tier2}%</color>
@@ -971,6 +971,7 @@ MonoBehaviour:
   dataTableRows:
   - {fileID: -1121979812204883633}
   - {fileID: 928073452166325240}
+  - {fileID: 816561294480232232}
   - {fileID: -2599323834062129005}
   - {fileID: -3660997445292384664}
   - {fileID: -3580987167551410345}
@@ -1051,6 +1052,27 @@ MonoBehaviour:
   tagText: 
   bodyText: '{thresholdText} - Defeated enemies have a {valueText} chance to drop
     gold.'
+  additionalHeaderText: 
+  additionalTagText: 
+  additionalBodyText: 
+--- !u!114 &816561294480232232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9605cada34b2b82f96efa5d5317ff, type: 3}
+  m_Name: PaletteSlot
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.TooltipDataTableRow
+  rowID: PaletteSlot
+  isEnable: 1
+  layout: 4
+  headerText: '{heroName}'
+  tagText: '{combatState}'
+  bodyText: 
   additionalHeaderText: 
   additionalTagText: 
   additionalBodyText: 

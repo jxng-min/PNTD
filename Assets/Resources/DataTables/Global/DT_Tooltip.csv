@@ -1,7 +1,9 @@
 rowID,layout,headerText,tagText,bodyText,additionalHeaderText,additionalTagText,additionalBodyText,isEnable
-ShopLevel,ShopLevel,Shop - <color=#FFCE1B>Lv.{level}</color>,,Tier 1 : <color=#FFCE1B>{tier1}%\n</color>Tier 2 : <color=#FFCE1B>{tier2}%</color>\nTier 3 : <color=#FFCE1B>{tier3}%</color>,,,,TRUE
+ShopLevel,ShopLevel,Shop - <color=#FFCE1B>Lv.{level}</color>,{levelUpCostText},Tier 1 : <color=#FFCE1B>{tier1}%\n</color>Tier 2 : <color=#FFCE1B>{tier2}%</color>\nTier 3 : <color=#FFCE1B>{tier3}%</color>,,,,TRUE
 ,,,,,,,,
 Hero,Hero,{heroName} - <color=#FFCE1B>Lv.{heroLevel}</color>,Classes : {heroSynergies},{physicalAttackIcon} : <color=#FFCE1B>{finalPhysicalAttackPower}</color>\n{magicAttackIcon} : <color=#FFCE1B>{finalMagicAttackPower}</color>\n{cooldownIcon} : <color=#FFCE1B>{finalAttackCooldown}</color>\n{rangeIcon} : <color=#FFCE1B>{finalAttackRange}</color>\n{physicalPenetrationIcon} : <color=#FFCE1B>{finalFlatPhysicalPenetration}</color> / <color=#FFCE1B>{finalPercentPhysicalPenetration}</color>\n{magicPenetrationIcon} : <color=#FFCE1B>{finalFlatMagicPenetration}</color> / <color=#FFCE1B>{finalPercentMagicPenetration}</color>,,,,TRUE
+,,,,,,,,
+PaletteSlot,PaletteSlot,{heroName},{combatState},,,,,TRUE
 ,,,,,,,,
 Synergy_Warrior,SynergySlot,{synergyName} - owned: {synergyCount},,{thresholdText} - Warriors gain {valueText} Physical Attack Power.,,,,TRUE
 Synergy_Ranger,SynergySlot,{synergyName} - owned: {synergyCount},,{thresholdText} - Reduces Rangers' attack cooldown by {valueText}.,,,,TRUE

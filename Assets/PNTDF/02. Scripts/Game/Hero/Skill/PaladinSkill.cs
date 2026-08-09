@@ -52,6 +52,7 @@ namespace PNTD
             {
                 var position = startPosition + direction * (SpaceInterval * index);
                 SpawnSpace(position, SpaceSize, hero, DamageMultiplier);
+                SoundManager.Instance.PlaySFX("SFX_Paladin");
 
                 if (index + 1 < spaceCount)
                 {

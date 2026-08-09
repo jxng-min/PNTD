@@ -16,6 +16,7 @@ namespace PNTD
             }
 
             SpawnFan(hero, DamageMultiplier, OrbitRadius, DegreesPerSecond, GetRevolutionCount(hero));
+            SoundManager.Instance.PlaySFX("SFX_Barbarian");
         }
 
         private static int GetRevolutionCount(Hero hero)

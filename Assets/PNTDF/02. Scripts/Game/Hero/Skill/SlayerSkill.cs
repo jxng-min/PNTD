@@ -37,6 +37,8 @@ namespace PNTD
                      hero.Stat.FinalAttackRange,
                      HitRadius,
                      hero.Level >= 3);
+            
+            SoundManager.Instance.PlaySFX("SFX_Slayer");
         }
     }
 }

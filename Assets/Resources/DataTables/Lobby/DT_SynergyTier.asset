@@ -126,7 +126,7 @@ MonoBehaviour:
   synergy: 8
   threshold: 2
   effect: 2
-  primaryValue: 0.2
+  primaryValue: 0.125
   secondaryValue: 0
   tierDescription: 'Whenever an allied unit defeats an enemy, there is a <color=#FFCE1B>20%</color>
     chance
@@ -174,7 +174,7 @@ MonoBehaviour:
   synergy: 8
   threshold: 4
   effect: 2
-  primaryValue: 0.4
+  primaryValue: 0.25
   secondaryValue: 0
   tierDescription: 'Whenever an allied unit defeats an enemy, there is a <color=#FFCE1B>40%</color>
     chance

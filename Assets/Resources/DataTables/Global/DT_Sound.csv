@@ -30,3 +30,7 @@ SFX_Enrager,SFX,Sound/SFX/Enrager.ogg,5,FALSE,TRUE
 SFX_Deploy,SFX,Sound/SFX/Deploy.ogg,5,FALSE,TRUE
 SFX_Hexer,SFX,Sound/SFX/Hexer.ogg,5,FALSE,TRUE
 SFX_Summoner,SFX,Sound/SFX/Summoner.ogg,20,FALSE,TRUE
+SFX_Swordman,SFX,Sound/SFX/Swordman.ogg,3,FALSE,TRUE
+SFX_Slayer,SFX,Sound/SFX/Slayer.ogg,5,FALSE,TRUE
+SFX_Barbarian,SFX,Sound/SFX/Barbarian.ogg,5,FALSE,TRUE
+SFX_Paladin,SFX,Sound/SFX/Paladin1.ogg|Sound/SFX/Paladin2.ogg,8,FALSE,TRUE

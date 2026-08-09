@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using JxModule;
 using UnityEngine;
@@ -7,8 +8,12 @@ using UnityEngine.UI;
 
 namespace PNTD
 {
-    public class PaletteSlotView : ViewBase
+    public class PaletteSlotView : ViewBase, ITooltipProvider
     {
+        private const string TooltipId = "PaletteSlot";
+        private const string InCombatText = "<color=#FF4040>In Combat</color>";
+        private const string OutOfCombatText = "<color=#40FF40>Out of Combat</color>";
+
         [BigHeader("UI")]
         [SerializeField] private Image hoverImage;
         [SerializeField] private Image heroImage;
@@ -27,6 +32,7 @@ namespace PNTD
         private Tween _clickTween;
 
         public event Action<int> OnClickedSlot;
+        public bool CanShowTooltip => _heroContext?.HeroDataTableRow != null;
 
         private void Awake()
         {
@@ -35,7 +41,7 @@ namespace PNTD
         
         public void Initialize(int slotIndex, HeroContext heroContext)
         {
-            if(heroContext == null || heroContext.HeroDataTableRow == null)
+            if (heroContext == null || heroContext.HeroDataTableRow == null)
             {
                 return;
             }
@@ -49,17 +55,17 @@ namespace PNTD
         
         public void UpdateState(string heroId, bool isUsing)
         {
-            if(!gameObject.activeInHierarchy)
+            if (!gameObject.activeInHierarchy)
             {
                 return;
             }
             
-            if(_heroContext == null || _heroContext.HeroDataTableRow == null)
+            if (_heroContext == null || _heroContext.HeroDataTableRow == null)
             {
                 return;
             }
             
-            if(heroId != _heroContext.HeroDataTableRow.rowID)
+            if (heroId != _heroContext.HeroDataTableRow.rowID)
             {
                 return;
             }
@@ -69,7 +75,7 @@ namespace PNTD
         
         public void UpdateState(bool isUsing)
         {
-            if(!gameObject.activeInHierarchy)
+            if (!gameObject.activeInHierarchy)
             {
                 return;
             }
@@ -114,6 +120,25 @@ namespace PNTD
             }
             
             OnClickedSlot?.Invoke(_slotIndex);
+        }
+
+        public TooltipContent GetTooltipContent()
+        {
+            if (_heroContext?.HeroDataTableRow == null)
+            {
+                return null;
+            }
+
+            var heroDataTableRow = _heroContext.HeroDataTableRow;
+            var heroColor = ColorUtility.ToHtmlStringRGB(heroDataTableRow.color);
+            return new TooltipContent(
+                TooltipId,
+                new Dictionary<string, object>
+                {
+                    { "heroName", $"<color=#{heroColor}>{heroDataTableRow.displayName}</color>" },
+                    { "combatState", _isUsing ? InCombatText : OutOfCombatText },
+                }
+            );
         }
 
         private void SetUsingState(bool isUsing)

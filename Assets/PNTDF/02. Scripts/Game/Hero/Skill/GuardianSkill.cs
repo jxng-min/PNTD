@@ -32,6 +32,11 @@ namespace PNTD
             }
         }
 
+        protected override void PlayFireSound()
+        {
+            SoundManager.Instance.PlaySFX("SFX_HandShot");
+        }
+
         private static Vector2[] GetDirections(Vector2 upDirection)
         {
             var up = upDirection.sqrMagnitude > Mathf.Epsilon ? upDirection.normalized : Vector2.up;

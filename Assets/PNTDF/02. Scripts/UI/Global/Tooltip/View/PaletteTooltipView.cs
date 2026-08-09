@@ -4,13 +4,12 @@ using UnityEngine;
 
 namespace PNTD
 {
-    public class ShopLevelTooltipView : TooltipView
+    public class PaletteTooltipView : TooltipView
     {
         [Space(30f)]
         [BigHeader("Lines")]
         [SerializeField] private TMP_Text headerLabel;
         [SerializeField] private TMP_Text tagLabel;
-        [SerializeField] private TMP_Text bodyLabel;
 
         protected override void Bind(TooltipDataTableRow tooltipDataTableRow, TooltipContent tooltipContent)
         {
@@ -22,7 +21,6 @@ namespace PNTD
 
             BindLabel(headerLabel, tooltipDataTableRow.headerText, tooltipContent);
             BindLabel(tagLabel, tooltipDataTableRow.tagText, tooltipContent);
-            BindLabel(bodyLabel, tooltipDataTableRow.bodyText, tooltipContent);
         }
 
         private void BindLabel(TMP_Text label, string template, TooltipContent tooltipContent)
@@ -41,7 +39,6 @@ namespace PNTD
         {
             ClearLabel(headerLabel);
             ClearLabel(tagLabel);
-            ClearLabel(bodyLabel);
         }
 
         private void ClearLabel(TMP_Text label)
