@@ -343,8 +343,22 @@ MonoBehaviour:
   - {fileID: 1188951963}
   - {fileID: 914724644}
   seedRangerParty: 0
+  seedWarriorParty: 1
   seedMageParty: 0
   seedStarbornParty: 0
+  warriorPartySeeds:
+  - heroId: Hero_Swordman
+    level: 1
+  - heroId: Hero_Barbarian
+    level: 1
+  - heroId: Hero_Slayer
+    level: 3
+  - heroId: Hero_Guardian
+    level: 1
+  - heroId: Hero_Paladin
+    level: 1
+  - heroId: Hero_Crusader
+    level: 1
   rangerPartySeeds: []
   magePartySeeds:
   - heroId: Hero_Magician
@@ -2967,6 +2981,18 @@ MonoBehaviour:
     initialPoolSize: 100
     maxPoolSize: 350
     isExpandable: 1
+  - prefab: {fileID: 1432515129942275428, guid: 972e869ada2598547adb37a096ec8bba, type: 3}
+    initialPoolSize: 12
+    maxPoolSize: 12
+    isExpandable: 0
+  - prefab: {fileID: 4296716174986347713, guid: 4423259f87eb0e242974788be04fe7c4, type: 3}
+    initialPoolSize: 3
+    maxPoolSize: 3
+    isExpandable: 0
+  - prefab: {fileID: 779044244030779677, guid: 1a15d376d44d5154d943fb79d738619c, type: 3}
+    initialPoolSize: 2
+    maxPoolSize: 2
+    isExpandable: 0
 --- !u!1001 &908702335
 PrefabInstance:
   m_ObjectHideFlags: 0

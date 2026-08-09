@@ -14,6 +14,9 @@ namespace PNTD
             "[PF] Starborn Orb",
             "[PF] Cleric Sancutuary",
             "[PF] Gold",
+            "[PF] Warrior Space",
+            "[PF] Warrior Fan",
+            "[PF] Warrior Axe",
         };
 
         public void ReturnStagePooledObjects()

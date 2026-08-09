@@ -76,10 +76,14 @@ MonoBehaviour:
   maxStep: 6
   icon: {fileID: 464222450, guid: 71d29722ef3c1744b9ccbe12a99a62ee, type: 3}
   color: {r: 1, g: 0.80784315, b: 0.105882354, a: 1}
-  thresholds: 
-  synergyEffects: 
-  primaryValues: []
-  secondaryValues: []
+  thresholds: 0300000006000000
+  synergyEffects: 0600000006000000
+  primaryValues:
+  - 1.2
+  - 1.4
+  secondaryValues:
+  - 0
+  - 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

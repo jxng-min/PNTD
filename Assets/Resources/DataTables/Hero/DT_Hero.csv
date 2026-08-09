@@ -1,6 +1,10 @@
 rowID,displayName,color,tier,synergy,cost,isEnable
 ,,,,,,
 Hero_Swordman,Swordman,#FFF834,1,Warrior,1,TRUE
+Hero_Barbarian,Barbarian,#FF8A3D,2,Warrior,2,TRUE
+Hero_Slayer,Slayer,#D94B4B,2,Warrior,2,TRUE
+Hero_Guardian,Guardian,#6FA8FF,3,Warrior,3,TRUE
+Hero_Paladin,Paladin,#FFE680,3,"Warrior, Mage",3,TRUE
 ,,,,,,
 Hero_Archer,Archer,#81C784,1,Ranger,1,TRUE
 Hero_Handgunner,Handgunner,#66BB6A,2,"Ranger,Plunder",2,TRUE

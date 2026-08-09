@@ -29,8 +29,18 @@ namespace PNTD
         [Space(30f)]
         [BigHeader("Debug")]
         [SerializeField] private bool seedRangerParty = true;
+        [SerializeField] private bool seedWarriorParty = false;
         [SerializeField] private bool seedMageParty = false;
         [SerializeField] private bool seedStarbornParty = false;
+        [SerializeField] private List<HeroPartySeed> warriorPartySeeds = new()
+        {
+            new HeroPartySeed { heroId = "Hero_Swordman", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Barbarian", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Slayer", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Guardian", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Paladin", level = 1 },
+            new HeroPartySeed { heroId = "Hero_Crusader", level = 1 },
+        };
         [SerializeField] private List<HeroPartySeed> rangerPartySeeds = new()
         {
             new HeroPartySeed { heroId = "Hero_Archer", level = 1 },
@@ -149,6 +159,11 @@ namespace PNTD
         
         private IReadOnlyList<HeroContext> CreateSeedParty()
         {
+            if (seedWarriorParty)
+            {
+                return CreateWarriorParty();
+            }
+            
             if (seedMageParty)
             {
                 return CreateMageParty();
@@ -160,6 +175,11 @@ namespace PNTD
             }
 
             return seedRangerParty ? CreateRangerParty() : null;
+        }
+
+        private IReadOnlyList<HeroContext> CreateWarriorParty()
+        {
+            return CreateParty(warriorPartySeeds, CreateDefaultWarriorPartySeeds());
         }
 
         private IReadOnlyList<HeroContext> CreateRangerParty()
@@ -210,6 +230,19 @@ namespace PNTD
                 new() { heroId = "Hero_Artillery", level = 1 },
                 new() { heroId = "Hero_Sniper", level = 1 },
                 new() { heroId = "Hero_Trickshooter", level = 1 },
+            };
+        }
+
+        private static List<HeroPartySeed> CreateDefaultWarriorPartySeeds()
+        {
+            return new List<HeroPartySeed>
+            {
+                new() { heroId = "Hero_Swordman", level = 1 },
+                new() { heroId = "Hero_Barbarian", level = 1 },
+                new() { heroId = "Hero_Slayer", level = 1 },
+                new() { heroId = "Hero_Guardian", level = 1 },
+                new() { heroId = "Hero_Paladin", level = 1 },
+                new() { heroId = "Hero_Crusader", level = 1 },
             };
         }
         

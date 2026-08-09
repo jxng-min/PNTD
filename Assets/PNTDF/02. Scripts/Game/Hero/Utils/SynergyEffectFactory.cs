@@ -65,6 +65,11 @@ namespace PNTD
                     new HeroStatModifierEffect(EHeroStat.AttackCooldown,
                                                EHeroStatModifierOperation.Multiply,
                                                tier.PrimaryValue),
+
+                ESynergyEffect.PhysicalAttackPowerMultiplier =>
+                    new HeroStatModifierEffect(EHeroStat.PhysicalAttackPower,
+                                               EHeroStatModifierOperation.Multiply,
+                                               tier.PrimaryValue),
                 
                 ESynergyEffect.EnemySlowOnHit =>
                     new MageSynergySlowEffect(tier.PrimaryValue, tier.SecondaryValue),

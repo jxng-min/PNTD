@@ -18,7 +18,7 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/HandShot1.ogg
   - Sound/SFX/HandShot2.ogg
-  channelCount: 20
+  channelCount: 30
   loop: 0
 --- !u!114 &-8945067539999322933
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/Archer1.ogg
   - Sound/SFX/Archer2.ogg
-  channelCount: 5
+  channelCount: 12
   loop: 0
 --- !u!114 &-6258485078878673946
 MonoBehaviour:
@@ -610,7 +610,7 @@ MonoBehaviour:
   type: 1
   soundAddresses:
   - Sound/SFX/Sniper.ogg
-  channelCount: 5
+  channelCount: 12
   loop: 0
 --- !u!114 &8888348209649068494
 MonoBehaviour:
@@ -630,7 +630,7 @@ MonoBehaviour:
   soundAddresses:
   - Sound/SFX/Artillery1.ogg
   - Sound/SFX/Artillery2.ogg
-  channelCount: 5
+  channelCount: 12
   loop: 0
 --- !u!114 &9051256569126879243
 MonoBehaviour:

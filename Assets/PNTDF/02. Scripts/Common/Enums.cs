@@ -32,6 +32,7 @@ namespace PNTD
         OraRangeMultiplier = 3,
         OraEffectMultiplier = 4,
         StarbornOrbCountBonus = 5,
+        PhysicalAttackPowerMultiplier = 6,
     }
 
     public enum ETooltipLayout

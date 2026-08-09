@@ -41,6 +41,27 @@ MonoBehaviour:
   primaryValue: 1.3
   secondaryValue: 0
   tierDescription: Increases the radius of all Cleric sanctuaries by <color=#FFCE1B>30%</color>.
+--- !u!114 &-6487334176607120215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
+  m_Name: Synergy_Warrior_Tier3
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyTierDataTableRow
+  rowID: Synergy_Warrior_Tier3
+  isEnable: 1
+  synergy: 1
+  threshold: 3
+  effect: 6
+  primaryValue: 1.2
+  secondaryValue: 0
+  tierDescription: Warrior units gain <color=#FFCE1B>20%</color> Physical Attack
+    Power.
 --- !u!114 &-5131862654454876262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,6 +106,8 @@ MonoBehaviour:
   - {fileID: 2976783520264928242}
   - {fileID: -8771375437061037271}
   - {fileID: -5131862654454876262}
+  - {fileID: -6487334176607120215}
+  - {fileID: 4588640311436275302}
   dataTableRowScript: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
 --- !u!114 &504066996502082979
 MonoBehaviour:
@@ -158,3 +181,24 @@ MonoBehaviour:
 
     to drop <color=#FFCE1B>1 Gold</color> near the defeated enemy. Dropped
     Gold must be collected manually.'
+--- !u!114 &4588640311436275302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b0f51679f3478c93a17c9d71468138, type: 3}
+  m_Name: Synergy_Warrior_Tier6
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.SynergyTierDataTableRow
+  rowID: Synergy_Warrior_Tier6
+  isEnable: 1
+  synergy: 1
+  threshold: 6
+  effect: 6
+  primaryValue: 1.4
+  secondaryValue: 0
+  tierDescription: Warrior units gain <color=#FFCE1B>40%</color> Physical Attack
+    Power.

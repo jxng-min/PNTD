@@ -7,10 +7,10 @@ SFX_Hover2,SFX,Sound/SFX/Hover2.ogg,10,FALSE,TRUE
 SFX_LevelUp,SFX,Sound/SFX/LevelUp.ogg,2,FALSE,TRUE
 SFX_Coin,SFX,Sound/SFX/Coin1.ogg|Sound/SFX/Coin2.ogg|Sound/SFX/Coin3.ogg,10,FALSE,TRUE
 SFX_Damage,SFX,Sound/SFX/Damage1.ogg|Sound/SFX/Damage2.ogg|Sound/SFX/Damage3.ogg,50,FALSE,TRUE
-SFX_Archer,SFX,Sound/SFX/Archer1.ogg|Sound/SFX/Archer2.ogg,5,FALSE,TRUE
-SFX_HandShot,SFX,Sound/SFX/HandShot1.ogg|Sound/SFX/HandShot2.ogg,20,FALSE,TRUE
-SFX_Artillery,SFX,Sound/SFX/Artillery1.ogg|Sound/SFX/Artillery2.ogg,5,FALSE,TRUE
-SFX_Sniper,SFX,Sound/SFX/Sniper.ogg,5,FALSE,TRUE
+SFX_Archer,SFX,Sound/SFX/Archer1.ogg|Sound/SFX/Archer2.ogg,12,FALSE,TRUE
+SFX_HandShot,SFX,Sound/SFX/HandShot1.ogg|Sound/SFX/HandShot2.ogg,30,FALSE,TRUE
+SFX_Artillery,SFX,Sound/SFX/Artillery1.ogg|Sound/SFX/Artillery2.ogg,12,FALSE,TRUE
+SFX_Sniper,SFX,Sound/SFX/Sniper.ogg,12,FALSE,TRUE
 SFX_Trickshooter,SFX,Sound/SFX/Trickshooter.ogg,30,FALSE,TRUE
 SFX_Starborn,SFX,Sound/SFX/Starborn.ogg,50,FALSE,TRUE
 SFX_Magician,SFX,Sound/SFX/Magician1.ogg|Sound/SFX/Magician2.ogg|Sound/SFX/Magician3.ogg,6,FALSE,TRUE
