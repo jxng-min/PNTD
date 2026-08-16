@@ -149,9 +149,7 @@ namespace PNTD
 
         private void HandleOnUpdateStage(int stage)
         {
-            var loopDisplayIndex = StageLoopUtility.GetLoopDisplayIndex(_lobbyDomain.StatusSystem.LoopCount);
-            var stageInLoop = StageLoopUtility.GetStageInLoop(stage);
-            _stageView.Label.text = $"Loop {loopDisplayIndex} - Stage {stageInLoop}";
+            _stageView.Label.text = $"Stage {stage}";
         }
 #endregion
 
