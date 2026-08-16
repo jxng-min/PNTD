@@ -8171,7 +8171,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1054894598532922001, guid: 74a95c6b918fc134483492d60ab117fb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1504995708738869920, guid: 74a95c6b918fc134483492d60ab117fb, type: 3}
       propertyPath: m_RaycastTarget
@@ -8196,6 +8196,18 @@ PrefabInstance:
     - target: {fileID: 8236504048226149727, guid: 74a95c6b918fc134483492d60ab117fb, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835176720142814699, guid: 74a95c6b918fc134483492d60ab117fb, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835176720142814699, guid: 74a95c6b918fc134483492d60ab117fb, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835176720142814699, guid: 74a95c6b918fc134483492d60ab117fb, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9021211714872659129, guid: 74a95c6b918fc134483492d60ab117fb, type: 3}
       propertyPath: m_Pivot.x

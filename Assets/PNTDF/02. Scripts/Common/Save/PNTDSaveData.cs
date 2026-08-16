@@ -18,6 +18,7 @@ namespace PNTD
         public int currentSeed;
         public int currentStage = 1;
         public int currentGold = 5;
+        public int loopCount;
         public int shopLevel = 1;
         public int shopExp;
         public bool shopIsLock;

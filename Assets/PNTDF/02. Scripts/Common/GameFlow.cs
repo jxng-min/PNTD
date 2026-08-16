@@ -46,6 +46,23 @@ namespace PNTD
             yield break;
         }
 
+        public IEnumerator ContinueLoopRoutine()
+        {
+            if (_lobbyModel == null || _mapRunner == null || _stageRunner == null)
+            {
+                yield break;
+            }
+
+            if (_stageRunner.StageResult != StageModel.EStageResult.GameClear)
+            {
+                yield break;
+            }
+
+            _isPlaying = true;
+            yield return LoadingManager.Instance.VirtualLoadScene("<pop>loading...</pop>", ReturnToLobbyForLoopRoutine);
+            _isPlaying = false;
+        }
+
         private IEnumerator PlayRoutine()
         {
             if (_lobbyModel == null || _mapRunner == null || _stageRunner == null)
@@ -72,7 +89,8 @@ namespace PNTD
         private IEnumerator LoadStageRoutine()
         {
             var stage = _lobbyModel.Domain.StatusSystem.Stage;
-            var stageId = $"Stage_{stage:00}";
+            var stageInLoop = StageLoopUtility.GetStageInLoop(stage);
+            var stageId = $"Stage_{stageInLoop:00}";
             
             _lobbyModel.Hide();
             
@@ -95,6 +113,23 @@ namespace PNTD
         private IEnumerator ReturnToLobbyRoutine()
         {
             _lobbyModel.Domain.StatusSystem.UpdateGold(_stageRunner.RewardGold + _stageRunner.BonusGold + _stageRunner.Interest);
+            _lobbyModel.Domain.StatusSystem.UpdateStage(1);
+            _lobbyModel.Domain.ShopSystem.UpdateLevel();
+            PNTDSaveSystem.SaveGameData(_lobbyModel.Domain);
+            
+            _stageRunner.DisposeStage();
+            _mapRunner.UnloadMap();
+            _currentMapContext = null;
+            
+            _lobbyModel.ShowShop();
+
+            yield break;
+        }
+
+        private IEnumerator ReturnToLobbyForLoopRoutine()
+        {
+            _lobbyModel.Domain.StatusSystem.UpdateGold(_stageRunner.RewardGold + _stageRunner.BonusGold + _stageRunner.Interest);
+            _lobbyModel.Domain.StatusSystem.AdvanceLoop();
             _lobbyModel.Domain.StatusSystem.UpdateStage(1);
             _lobbyModel.Domain.ShopSystem.UpdateLevel();
             PNTDSaveSystem.SaveGameData(_lobbyModel.Domain);

@@ -60,7 +60,7 @@ namespace PNTD
             CurrentSeed = gameData.currentSeed;
             UnityEngine.Random.InitState(CurrentSeed);
 
-            lobbyDomain.StatusSystem.SetState(gameData.currentStage, gameData.currentGold);
+            lobbyDomain.StatusSystem.SetState(gameData.currentStage, gameData.currentGold, gameData.loopCount);
             lobbyDomain.ShopSystem.SetState(gameData.shopLevel, gameData.shopExp, gameData.shopIsLock);
             lobbyDomain.PartySystem.Initialize(CreateHeroContexts(gameData.party, heroDataTable));
             lobbyDomain.SynergySystem.RefreshSynergies(lobbyDomain.PartySystem.HeroContexts);
@@ -113,6 +113,7 @@ namespace PNTD
                 currentSeed = CurrentSeed,
                 currentStage = lobbyDomain.StatusSystem.Stage,
                 currentGold = lobbyDomain.StatusSystem.Gold,
+                loopCount = lobbyDomain.StatusSystem.LoopCount,
                 shopLevel = lobbyDomain.ShopSystem.Level,
                 shopExp = lobbyDomain.ShopSystem.Exp,
                 shopIsLock = lobbyDomain.ShopSystem.IsLock,
