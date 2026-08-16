@@ -7,6 +7,7 @@ namespace PNTD
     {
         [SerializeField] private StageClearView stageClearView;
         [SerializeField] private StageOverView stageOverView;
+        [SerializeField] private GameClearView gameClearView;
 
         public IEnumerator StageClear(int gold, int bonus, int interest)
         {
@@ -16,6 +17,11 @@ namespace PNTD
         public IEnumerator StageOver(int reachedStage)
         {
             yield return stageOverView.StageOverRoutine(reachedStage);
+        }
+
+        public IEnumerator GameClear()
+        {
+            yield return gameClearView.GameClearRoutine();
         }
     }
 }

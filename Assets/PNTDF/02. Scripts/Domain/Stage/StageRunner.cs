@@ -139,7 +139,9 @@ namespace PNTD
             _model.StartStage();
             yield return _model.WaitUntilStageEnd();
 
-            if (_model.StageResult == StageModel.EStageResult.Clear && flowPresenter != null)
+            if ((_model.StageResult == StageModel.EStageResult.Clear ||
+                 _model.StageResult == StageModel.EStageResult.GameClear) &&
+                flowPresenter != null)
             {
                 yield return flowPresenter.Clear();
             }
@@ -153,6 +155,10 @@ namespace PNTD
             {
                 case StageModel.EStageResult.Clear:
                     yield return resultPresenter.StageClear(_model.RewardGold, _model.BonusGold, _interest);
+                    break;
+                
+                case StageModel.EStageResult.GameClear:
+                    yield return resultPresenter.GameClear();
                     break;
                 
                 case StageModel.EStageResult.Over:

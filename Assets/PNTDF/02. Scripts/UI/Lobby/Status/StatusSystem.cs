@@ -8,10 +8,11 @@ namespace PNTD
         private const int InitialStage = 1;
         private const int InitialGold = 5;
         private const int InitialHeroCountLimit = 7;
+        private const int MaxHeroCountLimit = 10;
         
         private int _currentStage = InitialStage;
         private int _currentGold = InitialGold;
-        private int _heroCountLimit = InitialHeroCountLimit;
+        private int _loopCount;
 
         public event Action<int> OnUpdateGold;
         public event Action<int> OnUpdateStage;
@@ -19,29 +20,32 @@ namespace PNTD
 
         public int Stage => _currentStage;
         public int Gold => _currentGold;
-        public int HeroCountLimit => _heroCountLimit;
+        public int LoopCount => _loopCount;
+        public int HeroCountLimit => Mathf.Clamp(InitialHeroCountLimit + _loopCount, InitialHeroCountLimit, MaxHeroCountLimit);
         public int Interest => Mathf.Clamp(Gold / 5, 0, 5);
 
         public void Initialize()
         {
             OnUpdateStage?.Invoke(_currentStage);
             OnUpdateGold?.Invoke(_currentGold);
-            OnUpdateHeroCountLimit?.Invoke(_heroCountLimit);
+            OnUpdateHeroCountLimit?.Invoke(HeroCountLimit);
         }
         
         public void Reset()
         {
             _currentStage = InitialStage;
             _currentGold = InitialGold;
-            _heroCountLimit = InitialHeroCountLimit;
+            _loopCount = 0;
             
             Initialize();
         }
 
-        public void SetState(int stage, int gold)
+        public void SetState(int stage, int gold, int loopCount = 0)
         {
             _currentStage = Mathf.Max(InitialStage, stage);
             _currentGold = Mathf.Clamp(gold, 0, int.MaxValue);
+            var inferredLoopCount = StageLoopUtility.GetLoopCountFromStage(_currentStage);
+            _loopCount = Mathf.Clamp(Mathf.Max(loopCount, inferredLoopCount), 0, MaxHeroCountLimit - InitialHeroCountLimit);
             
             Initialize();
         }
@@ -61,9 +65,13 @@ namespace PNTD
 
         public void UpdateHeroCountLimit(int amount)
         {
-            _heroCountLimit += amount;
-            _heroCountLimit = Mathf.Clamp(_heroCountLimit, 0, 10);
-            OnUpdateHeroCountLimit?.Invoke(_heroCountLimit);
+            _loopCount = Mathf.Clamp(_loopCount + amount, 0, MaxHeroCountLimit - InitialHeroCountLimit);
+            OnUpdateHeroCountLimit?.Invoke(HeroCountLimit);
+        }
+
+        public void AdvanceLoop()
+        {
+            UpdateHeroCountLimit(1);
         }
     }
 }

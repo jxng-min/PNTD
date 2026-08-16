@@ -9,6 +9,7 @@ namespace PNTD
         {
             None,
             Clear,
+            GameClear,
             Over
         }
 
@@ -101,7 +102,9 @@ namespace PNTD
 
         private void HandleOnStageCleared()
         {
-            _stageResult = EStageResult.Clear;
+            _stageResult = StageLoopUtility.IsLoopClearStage(_reachedStage)
+                ? EStageResult.GameClear
+                : EStageResult.Clear;
             _isStageEnded = true;
         }
 
