@@ -1,0 +1,304 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6373799064121966718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Sound Source Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 7524807931350131888, guid: b7bb2a8ef5e8c9e4b9af7b14d9c40fdb, type: 3}
+  initialPoolSize: 100
+  maxPoolSize: 350
+  isExpandable: 0
+--- !u!114 &-4875722775430884330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Warrior Fan Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 779044244030779677, guid: 1a15d376d44d5154d943fb79d738619c, type: 3}
+  initialPoolSize: 2
+  maxPoolSize: 2
+  isExpandable: 0
+--- !u!114 &-4503324596432406364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Magitech Robot Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 5661273342184995275, guid: 2db086c566bcef84daca1ab587c295f7, type: 3}
+  initialPoolSize: 2
+  maxPoolSize: 4
+  isExpandable: 0
+--- !u!114 &-4356334525376782791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Gold Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 6277163569181799580, guid: 25ab28d22ec2cd34284ade87cd73a989, type: 3}
+  initialPoolSize: 10
+  maxPoolSize: 30
+  isExpandable: 1
+--- !u!114 &-4271669932863052808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Warrior Axe Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 4296716174986347713, guid: 4423259f87eb0e242974788be04fe7c4, type: 3}
+  initialPoolSize: 3
+  maxPoolSize: 3
+  isExpandable: 0
+--- !u!114 &-4258487708020206263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Enemy Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 2971872994421524407, guid: 869b72b020c82d14d8e862f877c9e6ab, type: 3}
+  initialPoolSize: 20
+  maxPoolSize: 50
+  isExpandable: 1
+--- !u!114 &-3858069207986203322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Rogue Crow Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 6632417212741026415, guid: 419c911caa70af54f92d23ad0a4cec6e, type: 3}
+  initialPoolSize: 3
+  maxPoolSize: 3
+  isExpandable: 0
+--- !u!114 &-2489104241463137181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Warrior Space Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 1432515129942275428, guid: 972e869ada2598547adb37a096ec8bba, type: 3}
+  initialPoolSize: 12
+  maxPoolSize: 12
+  isExpandable: 0
+--- !u!114 &-1233825915059701690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Ranger Bullet Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 9011550732591010675, guid: 34cddd8ae751bf9459a7adae7c370ff6, type: 3}
+  initialPoolSize: 20
+  maxPoolSize: 40
+  isExpandable: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42723e2e70e44ca78e66ede24fe97ded, type: 3}
+  m_Name: Object Pool Configure
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.ObjectPoolConfigure
+  configs:
+  - {fileID: 6418436680443129758}
+  - {fileID: -4258487708020206263}
+  - {fileID: 6505002492492163391}
+  - {fileID: 4702919523679978042}
+  - {fileID: -1233825915059701690}
+  - {fileID: 1328515133729423855}
+  - {fileID: 6236616223684425420}
+  - {fileID: -4503324596432406364}
+  - {fileID: 7394147668614339582}
+  - {fileID: 7405533693808146208}
+  - {fileID: -4356334525376782791}
+  - {fileID: -6373799064121966718}
+  - {fileID: -2489104241463137181}
+  - {fileID: -4271669932863052808}
+  - {fileID: -4875722775430884330}
+  - {fileID: -3858069207986203322}
+  - {fileID: 484050626913454375}
+--- !u!114 &484050626913454375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Rogue Dagger Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 2388723393458880942, guid: 461ea59f54579de4c899cd89404230d8, type: 3}
+  initialPoolSize: 3
+  maxPoolSize: 8
+  isExpandable: 1
+--- !u!114 &1328515133729423855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Mage Sphere Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 5943740814239039241, guid: 63fa48943e6bb3a49b615ffaa5460b78, type: 3}
+  initialPoolSize: 10
+  maxPoolSize: 20
+  isExpandable: 0
+--- !u!114 &4702919523679978042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Hero Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 1250001235587268254, guid: e4099aaca4d2c7542b1d787172cbbd9d, type: 3}
+  initialPoolSize: 7
+  maxPoolSize: 10
+  isExpandable: 0
+--- !u!114 &6236616223684425420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Mage Circle Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 2851312986475265104, guid: 1b2383ee43169e945b3ee67c81daa16d, type: 3}
+  initialPoolSize: 3
+  maxPoolSize: 3
+  isExpandable: 0
+--- !u!114 &6418436680443129758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Enemy Damaged Particle Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 69457163131605798, guid: 0b9a9b61faeef0c45949e049b43881e8, type: 3}
+  initialPoolSize: 100
+  maxPoolSize: 200
+  isExpandable: 1
+--- !u!114 &6505002492492163391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] UI Dissolve Particle Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 4670288946441429958, guid: dcb582ee17bae654f95260d74d52560f, type: 3}
+  initialPoolSize: 3
+  maxPoolSize: 3
+  isExpandable: 0
+--- !u!114 &7394147668614339582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Starborn Orb Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 2680181627230565799, guid: e9779c6ed3f0cfb4ab4a111259a8ed5a, type: 3}
+  initialPoolSize: 12
+  maxPoolSize: 30
+  isExpandable: 1
+--- !u!114 &7405533693808146208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f6ddfd734745b387ca5b21e91a3132, type: 3}
+  m_Name: '[PF] Cleric Sancutuary Config'
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.JxObjectPoolConfig
+  prefab: {fileID: 3017585742819037171, guid: 7e497db1292d9f647bbbd4db5552b5cf, type: 3}
+  initialPoolSize: 4
+  maxPoolSize: 4
+  isExpandable: 0
