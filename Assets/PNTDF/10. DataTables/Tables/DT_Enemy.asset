@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1963248125848528095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Summoner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Summoner
+  isEnable: 1
+  color: {r: 1, g: 0.7019608, b: 0.2784314, a: 1}
+  maxHp: 100
+  moveSpeed: 0.7
+  type: 7
+  physicalDefense: 30
+  magicResistance: 60
+  slowResistance: 0.45
+  rewardWeight: 2.4
+  baseGoldReward: 5
+  lifeDamage: 1
+  spawnCostWeight: 3.2
+  countsForWaveClear: 1
+  grantsKillReward: 1
+  canDropPlunderGold: 1
+  abilityID: Ability_Summoner
+--- !u!114 &-1801801474543103930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Swarmer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Swarmer
+  isEnable: 1
+  color: {r: 1, g: 0.47843137, b: 0.47843137, a: 1}
+  maxHp: 100
+  moveSpeed: 1.1
+  type: 8
+  physicalDefense: 10
+  magicResistance: 15
+  slowResistance: 0.1
+  rewardWeight: 0.85
+  baseGoldReward: 5
+  lifeDamage: 1
+  spawnCostWeight: 0.8
+  countsForWaveClear: 1
+  grantsKillReward: 1
+  canDropPlunderGold: 1
+  abilityID: 
+--- !u!114 &-183716569554002108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Blinker
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Blinker
+  isEnable: 1
+  color: {r: 0.60784316, g: 0.42745098, b: 1, a: 1}
+  maxHp: 125
+  moveSpeed: 1.05
+  type: 5
+  physicalDefense: 30
+  magicResistance: 30
+  slowResistance: 0.25
+  rewardWeight: 1.8
+  baseGoldReward: 5
+  lifeDamage: 1
+  spawnCostWeight: 2.1
+  countsForWaveClear: 1
+  grantsKillReward: 1
+  canDropPlunderGold: 1
+  abilityID: Ability_Blinker
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: a2ea5b1d1e5f58d43b26e3012fe9471e, type: 3}
+  dataTableRowName: PNTD.EnemyDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=728675544
+  dataTableRows:
+  - {fileID: 6927501018376782785}
+  - {fileID: 2999872406662193855}
+  - {fileID: 6955143943602262923}
+  - {fileID: -183716569554002108}
+  - {fileID: 7084289094366475977}
+  - {fileID: -1963248125848528095}
+  - {fileID: -1801801474543103930}
+  - {fileID: 2550189352159548881}
+  dataTableRowScript: {fileID: 0}
+--- !u!114 &2550189352159548881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Baby
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Baby
+  isEnable: 1
+  color: {r: 1, g: 0.9490196, b: 0.65882355, a: 1}
+  maxHp: 35
+  moveSpeed: 1.55
+  type: 9
+  physicalDefense: 0
+  magicResistance: 0
+  slowResistance: 0
+  rewardWeight: 0
+  baseGoldReward: 0
+  lifeDamage: 1
+  spawnCostWeight: 0
+  countsForWaveClear: 1
+  grantsKillReward: 0
+  canDropPlunderGold: 0
+  abilityID: 
+--- !u!114 &2999872406662193855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Enrager
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Enrager
+  isEnable: 1
+  color: {r: 0.4862745, g: 0.9882353, b: 0, a: 1}
+  maxHp: 50
+  moveSpeed: 1
+  type: 3
+  physicalDefense: 10
+  magicResistance: 10
+  slowResistance: 0.2
+  rewardWeight: 1.2
+  baseGoldReward: 5
+  lifeDamage: 1
+  spawnCostWeight: 1.35
+  countsForWaveClear: 1
+  grantsKillReward: 1
+  canDropPlunderGold: 1
+  abilityID: Ability_Enrager
+--- !u!114 &6927501018376782785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Normal
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Normal
+  isEnable: 1
+  color: {r: 1, g: 0.21176471, b: 0.21176471, a: 1}
+  maxHp: 35
+  moveSpeed: 1
+  type: 0
+  physicalDefense: 5
+  magicResistance: 5
+  slowResistance: 0
+  rewardWeight: 1
+  baseGoldReward: 5
+  lifeDamage: 1
+  spawnCostWeight: 1
+  countsForWaveClear: 1
+  grantsKillReward: 1
+  canDropPlunderGold: 1
+  abilityID: 
+--- !u!114 &6955143943602262923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Tanker
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Tanker
+  isEnable: 1
+  color: {r: 0.5568628, g: 0.5568628, b: 0.5568628, a: 1}
+  maxHp: 400
+  moveSpeed: 0.55
+  type: 4
+  physicalDefense: 80
+  magicResistance: 35
+  slowResistance: 0.6
+  rewardWeight: 3
+  baseGoldReward: 5
+  lifeDamage: 2
+  spawnCostWeight: 4
+  countsForWaveClear: 1
+  grantsKillReward: 1
+  canDropPlunderGold: 1
+  abilityID: 
+--- !u!114 &7084289094366475977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e0114b878c4256a0b42116982eef30, type: 3}
+  m_Name: Enemy_Hexer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyDataTableRow
+  rowID: Enemy_Hexer
+  isEnable: 1
+  color: {r: 0.34901962, g: 0.827451, b: 1, a: 1}
+  maxHp: 200
+  moveSpeed: 0.9
+  type: 6
+  physicalDefense: 20
+  magicResistance: 50
+  slowResistance: 0.35
+  rewardWeight: 1.7
+  baseGoldReward: 5
+  lifeDamage: 1
+  spawnCostWeight: 2
+  countsForWaveClear: 1
+  grantsKillReward: 1
+  canDropPlunderGold: 1
+  abilityID: Ability_Hexer

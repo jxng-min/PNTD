@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6008800183859498495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8a6b1c8f9e4012b83118594f058e6f, type: 3}
+  m_Name: Ability_Summoner
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyAbilityDataTableRow
+  rowID: Ability_Summoner
+  isEnable: 1
+  ability: 6
+  coolDown: 5.5
+  trigger: 5
+--- !u!114 &-3462915985750830571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8a6b1c8f9e4012b83118594f058e6f, type: 3}
+  m_Name: Ability_Blinker
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyAbilityDataTableRow
+  rowID: Ability_Blinker
+  isEnable: 1
+  ability: 4
+  coolDown: 5
+  trigger: 5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_EnemyAbility
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: 384ef96eedc042d46a2c11c12615217f, type: 3}
+  dataTableRowName: PNTD.EnemyAbilityDataTableRow, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=1199432359
+  dataTableRows:
+  - {fileID: 6377983324074362249}
+  - {fileID: -3462915985750830571}
+  - {fileID: 5944018490300450740}
+  - {fileID: -6008800183859498495}
+  dataTableRowScript: {fileID: 0}
+--- !u!114 &5944018490300450740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8a6b1c8f9e4012b83118594f058e6f, type: 3}
+  m_Name: Ability_Hexer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyAbilityDataTableRow
+  rowID: Ability_Hexer
+  isEnable: 1
+  ability: 5
+  coolDown: 6
+  trigger: 5
+--- !u!114 &6377983324074362249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8a6b1c8f9e4012b83118594f058e6f, type: 3}
+  m_Name: Ability_Enrager
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.EnemyAbilityDataTableRow
+  rowID: Ability_Enrager
+  isEnable: 1
+  ability: 2
+  coolDown: 0
+  trigger: 2

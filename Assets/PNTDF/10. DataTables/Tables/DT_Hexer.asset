@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46e7f3d83ee4d15ab06220faf1fed1b, type: 3}
+  m_Name: DT_Hexer
+  m_EditorClassIdentifier: Assembly-CSharp::JxModule.DataTable.DataTable
+  dataTableCsv: {fileID: 4900000, guid: 62d0d01e42369764b9185a3cf2152936, type: 3}
+  dataTableRowName: PNTD.HexerDataTableRow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  remoteCsvUrl: https://docs.google.com/spreadsheets/d/1KzIJKsH3nIWOWq4qbyXZvVppW6I82TBQSXLidncaID0/export?format=csv&gid=624169241
+  dataTableRows:
+  - {fileID: 5529163740082087867}
+  dataTableRowScript: {fileID: 0}
+--- !u!114 &5529163740082087867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e46f39f740246fdb7ae6756a72a049d, type: 3}
+  m_Name: Ability_Hexer
+  m_EditorClassIdentifier: Assembly-CSharp::PNTD.HexerDataTableRow
+  rowID: Ability_Hexer
+  isEnable: 1
+  firstCastDelay: 2
+  coolDown: 6
+  castRange: 3.5
+  duration: 4
+  attackDamagePenalty: 0.2
+  attackSpeedPenalty: 0.15
+  maxActiveHexPerHexer: 1
