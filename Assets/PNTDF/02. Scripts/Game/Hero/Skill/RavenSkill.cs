@@ -2,6 +2,7 @@ using System.Collections;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Raven)]
     public class RavenSkill : RogueSkill
     {
         private const float BaseDamageMultiplier = 1f;

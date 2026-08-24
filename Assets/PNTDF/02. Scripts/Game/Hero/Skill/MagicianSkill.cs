@@ -1,5 +1,6 @@
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Magician)]
     public class MagicianSkill : MageSkill
     {
         private const float LevelOneDotDamageMultiplier = 0.1f;

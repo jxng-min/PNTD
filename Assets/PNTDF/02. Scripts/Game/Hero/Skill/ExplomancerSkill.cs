@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Explomancer)]
     public class ExplomancerSkill : HeroSkill
     {
         private const string MagicCirclePrefabName = "[PF] Mage Circle";

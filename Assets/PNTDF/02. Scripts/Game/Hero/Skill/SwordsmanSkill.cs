@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Swordman)]
     public class SwordsmanSkill : WarriorSkill
     {
         private static readonly Vector2 SpaceSize = new(1.3f, 1.3f);

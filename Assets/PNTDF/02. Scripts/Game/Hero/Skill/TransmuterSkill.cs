@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Transmuter)]
     public class TransmuterSkill : MageSkill
     {
         private const float LevelOneDisableChance = 0.3f;

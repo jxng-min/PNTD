@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Wizard)]
     public class WizardSkill : HeroSkill
     {
         private const string MagicCirclePrefabName = "[PF] Mage Circle";

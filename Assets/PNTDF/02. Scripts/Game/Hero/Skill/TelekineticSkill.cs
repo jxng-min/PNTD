@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Telekinetic)]
     public class TelekineticSkill : HeroSkill
     {
         private const string MagicCirclePrefabName = "[PF] Mage Circle";

@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Thief)]
     public class ThiefSkill : RogueSkill
     {
         private const float DamageMultiplier = 0.45f;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Paladin)]
     public class PaladinSkill : WarriorSkill
     {
         private const int TargetCount = 2;

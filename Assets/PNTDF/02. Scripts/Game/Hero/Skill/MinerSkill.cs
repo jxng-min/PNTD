@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Miner)]
     public class MinerSkill : RangerSkill
     {
         private const int GoldAmount = 1;

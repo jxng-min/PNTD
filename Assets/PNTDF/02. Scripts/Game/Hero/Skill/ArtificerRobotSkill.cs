@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.MageRobo)]
     public class ArtificerRobotSkill : HeroSkill
     {
         private const float DamageMultiplier = 0.55f;
