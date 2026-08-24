@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Guardian)]
     public class GuardianSkill : RangerSkill
     {
         protected override float DamageMultiplier => 0.55f;

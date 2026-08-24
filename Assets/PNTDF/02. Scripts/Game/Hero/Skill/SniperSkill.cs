@@ -1,5 +1,6 @@
 ﻿namespace PNTD
 {
+    [HeroSkill(EHeroType.Sniper)]
     public class SniperSkill : RangerSkill
     {
         protected override float BulletSpeed => 18f;

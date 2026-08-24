@@ -1,5 +1,6 @@
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Saint)]
     public class SaintSkill : ClericSkill
     {
         protected override ClericSanctuaryData SanctuaryData { get; } = new()

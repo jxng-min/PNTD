@@ -1,5 +1,6 @@
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Martian)]
     public class MartianSkill : StarbornSkill
     {
         protected override StarbornAttackData AttackData { get; } = new()

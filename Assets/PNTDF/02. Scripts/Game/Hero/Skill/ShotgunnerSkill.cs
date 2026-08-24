@@ -1,5 +1,6 @@
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Shotgunner)]
     public class ShotgunnerSkill : RangerSkill
     {
         protected override float DamageMultiplier => 0.55f;

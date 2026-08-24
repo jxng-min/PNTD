@@ -107,7 +107,7 @@ namespace PNTD
             }
             
             var stat = CreateStat(heroDataTableRow);
-            var skill = CreateSkill(heroDataTableRow.rowID);
+            var skill = CreateSkill(heroDataTableRow);
             
             skill.Initialize(_skillContext);
             hero.Initialize(heroDataTableRow, stat, skill, level, isSummoned, summoner);
@@ -180,47 +180,14 @@ namespace PNTD
 
         private HeroSkill CreateSkill(DeployContext deployContext)
         {
-            return CreateSkill(deployContext.HeroDataTableRow.rowID);
+            return CreateSkill(deployContext.HeroDataTableRow);
         }
         
-        private HeroSkill CreateSkill(string heroId)
+        private HeroSkill CreateSkill(HeroDataTableRow heroDataTableRow)
         {
-            return heroId switch
-            {
-                "Hero_Archer" => new ArcherSkill(),
-                "Hero_Handgunner" => new HandgunnerSkill(),
-                "Hero_Shotgunner" => new ShotgunnerSkill(),
-                "Hero_Artillery" => new ArtillerySkill(),
-                "Hero_Sniper" => new SniperSkill(),
-                "Hero_Trickshooter" => new TrickshooterSkill(),
-                "Hero_Raven" => new RavenSkill(),
-                "Hero_Thief" => new ThiefSkill(),
-                "Hero_Magician" => new MagicianSkill(),
-                "Hero_Wizard" => new WizardSkill(),
-                "Hero_Explomancer" => new ExplomancerSkill(),
-                "Hero_Telekinetic" => new TelekineticSkill(),
-                "Hero_Transmuter" => new TransmuterSkill(),
-                "Hero_Artificer" => new ArtificerSkill(),
-                "Hero_Miner" => new MinerSkill(),
-                "Hero_Alchemist" => new AlchemistSkill(),
-                "Hero_Saint" => new SaintSkill(),
-                "Hero_Sancitifier" => new SanctifierSkill(),
-                "Hero_Sanctifier" => new SanctifierSkill(),
-                "Hero_Crusader" => new CrusaderSkill(),
-                "Hero_Swordman" => new SwordsmanSkill(),
-                "Hero_Swordsman" => new SwordsmanSkill(),
-                "Hero_Barbarian" => new BarbarianSkill(),
-                "Hero_Slayer" => new SlayerSkill(),
-                "Hero_Guardian" => new GuardianSkill(),
-                "Hero_Paladin" => new PaladinSkill(),
-                MagitechRobotHeroId => new ArtificerRobotSkill(),
-                "Hero_Martian" => new MartianSkill(),
-                "Hero_Venusian" => new VenusianSkill(),
-                "Hero_Jovian" => new JovianSkill(),
-                "Hero_Saturnian" => new SaturnianSkill(),
-                "Hero_Uranian" => new UranianSkill(),
-                _ => new EmptyHeroSkill()
-            };
+            return heroDataTableRow != null
+                ? HeroSkillFactory.Create(heroDataTableRow.heroType)
+                : new EmptyHeroSkill();
         }
 
         private Hero GetPrefab(HeroDataTableRow heroDataTableRow)

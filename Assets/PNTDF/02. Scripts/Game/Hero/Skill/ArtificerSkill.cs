@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Artificer)]
     public class ArtificerSkill : HeroSkill
     {
         private const string RobotHeroId = "Hero_MageRobo";

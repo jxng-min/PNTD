@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Slayer)]
     public class SlayerSkill : WarriorSkill
     {
         private const float DamageMultiplier = 0.80f;

@@ -1,5 +1,6 @@
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Archer)]
     public class ArcherSkill : RangerSkill
     {
         protected override void PlayFireSound()

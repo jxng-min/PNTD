@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace PNTD
 {
+    [HeroSkill(EHeroType.Artillery)]
     public class ArtillerySkill : RangerSkill
     {
         protected override float BulletSpeed => 4f;
