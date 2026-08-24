@@ -5,6 +5,7 @@ namespace PNTD
 {
     public class HeroDataTableRow : DataTableRowBase
     {
+        public EHeroType heroType;
         public string displayName;
         public Color color;
         public ETier tier;

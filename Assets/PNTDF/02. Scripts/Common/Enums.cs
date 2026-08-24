@@ -132,4 +132,43 @@ namespace PNTD
         BGM                 = 0,
         SFX                 = 1,
     }
+
+    public enum EHeroType
+    {
+        Swordman            = 0,
+        Barbarian           = 1,
+        Slayer              = 2,
+        Guardian            = 3,
+        Paladin             = 4,
+
+        Raven               = 5,
+        Thief               = 6,
+
+        Archer              = 7,
+        Handgunner          = 8,
+        Shotgunner          = 9,
+        Artillery           = 10,
+        Sniper              = 11,
+        Trickshooter        = 12,
+
+        Magician            = 13,
+        Wizard              = 14,
+        Explomancer         = 15,
+        Telekinetic         = 16,
+        Transmuter          = 17,
+        Artificer           = 18,
+        MageRobo            = 19,
+
+        Martian             = 20,
+        Venusian            = 21,
+        Jovian              = 22,
+        Saturnian           = 23,
+        Uranian             = 24,
+
+        Miner               = 25,
+        Alchemist           = 26,
+        Saint               = 27,
+        Sancitifier         = 28,
+        Crusader            = 29,
+    }
 }
